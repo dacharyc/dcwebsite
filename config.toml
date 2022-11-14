@@ -56,28 +56,18 @@ paginate = 9
 
   [[params.social]]
     icon = "ion-logo-twitter"
-    name = "Twitter"
-    link = "https://twitter.com"
+    name = "Mastodon"
+    link = "https://mstdn.social/@dachary"
 
   [[params.social]]
-    icon = "ion-logo-facebook"
-    name = "Facebook"
-    link = "https://facebook.com"
+    icon = "ion-logo-github"
+    name = "GitHub"
+    link = "https://github.com/dacharyc"
 
   [[params.social]]
-    icon = "ion-logo-instagram"
-    name = "Instagram"
-    link = "https://instagram.com"
-
-  [[params.social]]
-    icon = "ion-logo-pinterest"
-    name = "Pinterest"
-    link = "https://pinterest.com"
-
-  [[params.social]]
-    icon = "ion-logo-youtube"
-    name = "Youtube"
-    link = "https://youtube.com"
+    icon = "ion-logo-linkedin"
+    name = "LinkedIn"
+    link = "https://www.linkedin.com/in/dachary/"
 
   # Example of adding a new link to the author section and footer:
   # [[params.social]]
