@@ -55,17 +55,20 @@ paginate = 9
     author__avatar = "/images/dc.jpeg"
 
   [[params.social]]
-    icon = "ion-logo-twitter"
+    # icon = "ion-logo-mastodon"
+    icon = "logo-mastodon"
     name = "Mastodon"
     link = "https://mstdn.social/@dachary"
 
   [[params.social]]
-    icon = "ion-logo-github"
+    # icon = "ion-logo-github"
+    icon = "logo-github"
     name = "GitHub"
     link = "https://github.com/dacharyc"
 
   [[params.social]]
-    icon = "ion-logo-linkedin"
+    # icon = "ion-logo-linkedin"
+    icon = "logo-linkedin"
     name = "LinkedIn"
     link = "https://www.linkedin.com/in/dachary/"
 

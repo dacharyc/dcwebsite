@@ -5,7 +5,7 @@ layout: post
 description: I which I am amazed to wake up and see my app leading sales in its category.
 date: 2022-03-14 15:01:35 +0300
 url: /2022/03/13/i-wrote-a-best-selling-ios-app/
-image: /images/539ACA62-91F0-4D2F-A038-B37FEF4BBC43-555x1200.jpeg
+image: /images/best-selling-app-hero.jpg
 tags: [Coding]
 
 ---

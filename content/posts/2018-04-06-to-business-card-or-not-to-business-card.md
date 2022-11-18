@@ -2,9 +2,10 @@
 title: To business card, or not to business card
 author: Dachary Carey
 layout: post
+description: In which I don't have business cards - and may regret it?
 date: 2018-04-07 15:01:35 +0300
 url: /2018/04/06/to-business-card-or-not-to-business-card/
-image: /wp-content/uploads/2018/04/shutterstock_527432977-800x450.jpg
+image: /images/business-card-hero.jpg
 tags: [Business]
 
 ---

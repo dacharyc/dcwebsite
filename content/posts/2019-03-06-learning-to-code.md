@@ -2,9 +2,10 @@
 title: Learning to code
 author: Dachary Carey
 layout: post
+description: In which I finally decide to start my coding journey.
 date: 2019-03-06 15:01:35 +0300
 url: /2019/03/06/learning-to-code/
-image: /wp-content/uploads/2019/03/computer_code_on_screen-800x450.jpg
+image: /images/learning-to-code-hero.jpg
 tags: [Coding, Personal]
 
 ---

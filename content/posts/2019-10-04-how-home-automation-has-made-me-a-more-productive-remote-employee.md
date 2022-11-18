@@ -2,9 +2,10 @@
 title: How home automation has made me a more productive remote employee
 author: Dachary Carey
 layout: post
+description: In which I dive into how home automation helps us move through our days.
 date: 2019-10-04 15:01:35 +0300
 url: /2019/10/04/how-home-automation-has-made-me-a-more-productive-remote-employee/
-image: /wp-content/uploads/2019/10/home-automation-800x450.jpg
+image: /images/home-automation-hero.jpg
 tags: [Business, Personal]
 
 ---

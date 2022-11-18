@@ -4,8 +4,10 @@
   <ul class="social__list list-reset">
     {{ range . }}
     <li class="social__item">
-      <a class="social__link" href="{{ .link }}" target="_blank" rel="noopener"
-        aria-label="{{ .name }} link"><i class="ion {{ .icon }}"></i></a>
+      <!-- <a class="social__link" href="{{ .link }}" target="_blank" rel="noopener"
+        aria-label="{{ .name }} link"><i class="ion {{ .icon }}"></i></a>-->
+        <a class="social__link" href="{{ .link }}" target="_blank" rel="noopener"
+        aria-label="{{ .name }} link"><ion-icon name="{{ .icon }}"></ion-icon></a>
     </li>
     {{ end }}
   </ul>

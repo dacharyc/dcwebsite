@@ -2,9 +2,10 @@
 title: My strange caffeine detox journey
 author: Dachary Carey
 layout: post
+description: In which I give up my beloved caffeine. Oh dear.
 date: 2017-06-25 15:01:35 +0300
 url: /2017/06/25/my-strange-caffeine-detox-journey/
-image: /wp-content/uploads/2017/06/IMG_6120-800x450.jpg
+image: /images/caffiene-detox-hero.jpg
 tags: [Lifestyle,Personal]
 
 ---

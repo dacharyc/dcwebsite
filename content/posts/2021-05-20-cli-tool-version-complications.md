@@ -2,8 +2,10 @@
 title: CLI tool version complications
 author: Dachary Carey
 layout: post
+description: In which I attempt to debug a CLI thing and find out I made an assumption.
 date: 2021-05-20 15:01:35 +0300
 url: /2021/05/20/cli-tool-version-complications/
+image: /images/cli-version-hero.jpg
 tags: [Coding]
 
 ---

@@ -2,9 +2,10 @@
 title: I wrote an iOS app!
 author: Dachary Carey
 layout: post
-date: 2022-03-09T 15:01:35 +0300
+description: In which I write an iOS app to track RPG playthrough details.
+date: 2022-03-09 15:01:35 +0300
 url: /2022/03/08/i-wrote-an-ios-app/
-image: /wp-content/uploads/2022/03/featured-800x450.png
+image: /images/wrote-ios-app-hero.jpg
 tags: [Coding]
 
 ---

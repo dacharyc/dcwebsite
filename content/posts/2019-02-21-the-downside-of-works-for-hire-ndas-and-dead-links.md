@@ -2,9 +2,10 @@
 title: The downside of works-for-hire, NDAs and dead links
 author: Dachary Carey
 layout: post
+description: In which I lament the vagaries of showing a portfolio as a freelancer.
 date: 2019-02-21 15:01:35 +0300
 url: /2019/02/21/the-downside-of-works-for-hire-ndas-and-dead-links/
-image: /wp-content/uploads/2019/02/nda_image-800x450.jpg
+image: /images/nda-hero.jpg
 tags: [Business]
 
 ---

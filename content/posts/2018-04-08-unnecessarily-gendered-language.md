@@ -2,9 +2,10 @@
 title: Unnecessarily gendered language
 author: Dachary Carey
 layout: post
+description: In which I explore why unnecessarily gendered language can be hurtful.
 date: 2018-04-08 15:01:35 +0300
 url: /2018/04/08/unnecessarily-gendered-language/
-image: /wp-content/uploads/2018/04/shutterstock_549384298-512x450.jpg
+image: /images/unnecessarily-gendered-language-hero.jpg
 tags: [Language, Personal]
 
 ---

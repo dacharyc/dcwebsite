@@ -2,9 +2,10 @@
 title: 'Learning to code: redux'
 author: Dachary Carey
 layout: post
+description: In which I complete a beginner programming class - in Python!
 date: 2020-05-19 15:01:35 +0300
 url: /2020/05/19/learning-to-code-redux/
-image: /wp-content/uploads/2020/05/Screen-Shot-2020-05-19-at-2.26.32-PM-1-800x450.png
+image: /images/learning-to-code-redux-hero.jpg
 tags: [Coding]
 
 ---

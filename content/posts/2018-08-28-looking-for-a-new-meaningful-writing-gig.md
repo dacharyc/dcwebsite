@@ -2,9 +2,10 @@
 title: Looking for a new (meaningful) writing gig
 author: Dachary Carey
 layout: post
+description: In which I part ways with a long-term client and want to do something meaningful.
 date: 2018-08-28 15:01:35 +0300
 url: /2018/08/28/looking-for-a-new-meaningful-writing-gig/
-image: /wp-content/uploads/2018/08/IMG_1388-800x450.jpg
+image: /images/looking-for-meaning-hero.jpg
 tags: [Business, Personal]
 
 ---

@@ -2,9 +2,10 @@
 title: My vacation rafting misadventure
 author: Dachary Carey
 layout: post
+description: In which I accidentally body-surfed a Class V rapid and things looked real grim.
 date: 2019-08-20 15:01:35 +0300
 url: /2019/08/20/my-vacation-rafting-misadventure/
-image: /wp-content/uploads/2019/08/Caleb_DSC_0111-1-800x450.jpg
+image: /images/vacation-rafting-misadventure-hero.jpg
 tags: [Personal, Travel]
 
 ---

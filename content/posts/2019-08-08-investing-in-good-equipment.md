@@ -2,9 +2,10 @@
 title: Investing in good equipment
 author: Dachary Carey
 layout: post
+description: In which I recognize how important it is to have good equipment, and do something about it.
 date: 2019-08-08 15:01:35 +0300
 url: /2019/08/08/investing-in-good-equipment/
-image: /wp-content/uploads/2019/08/new-desk-setup-800x450.jpg
+image: /images/investing-in-good-equipment-hero.jpg
 tags: [Business, Coding, Lifestyle, Personal, Writing]
 
 ---

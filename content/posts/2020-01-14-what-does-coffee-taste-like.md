@@ -2,9 +2,10 @@
 title: What does coffee taste like?
 author: Dachary Carey
 layout: post
+description: In which I ramble about why I love good coffee, and how you can learn to love it, too.
 date: 2020-01-15 15:01:35 +0300
 url: /2020/01/14/what-does-coffee-taste-like/
-image: /wp-content/uploads/2020/01/mark-daynes-QKylkd3HS6o-unsplash-800x450.jpg
+image: /images/mark-daynes-unsplash-1200x800.jpg
 tags: [Lifestyle, Personal]
 
 ---

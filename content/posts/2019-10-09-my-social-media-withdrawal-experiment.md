@@ -2,9 +2,10 @@
 title: My social media withdrawal experiment
 author: Dachary Carey
 layout: post
+description: In which I talk about why I took a hiatus from social media, and how awesome it is.
 date: 2019-10-09 15:01:35 +0300
 url: /2019/10/09/my-social-media-withdrawal-experiment/
-image: /wp-content/uploads/2019/10/daria-nepriakhina-gGoi4QTXXBA-unsplash-800x450.jpg
+image: /images/daria-nepriakhina-gGoi4QTXXBA-unsplash-1200x800.jpg
 tags: [Lifestyle, Personal]
 
 ---

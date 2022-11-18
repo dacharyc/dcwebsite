@@ -2,9 +2,10 @@
 title: Choosing the best writing tool
 author: Dachary Carey
 layout: post
+description: In which I lay out a generalist approach to choosing writing tools.
 date: 2019-07-12 15:01:35 +0300
 url: /2019/07/12/choosing-the-best-writing-tool/
-image: /wp-content/uploads/2019/07/best-tool-for-the-job-800x450.png
+image: /images/best-tool-for-the-job-hero.jpg
 tags: [Business, Writing]
 
 ---

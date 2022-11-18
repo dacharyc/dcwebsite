@@ -2,9 +2,10 @@
 title: 'Real talk: freelance/contract writing'
 author: Dachary Carey
 layout: post
+description: In which I talk about the pros and cons of being a freelance technical writer.
 date: 2019-06-12 15:01:35 +0300
 url: /2019/06/12/real-talk-freelance-contract-writing/
-image: /wp-content/uploads/2019/06/shutterstock_1348169369-800x450.jpg
+image: /images/shutterstock_1348169369-1200x795.jpg
 tags: [Business, Writing]
 
 ---

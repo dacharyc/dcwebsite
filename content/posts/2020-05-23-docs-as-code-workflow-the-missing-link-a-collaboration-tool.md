@@ -2,9 +2,10 @@
 title: 'Docs-as-code workflow: the missing link; a collaboration tool'
 author: Dachary Carey
 layout: post
+description: In which I wax poetic about the value of previewing a docs-as-code site.
 date: 2020-05-23 15:01:35 +0300
 url: /2020/05/23/docs-as-code-workflow-the-missing-link-a-collaboration-tool/
-image: /wp-content/uploads/2020/05/config.yml_example-800x450.jpg
+image: /images/tugboat-hero.jpg
 tags: [Writing]
 
 ---
