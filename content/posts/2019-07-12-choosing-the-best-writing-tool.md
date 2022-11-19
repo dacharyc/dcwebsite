@@ -13,7 +13,7 @@ In my recent technical writing job search and interviewing process, I've encount
 
 That's because there is no such thing as a one-size-fits-all writing tool. 
 
-I had an interviewer ask me recently: &#8220;When you sit down at the computer to write, what app do you open?&#8221; He seemed a little surprised when I responded: &#8220;That depends entirely on what I'm writing.&#8221; Here's why:
+I had an interviewer ask me recently: "When you sit down at the computer to write, what app do you open?" He seemed a little surprised when I responded: "That depends entirely on what I'm writing." Here's why:
 
 Different writing tools are designed for different tasks. There are also a lot of ancillary tools related to writing tasks that a writer might need to use in the course of the job.
 
@@ -23,7 +23,7 @@ When the general public thinks about writing on a computer, they typically pictu
 
 Currently, I don't use word processors very often. I'd typically fire this type of app up when working on a simple article or marketing piece. The majority of the time these days, I'm only using a word processor when editing something a client has sent me. It's fine for simple revision work, or working with simple content, but if you're hiring a technical writer and you want complex deliverables in Microsoft Word, I might run the other direction.
 
-(Not because I don't know how to use the more advanced functionality of these tools, like Table of Contents, etc. &#8211; but because this isn't the best tool for long-form or sophisticated content needs, and if it's the tool you rely on, that tells me a lot about your organization's documentation processes. But that's a whole &#8216;nother blog post&#8230;)
+(Not because I don't know how to use the more advanced functionality of these tools, like Table of Contents, etc. - but because this isn't the best tool for long-form or sophisticated content needs, and if it's the tool you rely on, that tells me a lot about your organization's documentation processes. But that's a whole 'nother blog post...)
 
 ## Long-form writing
 
@@ -31,7 +31,7 @@ One of my favorite writing apps ever is [Scrivener][5]. I've spent a fair amount
 
 I think it is the single best writing tool for long-form content out there; it has amazing support for organizing and re-ordering content, revision workflow, storing relevant research and notes within the app, and more advanced features to help you tackle even the most complex long-form writing project.
 
-And the compiling options&#8230; so many compiling options.
+And the compiling options... so many compiling options.
 
 If you're a single person working on long-form writing projects, Scrivener is the way to go.
 
@@ -39,11 +39,11 @@ Unfortunately, it's really not great for collaboration. And if you're doing a pr
 
 ## Text editors
 
-When the technical writing gets more technical, I turn to simple text editors. Recently, I worked on some API documentation using GitHub-flavored Markdown, which I committed to a private repo on GitHub, so I used [Atom][6] for this project. It's simple, displays Markdown and code nicely and makes it easy to spot potential problems. Atom does a good job of &#8216;helping' with auto-complete and spotting properly-formed (and improperly-formed) syntax. 
+When the technical writing gets more technical, I turn to simple text editors. Recently, I worked on some API documentation using GitHub-flavored Markdown, which I committed to a private repo on GitHub, so I used [Atom][6] for this project. It's simple, displays Markdown and code nicely and makes it easy to spot potential problems. Atom does a good job of 'helping' with auto-complete and spotting properly-formed (and improperly-formed) syntax. 
 
 When I'm working on simple code, JSON, XML, Markdown, CSS or HTML, I use Atom. It's my preferred tool when doing the more technical type of technical writing. (Until I get to more substantial code manipulation, and then I use an IDE, but that's more developer-y and is probably an outlier for a pure writer or tech writer.)
 
-I have friends who prefer [VS Code][7], and my husband is a staunch [Vim][8] user&#8230; there are a lot of opinions about text editors, especially among developers. I'll leave you all to your holy wars.
+I have friends who prefer [VS Code][7], and my husband is a staunch [Vim][8] user... there are a lot of opinions about text editors, especially among developers. I'll leave you all to your holy wars.
 
 I also have a few other text editing apps I use on occasion; [iA Writer][9] and [MacDown][10]. Because you can never have too many text editors; one for every occasion!
 
@@ -53,7 +53,7 @@ Sometimes, I write directly in a content management system, or CMS. When I'm blo
 
 I prefer authoring directly in a CMS if I'm creating rich content, with links and images, that will ultimately end up in a CMS; saves overhead vs. drafting it in a word processor, and then fighting with formatting when bringing it into the CMS from another app. (Unless I'm working in Markdown, and the CMS supports Markdown. Then I might just draft the content in my text editor.)
 
-You'll note I don't have a separate section for wikis. I don't make a distinction between a wiki and other types of CMSs; from a technical writer's standpoint, a wiki is just another type of CMS. Granted, a wiki is supposed to encourage collaboration, so you may have more contributors, and effectively managing content there may require more process. But that's another digression&#8230;
+You'll note I don't have a separate section for wikis. I don't make a distinction between a wiki and other types of CMSs; from a technical writer's standpoint, a wiki is just another type of CMS. Granted, a wiki is supposed to encourage collaboration, so you may have more contributors, and effectively managing content there may require more process. But that's another digression...
 
 ## HATs
 
@@ -71,9 +71,9 @@ On the other end of the API documentation spectrum, you have something like [Swa
 
 ## Charts and presentations
 
-By far the most common charting and diagramming tool I see in job descriptions is [Microsoft Visio][17], which makes me a little sad. Microsoft products get the job done, but&#8230; well, I'll refrain from further comment until I'm in a longer-term gig where I know I won't have to use them. But my preferred charting tool is [OmniGraffle][18], and it's the one I will continue to use for my personal projects for the foreseeable future.
+By far the most common charting and diagramming tool I see in job descriptions is [Microsoft Visio][17], which makes me a little sad. Microsoft products get the job done, but... well, I'll refrain from further comment until I'm in a longer-term gig where I know I won't have to use them. But my preferred charting tool is [OmniGraffle][18], and it's the one I will continue to use for my personal projects for the foreseeable future.
 
-And then you have presentations, which, sadly, have been the bane of offices everywhere from the very first [PowerPoint][19] presentation&#8230; and will continue to be so, because sometimes a presentation (or slide deck) really is the best tool for the job. As a long-time Mac user, I prefer Apple's [Keynote][20], but can use either. And let's not forget [Google Slides][21], which is the G Suite answer to presentations.
+And then you have presentations, which, sadly, have been the bane of offices everywhere from the very first [PowerPoint][19] presentation... and will continue to be so, because sometimes a presentation (or slide deck) really is the best tool for the job. As a long-time Mac user, I prefer Apple's [Keynote][20], but can use either. And let's not forget [Google Slides][21], which is the G Suite answer to presentations.
 
 ## Graphic editing, screen-capturing and video editing tools
 
@@ -97,7 +97,7 @@ Writing often entails some form of project management. There are a variety of re
 
 Most recently, I've used [Basecamp][29], [Pivotal Tracker][30], [Jira][31], [GitHub Issues/Projects][32] and [Trello][33] for project management and issue tracking. I'm partial to Jira, but they each have their quirks, and I'm basically just a worker bee using whatever the organization uses. But I do strongly believe having one of these tools in place helps organizations of all sizes stay organized and on-top of outstanding tasks, and using this type of tool is something I look for when interviewing.
 
-I also rely heavily on project management and issue tracking tools to provide transparency in an organization around workload and productivity. Working remotely requires an extra level of trust, and having a shared project management tool where other members of an organization can see the current workload broken down &#8211; and watch tickets progress through the columns &#8211; can help promote that trust. But there's a whole lot more I could unpack around this&#8230; I really need to write more about working remotely.
+I also rely heavily on project management and issue tracking tools to provide transparency in an organization around workload and productivity. Working remotely requires an extra level of trust, and having a shared project management tool where other members of an organization can see the current workload broken down - and watch tickets progress through the columns - can help promote that trust. But there's a whole lot more I could unpack around this... I really need to write more about working remotely.
 
 ## Collaboration tools
 
@@ -115,9 +115,9 @@ Some technical writers never get into this level of technical complexity; I spen
 
 In my experience, the more tightly coupled a technical writer is with a software development team, the more likely they are to be working in this type of environment. Tech writers that are more embedded in Product, Customer Services or other parts of the org are more likely to be using software that abstracts away some of the technical complexity. But that's obviously not true in every case; there are a wide range of ways technical writers work within an org, so it's tough to make generalizations about tooling and workflow.
 
-## The &#8220;best&#8221; writing tool changes in context
+## The "best" writing tool changes in context
 
-The one generalization it's safe to make about technical writing tooling is that the &#8220;best&#8221; tool varies based on the org, the desired output, SMEs and a broad range of factors. What's &#8220;best&#8221; in one org may not work at all in another org. As a writer, the tools I use today may not be the ones I'll use tomorrow; today I'm working on Markdown files in Atom and running git on the command line, but tomorrow I might be drafting a blog post in a CMS, or working on API documentation.
+The one generalization it's safe to make about technical writing tooling is that the "best" tool varies based on the org, the desired output, SMEs and a broad range of factors. What's "best" in one org may not work at all in another org. As a writer, the tools I use today may not be the ones I'll use tomorrow; today I'm working on Markdown files in Atom and running git on the command line, but tomorrow I might be drafting a blog post in a CMS, or working on API documentation.
 
 As a generalist, I enjoy using a wide range of writing tools; that way I can just pick up the best tool for the job when I sit down to start my task.
 

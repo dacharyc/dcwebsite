@@ -17,32 +17,38 @@ Using `npm uninstall` is simple, right? Just run it with the name of the package
 
 So here's what my command line looked like today:
 
-<pre class="wp-block-preformatted">-&gt; npm uninstall -g realm-cli
--&gt; realm-cli --version
+```shell
+-> npm uninstall -g realm-cli
+-> realm-cli --version
 realm-cli version 2.0.0-beta.3
-</pre>
+```
 
-Aaand&#8230;. that went on for a while. I kept running various permutations of NPM uninstall from different directories with different flags, and every time I checked the `realm-cli --version`, I kept seeing it sitting there, taunting me.
+Aaand.... that went on for a while. I kept running various permutations of NPM uninstall from different directories with different flags, and every time I checked the `realm-cli --version`, I kept seeing it sitting there, taunting me.
 
 I did what any good burgeoning developer would do. I started down a StackOverflow rabbit hole. I got my first good clue when I found this hint:
 
-`-> npm list -g`
+```shell
+-> npm list -g
+```
 
 Aha! This tells me which global libraries are installed and where they're located. I've got four of them, and they're at `/usr/local/lib`:
 
-<pre class="wp-block-preformatted">bluehawk@0.2.3
+```shell
+bluehawk@0.2.3
 m@1.5.6
 mongodb-realm-cli@2.0.0-beta.3
 npm@7.4.0
-</pre>
+```
 
 Now the astute among you will probably spot the problem pretty much immediately. I went a bit further before I figured it out.
 
 I popped into `/usr/local/lib`. Didn't see my `realm-cli` there, but I did see `node_modules`, so I figured that was where I needed to be. Changed directory into there, did a little `ls`, and Bob's your uncle: 
 
-`bluehawk     m     mongodb-realm-cli     npm`
+```shell
+bluehawk    m   mongodb-realm-cli   npm
+```
 
-Oh&#8230; wait a minute. I've been doing all kinds of permutations of `npm uninstall realm-cli`. But the name of the thing I'm trying to uninstall is `mongodb-realm-cli`. Even though the tool is all `realm-cli` this and `realm-cli` that, the _name_ of the thing is actually `mongodb-realm-cli`.
+Oh... wait a minute. I've been doing all kinds of permutations of `npm uninstall realm-cli`. But the name of the thing I'm trying to uninstall is `mongodb-realm-cli`. Even though the tool is all `realm-cli` this and `realm-cli` that, the _name_ of the thing is actually `mongodb-realm-cli`.
 
 Maybe this is something that a more experienced developer would check right away. But this is the first time I can remember encountering a CLI tool whose name is different than the syntax you use to invoke it. When I do the `realm-cli --version` and get back `realm-cli version 2.0.0-beta.3` instead of `mongodb-realm-cli version...`, that reinforces my perhaps naive conflation of package name and the syntax you use to invoke it.
 
@@ -54,4 +60,4 @@ I'm doing some inferring here, but here's my theory.
 
 MongoDB acquired Realm a couple of years ago. I did a little poking around, and NPM has a `realm-cli` that was last published 4 years ago. My guess is that for some reason, there isn't access to remove that old `realm-cli` package, so MongoDB had to append its name to the front of its version of the `realm-cli` to differentiate it. So if you're using Realm these days, you want `mongodb-realm-cli`.
 
-Now I'm curious how often things like this happen with acquisitions&#8230;
+Now I'm curious how often things like this happen with acquisitions...

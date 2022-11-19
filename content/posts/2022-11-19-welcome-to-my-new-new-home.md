@@ -3,7 +3,7 @@ title: Welcome to my new, new home.
 author: Dachary Carey
 layout: post
 description: I which I migrate from WordPress to Hugo.
-date: 2022-11-18 15:01:35 -0500
+date: 2022-11-19 10:01:35 -0500
 url: /2022/11/19/welcome-to-my-new-new-home/
 image: /images/new-new-home-hero.jpg
 tags: [Personal]
@@ -39,9 +39,11 @@ I just want simple Markdown. Ideally, with alt text.
 
 Oh, yeah, and did I mention that the theme I selected for my Hugo site wanted the hero images to be 1200 x 800? And essentially **NONE** of the images that exported from my WordPress site were in that size. So, it's time to re-make all of my hero images, or source new ones where the old ones were just ridiculously tiny.
 
-Oh, also, the tags that came across weren't usable. And the timestamp format didn't work in the page metadata. 
+Oh, also, the tags that came across weren't usable. And the timestamp format didn't work in the page metadata. And there were a million stupid HTML codes for "smart" things - smart quotes, smart ellipses, smart hyphens. 
 
 So, even after using the plugin to export my content, I had to individually tweak every post. As I write this, I haven't done the image handling yet for the images that are in the posts - I may let hubby write me a script for that because he can do it quickly. And then, of course, I have to select the image sizes that I want to actually store, because I don't want or need to retain all of those different image sizes for a simple personal static site. 
+
+_Note, a little bit later: I ended up handling the images myself. Hubby slept in this morning and I finished the images before he woke up - there weren't actually that many._
 
 Ideally, this move to Hugo and hosting my content from a GitHub repo will make my site more portable in the future. Nothing lasts forever, and I'm sure someday I'll need to change things up again. But maybe next time it'll be easier because I won't have some uber framework eating my content and storing it with all kinds of weird custom markup and doing who-knows-what to the images that I upload.
 
