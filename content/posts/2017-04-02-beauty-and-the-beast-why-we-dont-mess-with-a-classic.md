@@ -3,8 +3,9 @@ title: 'Beauty and the Beast: Why We Don’t Mess with a Classic'
 author: Dachary Carey
 layout: post
 date: 2017-04-02 15:01:35 +0300
+description: In which I take issue with the Hollywood treatment of this classic fairy tale.
 url: /2017/04/02/beauty-and-the-beast-why-we-dont-mess-with-a-classic/
-image: /wp-content/uploads/2017/04/beauty_and_the_beast-800x450.jpg
+image: /images/beauty-and-the-beast-hero.jpg
 tags: [Review]
 
 ---

@@ -1,7 +1,7 @@
 ---
 title: Corporate Runaways
 permalink: /corporate-runaways/
-image: '/images/programming.png'
+image: '/images/corporate-runaways-reach-ushuaia.jpg'
 ---
 
 Corporate Runaways

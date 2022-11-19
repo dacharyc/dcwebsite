@@ -3,8 +3,9 @@ title: Some days are harder than others
 author: Dachary Carey
 layout: post
 date: 2017-05-07 15:01:35 +0300
+description: In which I reflect on what it means to be a writer.
 url: /2017/05/06/some-days-are-harder-than-others/
-image: /wp-content/uploads/2017/05/typewriter.jpg
+image: /images/some-days-harder-than-others-hero.jpg
 tags: [Personal]
 
 ---

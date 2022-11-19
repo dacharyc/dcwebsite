@@ -1,7 +1,7 @@
 ---
 title: About
 permalink: /about/
-image: 'https://dacharycarey.com/wp-content/uploads/2016/04/IMG_5632-1200x900.jpg'
+image: '/images/IMG_6108.jpeg'
 ---
 
 A Few Words About Me

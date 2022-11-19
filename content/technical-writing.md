@@ -1,7 +1,7 @@
 ---
 title: Technical Writing
 permalink: /technical-writing/
-image: '/images/programming.png'
+image: '/images/technical-writing.jpg'
 ---
 
 After doing technical writing off-and-on throughout my writing career, I accepted my first full-time technical writing contract in 2016. I've done a range of contracting and in-house technical writing, getting more and more developer-focused and culminating in my current role in Developer Education at MongoDB.

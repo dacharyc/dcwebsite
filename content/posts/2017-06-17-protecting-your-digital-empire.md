@@ -3,8 +3,9 @@ title: Protecting your digital empire
 author: Dachary Carey
 layout: post
 date: 2017-06-18 15:01:35 +0300
+description: In which I explore the value of protecting your digital assets.
 url: /2017/06/17/protecting-your-digital-empire/
-image: /wp-content/uploads/2017/06/synology_diskstation_ds416play_4_bay_nas_1465243508000_1258373-500x450.jpg
+image: /images/digital-empire-hero.jpg
 tags: [Business]
 
 ---
