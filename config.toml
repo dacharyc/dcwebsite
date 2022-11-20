@@ -141,8 +141,8 @@ paginate = 9
 
   #-------------------------------
   # Comment Section (Disqus)
-  [params.disqus]
-    disqusShortname = "demo-menca" # Add your shortname for Disqus Comment. For example demo-menca
+  # [params.disqus]
+  #  disqusShortname = "demo-menca" # Add your shortname for Disqus Comment. For example demo-menca
 
 
 [markup]
