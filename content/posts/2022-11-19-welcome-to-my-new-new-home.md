@@ -2,7 +2,7 @@
 title: Welcome to my new, new home.
 author: Dachary Carey
 layout: post
-description: I which I migrate from WordPress to Hugo.
+description: In which I migrate from WordPress to Hugo.
 date: 2022-11-19 10:01:35 -0500
 url: /2022/11/19/welcome-to-my-new-new-home/
 image: /images/new-new-home-hero.jpg
