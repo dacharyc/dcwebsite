@@ -58,7 +58,7 @@ paginate = 9
     # icon = "ion-logo-mastodon"
     icon = "logo-mastodon"
     name = "Mastodon"
-    link = "https://mstdn.social/@dachary"
+    link = "https://dacharycarey.social/@dachary"
 
   [[params.social]]
     # icon = "ion-logo-github"
