@@ -17,7 +17,7 @@ The amount of stuff I write may be in direct proportion to the amount of coffee 
 
 I'm married to the inestimable [Kay Rhodes](http://masukomi.org/). We love to travel. If you like to read about travel, or see pretty travel pics, check out our travel site: [Corporate Runaways](http://www.corporaterunaways.com/).
 
-We have two dogs (Lita, a Lab/Beagle mix, and Maui, an English Springer Spaniel), and a cat (Ash, a Maine Coone). I talk about them - maybe a little more than I should. If you're just here for the cute pet pics, yes, they have [their own Instagram account](https://www.instagram.com/ashlita2018/).
+We have two dogs (Lita, a Lab/Beagle mix, and Maui, an English Springer Spaniel), and a cat (Ash, a Maine Coone). I talk about them - maybe a little more than I should.
 
 Still here? Ok. On to the slightly more boring stuff:
 
@@ -25,7 +25,7 @@ I'm a professional writer. I've been writing for over 20 years, and I quit my da
 
 I used to keep a portfolio of my work on my website, but the availability of the sources kept changing, which made lots of broken links... that didn't make anyone happy.
 
-Currently, I mostly document [the iOS/Swift SDK for MongoDB Realm](https://docs.mongodb.com/realm/sdk/ios/), but work on other Realm and Atlas App Services documentation in the margins. This entails writing documentation and code examples for the local Realm mobile app database and the Atlas App Services products. Turns out, I really love a technical documentation job that also lets me write code examples and learn more about Swift development. Before the current gig, I've written things like:
+For details, check out my [Technical Writing](http://localhost:1313/technical-writing/) page. Before the current gig, I've written things like:
 
 *   Technical writing, such as procedure guides, enterprise SaaS app software documentation, spec documents, and online help portals
 *   Developer-focused documentation, including API docs

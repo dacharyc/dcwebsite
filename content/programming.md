@@ -15,12 +15,16 @@ Shattered Ring
 
 Bonus: it's also great for tracking D&D or other TTRPG games! I'm using it to keep track of two D&D campaigns I'm in.
 
+I wrote most of the [Realm SwiftUI documentation](https://www.mongodb.com/docs/realm/sdk/swift/swiftui/) while working on this app. I had to figure out how to do things with Realm and SwiftUI, which I translated to public-facing documentation.
+
 PR Focus
 --------
 
 [PR Focus](https://prfocus.app) is a GitHub tracking app I'm writing for macOS. My regular workflow has me keeping track of pull requests across many repositories. I need to stay on top of my own GitHub pull requests, pull requests where I'm a reviewer, and pull requests by the upstream engineering teams whose work I document. Turns out, other folks on my team find it helpful, too, so now it's in a private alpha with a few users on TestFlight while I iron out some rough edges and squash a few more bugs.
 
-I'm writing my tool as a macOS app with SwiftUI and Realm. It has been interesting to write a macOS app with SwiftUI, and stumble across the differences between writing for it and iOS. It's also more complicated, as the GitHub API requires me to make a whole series of network calls to get the information I want to track, so I'm having fun figuring out how to do all those network calls and turn them into Realm objects I can display in my app and persist to the DB.
+I'm writing my tool as a macOS app with SwiftUI and Realm. It has been interesting to write a macOS app with SwiftUI, and stumble across the differences between writing for it and iOS. It's also more complicated, as I'm working with the GitHub API. I started the app using the GitHub REST API, but switched to the GraphQL API for more efficient network requests. Working with both APIs has given me a great opportunity to directly compare REST vs. GraphQL, and a lot of insight into what makes "good" API documentation as I consume it.
+
+Of course, as a technical writer, I've written [a documentation site for PR Focus](https://prfocus.app/docs/). I've made this documentation site the in-app help using a web view.
 
 Coffeelicious/Tealicious
 ------------------------
@@ -32,4 +36,4 @@ SwiftUI Template App for MongoDB Realm with Sync
 
 My team at MongoDB maintains a series of simple "template apps" in each of the Realm SDK languages to make it easier for developers to get started using MongoDB Realm with Sync. These are simple templates that are pre-populated with some of the basic code to work with Realm and Sync, that are automagically connected to a Sync backend that persists data in MongoDB Atlas. You sign up, select the "Create a Template App" option, a backend is created for you, and you have a few options to download the template app code. It's a pretty spiffy system that my very smart teammates have put together.
 
-My contribution to it is the SwiftUI Template App, which you can see in the [Realm Template Apps GitHub repository](https://github.com/mongodb-university/realm-template-apps/tree/main/swiftui). I've also become a maintainer of the Kotlin template app, and will be helping with maintenance of the C++ template app that my lead is writing.
+My contribution to it is the SwiftUI Template App, which you can see in the [Realm Template Apps GitHub repository](https://github.com/mongodb-university/realm-template-apps/tree/main/swiftui). I've also become a maintainer of the Kotlin template app, and will be writing a C++ template app in the near future.
