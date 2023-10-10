@@ -6,7 +6,7 @@ description: In which I automate readability scoring for documentation.
 date: 2023-03-10 17:00:00 -0500
 url: /2023/03/10/docs-readability-scoring/
 image: /images/docs-readability-hero.jpg
-tags: [Coding, Writing]
+tags: [Documentation, Coding, Writing]
 ---
 
 Experienced documentation writers know that grammar isn't the only important aspect of documentation. Readability is a huge part of what makes documentation good. Readable documentation:

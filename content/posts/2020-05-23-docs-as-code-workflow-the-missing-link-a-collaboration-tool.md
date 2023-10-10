@@ -6,7 +6,7 @@ description: In which I wax poetic about the value of previewing a docs-as-code 
 date: 2020-05-23 15:01:35 +0300
 url: /2020/05/23/docs-as-code-workflow-the-missing-link-a-collaboration-tool/
 image: /images/tugboat-hero.jpg
-tags: [Writing]
+tags: [Documentation, Writing]
 
 ---
 [Docs as code][1] is a technical documentation movement to use the same tools that developers use in the documentation workflow. It's a great way to enable collaboration with developers, and now that I've been doing it for more than a year, I can't imagine writing documentation for developers, with developers in any other toolchain. But one thing is missing from most docs-as-code workflows: a collaboration tool to easily share the work and solicit feedback.
