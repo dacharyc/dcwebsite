@@ -9,7 +9,7 @@ image: /images/docs-writing-code-examples-hero.png
 tags: [Documentation, Coding, Writing]
 ---
 
-A few weeks ago, I wrote about the benefits of testing the code examples in your documentation.
+A few weeks ago, I wrote about [the benefits of testing the code examples in your documentation](https://dacharycarey.com/2023/10/10/test-docs-code-examples/).
 
 That article has sparked some interesting conversations. The topic kept turning to who should be writing the code examples.
 
