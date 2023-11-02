@@ -151,7 +151,7 @@ Now I need to figure out how to apply the update to the matching document I retr
 ```js
 const update = {
     "$push": {
-    "weekly_data": dataOfAppropriateTypes
+        "weekly_data": dataOfAppropriateTypes
     }
 }
 ```
@@ -169,10 +169,10 @@ Alright! Now I've got everything I need to actually perform the update. So now I
 ```js
 sdkDocsCollection.updateOne(mongoDBQuery, update, options)
     .then(result => {
-    const { matchedCount, modifiedCount } = result;
-    if(matchedCount && modifiedCount) {
-    console.log(`Successfully updated the item.`)
-    }
+        const { matchedCount, modifiedCount } = result;
+        if(matchedCount && modifiedCount) {
+            console.log(`Successfully updated the item.`)
+        }
     })
     .catch(err => console.error(`Failed to update the item: ${err}`))
 ```
