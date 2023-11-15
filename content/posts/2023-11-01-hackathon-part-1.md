@@ -203,4 +203,4 @@ So now I copy a few rows of data for a week into my test spreadsheet. Does it ma
 
 I ran the imports for 3 months worth of weekly data just to get a baseline of data into my Atlas collection. Now it is time to start building Charts!
 
-In the next installment, [Part 2 in my Hackathon series](https://dacharycarey.com/2023/11/08/hackathon-part-2/), I'm going to dig into the data structure. If you want to skip that part and go directly to where I start building charts, look for Part 3 in my Hackathon series.
+In the next installment, [Part 2 in my Hackathon series](https://dacharycarey.com/2023/11/08/hackathon-part-2/), I'm going to dig into the data structure. If you want to skip that part and go directly to where I start building charts, look for [Part 3](https://dacharycarey.com/2023/11/15/hackathon-part-3/) in my Hackathon series.
