@@ -94,7 +94,7 @@ With those questions in mind, this is what I came up with. Each documentation pa
 
 ![Screenshot of a transformed document containing Google Analytics data for a documentation page](/images/sdk-analytics-atlas-document.png)
 
-If you're familiar with software development, you may notice that a lot of these string fields have a small selection of fixed values. If I were writing this as an app, I make these fields enums to enforce correctness and simplify discovering the values. MongoDB doesn't have an enum data type, though. 
+If you're familiar with software development, you may notice that a lot of these string fields have a small selection of fixed values. If I were writing this as an app, I would make these fields enums to enforce correctness and simplify discovering the values. MongoDB doesn't have an enum data type, though. 
 
 Developers often debate how to store enum values in MongoDB. Integers are arguably more efficient to query, and you can map them to strings. But storing strings directly gives you immediate understanding of the data. This collection will never have a huge number of documents or values to query. Making these fields strings makes the data more understandable for my teammates. This also lets me use the values of these fields as labels when I get to making Charts.
 
@@ -201,4 +201,4 @@ After manually structuring the majority of my data, it was time to start running
 
 After some minor hiccups with authenticating to my endpoint, everything just worked!
 
-With the setup done, I could finally get into the meat of my hackathon project - making [MongoDB Charts](https://www.mongodb.com/docs/charts/) to make it easy for my team to visualize the data I loaded into Atlas. Check it out in Part 3 of this series, coming soon!
+With the setup done, I could finally get into the meat of my hackathon project - making [MongoDB Charts](https://www.mongodb.com/docs/charts/) to make it easy for my team to visualize the data I loaded into Atlas. Check it out in [Part 3](https://dacharycarey.com/2023/11/15/hackathon-part-3/) of this series.
