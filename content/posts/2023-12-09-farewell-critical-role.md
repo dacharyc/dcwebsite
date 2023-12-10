@@ -3,7 +3,7 @@ title: Farewell, Critical Role
 author: Dachary Carey
 layout: post
 description: In which I abandon one of my favorite franchises due to enshittification.
-date: 2023-12-08 7:00:00 -0400
+date: 2023-12-09 7:00:00 -0400
 url: /2023/12/09/farewell-critical-role/
 image: /images/gaming-table-hero.png
 tags: [Personal]
@@ -55,9 +55,14 @@ There are - a *lot* of reasons I think Facebook is bad. I don't care if they've 
 
 I'm not going to list all the reasons I think Meta is awful. It would probably take thousands of words to enumerate the ways in which they actively make the world a worse place. 
 
-By taking money from Meta, and actively promoting the company's products to their fans, Critical Role is telling their fans:
+By taking money from Meta, and actively promoting the company's products to their fans, Critical Role is proving with their actions that they are willing to support a company:
 
-> "It's ok. This company that is actively harming millions of people is fine. Facebook has helped contribute to a genocide, but you should give them money. Their platform played a pivotal role in an insurrection that came perilously close to toppling our government - and internal documents that have come out in investigations show they were aware of it at the time - but don't worry your pretty little head about it. Just give them some cash for this really cool game you should definitely play. And continue to fund the atrocities that this morally bankrupt corporation contribute to. And don't forget to be complicit in the commoditization of all your personal data! Plus everyone you know whose information you share with them."
+- That is actively harming millions of people. 
+- That has helped contribute to a genocide. 
+- Whose platform played a pivotal role in an insurrection that came perilously close to toppling our government - and internal documents that have come out in investigations show said company was aware of it at the time
+- That makes all of its users complicit in the commoditization of their personal data, and the personal data of all their friends and family.
+
+Not only is Critical Role proving with their actions that they are willing to support Meta in spite of these and many other issues - they are asking their *fans* to support Meta by buying its products.
 
 This was a bridge too far for me. I have seen the increasing commercialization of Critical Role over the last few years as an inevitable march of progress that supported their growth. But I have still had faith in the humans at the core of the company to honor the responsibility that comes along with having such a powerful platform. I had faith that they generally wanted good for their fans, who had brought them such success through their devotion. But a company that takes money from Meta to promote its products cannot have the good of its audience in mind. It has officially betrayed its audience for cash.
 
