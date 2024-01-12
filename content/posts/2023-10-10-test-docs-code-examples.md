@@ -77,4 +77,4 @@ What do tests for documentation look like? Here's an example.
 
 Essentially, the test *proves* that the code in the documentation page works the way we say it works.
 
-In a future blog post, I'll dive deeper into *how* to test docs code examples.
+In a future blog post, I'll dive deeper into *how* to test docs code examples. Check out [How to Test Docs Code Examples](https://dacharycarey.com/2024/01/12/how-to-test-docs-code-examples/).
