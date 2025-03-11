@@ -21,7 +21,7 @@ This was the first attempt to do anything like this in the organization - unders
 At the time of writing this overview, the audit is complete, but it's going to take me some time to write all this up, so I'll add links to the "Coming soon" content as I make time to write up the details.
 
 - [What is a code example?](http://dacharycarey.com/2025/03/02/audit-what-is-code-example/)
-- What should we track? (Coming soon)
+- [What should we track?](http://dacharycarey.com/2025/03/10/audit-what-to-track/)
 - How can we access the data? (Coming soon)
 - AI-assisted classification (Coming soon)
 - Modeling code example metadata (Coming soon)
