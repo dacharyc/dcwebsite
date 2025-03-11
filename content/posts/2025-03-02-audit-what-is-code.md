@@ -191,4 +191,4 @@ Ultimately, this is another arbitrary breakdown which may be imperfect, but it h
 
 With these definitions sorted, we had a way to break down our counts more granularly. I thought I had what I needed to perform the audit. But I realized as I started to think about how to build out the tooling to actually complete the audit that these code example types were only one part of the picture. We needed to agree on what we actually wanted to track about the code examples in our documentation.
 
-The next phase in the project would be deciding what to track.
+The next phase in the project would be [deciding what to track.](http://dacharycarey.com/2025/03/10/audit-what-to-track/)
