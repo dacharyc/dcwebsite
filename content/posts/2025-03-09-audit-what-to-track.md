@@ -79,7 +79,7 @@ I *also* discovered some unexpected consequences of this being an option used fo
 
 ### Git data
 
-We store our reStructuredText documentation files in git repositories. If we wanted to get information like when the code example was added or when it was last updated, it would be possible to do this using git data. However, that has its own complications. It constrains *how* we can get the data, which I cover in the *How can we access the data?* article in this series (coming soon).
+We store our reStructuredText documentation files in git repositories. If we wanted to get information like when the code example was added or when it was last updated, it would be possible to do this using git data. However, that has its own complications. It constrains *how* we can get the data, which I cover in the [*How can we access the data?*](http://dacharycarey.com/2025/03/16/audit-access-data/) article in this series (coming soon).
 
 More importantly, it requires us to be more sophisticated in how we want to use the code example audit data. An argument could be made that we should regularly revisit code examples after N period of time to make sure they still work. If we could see when a code example was added and last updated, we could generate a list of code examples that should be reviewed to make sure they're still valid and still reflect best practices. But we don't currently have a process to do this, a way to assign the work, or the bandwidth to complete it. So parsing the git data to get this information hasn't become a priority.
 
@@ -89,7 +89,7 @@ I would like to see us get to this point in the future. I've added an imperfect 
 
 When we ingest the rST to look for code example-related directives, we examine the rST unit-by-unit. Depending on *how* we are getting the data we parse, the unit could either represent a file that contains rST or a documentation page.
 
-For reasons I'll cover in the *How can we access the data?* article in this series (coming soon), we're ingesting units that map to the documentation page. This is data that we can access "for free" as we are retrieving code examples, which we could either discard or record.
+For reasons I'll cover in the [How can we access the data?](http://dacharycarey.com/2025/03/16/audit-access-data/) article in this series (coming soon), we're ingesting units that map to the documentation page. This is data that we can access "for free" as we are retrieving code examples, which we could either discard or record.
 
 Discarding the page data would require the least handling. We could just munge everything into one big counter - or a few big counters, if we want to be able to track programming language and code example category independently. But that would leave a lot of powerful analysis, validation, and future development opportunities untapped.
 
@@ -192,4 +192,4 @@ For the moment, the plan is to take our audit data to key stakeholders across th
 
 ## What's next?
 
-With decisions made about what to actually track, we needed to consider the implementation of how we were going to get, store, and use this information. I'll cover those details in *How can we access the data?* (Coming soon)
+With decisions made about what to actually track, we needed to consider the implementation of how we were going to get, store, and use this information. I'll cover those details in *[How can we access the data?](http://dacharycarey.com/2025/03/16/audit-access-data/)*.
