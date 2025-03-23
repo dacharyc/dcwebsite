@@ -23,7 +23,7 @@ At the time of writing this overview, the audit is complete, but it's going to t
 - [What is a code example?](http://dacharycarey.com/2025/03/02/audit-what-is-code-example/)
 - [What should we track?](http://dacharycarey.com/2025/03/10/audit-what-to-track/)
 - [How can we access the data?](http://dacharycarey.com/2025/03/16/audit-access-data/)
-- AI-assisted classification (Coming soon)
+- [AI-assisted classification](http://dacharycarey.com/2025/03/23/audit-ai-assisted-classification/)
 - Modeling code example metadata (Coming soon)
 - Slicing code example metadata (Coming soon)
 - Audit conclusions (Coming soon)

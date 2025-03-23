@@ -166,7 +166,7 @@ The "snippet" term isn't actually used as a value in the metadata; a code exampl
 
 #### Imperfect but usable
 
-Ultimately, I think this is an imperfect breakdown. When evaluating syntax example versus usage example, we have had difficulty distinguishing these both programmatically and as humans spot-checking the audit results. We have debated whether things like the presence of placeholders affect whether code is a syntax example or a usage example, or whether we can use length as a proxy for determining this. I'll dig more into this in the AI-assisted classification article.
+Ultimately, I think this is an imperfect breakdown. When evaluating syntax example versus usage example, we have had difficulty distinguishing these both programmatically and as humans spot-checking the audit results. We have debated whether things like the presence of placeholders affect whether code is a syntax example or a usage example, or whether we can use length as a proxy for determining this. I'll dig more into this in the *[AI-assisted classification](http://dacharycarey.com/2025/03/23/audit-ai-assisted-classification/)* article.
 
 We also omitted some categories that the Education AI team used in their initial assessment, such as *sample data* and *error message*. I would have had a difficult time programmatically assessing whether something was sample data, so I omitted it in this initial round. Error message would have been a subset of return example, and it seemed - unnecessary - to have that level of granularity around that type of return example versus other types of return examples, given the push-back we initially got about the "too granular" hierarchy.
 
