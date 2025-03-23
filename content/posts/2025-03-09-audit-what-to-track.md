@@ -124,7 +124,7 @@ We have identified the categories we want to use to drill deeper into our code e
 
 In the meantime, we need to assign a category to all of our code examples for this audit. Given the volume - tens of thousands - there is no feasible way we can do that manually. Fortunately, this is an area where AI can help.
 
-In the *AI-assisted classification* article in this series (coming soon), I'll go into more detail about how we used AI to programmatically assign categories to all of the code examples in our documentation. And I'll detail the iteration and refinement process we used to improve the accuracy of this process. It's imperfect, but it makes it possible to do something we wouldn't be able to do at all.
+In the *[AI-assisted classification](http://dacharycarey.com/2025/03/23/audit-ai-assisted-classification/)* article in this series, I'll go into more detail about how we used AI to programmatically assign categories to all of the code examples in our documentation. And I'll detail the iteration and refinement process we used to improve the accuracy of this process. It's imperfect, but it makes it possible to do something we wouldn't be able to do at all.
 
 For this audit, we used AI to assign categories to the code examples as we parsed them, and store those categories as metadata on the code example in the database where we're storing our counts.
 
