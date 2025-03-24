@@ -349,4 +349,4 @@ I'd love to spend some time, and maybe even enlist some of my other teammates, t
 
 ## What's next?
 
-Now that we have the code example category, we can model our code example metadata and insert it into a database. I'll go more into the data modeling decisions we made, and what they enable, in the *Modling Code Example Data* article (coming soon). Category became a key reporting metric in our *Audit Conclusions* (coming soon), and factored heavily in the *Ongoing Code Example Reporting* considerations (coming soon).
+Now that we have the code example category, we can model our code example metadata and insert it into a database. I'll go more into the data modeling decisions we made, and what they enable, in the *Modeling Code Example Data* article (coming soon). Category became a key reporting metric in our *Audit Conclusions* (coming soon), and factored heavily in the *Ongoing Code Example Reporting* considerations (coming soon).
