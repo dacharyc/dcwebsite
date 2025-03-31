@@ -25,12 +25,6 @@ paginate = 9
     weight = 2
 
   [[menu.main]]
-    identifier = "corporate-runaways"
-    name = "Corporate Runaways"
-    url = "/corporate-runaways"
-    weight = 3
-
-  [[menu.main]]
     identifier = "about"
     name = "About"
     url = "/about"
