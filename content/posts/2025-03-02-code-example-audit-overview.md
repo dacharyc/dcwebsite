@@ -25,6 +25,6 @@ At the time of writing this overview, the audit is complete, but it's going to t
 - [How can we access the data?](http://dacharycarey.com/2025/03/16/audit-access-data/)
 - [AI-assisted classification](http://dacharycarey.com/2025/03/23/audit-ai-assisted-classification/)
 - [Modeling code example metadata](http://dacharycarey.com/2025/04/27/audit-model-code-example-metadata/)
-- Slicing code example metadata (Coming soon)
+- [Slicing code example metadata](http://dacharycarey.com/2025/08/23/audit-slice-code-example-data/)
 - Audit conclusions (Coming soon)
 - Ongoing code example reporting (Coming soon)
