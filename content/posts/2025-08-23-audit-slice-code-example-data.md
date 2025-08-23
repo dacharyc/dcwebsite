@@ -19,6 +19,37 @@ For the queries I discuss in this article, each section contains:
 
 For more information about how we modeled the data we're working with here, refer to the *[Modeling Code Example Data](http://dacharycarey.com/2025/04/27/audit-model-code-example-metadata/)* article.
 
+## Table of Contents
+
+Since this article is lengthy, and you may want to refer to a specific section later, I've provided a ToC for convenience:
+
+- [Putting counts in context](#putting-counts-in-context)
+- [Counts by documentation set, product, and sub-product](#counts-by-documentation-set-product-and-sub-product)
+	- [Documentation set](#documentation-set)
+		- [Total counts](#total-counts)
+		- [Programming language](#programming-language)
+		- [Specific programming language](#specific-programming-language)
+		- [Category](#category)
+	- [Product](#product)
+		- [Total counts](#total-counts-1)
+		- [Programming language](#programming-language-1)
+		- [Category](#category)
+	- [Sub-Product](#sub-product)
+		- [Total counts](#total-counts-2)
+		- [Programming language](#programming-language-2)
+		- [Category](#category-1)
+- [Code example complexity analysis](#code-example-complexity-analysis)
+	- [One-line usage examples by documentation set](#one-line-usage-examples-by-documentation-set)
+	- [Min, median, max character counts of code example by documentation set](#min-median-max-character-counts-of-code-example-by-documentation-set)
+- [Count of new applied usage examples](#count-of-new-applied-usage-examples)
+- [Code example contents](#code-example-contents)
+- [Find docs pages that meet a certain code example criteria](#find-docs-pages-that-meet-a-certain-code-example-criteria)
+- [Debugging queries](#debugging-queries)
+- [Updating data in the database](#updating-data-in-the-database)
+- [Value beyond the audit](#value-beyond-the-audit)
+
+> **Note:** Some sections build on concepts introduced earlier. For best understanding, consider reading the article in order, but feel free to use the table of contents to revisit specific topics.
+
 ## Putting counts in context
 
 For our data analysis, most of my queries output numerical counts of various sub-groupings relative to a total group size. My tooling prints these counts to console as tables, and we copy those to other formats depending on where/how we present them. 
@@ -62,6 +93,8 @@ For docs team leads and individual contributors, we may want to understand the b
 
 This makes it easier for leads and docs team members to understand the corpus of code examples their team is responsible for.
 
+<span style="font-size: 0.8em;">[Back to Table of Contents](#table-of-contents)</span>
+
 #### Total counts
 
 This is a starting point to get a high-level summary of how many code examples exist in a given documentation set.
@@ -100,6 +133,8 @@ The total count of code examples across all documentation sets is: <number>
 When the audit project started, a stakeholder requested we provide a breakdown of code examples by programming language. I normalized our programming languages as part of ingesting the code example data, so every code example across our documentation was attributed to one of 21 "canonical" programming languages. (Or "undefined" where no language was provided or where the provided language did not normalize to one of our canonical languages.)
 
 This was a large volume of data, so I also wrote a simple query to get a count of code examples in a specific programming language within a specific documentation set. This enabled me to easily check, for example, how many JavaScript code examples are in our Node.js Driver documentation.
+
+<span style="font-size: 0.8em;">[Back to Table of Contents](#table-of-contents)</span>
 
 #### Shared query logic
 
@@ -172,11 +207,13 @@ The total count of code examples in project "atlas-cli" is: <number>
 +-----------+-----------+------------+
 ```
 
-#### Specific programming language across documentation set
+#### Specific programming language
 
 This query returns an int count of code examples in a specific programming language within a single documentation set. So I might query for "JavaScript" code examples in the "node" Driver project and get an int count of ~1,100 code examples. We can use this query to get up-to-date counts if a stakeholder has questions about the distribution of a programming language within a specific docs set.
 
 This is a subset of the prior query which outputs only the code example counts for a single language within a documentation set, instead of a table that breaks down all of the counts. This query came first, and then I expanded it to the complete language breakdown query to give us a more comprehensive view.
+
+<span style="font-size: 0.8em;">[Back to Table of Contents](#table-of-contents)</span>
 
 ##### Query logic
 
@@ -199,13 +236,15 @@ The output for this query resembles:
 For the documentation set "atlas-cli", the total count of "javascript" code examples is: <number>
 ```
 
-#### Category across documentation set
+#### Category
 
 Programming language gives us a starting point to understand our code example distribution. But how can we understand what's *in* those 10,000 JavaScript code examples? How many of them are syntax examples for various APIs or configuration objects versus usage examples that show the code in context?
 
 To help dig deeper, we assigned every code example a category. For more details, refer to the *[What is a code example?](https://dacharycarey.com/2025/03/02/audit-what-is-code-example/)* article in this series.
 
 To look at this data through a different lens, I added queries to break down the counts for a specific category across documentation set, product, and sub-product.
+
+<span style="font-size: 0.8em;">[Back to Table of Contents](#table-of-contents)</span>
 
 ##### Query logic
 
@@ -248,6 +287,8 @@ Multiple documentation sets may belong to a single product. For example, we trea
 
 The output from these queries is useful for higher-level stakeholders in the organization who do not necessarily need to know the breakdown at the documentation set level.
 
+<span style="font-size: 0.8em;">[Back to Table of Contents](#table-of-contents)</span>
+
 #### Total counts
 
 This is a starting point to get a high-level summary of how many code examples exist for a given product.
@@ -285,6 +326,8 @@ The total count of code examples across all products is: <number>
 
 #### Programming language
 
+<span style="font-size: 0.8em;">[Back to Table of Contents](#table-of-contents)</span>
+
 ##### Query logic
 
 This query:
@@ -321,6 +364,8 @@ The total count of code examples in product "Atlas" is: <number>
 ```
 
 #### Category
+
+<span style="font-size: 0.8em;">[Back to Table of Contents](#table-of-contents)</span>
 
 ##### Query logic
 
@@ -370,6 +415,8 @@ Every page corresponds to either no sub-products, or a single sub-product.
 
 This query's output is useful for higher-level stakeholders in the organization who do not necessarily need to know the breakdown at the documentation set level.
 
+<span style="font-size: 0.8em;">[Back to Table of Contents](#table-of-contents)</span>
+
 #### Total counts
 
 This is a starting point to get a high-level summary of how many code examples exist for a given sub-product.
@@ -407,6 +454,8 @@ The total count of code examples across all sub-products is: <number>
 ```
 
 #### Programming language
+
+<span style="font-size: 0.8em;">[Back to Table of Contents](#table-of-contents)</span>
 
 ##### Query logic
 
@@ -446,6 +495,8 @@ Total code examples by Vector Search: <number>
 ```
 
 #### Category
+
+<span style="font-size: 0.8em;">[Back to Table of Contents](#table-of-contents)</span>
 
 ##### Query logic
 
@@ -508,6 +559,8 @@ For the purposes of determining whether a code example is "one line", we:
 
 We went with a character count over trying to count newlines because the character count was easier to apply consistently. There was no need to try to normalize newlines before/after the code example line(s), or deal with any other oddities related to newlines. This query can also be done using a MongoDB aggregation operator, [`$strLenCP`](https://www.mongodb.com/docs/manual/reference/operator/aggregation/strLenCP/), which is more performant than parsing the text of every code example for newline characters.
 
+<span style="font-size: 0.8em;">[Back to Table of Contents](#table-of-contents)</span>
+
 #### Query logic
 
 This query:
@@ -559,6 +612,8 @@ On the other extreme, I found a number of documentation sets where the `Max` was
 
 I *expected* to find the median code example length was between 5 and 10 lines, or between 400 and 800 characters, but I was wrong! Many documentation sets averaged a `Median` code example character count between 100 and 150 characters, or around 1.5 to 2 lines of code.
 
+<span style="font-size: 0.8em;">[Back to Table of Contents](#table-of-contents)</span>
+
 #### Query logic
 
 This query:
@@ -605,7 +660,7 @@ The output for this query is one table, which breaks down the data segmented by 
 +-----------------------+----------+----------+----------+
 ```
 
-### Count of new applied usage examples
+## Count of new applied usage examples
 
 Our leadership team is particularly interested in a subset of code examples that we refer to as "applied usage examples." These are usage examples that have more context or resemble more real-world usage. Developers consistently request more examples of this type, so we have scoped work to provide more of them. After running the first audit, we were asked to write tooling that we could re-run weekly and provide counts of new applied usage examples to the leadership team. They could use these counts to track our progress toward a a specific metric we set relative to this.
 
@@ -623,7 +678,9 @@ We have also expanded our "sub-product" listing for this particular query *beyon
 
 To further muddy the waters, our organization has no formal way to recognize content that fits into these focus areas. We do have a meta `keywords` field available on the documentation page, and I started ingested these values into the audit tooling so we could query the code examples by keyword. However, in examining the data, I found that we do not apply keywords consistently across documentation sets. Many pages that should have a focus area keyword are missing the keyword. Since I can't rely on this value being accurate, I am once again parsing the page URL for specific substrings that represent non-sub-product focus areas, *hoping* the URL value contain those keywords where applicable, and attributing new applied usage examples on those pages to their relative focus areas/faux sub-products.
 
-#### Query logic
+<span style="font-size: 0.8em;">[Back to Table of Contents](#table-of-contents)</span>
+
+### Query logic
 
 This query:
 
@@ -637,7 +694,7 @@ This query:
 - Groups the code examples that have passed these filters by `product` and `sub_product` values
 - Provides a count for each group, sorted in descending order
 
-#### Data representation
+### Data representation
 
 For this query, we represent the data as a series of purpose-build structs:
 
@@ -664,7 +721,7 @@ type ProductSubProductDocumentID struct {
 }
 ```
 
-#### Output
+### Output
 
 For reporting in the weekly meeting, the query outputs an aggregate table resembling:
 
@@ -700,6 +757,8 @@ These supplemental tables let us dig deeper if the numbers seem surprising, or i
 ## Code example contents
 
 After creating this tooling, the docs org got a request to change a placeholder value that exists in some code examples across our documentation. Because our docs exist across 50+ docs repositories, there isn't an easy way to check how many instances of this placeholder exist across our documentation corpus. Fortunately, now that we ingest the code examples weekly into this database, I was able to write a query that checked for the placeholder as a substring in every code example across all of our documentation sets. 
+
+<span style="font-size: 0.8em;">[Back to Table of Contents](#table-of-contents)</span>
 
 #### Query logic
 
@@ -738,6 +797,8 @@ For this initial query, we only wanted to understand the impact of making this c
 ## Find docs pages that meet a certain code example criteria
 
 Earlier this year, we released a major version update for our Go Driver. The major version bump contained changes that affected essentially every Go Driver code example across our documenation. We wanted to know which documentation pages contained code examples using the Go Driver so we could plan work to update them. Because our docs exist across 50+ docs repositories, there isn't an easy way to check for Go code examples manually in our documentation, but it was relatively simple to write a query for this using our code example audit data.
+
+<span style="font-size: 0.8em;">[Back to Table of Contents](#table-of-contents)</span>
 
 ### Query logic
 
@@ -786,6 +847,8 @@ Detailing the specifics here wouldn't be helpful, as it's very tied to our imple
 
 Having these queries available helped me find and fix issues with our data, and also debug problems with the ingest tooling.
 
+<span style="font-size: 0.8em;">[Back to Table of Contents](#table-of-contents)</span>
+
 ## Updating data in the database
 
 Once I started using the audit tooling to debug our database, I had a need to update the data. If the data was bad or had changed, I needed to be able to fix it. So I expanded the little tool that I wrote to slice data to give it the ability to make updates to the data. At the time of this writing, my little query utility can now also:
@@ -796,6 +859,8 @@ Once I started using the audit tooling to debug our database, I had a need to up
 - Rename a value in every document if I wanted to unify on a simpler or different value
 
 I also added the ability to manually back up the database for testing purposes, to preserve the data before making changes in case we need to revert. I've also baked this functionality into our weekly ingest job, so now the job always backs up the database before ingesting changes to code examples during the last week.
+
+<span style="font-size: 0.8em;">[Back to Table of Contents](#table-of-contents)</span>
 
 ## Value beyond the audit
 
