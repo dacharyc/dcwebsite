@@ -19,6 +19,10 @@ For the queries I discuss in this article, each section contains:
 
 For more information about how we modeled the data we're working with here, refer to the *[Modeling Code Example Data](http://dacharycarey.com/2025/04/27/audit-model-code-example-metadata/)* article.
 
+I provided the data from these queries as appendices to the final audit report. The output tables in the audit report represented approximately 60 pages of data. I also run some of these queries regularly for ongoing reporting.
+
+This is a *lot* of information to drive audit findings and ongoing analysis and reporting within our organization.
+
 ## Table of Contents
 
 Since this article is lengthy, and you may want to refer to a specific section later, I've provided a ToC for convenience:
