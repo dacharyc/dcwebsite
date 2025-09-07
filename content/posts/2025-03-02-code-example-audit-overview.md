@@ -26,5 +26,6 @@ At the time of writing this overview, the audit is complete, but it's going to t
 - [AI-assisted classification](http://dacharycarey.com/2025/03/23/audit-ai-assisted-classification/)
 - [Modeling code example metadata](http://dacharycarey.com/2025/04/27/audit-model-code-example-metadata/)
 - [Slicing code example metadata](http://dacharycarey.com/2025/08/23/audit-slice-code-example-data/)
-- Audit conclusions (Coming soon)
+- [Audit conclusions](http://dacharycarey.com/2025/09/07/audit-conclusions/)
+- Audit recommendations (coming soon)
 - Ongoing code example reporting (Coming soon)
