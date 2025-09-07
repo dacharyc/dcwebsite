@@ -65,7 +65,7 @@ Unfortunately, language is not a required option. The rST parser uses the langua
 
 The use case of wanting to use the language option to programmatically track code examples in our documentation is new. Thousands of examples across our documentation have no language specified, and that is perfectly valid rST. So assumption number one - that we can get a language for every code example - is out the window.
 
-Also unfortunately, web crawlers and LLMs that are parsing our documentation can see the language option in the generated page HTML. This wasn't really a concern when reStructuredText was first released in 2001, but it is potentially a big issue today. Check out the *Audit Conclusions* article in this series for details (coming soon).
+Also unfortunately, web crawlers and LLMs that are parsing our documentation can see the language option in the generated page HTML. This wasn't really a concern when reStructuredText was first released in 2001, but it is potentially a big issue today. Check out the *Audit Recommendations* article in this series for details (coming soon).
 
 We could apply a couple of additional techniques to try to derive a programming language when none is provided. When a directive uses a file path to transclude the code example, instead of hard-coding the code example text in the page, we could parse the filepath, look for an extension, and map that to a programming language. For example, a `.py` file extension is a Python language file; a `.cs` file extension is C#, and so on. I did implement this to try to improve our counts.
 
@@ -75,7 +75,7 @@ It's worth noting that the rST option is "language," which I mostly use intercha
 
 For the purpose of this audit, I didn't take every langauge provided on a code example as written. I defined a list of "canonical" languages based on our docs taxonomy, plus a few additional languages that are not in our taxonomy but seem valid. I ended with a list of 20 lanuages, and did some work to normalize the language option we ingest to one of these 20 languages. Everything that didn't normalize to a language, or where no language was provided, went into an "undefined" bucket. As we iterate on this process, we can scope work to provide languages where none exist, or update languages to use one of our "canonical" languages.
 
-I *also* discovered some unexpected consequences of this being an option used for syntax highlighting, which effectively means that a non-trivial number of counts for a couple of languages are effectively bad data. I'll go into more details about this in the *Audit Conclusions* article.
+I *also* discovered some unexpected consequences of this being an option used for syntax highlighting, which effectively means that a non-trivial number of counts for a couple of languages are effectively bad data. I'll go into more details about this in the *Audit Recommendations* article.
 
 ### Git data
 
@@ -155,7 +155,7 @@ I have theories about why this isn't actually a useful metric. For things like A
 
 For longer examples that include setup code, error handling, and actually working with the return object - developers *may* be likely to copy and paste those examples. If the context is useful and generic enough, developers can just copy it and modify argument names or add logic based on their application needs. Copy data *may* be a relevant measure of engagement for those examples, but I still think plenty of developers would find these examples useful but not use them directly.
 
-I can think of some other ways to measure engagement, and have made some recommendations around this in the audit report document. I'll go into more detail in the *Audit Conclusions* article. But for the purpose of this audit, we don't yet have a good way to measure engagement, so this is not information that is available to us at this time.
+I can think of some other ways to measure engagement, and have made some recommendations around this in the audit report document. I'll go into more detail in the *Audit Recommendations* article. But for the purpose of this audit, we don't yet have a good way to measure engagement, so this is not information that is available to us at this time.
 
 ## How can we use this information to identify gaps?
 

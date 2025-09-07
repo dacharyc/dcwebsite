@@ -258,11 +258,11 @@ question := fmt.Sprintf(questionTemplate,
 )
 ```
 
-There is a caveat around this: a *lot* of code examples across our documentation are labeled as JavaScript. This label is technically correct from a syntax highlighting perspective, but probably doesn't actually represent what a developer wants when they search for a "MongoDB JavaScript example." I'll get into this more in the *Audit Conclusions* article (coming soon). But for the purpose of using the right LLM prompt, I can't make this generalization about JavaScript even if I'm in a Drivers project.
+There is a caveat around this: a *lot* of code examples across our documentation are labeled as JavaScript. This label is technically correct from a syntax highlighting perspective, but probably doesn't actually represent what a developer wants when they search for a "MongoDB JavaScript example." I'll get into this more in the *Audit Recommendations* article (coming soon). But for the purpose of using the right LLM prompt, I can't make this generalization about JavaScript even if I'm in a Drivers project.
 
 #### JavaScript, Text, or Shell
 
-When the programming language label on a code example is JavaScript, Text, or Shell, it could be any of our categories. I'll get into this more in the *Audit Conclusions* article (coming soon), but for the purpose of using the right LLM prompt, I have to pass these examples to the most "open" prompt that includes all of the possible categories. 
+When the programming language label on a code example is JavaScript, Text, or Shell, it could be any of our categories. I'll get into this more in the *Audit Recommendations* article (coming soon), but for the purpose of using the right LLM prompt, I have to pass these examples to the most "open" prompt that includes all of the possible categories. 
 
 ```go
 const questionTemplate = `I need to sort code examples into one of these categories:
@@ -349,4 +349,4 @@ I'd love to spend some time, and maybe even enlist some of my other teammates, t
 
 ## What's next?
 
-Now that we have the code example category, we can model our code example metadata and insert it into a database. I'll go more into the data modeling decisions we made, and what they enable, in the *[Modeling Code Example Data](http://dacharycarey.com/2025/04/27/audit-model-code-example-metadata/)* article. Category became a key reporting metric in our *Audit Conclusions* (coming soon), and factored heavily in the *Ongoing Code Example Reporting* considerations (coming soon).
+Now that we have the code example category, we can model our code example metadata and insert it into a database. I'll go more into the data modeling decisions we made, and what they enable, in the *[Modeling Code Example Data](http://dacharycarey.com/2025/04/27/audit-model-code-example-metadata/)* article. Category became a key reporting metric in our *[Audit Conclusions](http://dacharycarey.com/2025/09/07/audit-conclusions/)*, and factored heavily in the *Ongoing Code Example Reporting* considerations (coming soon).
