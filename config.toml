@@ -66,6 +66,11 @@ paginate = 9
     name = "LinkedIn"
     link = "https://www.linkedin.com/in/dachary/"
 
+  [[params.social]]
+    icon = "logo-rss"
+    name = "RSS Feed"
+    link = "/index.xml"
+
   # Example of adding a new link to the author section and footer:
   # [[params.social]]
   #   icon = "ion-logo-vimeo"
