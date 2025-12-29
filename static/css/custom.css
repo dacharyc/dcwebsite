@@ -1,0 +1,21 @@
+/* Custom CSS overrides */
+
+/* Inline code styling - supports both light and dark mode */
+:root {
+  --inline-code-background: #f3f3f3;
+  --inline-code-color: #b35959;
+}
+
+:root[dark] {
+  --inline-code-background: #1e2231;
+  --inline-code-color: #e8a0a0;
+}
+
+/* Style inline code (not code blocks inside pre tags) */
+code:not(pre code) {
+  background-color: var(--inline-code-background);
+  color: var(--inline-code-color);
+  padding: 0.15em 0.35em;
+  border-radius: 3px;
+  font-size: 0.9em;
+}
