@@ -42,7 +42,7 @@ Designed the testing infrastructure for MongoDB's developer documentation code e
 
 **Languages supported:** Go, Java, Python, C#/.NET, JavaScript/Node.js, MongoDB Shell
 
-**Scope:** 60+ repositories, 397+ tested code examples
+**Scope:** 40+ documentation projects, 397+ tested code examples
 
 **Education Resources:** Three workshops, an early adopter/UAT working group, and documentation at: [Grove Platform](https://www.mongodb.com/docs/meta/grove/)
 
