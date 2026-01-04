@@ -34,7 +34,9 @@ Built as the algorithm layer underneath tokendiff, with a clean `Element` interf
 
 ### OASprey
 
-A Jest/Chai plugin for validating HTTP responses against OpenAPI specifications. Forked and streamlined from OpenAPIValidators.
+OpenAPI specification validation for Jest. Validates that HTTP responses match their OpenAPI schemas at test time.
+
+Forked and streamlined from OpenAPIValidators to reduce dependencies and improve maintainability.
 
 - **Language**: TypeScript
 - **State**: Published on npm
@@ -63,6 +65,7 @@ Used to audit content and infrastructure to perform maintenance work, product up
 - **Language**: Go
 - **State**: Active development
 - **Scope**: 40+ documentation projects, 35,000+ code examples, one zillion documentation source files
+- **Links**: [GitHub](https://github.com/grove-platform/audit-cli) ・ [Documentation](https://www.mongodb.com/docs/meta/grove/audit-cli/)
 
 ### GDCD (Great Docs Code Devourer)
 

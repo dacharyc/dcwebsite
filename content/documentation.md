@@ -16,13 +16,33 @@ I joined MongoDB's Developer Education team as the first writer on a team of dev
 
 I design and build tooling for code example quality across MongoDB's developer documentation:
 
-- **Audit CLI** (Go): Analyzes code examples, includes, and cross-references across 40+ documentation projects, many with their own versions, with monorepo structure awareness. Used to audit content and infrastructure to perform maintenance work, product updates, or identify needed process improvements and education opportunities.
-
-- **Cross-language testing frameworks**: Comparison utilities for validating code example output across Go, Java, Python, C#, JavaScript, and MongoDB Shell. Each provides a fluent API for comparing actual vs. expected output with support for MongoDB-specific types.
+- **[Audit CLI](https://github.com/grove-platform/audit-cli)** (Go): Analyzes code examples, includes, and cross-references across 40+ documentation projects, many with their own versions, with monorepo structure awareness. Used to audit content and infrastructure to perform maintenance work, product updates, or identify needed process improvements and education opportunities.
 
 - **GDCD & DODEC** (Go): Tools for fetching, storing, and querying documentation metadata. Used to audit 35,000+ code examples across 40+ repositories, resulting in an 88-page analysis for documentation leadership, and provide ongoing weekly and monthly metrics.
 
 - **Automated pipelines**: CI/CD infrastructure for code example validation and regression testing.
+
+#### Grove Code Testing Framework
+
+Designed the testing infrastructure for MongoDB's developer documentation code examples. The framework ensures code examples compile, run, and produce correct output across all supported languages.
+
+**Components I designed:**
+
+- **Comparison libraries** (6 languages): Validate actual vs. expected output with configurable matching
+  - Ordered/unordered array comparison
+  - Field value ignoring for dynamic data (ObjectIds, timestamps)
+  - MongoDB type support (Decimal128, Date, ObjectId)
+  - Truncation handling for large outputs
+
+- **Sample data utilities**: Convenience wrappers (`describeWithSampleData`, `itWithSampleData`) that automatically skip tests when MongoDB sample datasets aren't loaded - reduces friction for contributors while CI runs full test suite
+
+- **Process documentation**: Comprehensive guides for technical writers on structuring tests, handling state, working with sample data
+
+**Languages supported:** Go, Java, Python, C#/.NET, JavaScript/Node.js, MongoDB Shell
+
+**Scope:** 60+ repositories, 397+ tested code examples
+
+**Education Resources:** Three workshops, an early adopter/UAT working group, and documentation at: [Grove Platform](https://www.mongodb.com/docs/meta/grove/)
 
 ### Previous: SDK Documentation
 
