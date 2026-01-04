@@ -22,6 +22,8 @@ I design and build tooling for code example quality across MongoDB's developer d
 
 - **Automated pipelines**: CI/CD infrastructure for code example validation and regression testing.
 
+- **[OpenAPI Spec Testing](https://www.mongodb.com/docs/meta/grove/openapi/)** (TypeScript/Jest): Forked and modernized an OpenAPI testing tool. Validates that HTTP responses match their OpenAPI schemas at test time.
+
 #### Grove Code Testing Framework
 
 Designed the testing infrastructure for MongoDB's developer documentation code examples. The framework ensures code examples compile, run, and produce correct output across all supported languages.
