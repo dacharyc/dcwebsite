@@ -4,7 +4,7 @@ permalink: /documentation/
 image: '/images/audit-cli-analyze.png'
 ---
 
-I've spent nine years building documentation systems, testing infrastructure, and developer education content. This page covers that work - for my programming projects, see [Programming](/programming/).
+I've spent nine years building documentation systems, testing infrastructure, and creating developer education content. This page covers that work - for my programming projects, see [Programming](/programming/).
 
 ---
 
