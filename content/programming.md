@@ -1,42 +1,180 @@
 ---
 title: Programming
 permalink: /programming/
-image: '/images/programming.png'
+image: '/images/tokendiff-fenestro.png'
 ---
 
-I'm a self-taught programmer who works mainly in Swift, but recently I've been working in C++, Kotlin, and Dart. Sometimes I dip my toes into Python, TypeScript or Go as the project requires.
+I build tools that solve problems I encounter in my own workflow - whether that's managing pull requests across repositories, getting readable diff output, or ensuring code examples actually work.
 
-For fun, and to learn more about programming and practice my skills, I've got several apps in various states of development. This is the current list:
+---
 
-Shattered Ring
---------------
+## Developer Tools & Libraries
 
-[Shattered Ring](https://shatteredring.com) is a SwiftUI app that uses Realm Database. It's an iOS app I wrote to track Elden Ring play through details - namely, important NPCs, Locations and Quests in the game. It's my first app that I've [released to the App Store](https://apps.apple.com/app/shattered-ring/id1613271666), and I know it's a tiny hobby app but I'm so chuffed to have it out in the world.
+Tools I've built to solve developer workflow problems.
 
-Bonus: it's also great for tracking D&D or other TTRPG games! I'm using it to keep track of two D&D campaigns I'm in.
+### tokendiff
 
-I wrote most of the [Realm SwiftUI documentation](https://www.mongodb.com/docs/realm/sdk/swift/swiftui/) while working on this app. I had to figure out how to do things with Realm and SwiftUI, which I translated to public-facing documentation.
+A Go library and CLI for human-readable, token-level diffing.
 
-PR Focus
---------
+Standard diff tools optimize for minimal edit distance, but often produce output that's hard for humans to parse - fragmenting changes across common words like "the" or "for." tokendiff uses a histogram-based algorithm with heuristics tuned for readability.
 
-[PR Focus](https://prfocus.app) is a GitHub tracking app for macOS. My regular workflow has me keeping track of pull requests across many repositories. I need to stay on top of my own GitHub pull requests, pull requests where I'm a reviewer, and pull requests by the upstream engineering teams whose work I document. Turns out, other folks on my team find it helpful, too. I've been running a private alpha for a year, and have just opened a [public beta on TestFlight](https://testflight.apple.com/join/PmdjrF6U) for a limited number of spots.
+- **Language**: Go
+- **State**: Released
+- **Links**: [GitHub](https://github.com/dacharyc/tokendiff) ・ [Blog post: Diff Algorithm Spelunking](/2025/12/29/diff-algorithm-spelunking/)
 
-I'm writing my tool as a macOS app with SwiftUI and Realm. It has been interesting to write a macOS app with SwiftUI, and stumble across the differences between writing for it and iOS. It's also more complicated, as I'm working with the GitHub API. I started the app using the GitHub REST API, but switched to the GraphQL API for more efficient network requests. Working with both APIs has given me a great opportunity to directly compare REST vs. GraphQL, and a lot of insight into what makes "good" API documentation as I consume it.
+### diffx
 
-Of course, as a technical writer, I've written [a documentation site for PR Focus](https://prfocus.app/docs/). I've made this documentation site the in-app help using a web view.
+A Go implementation of the Myers O(ND) diff algorithm with preprocessing, heuristics, and postprocessing for improved output quality.
 
-Coffeelicious/Tealicious
-------------------------
+Built as the algorithm layer underneath tokendiff, with a clean `Element` interface for custom diffing beyond strings.
 
-Coffeelicious for me, and Tealicious for the spousey, are trackers where we can keep tabs on our preferred beverages. Whenever I go to order coffee beans from various roasters, I can't remember what I've liked and haven't liked from the prior orders, and I'm also not learning more general details about flavor profiles I like, coffee characteristics I like, etc. I want an app where I can rate the coffee I drink, and have that app build a profile for me to get recommendations about coffee I'd like. I've been through a few iterations of this and have never quite gotten it to done, but after my progress with Shattered Ring, I'm hopeful these apps will follow shortly.
+- **Language**: Go
+- **State**: Released
+- **Links**: [GitHub](https://github.com/dacharyc/diffx)
 
-Template Apps for MongoDB Realm with Sync
-----------------------------------------------
+### OASprey
 
-My team at MongoDB maintains a series of simple "template apps" in each of the Realm SDK languages to make it easier for developers to get started using MongoDB Realm with Sync. These are simple templates that are pre-populated with some of the basic code to work with Realm and Sync, that are automagically connected to a Sync backend that persists data in MongoDB Atlas. You sign up, select the "Create a Template App" option, a backend is created for you, and you have a few options to download the template app code. It's a pretty spiffy system that my very smart teammates have put together.
+A Jest/Chai plugin for validating HTTP responses against OpenAPI specifications. Forked and streamlined from OpenAPIValidators.
 
-I've made two big contributions to it:
+- **Language**: TypeScript
+- **State**: Published on npm
+- **Links**: [GitHub](https://github.com/grove-platform/OASprey) ・ [npm](https://www.npmjs.com/package/oasprey)
 
-- The SwiftUI Template App, which you can see in the [Swift client dir of the Realm Template Apps GitHub repository](https://github.com/mongodb-university/realm-template-apps/tree/main/sync-todo/v2/client/swiftui).
-- The C++ Template App - a command line todo tracker that uses [FTXUI](https://github.com/ArthurSonzogni/FTXUI) for the GUI - which you can see in the [C++ client dir of the Realm Template Apps GitHub repository](https://github.com/mongodb-university/realm-template-apps/tree/main/sync-todo/v2/client/cpp)
+### fenestro
+
+A Go CLI that ingests HTML and renders it in helpful windows. Built to support diff output visualization.
+
+- **Language**: Go
+- **State**: In development
+- **Links**: [GitHub](https://github.com/dacharyc/fenestro)
+
+---
+
+## Documentation Infrastructure
+
+Tools built for my work at MongoDB, focused on code example quality at scale.
+
+### Audit CLI
+
+A Go CLI for analyzing documentation source files - tracking code examples, includes, procedures, and cross-references across large documentation sets with monorepo structure awareness.
+
+Used to audit content and infrastructure to perform maintenance work, product updates, or identify needed process improvements and education opportunities.
+
+- **Language**: Go
+- **State**: Active development
+- **Scope**: 40+ documentation projects, 35,000+ code examples, one zillion documentation source files
+
+### GDCD (Great Docs Code Devourer)
+
+Fetches and analyzes documentation data from internal APIs, tracking code examples and page metadata. Used to audit 35,000+ code examples across 40+ repositories, resulting in an 88-page analysis for documentation leadership.
+
+- **Language**: Go
+- **State**: Maintenance mode (used weekly)
+
+### DODEC (Database of Devoured Code)
+
+Query tool for aggregating and reporting on code example data stored in MongoDB. Supports weekly and monthly reporting and trend analysis.
+
+- **Language**: Go
+- **State**: Maintenance mode (used weekly)
+
+### Cross-Language Comparison Frameworks
+
+Testing utilities for validating code example output across programming languages. Each implementation provides a fluent API for comparing actual output against expected results, with support for MongoDB-specific types, ellipsis patterns, and flexible matching.
+
+- **Languages**: Go, Java, Python, C#/.NET, JavaScript, MongoDB Shell
+- **State**: Active development
+- **Scope**: Used across MongoDB's documentation
+
+---
+
+## macOS Apps
+
+Native macOS applications built with SwiftUI.
+
+### PR Focus
+
+A native macOS dashboard app for managing pull request activity across GitHub repositories. Helps developers track incoming PRs, review requests, and PR status without context-switching to the browser or having to check many repositories.
+
+- **Stack**: SwiftUI, Realm Database, GitHub GraphQL API
+- **State**: [Live on Mac App Store](https://apps.apple.com/us/app/prfocus/id6449602269) ・ [Website](https://prfocus.app)
+
+### Issuenator
+
+Watches GitHub repositories for new issues and surfaces them in a native interface. Built for developers who maintain multiple repositories.
+
+- **Stack**: SwiftUI, SwiftData
+- **State**:  TestFlight Alpha ・ [Website](https://issuenator.app)
+
+### Geta
+
+A GM toolkit for tabletop gaming - generates shops, taverns, NPCs, and other elements for game masters.
+
+- **Stack**: SwiftUI, SwiftData
+- **State**: In development
+
+---
+
+## iOS Apps
+
+Native iOS applications built with SwiftUI.
+
+### Shattered Ring
+
+A companion app for the video game *Elden Ring* - helps players track NPCs, Quests, Locations, and Bosses since the game did not provide an in-game system for this.
+
+- **Stack**: SwiftUI, Realm Database
+- **State**: [Live on App Store](https://apps.apple.com/app/shattered-ring/id1632437036) ・ [Website](https://shatteredring.com)
+
+### Pocket Codex
+
+A reference app for video game data - provides searchable, offline access to game information. Includes a custom data pipeline with web crawling, HTML parsing, and automated code generation.
+
+- **Stack**: SwiftUI, SwiftData, Go (data pipeline)
+- **State**: TestFlight Alpha
+
+### TeaLixir
+
+A tea-tracking app for tea enthusiasts - save tea details, log preparations with additions and tasting notes, and discover patterns in your preferences.
+
+- **Stack**: SwiftUI, SwiftData, CloudKit
+- **State**: Pending Release ・ [Website](https://tealixir.app)
+
+### Coffeelicious
+
+A coffee-and-espresso tracking app for coffee enthusiasts - save bean details, log preparations with additions and tasting notes, and discover patterns in your preferences. (TeaLixir, but for coffee!)
+
+- **Stack**: SwiftUI, SwiftData, CloudKit
+- **State**: In development
+
+---
+
+## Writing & Workshops
+
+Technical content about building software.
+
+### Blog
+
+I write about software development, documentation infrastructure, and the tools I build:
+
+- [Diff Algorithm Spelunking](/2025/12/29/diff-algorithm-spelunking/) - Designing human-readable diff output
+- [Code Example Audit Series](/2025/03/02/code-example-audit-overview/) - Auditing 35,000+ code examples at scale
+- [Testing Documentation Code Examples](/2024/01/12/how-to-test-docs-code-examples/) - Unit testing approaches across 9 SDKs
+
+### Workshops
+
+Training materials for technical writers on code example testing and documentation workflows:
+
+- Creating Tested Code Examples
+- Working with Tested Code Examples
+- Removing Hard-Coded Code Blocks
+
+---
+
+## Technical Focus
+
+**Primary languages**: Go, Swift, TypeScript
+
+**Domains**: Developer tooling, documentation infrastructure, native app development
+
+**Approach**: I build tools that solve problems I actually have. Everything here started as "I wish this existed" and became "I'll build it myself."

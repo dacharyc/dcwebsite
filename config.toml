@@ -13,9 +13,9 @@ paginate = 9
 # Main Menu
 [menu]
   [[menu.main]]
-    identifier = "technical-writing"
-    name = "Technical Writing"
-    url = "/technical-writing"
+    identifier = "documentation"
+    name = "Documentation & Developer Education"
+    url = "/documentation"
     weight = 1
 
   [[menu.main]]
@@ -39,13 +39,13 @@ paginate = 9
 
 [params]
   logo = "" # You can add own logo. For example "/images/logo.png".
-  description = "Dachary - Tech Writer, Programmer, Coffee Enthusiast"
+  description = "Dachary - Tools, apps, and strong opinions about coffee"
 
   #-------------------------------
   # Author Settings
   [params.author]
     author__name = "Dachary Carey"
-    author__bio = "Tech Writer, Programmer, Coffee Enthusiast"
+    author__bio = "Tools, apps, and strong opinions about coffee"
     author__avatar = "/images/dc.jpeg"
 
   [[params.social]]
@@ -84,7 +84,7 @@ paginate = 9
   # Hero Settings
   [params.hero]
     hero__title = "Hey, I'm Dachary Carey"
-    hero__description = "Tech Writer, Programmer, Coffee Enthusiast"
+    hero__description = "Tools, apps, and strong opinions about coffee"
     hero__image = "/images/IMG_6321.jpeg"
 
   #-------------------------------
