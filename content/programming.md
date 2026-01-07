@@ -129,19 +129,19 @@ A companion app for the video game *Elden Ring* - helps players track NPCs, Ques
 - **Stack**: SwiftUI, Realm Database
 - **State**: [Live on App Store](https://apps.apple.com/app/shattered-ring/id1632437036) ・ [Website](https://shatteredring.com)
 
+### TeaLixir
+
+A tea-tracking app for tea enthusiasts - save tea details, log preparations with additions and tasting notes, and discover patterns in your preferences.
+
+- **Stack**: SwiftUI, SwiftData, CloudKit
+- **State**: [Live on App Store](https://apps.apple.com/us/app/prfocus/id6756220562) ・ [Website](https://tealixir.app)
+
 ### Pocket Codex
 
 A reference app for video game data - provides searchable, offline access to game information. Includes a custom data pipeline with web crawling, HTML parsing, and automated code generation.
 
 - **Stack**: SwiftUI, SwiftData, Go (data pipeline)
 - **State**: TestFlight Alpha
-
-### TeaLixir
-
-A tea-tracking app for tea enthusiasts - save tea details, log preparations with additions and tasting notes, and discover patterns in your preferences.
-
-- **Stack**: SwiftUI, SwiftData, CloudKit
-- **State**: Pending Release ・ [Website](https://tealixir.app)
 
 ### Coffeelicious
 
