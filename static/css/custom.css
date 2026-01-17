@@ -19,3 +19,211 @@ code:not(pre code) {
   border-radius: 3px;
   font-size: 0.9em;
 }
+
+/* ========================================
+   Syntax Highlighting for Code Blocks
+   Light mode: GitHub theme
+   Dark mode: Dracula theme
+   Generated using: hugo gen chromastyles
+   ======================================== */
+
+/* Shared styles */
+.highlight {
+  margin-bottom: 32px;
+  border-radius: 6px;
+  overflow: auto;
+}
+
+.highlight pre {
+  margin: 0;
+  padding: 16px;
+  overflow-x: auto;
+}
+
+.highlight .lnlinks { outline: none; text-decoration: none; color: inherit; }
+.highlight .lntd { vertical-align: top; padding: 0; margin: 0; border: 0; }
+.highlight .lntable { border-spacing: 0; padding: 0; margin: 0; border: 0; }
+.highlight .lnt,
+.highlight .ln { white-space: pre; -webkit-user-select: none; user-select: none; margin-right: 0.4em; padding: 0 0.4em 0 0.4em; }
+.highlight .line { display: flex; }
+
+/* ----------------------------------------
+   Light Mode: GitHub Theme
+   ---------------------------------------- */
+.highlight { background-color: #f6f8fa; }
+.highlight pre { background-color: #f6f8fa; color: #24292f; }
+.highlight .hl { background-color: #e5e5e5; }
+.highlight .lnt, .highlight .ln { color: #7f7f7f; }
+
+/* Keywords */
+.highlight .k { color: #cf222e; font-weight: bold; }
+.highlight .kc { color: #cf222e; font-weight: bold; }
+.highlight .kd { color: #cf222e; font-weight: bold; }
+.highlight .kn { color: #cf222e; font-weight: bold; }
+.highlight .kp { color: #cf222e; font-weight: bold; }
+.highlight .kr { color: #cf222e; font-weight: bold; }
+.highlight .kt { color: #8250df; font-weight: bold; }
+
+/* Names */
+.highlight .na { color: #116329; }
+.highlight .nb { color: #0550ae; }
+.highlight .bp { color: #6e7781; }
+.highlight .nc { color: #8250df; font-weight: bold; }
+.highlight .no { color: #0550ae; }
+.highlight .nd { color: #8250df; }
+.highlight .ni { color: #0550ae; }
+.highlight .ne { color: #cf222e; font-weight: bold; }
+.highlight .nf { color: #8250df; font-weight: bold; }
+.highlight .nl { color: #0550ae; font-weight: bold; }
+.highlight .nn { color: #6e7781; }
+.highlight .nt { color: #116329; }
+.highlight .nv { color: #0550ae; }
+.highlight .vc { color: #0550ae; }
+.highlight .vg { color: #0550ae; }
+.highlight .vi { color: #0550ae; }
+
+/* Strings */
+.highlight .s { color: #0a3069; }
+.highlight .sa { color: #0a3069; }
+.highlight .sb { color: #0a3069; }
+.highlight .sc { color: #0a3069; }
+.highlight .dl { color: #0a3069; }
+.highlight .sd { color: #0a3069; }
+.highlight .s2 { color: #0a3069; }
+.highlight .se { color: #0a3069; }
+.highlight .sh { color: #0a3069; }
+.highlight .si { color: #0a3069; }
+.highlight .sx { color: #0a3069; }
+.highlight .sr { color: #116329; }
+.highlight .s1 { color: #0a3069; }
+.highlight .ss { color: #0a3069; }
+
+/* Numbers */
+.highlight .m { color: #0550ae; }
+.highlight .mb { color: #0550ae; }
+.highlight .mf { color: #0550ae; }
+.highlight .mh { color: #0550ae; }
+.highlight .mi { color: #0550ae; }
+.highlight .il { color: #0550ae; }
+.highlight .mo { color: #0550ae; }
+
+/* Operators */
+.highlight .o { color: #cf222e; font-weight: bold; }
+.highlight .ow { color: #cf222e; font-weight: bold; }
+
+/* Comments */
+.highlight .c { color: #6e7781; font-style: italic; }
+.highlight .ch { color: #6e7781; font-style: italic; }
+.highlight .cm { color: #6e7781; font-style: italic; }
+.highlight .c1 { color: #6e7781; font-style: italic; }
+.highlight .cs { color: #6e7781; font-weight: bold; font-style: italic; }
+.highlight .cp { color: #cf222e; font-weight: bold; }
+.highlight .cpf { color: #0a3069; }
+
+/* Generic */
+.highlight .gd { color: #82071e; background-color: #ffebe9; }
+.highlight .ge { font-style: italic; }
+.highlight .gr { color: #cf222e; }
+.highlight .gh { color: #0550ae; font-weight: bold; }
+.highlight .gi { color: #116329; background-color: #dafbe1; }
+.highlight .go { color: #6e7781; }
+.highlight .gp { color: #6e7781; font-weight: bold; }
+.highlight .gs { font-weight: bold; }
+.highlight .gu { color: #0550ae; }
+.highlight .gt { color: #cf222e; }
+.highlight .gl { text-decoration: underline; }
+
+/* Error & Whitespace */
+.highlight .err { color: #cf222e; background-color: #ffebe9; }
+.highlight .w { color: #6e7781; }
+
+/* ----------------------------------------
+   Dark Mode: Dracula Theme
+   ---------------------------------------- */
+:root[dark] .highlight { background-color: #282a36; }
+:root[dark] .highlight pre { background-color: #282a36; color: #f8f8f2; }
+:root[dark] .highlight .hl { background-color: #3d3f4a; }
+:root[dark] .highlight .lnt,
+:root[dark] .highlight .ln { color: #6272a4; }
+
+/* Keywords */
+:root[dark] .highlight .k { color: #ff79c6; font-weight: normal; }
+:root[dark] .highlight .kc { color: #ff79c6; font-weight: normal; }
+:root[dark] .highlight .kd { color: #8be9fd; font-style: italic; font-weight: normal; }
+:root[dark] .highlight .kn { color: #ff79c6; font-weight: normal; }
+:root[dark] .highlight .kp { color: #ff79c6; font-weight: normal; }
+:root[dark] .highlight .kr { color: #ff79c6; font-weight: normal; }
+:root[dark] .highlight .kt { color: #8be9fd; font-weight: normal; }
+
+/* Names */
+:root[dark] .highlight .na { color: #50fa7b; }
+:root[dark] .highlight .nb { color: #8be9fd; font-style: italic; }
+:root[dark] .highlight .bp { color: #f8f8f2; }
+:root[dark] .highlight .nc { color: #50fa7b; font-weight: normal; }
+:root[dark] .highlight .no { color: #f8f8f2; }
+:root[dark] .highlight .nd { color: #f8f8f2; }
+:root[dark] .highlight .ni { color: #f8f8f2; }
+:root[dark] .highlight .ne { color: #f8f8f2; font-weight: normal; }
+:root[dark] .highlight .nf { color: #50fa7b; font-weight: normal; }
+:root[dark] .highlight .nl { color: #8be9fd; font-style: italic; }
+:root[dark] .highlight .nn { color: #f8f8f2; }
+:root[dark] .highlight .nt { color: #ff79c6; }
+:root[dark] .highlight .nv { color: #8be9fd; font-style: italic; }
+:root[dark] .highlight .vc { color: #8be9fd; font-style: italic; }
+:root[dark] .highlight .vg { color: #8be9fd; font-style: italic; }
+:root[dark] .highlight .vi { color: #8be9fd; font-style: italic; }
+
+/* Strings */
+:root[dark] .highlight .s { color: #f1fa8c; }
+:root[dark] .highlight .sa { color: #f1fa8c; }
+:root[dark] .highlight .sb { color: #f1fa8c; }
+:root[dark] .highlight .sc { color: #f1fa8c; }
+:root[dark] .highlight .dl { color: #f1fa8c; }
+:root[dark] .highlight .sd { color: #f1fa8c; }
+:root[dark] .highlight .s2 { color: #f1fa8c; }
+:root[dark] .highlight .se { color: #f1fa8c; }
+:root[dark] .highlight .sh { color: #f1fa8c; }
+:root[dark] .highlight .si { color: #f1fa8c; }
+:root[dark] .highlight .sx { color: #f1fa8c; }
+:root[dark] .highlight .sr { color: #f1fa8c; }
+:root[dark] .highlight .s1 { color: #f1fa8c; }
+:root[dark] .highlight .ss { color: #f1fa8c; }
+
+/* Numbers */
+:root[dark] .highlight .m { color: #bd93f9; }
+:root[dark] .highlight .mb { color: #bd93f9; }
+:root[dark] .highlight .mf { color: #bd93f9; }
+:root[dark] .highlight .mh { color: #bd93f9; }
+:root[dark] .highlight .mi { color: #bd93f9; }
+:root[dark] .highlight .il { color: #bd93f9; }
+:root[dark] .highlight .mo { color: #bd93f9; }
+
+/* Operators */
+:root[dark] .highlight .o { color: #ff79c6; font-weight: normal; }
+:root[dark] .highlight .ow { color: #ff79c6; font-weight: normal; }
+
+/* Comments */
+:root[dark] .highlight .c { color: #6272a4; font-style: normal; }
+:root[dark] .highlight .ch { color: #6272a4; font-style: normal; }
+:root[dark] .highlight .cm { color: #6272a4; font-style: normal; }
+:root[dark] .highlight .c1 { color: #6272a4; font-style: normal; }
+:root[dark] .highlight .cs { color: #6272a4; font-style: normal; font-weight: normal; }
+:root[dark] .highlight .cp { color: #ff79c6; font-weight: normal; }
+:root[dark] .highlight .cpf { color: #ff79c6; }
+
+/* Generic */
+:root[dark] .highlight .gd { color: #f55; background-color: transparent; }
+:root[dark] .highlight .ge { text-decoration: underline; font-style: normal; }
+:root[dark] .highlight .gr { color: #f8f8f2; }
+:root[dark] .highlight .gh { font-weight: bold; }
+:root[dark] .highlight .gi { color: #50fa7b; font-weight: bold; background-color: transparent; }
+:root[dark] .highlight .go { color: #44475a; }
+:root[dark] .highlight .gp { color: #f8f8f2; font-weight: normal; }
+:root[dark] .highlight .gs { color: #f8f8f2; }
+:root[dark] .highlight .gu { font-weight: bold; }
+:root[dark] .highlight .gt { color: #f8f8f2; }
+:root[dark] .highlight .gl { text-decoration: underline; }
+
+/* Error & Whitespace */
+:root[dark] .highlight .err { color: #f8f8f2; background-color: transparent; }
+:root[dark] .highlight .w { color: #f8f8f2; }
