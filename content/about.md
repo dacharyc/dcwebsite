@@ -21,7 +21,9 @@ I've been a professional writer for over 18 years - starting with freelance work
 
 That role pushed me to grow. I went from documenting SDKs to building testing infrastructure. From writing code examples to building tools that audit 35,000+ code examples across 40+ repositories. The line between "technical writer" and "developer" got blurry, and I discovered I liked it that way.
 
-These days, my work sits at the intersection of development and communication. I build tools, I write documentation, and I help other people do both more effectively. For more on my documentation background, see [Documentation & Developer Education](/documentation/).
+I'm driven by curiosity - when I encounter a system or ecosystem, I want to understand how it actually works, not just how it's supposed to work. That impulse has led me from building audit tooling to conducting ecosystem-scale research: analyzing hundreds of data points, identifying patterns, and publishing findings. The tools I build often start as "I want to understand this" and end up as something others can use too.
+
+These days, my work sits at the intersection of development, communication, and analysis. I build tools, I write documentation, I investigate ecosystems, and I help other people do all of it more effectively. For more on my documentation background, see [Documentation & Developer Education](/documentation/).
 
 ## The Personal Stuff
 
