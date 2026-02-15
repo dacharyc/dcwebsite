@@ -14,3 +14,6 @@ hugo.linux
 
 # Ignore on macOS
 .DS_Store
+
+# Files for syncing
+/.linkedin
