@@ -50,6 +50,14 @@ A Go CLI that ingests HTML and renders it in helpful windows. Built to support d
 - **State**: In development
 - **Links**: [GitHub](https://github.com/dacharyc/fenestro)
 
+### skill-validator
+
+A Go CLI that validates Agent Skills against the agentskills.io specification. Checks directory structure, frontmatter, content quality, cross-contamination risk, and token budget composition. Built to support my ecosystem-scale analysis of 673 skills across 41 repositories.
+
+- **Language**: Go
+- **State**: Active development
+- **Links**: [GitHub](https://github.com/dacharyc/skill-validator) ・ [Blog post: Agent Skill Analysis](/2026/02/13/agent-skill-analysis/)
+
 ---
 
 ## Documentation Infrastructure
