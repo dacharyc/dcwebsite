@@ -25,6 +25,12 @@ paginate = 9
     weight = 2
 
   [[menu.main]]
+    identifier = "resume"
+    name = "Resume"
+    url = "/resume"
+    weight = 3
+
+  [[menu.main]]
     identifier = "about"
     name = "About"
     url = "/about"
