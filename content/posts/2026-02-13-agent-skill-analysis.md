@@ -58,7 +58,7 @@ For a quick analysis, I looked at two sources of Agent Skills:
 - [Anthropic Agent Skills](https://github.com/anthropics/skills): These folks literally wrote the spec, so I thought their Skills should be the archetype of a "good" implementation
 - [Awesome Claude Skills](https://github.com/travisvn/awesome-claude-skills): This repo has 7k stars and has some community-contributed Skills, so I thought it might show me other Skill implementations
 
-I'm working on a deeper analysis that looks at Skills from more sources, including official company-promoted Skills. I'll publish this as an in-depth report.
+I followed up with a deeper analysis that looked at Skills from more sources, including official company-promoted Skills. You can view the interactive dashboard or download the paper at [Agent Skill Analysis - Interactive Report](https://agentskillreport.com).
 
 ### Anthropic Agent Skills Analysis
 
