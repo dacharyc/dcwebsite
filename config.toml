@@ -156,8 +156,20 @@ paginate = 9
       unsafe = true
 
 
+[mediaTypes."text/markdown"]
+  suffixes = ["md"]
+
+[outputFormats.Markdown]
+  mediaType = "text/markdown"
+  baseName = "index"
+  isPlainText = true
+
 [outputs]
-  home = ["HTML", "RSS", "JSON"]
+  home = ["HTML", "RSS", "JSON", "Markdown"]
+  page = ["HTML", "Markdown"]
+  section = ["HTML", "RSS", "Markdown"]
+  taxonomy = ["HTML", "RSS", "Markdown"]
+  term = ["HTML", "RSS", "Markdown"]
 
 
 [markup.highlight]

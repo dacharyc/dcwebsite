@@ -1,3 +1,4 @@
 #!/bin/sh
+./generate_llms_txt
 hugo
 rsync -avz public/ dacharycarey.com:dacharycarey.com/
