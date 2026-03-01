@@ -1,0 +1,56 @@
+#!/bin/sh
+#
+# Generates static/llms.txt from content directory.
+# Called by build_and_sync before hugo build.
+
+SITE_DIR="$(cd "$(dirname "$0")" && pwd)"
+OUTPUT="$SITE_DIR/static/llms.txt"
+BASE_URL="https://dacharycarey.com"
+
+cat > "$OUTPUT" << 'HEADER'
+# Dachary Carey
+
+> Tools, apps, and strong opinions about coffee.
+
+## Pages
+
+HEADER
+
+# Add top-level pages
+for file in "$SITE_DIR"/content/*.md; do
+  [ -f "$file" ] || continue
+
+  title=$(sed -n '/^---$/,/^---$/{ /^title:/p; }' "$file" | head -1 | sed "s/.*: *['\"]\\{0,1\\}//; s/['\"]\\{0,1\\}$//" )
+  permalink=$(sed -n '/^---$/,/^---$/{ /^permalink:/p; }' "$file" | head -1 | sed "s/.*: *['\"]\\{0,1\\}//; s/['\"]\\{0,1\\}$//" )
+
+  [ -z "$permalink" ] && continue
+
+  echo "- [$title](${BASE_URL}${permalink}index.md)" >> "$OUTPUT"
+done
+
+cat >> "$OUTPUT" << 'SECTION'
+
+## Posts
+
+SECTION
+
+# Add published posts, sorted by date descending
+for file in $(ls -r "$SITE_DIR"/content/posts/*.md 2>/dev/null); do
+  [ -f "$file" ] || continue
+
+  # Skip drafts
+  draft=$(sed -n '/^---$/,/^---$/{ /^draft:/p; }' "$file" | head -1 | sed 's/.*: *//; s/["\x27]//g')
+  [ "$draft" = "true" ] && continue
+
+  title=$(sed -n '/^---$/,/^---$/{ /^title:/p; }' "$file" | head -1 | sed "s/.*: *['\"]\\{0,1\\}//; s/['\"]\\{0,1\\}$//" )
+  description=$(sed -n '/^---$/,/^---$/{ /^description:/p; }' "$file" | head -1 | sed "s/.*: *['\"]\\{0,1\\}//; s/['\"]\\{0,1\\}$//" )
+  url=$(sed -n '/^---$/,/^---$/{ /^url:/p; }' "$file" | head -1 | sed "s/.*: *['\"]\\{0,1\\}//; s/['\"]\\{0,1\\}$//" )
+
+  [ -z "$url" ] && continue
+
+  if [ -n "$description" ]; then
+    echo "- [$title](${BASE_URL}${url}index.md): $description" >> "$OUTPUT"
+  else
+    echo "- [$title](${BASE_URL}${url}index.md)" >> "$OUTPUT"
+  fi
+done

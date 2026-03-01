@@ -1,0 +1,65 @@
+# Dachary Carey
+
+> Tools, apps, and strong opinions about coffee.
+
+## Pages
+
+- [About](https://dacharycarey.com/about/index.md)
+- [Documentation & Developer Education](https://dacharycarey.com/documentation/index.md)
+- [Programming](https://dacharycarey.com/programming/index.md)
+- [Resume](https://dacharycarey.com/resume/index.md)
+
+## Posts
+
+- [Case Study - 'upgrade-stripe' Agent Skill](https://dacharycarey.com/2026/02/27/case-study-upgrade-stripe-skill/index.md): In which I deep dive on a Stripe Skill, and what it means for the industry.
+- [LLMs vs. Agents as Docs Consumers](https://dacharycarey.com/2026/02/26/llms-vs-agents-as-docs-consumers/index.md): In which I discuss how model training and agents need different docs access patterns.
+- [Upskilling in the AI Age](https://dacharycarey.com/2026/02/23/upskilling-in-ai-age/index.md): In which I answer someone who asked me how to get started with AI.
+- [Agent Web Fetch Spelunking](https://dacharycarey.com/2026/02/19/agent-web-fetch-spelunking/index.md): In which I ask an agent to help me explore Web Fetch with docs pages - and get a surprise.
+- [Agent-Friendly Docs](https://dacharycarey.com/2026/02/18/agent-friendly-docs/index.md): In which I ask an agent to view hundreds of docs pages - and feel sad.
+- [Agent Skill Analysis](https://dacharycarey.com/2026/02/13/agent-skill-analysis/index.md): In which I build a validator and analyze popular Agent Skills.
+- [Inside the Code Example Comparison APIs](https://dacharycarey.com/2026/01/17/inside-comparison-apis/index.md): In which I deep dive into the problem domain to discuss the problems we had to solve.
+- [Code Example Testing Redux - Designing Cross-Language Testing Infrastructure at Scale](https://dacharycarey.com/2026/01/04/code-example-testing-redux/index.md): In which I design systems to scale code example testing across the org.
+- [Diff Algorithm Spelunking](https://dacharycarey.com/2025/12/29/diff-algorithm-spelunking/index.md): In which I fall down a semantic diffing rabbit hole and emerge two libraries later.
+- [Audit - Conclusions](https://dacharycarey.com/2025/09/07/audit-conclusions/index.md): In which we report what we learned through the code example audit.
+- [Audit - Slicing Code Example Data](https://dacharycarey.com/2025/08/23/audit-slice-code-example-data/index.md): In which we explore different ways to break down audit data.
+- [Audit - Modeling Code Example Metadata](https://dacharycarey.com/2025/04/27/audit-model-code-example-metadata/index.md): In which we decide what information to store, and how.
+- [Audit - AI-Assisted Classification](https://dacharycarey.com/2025/03/23/audit-ai-assisted-classification/index.md): In which we have an LLM help us assign categories to code examples.
+- [Audit - How can we access the data?](https://dacharycarey.com/2025/03/16/audit-access-data/index.md): In which we explore the best way to get content and work with audit data.
+- [Audit - What should we track?](https://dacharycarey.com/2025/03/10/audit-what-to-track/index.md): In which we dive deeper into what we actually want to know.
+- [Audit - Overview](https://dacharycarey.com/2025/03/02/code-example-audit-overview/index.md): In which we try to make sense of our code examples, and track them.
+- [Audit - What is a Code Example?](https://dacharycarey.com/2025/03/02/audit-what-is-code-example/index.md): In which we decide what to count, and how.
+- [I wrote a macOS app!](https://dacharycarey.com/2024/08/05/i-wrote-a-macos-app/index.md): In which I write a macOS app to track important pull requests.
+- [Docs Consolidation Project - Month Two Check-In](https://dacharycarey.com/2024/07/28/docs-consolidation-project-two-month-check-in/index.md): In which I explore lessons learned in the second month of a project to consolidate 9 docs sets.
+- [Docs Consolidation Project - One Month Check-In](https://dacharycarey.com/2024/06/26/docs-consolidation-project-one-month-check-in/index.md): In which I explore lessons learned in the first month of a project to consolidate 9 docs sets.
+- [What to Test In Docs Code Examples](https://dacharycarey.com/2024/02/11/what-to-test-in-docs-code-examples/index.md): In which I explore WHAT to test in docs code examples.
+- [How to Test Docs Code Examples](https://dacharycarey.com/2024/01/12/how-to-test-docs-code-examples/index.md): In which I explore HOW to test docs code examples.
+- [Farewell, Critical Role](https://dacharycarey.com/2023/12/09/farewell-critical-role/index.md): In which I abandon one of my favorite franchises due to enshittification.
+- [Hackathon Part 3 - Charts, Charts, Charts!](https://dacharycarey.com/2023/11/15/hackathon-part-3/index.md): In which I make a whole lotta Charts.
+- [Hackathon Part 2 - Modeling Documentation Metadata](https://dacharycarey.com/2023/11/08/hackathon-part-2/index.md): In which I decide how I want to structure my documentation metadata.
+- [Hackathon Part 1 - Out of Google Sheets and Into Atlas](https://dacharycarey.com/2023/11/01/hackathon-part-1/index.md): In which I free my data from Google Sheets.
+- [Benefits of Docs Writing Code Examples](https://dacharycarey.com/2023/10/26/benefits-of-docs-writing-code-examples/index.md): In which I discuss the benefits of having a documentation team writing the code examples.
+- [Knowing When Docs Need Updates](https://dacharycarey.com/2023/10/18/knowing-when-docs-need-updates/index.md): In which I discuss the strategies for knowing when docs need updates.
+- [Test Docs Code Examples](https://dacharycarey.com/2023/10/10/test-docs-code-examples/index.md): In which I explore why you really need to test docs code examples.
+- [Docs Readability Scoring](https://dacharycarey.com/2023/03/10/docs-readability-scoring/index.md): In which I automate readability scoring for documentation.
+- [Welcome to my new, new home.](https://dacharycarey.com/2022/11/19/welcome-to-my-new-new-home/index.md): In which I migrate from WordPress to Hugo.
+- [I wrote a… best-selling iOS app?](https://dacharycarey.com/2022/03/13/i-wrote-a-best-selling-ios-app/index.md): I which I am amazed to wake up and see my app leading sales in its category.
+- [I wrote an iOS app!](https://dacharycarey.com/2022/03/08/i-wrote-an-ios-app/index.md): In which I write an iOS app to track RPG playthrough details.
+- [CLI tool version complications](https://dacharycarey.com/2021/05/20/cli-tool-version-complications/index.md): In which I attempt to debug a CLI thing and find out I made an assumption.
+- [the missing link; a collaboration tool](https://dacharycarey.com/2020/05/23/docs-as-code-workflow-the-missing-link-a-collaboration-tool/index.md): In which I wax poetic about the value of previewing a docs-as-code site.
+- [redux](https://dacharycarey.com/2020/05/19/learning-to-code-redux/index.md): In which I complete a beginner programming class - in Python!
+- [What does coffee taste like?](https://dacharycarey.com/2020/01/14/what-does-coffee-taste-like/index.md): In which I ramble about why I love good coffee, and how you can learn to love it, too.
+- [My social media withdrawal experiment](https://dacharycarey.com/2019/10/09/my-social-media-withdrawal-experiment/index.md): In which I talk about why I took a hiatus from social media, and how awesome it is.
+- [How home automation has made me a more productive remote employee](https://dacharycarey.com/2019/10/04/how-home-automation-has-made-me-a-more-productive-remote-employee/index.md): In which I dive into how home automation helps us move through our days.
+- [My vacation rafting misadventure](https://dacharycarey.com/2019/08/20/my-vacation-rafting-misadventure/index.md): In which I accidentally body-surfed a Class V rapid and things looked real grim.
+- [Investing in good equipment](https://dacharycarey.com/2019/08/08/investing-in-good-equipment/index.md): In which I recognize how important it is to have good equipment, and do something about it.
+- [Choosing the best writing tool](https://dacharycarey.com/2019/07/12/choosing-the-best-writing-tool/index.md): In which I lay out a generalist approach to choosing writing tools.
+- [freelance/contract writing](https://dacharycarey.com/2019/06/12/real-talk-freelance-contract-writing/index.md): In which I talk about the pros and cons of being a freelance technical writer.
+- [Learning to code](https://dacharycarey.com/2019/03/06/learning-to-code/index.md): In which I finally decide to start my coding journey.
+- [The downside of works-for-hire, NDAs and dead links](https://dacharycarey.com/2019/02/21/the-downside-of-works-for-hire-ndas-and-dead-links/index.md): In which I lament the vagaries of showing a portfolio as a freelancer.
+- [Looking for a new (meaningful) writing gig](https://dacharycarey.com/2018/08/28/looking-for-a-new-meaningful-writing-gig/index.md): In which I part ways with a long-term client and want to do something meaningful.
+- [Unnecessarily gendered language](https://dacharycarey.com/2018/04/08/unnecessarily-gendered-language/index.md): In which I explore why unnecessarily gendered language can be hurtful.
+- [To business card, or not to business card](https://dacharycarey.com/2018/04/06/to-business-card-or-not-to-business-card/index.md): In which I don't have business cards - and may regret it?
+- [My strange caffeine detox journey](https://dacharycarey.com/2017/06/25/my-strange-caffeine-detox-journey/index.md): In which I give up my beloved caffeine. Oh dear.
+- [Protecting your digital empire](https://dacharycarey.com/2017/06/17/protecting-your-digital-empire/index.md): In which I explore the value of protecting your digital assets.
+- [Some days are harder than others](https://dacharycarey.com/2017/05/06/some-days-are-harder-than-others/index.md): In which I reflect on what it means to be a writer.
+- [Why We Don’t Mess with a Classic](https://dacharycarey.com/2017/04/02/beauty-and-the-beast-why-we-dont-mess-with-a-classic/index.md): In which I take issue with the Hollywood treatment of this classic fairy tale.
