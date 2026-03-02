@@ -11,6 +11,7 @@
 
 ## Posts
 
+- [Make Your Hugo Site Agent-Friendly](https://dacharycarey.com/2026/03/01/make-hugo-site-agent-friendly/index.md): In which I show you how I made multiple Hugo sites agent-friendly.
 - [Case Study - 'upgrade-stripe' Agent Skill](https://dacharycarey.com/2026/02/27/case-study-upgrade-stripe-skill/index.md): In which I deep dive on a Stripe Skill, and what it means for the industry.
 - [LLMs vs. Agents as Docs Consumers](https://dacharycarey.com/2026/02/26/llms-vs-agents-as-docs-consumers/index.md): In which I discuss how model training and agents need different docs access patterns.
 - [Upskilling in the AI Age](https://dacharycarey.com/2026/02/23/upskilling-in-ai-age/index.md): In which I answer someone who asked me how to get started with AI.
