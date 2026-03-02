@@ -338,7 +338,7 @@ If you see anything else, investigate before deploying. One gotcha we caught thi
   section = ["HTML", "RSS", "Markdown"]
 ```
 
-This is easy to miss because Hugo's defaults are implicit. Once you start explicitly listing outputs for a kind, you take full ownership of that list. Check [Hugo's default output formats](https://gohugo.io/templates/output-formats/#default-output-formats) to see what each kind normally includes.
+This is easy to miss because Hugo's defaults are implicit. Once you start explicitly listing outputs for a kind, you take full ownership of that list. Check [Hugo's default output formats](https://gohugo.io/configuration/output-formats/) to see what each kind normally includes.
 
 #### Check for missing markdown counterparts
 
