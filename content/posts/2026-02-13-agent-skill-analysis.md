@@ -6,7 +6,7 @@ description: In which I build a validator and analyze popular Agent Skills.
 date: 2026-02-13 10:00:00 -0500
 url: /2026/02/13/agent-skill-analysis/
 image: /images/agent-skill-analysis-hero.jpg
-tags: [Coding, Documentation]
+tags: [Coding, Documentation, ai]
 draft: false
 ---
 

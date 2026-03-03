@@ -50,13 +50,21 @@ A Go CLI that ingests HTML and renders it in helpful windows. Built to support d
 - **State**: In development
 - **Links**: [GitHub](https://github.com/dacharyc/fenestro)
 
+### afdocs
+
+A CLI tool that tests documentation sites against the [Agent-Friendly Documentation Spec](https://agentdocsspec.com). Checks llms.txt discovery, markdown availability, page size risks, content negotiation, URL stability, and more. Point it at a docs URL and it reports how well the site serves AI agent consumers.
+
+- **Language**: TypeScript
+- **State**: Active development
+- **Links**: [GitHub](https://github.com/agent-ecosystem/afdocs) ・ [npm](https://www.npmjs.com/package/afdocs)
+
 ### skill-validator
 
 A Go CLI that validates Agent Skills against the agentskills.io specification. Checks directory structure, frontmatter, content quality, cross-contamination risk, and token budget composition. Built to support my ecosystem-scale analysis of 673 skills across 41 repositories.
 
 - **Language**: Go
 - **State**: Active development
-- **Links**: [GitHub](https://github.com/dacharyc/skill-validator) ・ [Blog post: Agent Skill Analysis](/2026/02/13/agent-skill-analysis/)
+- **Links**: [GitHub](https://github.com/dacharyc/skill-validator) ・ [Blog post: Agent Skill Analysis](/2026/02/13/agent-skill-analysis/) ・ [Interactive Report](https://agentskillreport.com)
 
 ---
 

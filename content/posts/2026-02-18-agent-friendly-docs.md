@@ -6,7 +6,7 @@ description: In which I ask an agent to view hundreds of docs pages - and feel s
 date: 2026-02-18 21:00:00 -0500
 url: /2026/02/18/agent-friendly-docs/
 image: /images/agent-friendly-docs-hero.png
-tags: [Coding, Documentation]
+tags: [Coding, Documentation, ai]
 draft: false
 ---
 

@@ -6,7 +6,7 @@ description: In which I show you how I made multiple Hugo sites agent-friendly.
 date: 2026-03-01 08:00:00 -0500
 url: /2026/03/01/make-hugo-site-agent-friendly/
 image: /images/make-your-hugo-site-agent-friendly-hero.jpg
-tags: [Documentation]
+tags: [Documentation, ai]
 draft: false
 ---
 

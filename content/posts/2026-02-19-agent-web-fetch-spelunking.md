@@ -6,7 +6,7 @@ description: In which I ask an agent to help me explore Web Fetch with docs page
 date: 2026-02-19 21:00:00 -0500
 url: /2026/02/19/agent-web-fetch-spelunking/
 image: /images/agent-web-fetch-hero.png
-tags: [Documentation]
+tags: [Documentation, ai]
 draft: false
 ---
 

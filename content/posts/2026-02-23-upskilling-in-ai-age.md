@@ -6,7 +6,7 @@ description: In which I answer someone who asked me how to get started with AI.
 date: 2026-02-23 23:00:00 -0500
 url: /2026/02/23/upskilling-in-ai-age/
 image: /images/upskill-in-ai-age-hero.jpg
-tags: [Documentation]
+tags: [Documentation, ai]
 draft: false
 ---
 

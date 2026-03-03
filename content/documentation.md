@@ -8,6 +8,18 @@ I've spent nine years building documentation systems, testing infrastructure, an
 
 ---
 
+## Agent-Friendly Documentation
+
+I've been researching how AI agents consume documentation and building tools to help docs teams optimize for this new access pattern. Agents fetch docs in real time, but face constraints that human readers don't: truncation limits, inability to render JavaScript, unreliable redirect handling, and more. Most docs teams are being told to "make docs AI-friendly" without a clear picture of what that means in practice.
+
+- **[Agent-Friendly Documentation Spec](https://agentdocsspec.com)**: A specification defining 21 checks across 8 categories for evaluating how well a docs site serves AI agent consumers. Covers llms.txt discovery, markdown availability, page size, content structure, URL stability, and more.
+
+- **[afdocs](https://github.com/agent-ecosystem/afdocs)**: A CLI tool that implements the spec and tests docs sites against it. Point it at a URL and it reports where your docs stand. Published on npm as `afdocs`.
+
+I write about this work extensively on my blog (see the [ai](/tags/ai/) tag) and at [AE Shift](https://aeshift.com).
+
+---
+
 ## MongoDB (2021 - Present)
 
 I joined MongoDB's Developer Education team as the first writer on a team of developers. What started as SDK documentation evolved into building infrastructure for code example quality at scale.

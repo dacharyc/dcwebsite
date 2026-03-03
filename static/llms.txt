@@ -5,12 +5,14 @@
 ## Pages
 
 - [About](https://dacharycarey.com/about/index.md)
+- [AI & Agent Research](https://dacharycarey.com/ai-research/index.md)
 - [Documentation & Developer Education](https://dacharycarey.com/documentation/index.md)
 - [Programming](https://dacharycarey.com/programming/index.md)
 - [Resume](https://dacharycarey.com/resume/index.md)
 
 ## Posts
 
+- [An Agent is More Than Its Brain](https://dacharycarey.com/2026/03/02/an-agent-is-more-than-its-brain/index.md): In which I talk about what's inside a coding agent.
 - [Make Your Hugo Site Agent-Friendly](https://dacharycarey.com/2026/03/01/make-hugo-site-agent-friendly/index.md): In which I show you how I made multiple Hugo sites agent-friendly.
 - [Case Study - 'upgrade-stripe' Agent Skill](https://dacharycarey.com/2026/02/27/case-study-upgrade-stripe-skill/index.md): In which I deep dive on a Stripe Skill, and what it means for the industry.
 - [LLMs vs. Agents as Docs Consumers](https://dacharycarey.com/2026/02/26/llms-vs-agents-as-docs-consumers/index.md): In which I discuss how model training and agents need different docs access patterns.

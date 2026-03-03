@@ -6,7 +6,7 @@ description: In which I deep dive on a Stripe Skill, and what it means for the i
 date: 2026-02-27 08:00:00 -0500
 url: /2026/02/27/case-study-upgrade-stripe-skill/
 image: /images/case-study-upgrade-stripe-skill-hero.jpg
-tags: [Documentation]
+tags: [Documentation, ai]
 draft: false
 ---
 

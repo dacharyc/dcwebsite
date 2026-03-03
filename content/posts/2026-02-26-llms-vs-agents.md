@@ -6,7 +6,7 @@ description: In which I discuss how model training and agents need different doc
 date: 2026-02-26 08:00:00 -0500
 url: /2026/02/26/llms-vs-agents-as-docs-consumers/
 image: /images/llms-vs-agents-as-docs-consumers-hero.jpg
-tags: [Documentation]
+tags: [Documentation, ai]
 draft: false
 ---
 
