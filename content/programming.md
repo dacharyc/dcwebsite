@@ -64,7 +64,7 @@ A Go CLI that validates Agent Skills against the agentskills.io specification. C
 
 - **Language**: Go
 - **State**: Active development
-- **Links**: [GitHub](https://github.com/dacharyc/skill-validator) ・ [Blog post: Agent Skill Analysis](/2026/02/13/agent-skill-analysis/) ・ [Interactive Report](https://agentskillreport.com)
+- **Links**: [GitHub](https://github.com/agent-ecosystem/skill-validator) ・ [Blog post: Agent Skill Analysis](/2026/02/13/agent-skill-analysis/) ・ [Interactive Report](https://agentskillreport.com)
 
 ---
 

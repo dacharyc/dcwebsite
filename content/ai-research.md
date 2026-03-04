@@ -38,7 +38,7 @@ A CLI tool that implements the Agent-Friendly Documentation Spec and tests docs 
 A CLI that validates Agent Skills against the agentskills.io specification. Checks directory structure, frontmatter, content quality, cross-contamination risk, and token budget composition.
 
 - **Language**: Go
-- **Links**: [GitHub](https://github.com/dacharyc/skill-validator)
+- **Links**: [GitHub](https://github.com/agent-ecosystem/skill-validator)
 
 ---
 

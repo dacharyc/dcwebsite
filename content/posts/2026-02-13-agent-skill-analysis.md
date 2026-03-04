@@ -17,7 +17,7 @@ Any given Agent Skill must hit two targets to actually achieve the promise of im
 - Comply with the Agent Skills specification
 - Provide high-quality content that enhances LLM outputs and does not waste precious LLM context/tokens
 
-I've been seeing a proliferation of Agent Skills that miss on one or both of these requirements, so I wrote a [Skill validator](https://github.com/dacharyc/skill-validator) and performed some analysis to dig deeper into how widespread this issue is. Here's an informal summary of my findings; I'm planning to put together a more detailed report for folks who really want to dig into the data.
+I've been seeing a proliferation of Agent Skills that miss on one or both of these requirements, so I wrote a [Skill validator](https://github.com/agent-ecosystem/skill-validator) and performed some analysis to dig deeper into how widespread this issue is. Here's an informal summary of my findings; I'm planning to put together a more detailed report for folks who really want to dig into the data.
 
 ## Compliance with the Agent Skills Specification
 
@@ -47,7 +47,7 @@ To help flag these issues, my skill validator reports warnings and errors for:
 - Token counting and limits
 - Holistic structure check
 
-You can get more details about how these issues can affect agent outputs and why I flag them in [the README for my tool](https://github.com/dacharyc/skill-validator?tab=readme-ov-file#quality-checks).
+You can get more details about how these issues can affect agent outputs and why I flag them in [the README for my tool](https://github.com/agent-ecosystem/skill-validator?tab=readme-ov-file#quality-checks).
 
 For the purposes of reporting on this analysis, I flag most of these issues as warnings, because they can degrade the LLM performance when using your Agent Skills but don't actually prevent the LLM from using the Skills. But I report the holistic structure check and token counting hard limits as errors, since these _will_ prevent agent platforms from using your Agent Skills.
 
@@ -160,7 +160,7 @@ Across all 218 community skills, the issues cluster into a few recurring pattern
 
 Across 234 skills from Anthropic and the community, the same issues come up over and over. If you're building or distributing Agent Skills, here's what the data says matters.
 
-**Validate before you publish.** The most common errors — broken links, name mismatches, missing files — are all caught by basic automated checks. Run a validator as part of your workflow, not as an afterthought. My [skill-validator](https://github.com/dacharyc/skill-validator) is one option; Anthropic's [reference implementation](https://github.com/agentskills/agentskills/tree/main/skills-ref) is another. The specific tool matters less than having *any* validation in your pipeline.
+**Validate before you publish.** The most common errors — broken links, name mismatches, missing files — are all caught by basic automated checks. Run a validator as part of your workflow, not as an afterthought. My [skill-validator](https://github.com/agent-ecosystem/skill-validator) is one option; Anthropic's [reference implementation](https://github.com/agentskills/agentskills/tree/main/skills-ref) is another. The specific tool matters less than having *any* validation in your pipeline.
 
 **One skill, one job.** The cleanest collection in this analysis was obra/superpowers: 14 skills, zero errors, each focused on a single workflow. The worst performers tried to do too much — cramming entire platforms, exhaustive API references, or dozens of library guides into a single skill. A skill that tries to cover everything ends up consuming a huge chunk of the context window before the agent even starts working on the user's task. If your skill exceeds 5,000 tokens in the body, ask whether it's really one skill or several.
 
