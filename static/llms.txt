@@ -12,6 +12,7 @@
 
 ## Posts
 
+- [How to Measure Agent Web Traffic](https://dacharycarey.com/2026/03/05/how-to-measure-agent-web-traffic/index.md): In which I lurk in server logs and try to make sense of what I see.
 - [An Agent is More Than Its Brain](https://dacharycarey.com/2026/03/02/an-agent-is-more-than-its-brain/index.md): In which I talk about what's inside a coding agent.
 - [Make Your Hugo Site Agent-Friendly](https://dacharycarey.com/2026/03/01/make-hugo-site-agent-friendly/index.md): In which I show you how I made multiple Hugo sites agent-friendly.
 - [Case Study - 'upgrade-stripe' Agent Skill](https://dacharycarey.com/2026/02/27/case-study-upgrade-stripe-skill/index.md): In which I deep dive on a Stripe Skill, and what it means for the industry.
