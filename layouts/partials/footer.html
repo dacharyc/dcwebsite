@@ -1,0 +1,60 @@
+<!-- begin footer -->
+<footer class="footer">
+
+  <div class="footer__inner">
+    <div class="container">
+      <div class="row">
+
+        <div class="col col-5 col-d-12">
+          <div class="footer__author">
+            <div class="footer__author-avatar">
+              <img class="lazy" data-src="{{ .Site.Params.author.author__avatar }}" alt="{{ .Site.Params.author.author__name }}">
+            </div>
+            <h3 class="footer__author-name">{{ .Site.Params.author.author__name }}</h3>
+            <p class="footer__author-bio">{{ .Site.Params.author.author__bio }}</p>
+            {{ partial "social-links.html" . }}
+            <div class="footer__support" style="margin-top: 10px; display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
+              <a href='https://github.com/sponsors/dacharyc' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://img.shields.io/badge/Sponsor-EA4AAA?style=for-the-badge&logo=githubsponsors&logoColor=white' alt='Sponsor on GitHub' /></a>
+              <a href='https://ko-fi.com/Q5Q41VNJIE' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://storage.ko-fi.com/cdn/kofi1.png?v=6' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
+            </div>
+          </div>
+        </div>
+
+        {{ if .Site.Params.gallery }}
+        <div class="col col-6 push-1 col-d-12 push-d-0">
+          <div class="footer__gallery">
+            <h3 class="footer__gallery-title">{{ .Site.Params.gallery.gallery__title }}</h3>
+            <div class="gallery-footer">
+              <div class="gallery" style="grid-template-columns: repeat({{ .Site.Params.gallery.gallery__columns }}, auto);">
+              {{ with .Site.Params.gallery_image }}
+                {{ range . }}
+                <div class="gallery__image">
+                  <img src="{{ .image_url }}" alt="{{ .image_alt }}" loading="lazy">
+                </div>
+                {{ end }}
+              </div>
+            </div>
+            {{ end }}
+          </div>
+        </div>
+        {{ end }}
+
+      </div>
+    </div>
+  </div>
+
+  <div class="footer__info">
+    <div class="container">
+      <div class="row">
+        <div class="col col-12">
+          <div class="footer__info-box">
+            <div class="copyright">{{ dateFormat "2006" now }} &copy; <a href="/">{{ .Site.Title }}</a>. All Right Reserved. <a rel="me" href="https://dacharycarey.social/@dachary">Find me on Mastodon</a> - <a rel="me" href="https://corporaterunaways.social/@prfocus">Check out PR Focus on Mastodon</a></div>
+            <div class="top" title="Top"><ion-icon name="chevron-up-outline"></ion-icon></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</footer>
+<!-- end footer -->
