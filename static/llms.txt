@@ -12,6 +12,7 @@
 
 ## Posts
 
+- [Vibes are Out, Data is In](https://dacharycarey.com/2026/03/12/vibes-out-data-in/index.md): In which I explain why a vibes-based approach to AI and docs ain't cutting it.
 - [How to Measure Agent Web Traffic](https://dacharycarey.com/2026/03/05/how-to-measure-agent-web-traffic/index.md): In which I lurk in server logs and try to make sense of what I see.
 - [An Agent is More Than Its Brain](https://dacharycarey.com/2026/03/02/an-agent-is-more-than-its-brain/index.md): In which I talk about what's inside a coding agent.
 - [Make Your Hugo Site Agent-Friendly](https://dacharycarey.com/2026/03/01/make-hugo-site-agent-friendly/index.md): In which I show you how I made multiple Hugo sites agent-friendly.
