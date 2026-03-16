@@ -3,7 +3,7 @@ title: Agent Skill Mega Repo Woes
 author: Dachary Carey
 layout: post
 description: In which I validate a 23.7k-star skill mega repo and discover problems the star count won't tell you.
-date: 2026-03-13 08:00:00 -0500
+date: 2026-03-13 07:00:00 -0500
 url: /2026/03/13/agent-skill-mega-repo-woes/
 image: /images/skill-mega-repo-hero.png
 tags: [ai, Coding]
