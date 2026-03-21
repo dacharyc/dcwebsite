@@ -12,6 +12,7 @@
 
 ## Posts
 
+- [Why a Platform Shouldn't Own an Open Spec](https://dacharycarey.com/2026/03/20/why-platform-shouldnt-own-open-spec/index.md): In which a platform breaks the Agent Skills spec for its own benefit.
 - [Is Your llms.txt Already Stale?](https://dacharycarey.com/2026/03/15/is-your-llms-txt-already-stale/index.md): In which I build a freshness check for llms.txt and discover that my tools were the problem.
 - [Agent Skill Mega Repo Woes](https://dacharycarey.com/2026/03/13/agent-skill-mega-repo-woes/index.md): In which I validate a 23.7k-star skill mega repo and discover problems the star count won't tell you.
 - [Vibes are Out, Data is In](https://dacharycarey.com/2026/03/12/vibes-out-data-in/index.md): In which I explain why a vibes-based approach to AI and docs ain't cutting it.
