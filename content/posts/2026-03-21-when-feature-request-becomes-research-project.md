@@ -1,0 +1,63 @@
+---
+title: When a Feature Request Becomes a Research Project
+author: Dachary Carey
+layout: post
+description: In which someone asks for something in 'skill-validator' and I spin up a new community research project.
+date: 2026-03-21 19:00:00 -0500
+url: /2026/03/21/when-feature-request-becomes-research-project/
+image: /images/when-feature-request-becomes-research-project-hero.jpg
+tags: [ai, coding]
+draft: false
+---
+
+Someone made a feature request on the `skill-validator` tool: [support for the `evals/` directory](https://github.com/agent-ecosystem/skill-validator/issues/39) introduced by Anthropic's recent updates to its `skill-creator` skill. This is the third or fourth Claude Code-specific request I've gotten regarding `skill-validator` development, and the tool is quickly accumulating custom flags to enable support for Claude Code-specific functionality while trying to preserve general spec adherence for folks developing cross-platform skills.
+
+I've told people on more than one Issue or PR that I intend to look into cross-platform support for Skill file loading, so I can have more concrete data than "I *hope* citing the spec here means it will be portable across platforms." After [yesterday's article](https://dacharycarey.com/2026/03/20/why-platform-shouldnt-own-open-spec/) about the Agent Skill governance issues, and the lack of support and guidance that community members are getting from spec maintainers, I decided it was time to stop saying "it's on my todo list" and put together some resources to help other people dig into it.
+
+## The starting point: researching file loading behavior
+
+The `evals/` issue had a great comment thread. One contributor, victorujfrog, surveyed 21 official skill repos listed on skills.sh to see how skill authors in the ecosystem actually handle evaluation artifacts. The finding: none of the 21 use the `evals/evals.json` structure from Anthropic's evaluating-skills guide. Automattic uses a singular `eval/` directory. Firebase keeps evals in a separate repo entirely. Stripe uses `benchmarks/`. Anthropic itself scatters eval tooling across `scripts/`, `assets/`, and custom directories. The picture is messy. I suspect this is because Anthropic's eval tooling is only about a month old. The `skill-creator` skill gained its evaluation functionality (eval runner, benchmark aggregator, grader agents, eval viewer) on February 25, and the evaluating-skills guide formalizing the `evals/evals.json` directory structure followed on March 5.
+
+I had Claude check the commit history for all 21 repos victorujfrog surveyed. Every single one had its skills committed before February 25. The earliest was Anthropic's own repo (October 2025), the bulk landed in January 2026, and even the most recent (Datadog, February 3) was still three weeks before the eval tooling shipped. So it's not that these organizations evaluated the recommended approach and chose differently. The recommended approach didn't exist yet when they were building.
+
+This is a recurring pattern with the Agent Skills spec. New guidance and tooling arrive without version numbers, changelogs, or any notification mechanism. If you created a skill in January and moved on to other work, you have no way of knowing that Anthropic published an evaluating-skills guide in March, or that the implementation guide was completely rewritten, or that the directory structure rules changed. The spec repo has no release process. There's no mailing list, no announcement channel, no "what's new" page. You'd have to be watching the repo's commit history to notice. The result is that the ecosystem fragments not because people disagree on how to do things, but because they built at different points in time against different versions of guidance that were never labeled as versions.
+
+victorujfrog also made a claim that caught my attention: that an unreferenced `evals/` directory shouldn't be loaded during normal skill activation, based on the spec's "progressive disclosure" model. The reasoning was straightforward. The spec says platforms load metadata first, the full SKILL.md body on activation, and supporting files only when explicitly referenced. If nothing in SKILL.md points to `evals/`, it stays unloaded.
+
+That reasoning is tidy. But it depends on an assumption I've been poking at for weeks: that platforms actually implement progressive disclosure the way the client implementation guide describes it.
+
+So I started digging into the history of the file loading guidance. The term "progressive disclosure" has been in the spec since launch day (December 18, 2025), but its role changed over time. At launch, it appeared as a brief structural recommendation to skill authors: "Skills should be structured for efficient use of context." Six lines. And that word "should" matters. In specification language (per RFC 2119, the standard that most specs reference for keywords), "should" means recommended but not required. An implementer can skip it if they have a good reason. "Must" means mandatory; you can't claim compliance without it. The spec's progressive disclosure section used "should," which means a platform that loads all skill content at once isn't violating the spec. It's just not following a recommendation.
+
+Three months later, on March 5, 2026, PR #200 rewrote the client implementation guide and elevated progressive disclosure to "the core principle" of the entire architecture. The new claim: "Every skills-compatible agent follows the same three-tier loading strategy." That PR disclosed it was developed from analysis of seven real-world implementations (OpenCode, Pi, Gemini CLI, Codex, VS Code Copilot Chat, Goose, and OpenHands). But at the time it was merged, at least 25 platforms had logos on the spec's own carousel. Seven out of twenty-five-plus is a 28% sample, and the guide's own body hedges with phrases like "most implementations" and "common approaches" that don't quite square with the "every" in the headline. Universal behavior predicated on a "should," not a "must."
+
+This matters because victorujfrog's reasoning chains trust in the way you'd expect a careful reader to: the guide says all platforms do X, therefore platforms do X, therefore my skill's `evals/` directory is safe. But that chain runs through an unchallenged claim based on a minority sample. And victorujfrog's own findings about wildly divergent directory structures across official skill repos are actually evidence pointing the other direction. If skill authors can't even agree on what to call the evals directory, there's no basis to assume platforms handle those directories uniformly.
+
+## The realization: the scope of this question is sizable
+
+I was originally picturing making some time one afternoon to test loading behavior across four or five platforms. Then I counted the logos in the carousel. Twenty-six platforms have adopted Agent Skills, and all but one of them shipped their implementations *before* the detailed progressive disclosure guidance existed. They built against either the basic original integration guide (which didn't formalize progressive disclosure as an architectural requirement) or just the spec itself.
+
+Then I started writing down the specific questions I'd need to answer per platform, and the list grew fast. When does content actually enter context? Do platforms read just frontmatter at discovery, or the entire SKILL.md? When a skill activates, do they load just the body, or eagerly pull in supporting files too? Do they parse for markdown links and pre-fetch referenced files? Which directories do they recognize? What happens with directories that aren't in the spec's original set of three? How do they resolve relative file paths? What happens if two active skills both have a `references/API.md`? Do they strip frontmatter or pass it through? Do they deduplicate if a skill gets activated twice? What about skill-to-skill invocation, where the spec is completely silent and platforms are known to diverge? Claude Code has a documented ~10% failure rate for skill chaining in Japanese prompts; GitHub Copilot has no restrictions at all; the other twenty-four platforms are unknowns.
+
+I ended up with 22 distinct checks across 9 categories. Testing all of those across 26 platforms is not an afternoon project. It's not even a weekend project.
+
+## The pivot: how can I enable community contributions?
+
+If I can't do this alone in a reasonable timeframe, maybe I can make it easy for other people to help. The ecosystem has plenty of practitioners who use skills across different platforms and have a stake in portability. What they need are the right questions to ask and the right tools to answer them.
+
+I structured the checks using a format similar to what we used for the [agent-friendly docs spec](https://agentdocsspec.com): each check gets an ID, a category, a description of what it evaluates, and a "why it matters" section explaining the practical consequences for skill authors. This makes it possible to discuss and reference specific checks without ambiguity (`discovery-reading-depth` is clearer than "that thing about whether platforms read the whole file at startup").
+
+The bigger challenge was making the checks *testable* without requiring people to read platform source code. That's where the benchmark skills come in. I created 16 spec-compliant skills, each designed to exercise specific loading behaviors. The key design decision came from Claude: every benchmark skill contains unique canary phrases embedded in its content. The theory is that when you install one of the benchmark skills on a platform and start a conversation, you can ask the agent what it sees. If a canary phrase from a reference file shows up in the agent's response, you know the platform loaded that file. If it doesn't, the platform either didn't load it or the model didn't retain it. Either way, you've got a data point. This avoids the trap of asking a model "did you load this file?" and getting a hallucinated yes.
+
+The benchmark skills cover the range: `probe-loading` tests basic progressive disclosure behavior, `probe-linked-resources` tests whether platforms pre-fetch files referenced in markdown links, `probe-nonstandard-dirs` tests handling of directories outside the spec's original set, `probe-shadow-alpha` and `probe-shadow-beta` test cross-skill resource conflicts, and so on. There are also `invoke-*` and `probe-circular-*` skills for testing skill-to-skill chaining and circular dependency behavior.
+
+I rounded things out with the usual open-source infrastructure: PR and issue templates, contributing guidelines, a code of conduct. One thing I was deliberate about was normalizing AI usage disclosure. This is obviously going to be an AI-driven project. People will use agents to help them run benchmarks, analyze results, and write up findings. That's fine, and I want people to feel comfortable saying so. The contributing guide asks for an AI usage disclosure and asks contributors to use their own judgment to validate AI-generated claims and outputs. Trust, but verify.
+
+Finally, I set up a website at [agentskillimplementation.com](https://agentskillimplementation.com) for easy sharing. As people contribute per-platform findings, each platform will get its own page. Eventually, the site will include an aggregate report comparing behavior across platforms and practical guidance for skill authors who need their skills to work portably.
+
+## The result: accidental research project
+
+What started as a feature request about an `evals/` directory turned into [agent-ecosystem/agent-skill-implementation](https://github.com/agent-ecosystem/agent-skill-implementation), a community research project with 22 checks, 16 benchmark skills, per-platform templates, and a website. I did not plan to do this today.
+
+If you're using Agent Skills on any platform, I'd genuinely appreciate help testing. Pick a platform you use, install the benchmark skills, run through the checks, and submit your findings. The more platforms we cover, the more useful this becomes for everyone trying to write portable skills.
+
+And more broadly: if you've got a question about how the agent ecosystem works in practice (not in theory, not according to the docs, but in the actual implementations people are running), consider whether it could benefit from this kind of structured crowd-sourcing. We're in a phase of software development where a lot of the ground truth lives in individual people's experiences with individual platforms. Getting that knowledge out of Slack threads and GitHub comment sections and into structured, comparable data is one of the most useful things the community can do right now.
