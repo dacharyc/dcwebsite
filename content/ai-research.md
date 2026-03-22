@@ -53,7 +53,7 @@ An ecosystem-scale analysis of 673 Agent Skills across 41 repositories, examinin
 
 ### Agent Skill Implementation Research
 
-Empirical research into how agent platforms actually implement Agent Skill loading, management, and presentation. Catalogs 22 checks across 9 categories, with 16 benchmark skills containing canary phrases for testing platform behavior without relying on model self-reporting. A community-driven project accepting per-platform contributions.
+Empirical research into how agent platforms actually implement Agent Skill loading, management, and presentation. Catalogs 23 checks across 9 categories, with 17 benchmark skills containing canary phrases for testing platform behavior without relying on model self-reporting. A community-driven project accepting per-platform contributions.
 
 - **Links**: [agentskillimplementation.com](https://agentskillimplementation.com) ・ [GitHub](https://github.com/agent-ecosystem/agent-skill-implementation) ・ [Blog post](https://dacharycarey.com/2026/03/21/when-feature-request-becomes-research-project/)
 
