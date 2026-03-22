@@ -3,7 +3,7 @@ title: Why a Platform Shouldn't Own an Open Spec
 author: Dachary Carey
 layout: post
 description: In which a platform breaks the Agent Skills spec for its own benefit.
-date: 2026-03-20 07:00:00 -0500
+date: 2026-03-20 15:00:00 -0500
 url: /2026/03/20/why-platform-shouldnt-own-open-spec/
 image: /images/why-platform-shouldnt-own-open-spec-hero.png
 tags: [ai, coding]
