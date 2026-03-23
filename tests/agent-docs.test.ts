@@ -1,3 +1,3 @@
-import { describeAgentDocs } from 'afdocs/helpers';
+import { describeAgentDocsPerCheck } from 'afdocs/helpers';
 
-describeAgentDocs(__dirname);
+describeAgentDocsPerCheck(__dirname);
