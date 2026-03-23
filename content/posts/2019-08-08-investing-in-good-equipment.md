@@ -14,7 +14,7 @@ tags: [Business, Coding, Lifestyle, Personal, Writing]
 
 A younger, more innocent me bought a 13" mid-2014 MacBook Pro on closeout in early 2015. My main tasks for my computer at that time were writing documents in word processors (Pages) and using CMSs to create and publish content. I thought I might do some light video editing of travel videos for Corporate Runaways, but didn't have much need or desire for a powerhouse machine. I had an external monitor for additional screen real estate, and mostly used the laptop screen for reference material.
 
-Fast forward to 2019. In the past few years, I've started doing [docs-as-code][1] in conjunction with a few open source projects. From the open source project side, this has involved setting up local development environments on my machine, and running apps locally so I can document them. From the documentation side, this has involved using static site generators to create doc sites from files (markdown, mostly). My work needs have definitely gotten more intensive.
+Fast forward to 2019. In the past few years, I've started doing [docs-as-code](https://www.writethedocs.org/guide/docs-as-code/) in conjunction with a few open source projects. From the open source project side, this has involved setting up local development environments on my machine, and running apps locally so I can document them. From the documentation side, this has involved using static site generators to create doc sites from files (markdown, mostly). My work needs have definitely gotten more intensive.
 
 Then, this spring, I dove into Swift. When I decided to learn to code so I could write an app I want to use, I took a gradual approach. I worked through some Swift Playgrounds stuff on my iPad, and then read a book or two about coding and Swift. I brainstormed the data structure for my app, and made UML diagrams. Eventually, I took a couple of online classes on Xcode and Swift.
 
@@ -47,5 +47,3 @@ So here's a reminder, if you need one, too: investing in good equipment is an im
 Yes, I am extremely privileged to be able to spend the money on an Apple device; I know you pay a big premium for their products. And I know that not everyone has the financial freedom to invest in big, splashy monitors and professional-quality office equipment; especially for folks who are the sole breadwinners, or supporting family members. But it _is_ worthwhile to put money aside and invest in the equipment you need for your career, in whatever form you're able and whatever that equipment looks like for you.
 
 I am very much enjoying my new setup.
-
- [1]: https://www.writethedocs.org/guide/docs-as-code/

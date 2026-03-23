@@ -19,7 +19,7 @@ Different writing tools are designed for different tasks. There are also a lot o
 
 ## Word processors
 
-When the general public thinks about writing on a computer, they typically picture a word processor, such as [Microsoft Office][1] or [Apple's Pages][2]. I'm also seeing more and more enterprises using [Google Docs][3] for basic word-processing tasks, as part of [G Suite][4] adoption within the orgs.
+When the general public thinks about writing on a computer, they typically picture a word processor, such as [Microsoft Office](https://products.office.com/en-us/home) or [Apple's Pages](https://www.apple.com/pages/). I'm also seeing more and more enterprises using [Google Docs](https://www.google.com/docs/about/) for basic word-processing tasks, as part of [G Suite](https://gsuite.google.com/) adoption within the orgs.
 
 Currently, I don't use word processors very often. I'd typically fire this type of app up when working on a simple article or marketing piece. The majority of the time these days, I'm only using a word processor when editing something a client has sent me. It's fine for simple revision work, or working with simple content, but if you're hiring a technical writer and you want complex deliverables in Microsoft Word, I might run the other direction.
 
@@ -27,7 +27,7 @@ Currently, I don't use word processors very often. I'd typically fire this type 
 
 ## Long-form writing
 
-One of my favorite writing apps ever is [Scrivener][5]. I've spent a fair amount of my time over the years drafting long-form content; think novels and business books. 
+One of my favorite writing apps ever is [Scrivener](https://www.literatureandlatte.com/scrivener/overview). I've spent a fair amount of my time over the years drafting long-form content; think novels and business books. 
 
 I think it is the single best writing tool for long-form content out there; it has amazing support for organizing and re-ordering content, revision workflow, storing relevant research and notes within the app, and more advanced features to help you tackle even the most complex long-form writing project.
 
@@ -39,13 +39,13 @@ Unfortunately, it's really not great for collaboration. And if you're doing a pr
 
 ## Text editors
 
-When the technical writing gets more technical, I turn to simple text editors. Recently, I worked on some API documentation using GitHub-flavored Markdown, which I committed to a private repo on GitHub, so I used [Atom][6] for this project. It's simple, displays Markdown and code nicely and makes it easy to spot potential problems. Atom does a good job of 'helping' with auto-complete and spotting properly-formed (and improperly-formed) syntax. 
+When the technical writing gets more technical, I turn to simple text editors. Recently, I worked on some API documentation using GitHub-flavored Markdown, which I committed to a private repo on GitHub, so I used [Atom](https://atom.io/) for this project. It's simple, displays Markdown and code nicely and makes it easy to spot potential problems. Atom does a good job of 'helping' with auto-complete and spotting properly-formed (and improperly-formed) syntax. 
 
 When I'm working on simple code, JSON, XML, Markdown, CSS or HTML, I use Atom. It's my preferred tool when doing the more technical type of technical writing. (Until I get to more substantial code manipulation, and then I use an IDE, but that's more developer-y and is probably an outlier for a pure writer or tech writer.)
 
-I have friends who prefer [VS Code][7], and my husband is a staunch [Vim][8] user... there are a lot of opinions about text editors, especially among developers. I'll leave you all to your holy wars.
+I have friends who prefer [VS Code](https://code.visualstudio.com/), and my husband is a staunch [Vim](https://www.vim.org/) user... there are a lot of opinions about text editors, especially among developers. I'll leave you all to your holy wars.
 
-I also have a few other text editing apps I use on occasion; [iA Writer][9] and [MacDown][10]. Because you can never have too many text editors; one for every occasion!
+I also have a few other text editing apps I use on occasion; [iA Writer](https://ia.net/writer) and [MacDown](https://macdown.uranusjr.com/). Because you can never have too many text editors; one for every occasion!
 
 ## CMS
 
@@ -57,7 +57,7 @@ You'll note I don't have a separate section for wikis. I don't make a distinctio
 
 ## HATs
 
-Some clients need a sophisticated authoring solution like a help-authoring tool, or HAT. HATs are great if you need to single-source content, create conditional content, or want to output in specific/multiple formats. [MadCap Flare][11], [Adobe RoboHelp][12], [Author-It][13], and [Oxygen XML Author][14] are all HATs.
+Some clients need a sophisticated authoring solution like a help-authoring tool, or HAT. HATs are great if you need to single-source content, create conditional content, or want to output in specific/multiple formats. [MadCap Flare](https://www.madcapsoftware.com/products/flare/), [Adobe RoboHelp](https://www.adobe.com/products/robohelp.html), [Author-It](https://www.author-it.com/), and [Oxygen XML Author](https://www.oxygenxml.com/xml_author.html) are all HATs.
 
 HATs are great for a single technical writer, or a team of technical writers, working to produce help documentation. Things get more complicated if you want a tool that enables easy collaboration outside of the technical writing team, such as collaboration with SMEs. More sophisticated (and expensive) authoring tools support collaboration well, too, but may add cost in terms of adding seats for SMEs, or complexity, in terms of requiring SMEs to work with docs in a specific way.
 
@@ -65,15 +65,15 @@ One company I've talked with during my interviewing process uses Flare for their
 
 ## API documentation
 
-The API documentation project I recently completed was quite simple, so I just used [Atom][6] to manually draft the docs. I've added a REST Client package to my Atom install, which is very basic, but gets the job done. I did install and poke [Insomnia][15], which is a more robust REST client with a focus on documentation, but I didn't need those capabilities for the small project I just wrapped.
+The API documentation project I recently completed was quite simple, so I just used [Atom](https://atom.io/) to manually draft the docs. I've added a REST Client package to my Atom install, which is very basic, but gets the job done. I did install and poke [Insomnia](https://insomnia.rest/), which is a more robust REST client with a focus on documentation, but I didn't need those capabilities for the small project I just wrapped.
 
-On the other end of the API documentation spectrum, you have something like [Swagger][16], which is an API development tool that also has some documentation elements, such as being able to automatically generate components of API docs, or ensuring API docs stay up-to-date as the API changes. I see it in a lot of job postings, and it's a valuable tool for developing and documenting complex APIs.
+On the other end of the API documentation spectrum, you have something like [Swagger](https://swagger.io/), which is an API development tool that also has some documentation elements, such as being able to automatically generate components of API docs, or ensuring API docs stay up-to-date as the API changes. I see it in a lot of job postings, and it's a valuable tool for developing and documenting complex APIs.
 
 ## Charts and presentations
 
-By far the most common charting and diagramming tool I see in job descriptions is [Microsoft Visio][17], which makes me a little sad. Microsoft products get the job done, but... well, I'll refrain from further comment until I'm in a longer-term gig where I know I won't have to use them. But my preferred charting tool is [OmniGraffle][18], and it's the one I will continue to use for my personal projects for the foreseeable future.
+By far the most common charting and diagramming tool I see in job descriptions is [Microsoft Visio](https://products.office.com/en-us/visio/flowchart-software), which makes me a little sad. Microsoft products get the job done, but... well, I'll refrain from further comment until I'm in a longer-term gig where I know I won't have to use them. But my preferred charting tool is [OmniGraffle](https://www.omnigroup.com/omnigraffle/), and it's the one I will continue to use for my personal projects for the foreseeable future.
 
-And then you have presentations, which, sadly, have been the bane of offices everywhere from the very first [PowerPoint][19] presentation... and will continue to be so, because sometimes a presentation (or slide deck) really is the best tool for the job. As a long-time Mac user, I prefer Apple's [Keynote][20], but can use either. And let's not forget [Google Slides][21], which is the G Suite answer to presentations.
+And then you have presentations, which, sadly, have been the bane of offices everywhere from the very first [PowerPoint](https://products.office.com/en-us/powerpoint) presentation... and will continue to be so, because sometimes a presentation (or slide deck) really is the best tool for the job. As a long-time Mac user, I prefer Apple's [Keynote](https://www.apple.com/keynote/), but can use either. And let's not forget [Google Slides](https://www.google.com/slides/about/), which is the G Suite answer to presentations.
 
 ## Graphic editing, screen-capturing and video editing tools
 
@@ -81,13 +81,13 @@ Good documentation isn't just words. People are attracted to interesting and eng
 
 As a documentarian, sometimes it becomes my job to create or edit those pictures and graphics, capture screenshares to illustrate flow, and even create and edit video. I own and routinely use a ton of tools related to this aspect of the job, and have used many more over the years, but here's a sampling:
 
-  * [Adobe Photoshop][22]
-  * [Pixelmator Pro][23]
-  * [Skitch][24]
-  * [SnagIt][25]
-  * [Graphic][26]
-  * [Camtasia][27]
-  * [iMovie][28]
+  * [Adobe Photoshop](https://www.adobe.com/products/photoshop.html)
+  * [Pixelmator Pro](https://www.pixelmator.com/pro/)
+  * [Skitch](https://evernote.com/products/skitch)
+  * [SnagIt](https://www.techsmith.com/screen-capture.html)
+  * [Graphic](https://www.graphic.com/)
+  * [Camtasia](https://www.techsmith.com/video-editor.html)
+  * [iMovie](https://www.apple.com/imovie/)
 
 There are also some great stock image sites where you can get affordable images to use in documentation; I routinely use those in my personal project sites.
 
@@ -95,13 +95,13 @@ There are also some great stock image sites where you can get affordable images 
 
 Writing often entails some form of project management. There are a variety of reasons to use project management tools and issue trackers, from keeping track of incoming requests, to providing transparency to management about what's in-progress, to being able to show conversations about a specific deliverable.
 
-Most recently, I've used [Basecamp][29], [Pivotal Tracker][30], [Jira][31], [GitHub Issues/Projects][32] and [Trello][33] for project management and issue tracking. I'm partial to Jira, but they each have their quirks, and I'm basically just a worker bee using whatever the organization uses. But I do strongly believe having one of these tools in place helps organizations of all sizes stay organized and on-top of outstanding tasks, and using this type of tool is something I look for when interviewing.
+Most recently, I've used [Basecamp](https://basecamp.com/), [Pivotal Tracker](https://www.pivotaltracker.com/), [Jira](https://www.atlassian.com/software/jira), [GitHub Issues/Projects](https://help.github.com/en/articles/about-issues) and [Trello](https://trello.com/) for project management and issue tracking. I'm partial to Jira, but they each have their quirks, and I'm basically just a worker bee using whatever the organization uses. But I do strongly believe having one of these tools in place helps organizations of all sizes stay organized and on-top of outstanding tasks, and using this type of tool is something I look for when interviewing.
 
 I also rely heavily on project management and issue tracking tools to provide transparency in an organization around workload and productivity. Working remotely requires an extra level of trust, and having a shared project management tool where other members of an organization can see the current workload broken down - and watch tickets progress through the columns - can help promote that trust. But there's a whole lot more I could unpack around this... I really need to write more about working remotely.
 
 ## Collaboration tools
 
-Let's not forget collaboration tools, whether you're talking messaging tool ([Slack][34]) or shared workspace tools ([Confluence][35], [Notion][36]). Collaboration is key to getting anything done as a technical writer. Maybe you're collaborating with SMEs, or your department, or cross-departmentally among the org. Maybe you're collaborating with freelance or contract workers. 
+Let's not forget collaboration tools, whether you're talking messaging tool ([Slack](https://slack.com/)) or shared workspace tools ([Confluence](https://www.atlassian.com/software/confluence), [Notion](https://www.notion.so/)). Collaboration is key to getting anything done as a technical writer. Maybe you're collaborating with SMEs, or your department, or cross-departmentally among the org. Maybe you're collaborating with freelance or contract workers. 
 
 There are a lot of contexts where collaboration tools are useful, and breaking things down to a particular level of granularity can be helpful; i.e. a shared workspace for each project, or a collaboration tool where you can lock-down access when you're working with external providers.
 
@@ -120,40 +120,3 @@ In my experience, the more tightly coupled a technical writer is with a software
 The one generalization it's safe to make about technical writing tooling is that the "best" tool varies based on the org, the desired output, SMEs and a broad range of factors. What's "best" in one org may not work at all in another org. As a writer, the tools I use today may not be the ones I'll use tomorrow; today I'm working on Markdown files in Atom and running git on the command line, but tomorrow I might be drafting a blog post in a CMS, or working on API documentation.
 
 As a generalist, I enjoy using a wide range of writing tools; that way I can just pick up the best tool for the job when I sit down to start my task.
-
- [1]: https://products.office.com/en-us/home
- [2]: https://www.apple.com/pages/
- [3]: https://www.google.com/docs/about/
- [4]: https://gsuite.google.com/
- [5]: https://www.literatureandlatte.com/scrivener/overview
- [6]: https://atom.io/
- [7]: https://code.visualstudio.com/
- [8]: https://www.vim.org/
- [9]: https://ia.net/writer
- [10]: https://macdown.uranusjr.com/
- [11]: https://www.madcapsoftware.com/products/flare/
- [12]: https://www.adobe.com/products/robohelp.html
- [13]: https://www.author-it.com/
- [14]: https://www.oxygenxml.com/xml_author.html
- [15]: https://insomnia.rest/
- [16]: https://swagger.io/
- [17]: https://products.office.com/en-us/visio/flowchart-software
- [18]: https://www.omnigroup.com/omnigraffle/
- [19]: https://products.office.com/en-us/powerpoint
- [20]: https://www.apple.com/keynote/
- [21]: https://www.google.com/slides/about/
- [22]: https://www.adobe.com/products/photoshop.html
- [23]: https://www.pixelmator.com/pro/
- [24]: https://evernote.com/products/skitch
- [25]: https://www.techsmith.com/screen-capture.html
- [26]: https://www.graphic.com/
- [27]: https://www.techsmith.com/video-editor.html
- [28]: https://www.apple.com/imovie/
- [29]: https://basecamp.com/
- [30]: https://www.pivotaltracker.com/
- [31]: https://www.atlassian.com/software/jira
- [32]: https://help.github.com/en/articles/about-issues
- [33]: https://trello.com/
- [34]: https://slack.com/
- [35]: https://www.atlassian.com/software/confluence
- [36]: https://www.notion.so/

@@ -25,12 +25,10 @@ Fast forward to today, when there are a couple of apps that have been percolatin
 
 App number one is fairly trivial, and something that I really just want to use myself; I don't care if another person ever buys it. But that app should serve as training wheels for the more important app I want to write; one that will hopefully be useful to an entire industry.
 
-Right now, I'm working my way through Swift Playgrounds to get some of the basic fundamentals under my belt. I'm also reading a couple of books. Maybe this time I'll make it through [Chris Pine's _Learn to Program_][1], a great beginner book hubby gifted to me ages ago. From there, I've got a couple of other courses lined up.
+Right now, I'm working my way through Swift Playgrounds to get some of the basic fundamentals under my belt. I'm also reading a couple of books. Maybe this time I'll make it through [Chris Pine's _Learn to Program_](https://amzn.to/2IV1WJZ), a great beginner book hubby gifted to me ages ago. From there, I've got a couple of other courses lined up.
 
 Happily, I'm already familiar with the logic behind programming; some of my work as a technical writer has been to explain that logic to non-programmers, so they can use a very technical app whose interface was developed by engineers, not UI/UX folks. And I remember some of the basics from my old days mucking about in Basic; conditionals and loops are conditionals and loops, 25 years ago or today. 
 
 Wish me luck as I dive into this side project! I'm still looking for a paying technical writing gig to cover the bills, but this is a fun way to expand my skills while I hunt for the right fit. And maybe I can bring in a little side income from the apps I'll write. 
 
 If nothing else, I always enjoy stretching my brain and learning new skills, and it's fun to come full-circle from my early days in computing and dip my toes into coding again.
-
- [1]: https://amzn.to/2IV1WJZ

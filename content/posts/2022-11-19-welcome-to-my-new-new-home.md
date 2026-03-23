@@ -23,7 +23,7 @@ And now, with this influx to Mastodon, there is a special trick to getting a "Ve
 
 So it's time to avail myself of some of the tools at my disposal. I'm switching my content over to a Hugo static site served from a GitHub repository. I'll have a webhook on the GitHub repo that has the server rebuild my site when I push changes to the repository. I can run Hugo locally to check how things look and tweak to my heart's content. Easy, peasy. 
 
-It was a bit of a hassle to get my content out of WordPress and into Hugo. It has taken me over a week of work on nights and weekends, even after using [the WordPress to Hugo Exporter plugin][1] to get my content out of WordPress. It took a minute to figure out how to get the plugin installed and get it to work - alas, the repo's README author is not a technical writer. When I did get it to run, the content downloaded pretty quickly.
+It was a bit of a hassle to get my content out of WordPress and into Hugo. It has taken me over a week of work on nights and weekends, even after using [the WordPress to Hugo Exporter plugin](https://github.com/SchumacherFM/wordpress-to-hugo-exporter) to get my content out of WordPress. It took a minute to figure out how to get the plugin installed and get it to work - alas, the repo's README author is not a technical writer. When I did get it to run, the content downloaded pretty quickly.
 
 But then... I had a mess on my hands. Images came down with undescriptive names like 'featured.jpg' - or else a ridiculous hash. And for some reason, there were a million honking sizes of each image. This is what I got from one single blog post:
 
@@ -48,5 +48,3 @@ _Note, a little bit later: I ended up handling the images myself. Hubby slept in
 Ideally, this move to Hugo and hosting my content from a GitHub repo will make my site more portable in the future. Nothing lasts forever, and I'm sure someday I'll need to change things up again. But maybe next time it'll be easier because I won't have some uber framework eating my content and storing it with all kinds of weird custom markup and doing who-knows-what to the images that I upload.
 
 Control your own destiny on the interwebs, folks. It'll make things easier the next time you need to move. Or, in the case of Twitter, flee a slow-motion train wreck that has suddenly sped up into realtime.
-
-[1]: https://github.com/SchumacherFM/wordpress-to-hugo-exporter

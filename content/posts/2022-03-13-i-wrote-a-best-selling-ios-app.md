@@ -17,13 +17,13 @@ Turns out, when you email industry-specific news sources with topical news that 
 
 My little hobby app, Shattered Ring, has been featured on a ton of video game news sites, including:
 
-  * Video Games Chronicle: [A new iOS app lets players track quests and NPCs in Elden Ring][1]
-  * Metro: [Elden Rings fan creates a task-tracker phone app so you never forget a side quest][2]
-  * Games Radar: [This Elden Ring app helps you track NPCs and side quests][3]
-  * Eurogamer: [This Elden Ring fan created an iOS app to help players track quests][4]
-  * MP1ST: [Elden Ring Side Quests Tracker "Shattered Ring" Developed by Fan Released][5]
+  * Video Games Chronicle: [A new iOS app lets players track quests and NPCs in Elden Ring](https://www.videogameschronicle.com/news/a-new-ios-app-lets-players-track-quests-and-npcs-in-elden-ring/)
+  * Metro: [Elden Rings fan creates a task-tracker phone app so you never forget a side quest](https://metro.co.uk/2022/03/11/elden-ring-fan-creates-phone-app-so-you-never-forget-a-side-quest-16259604/)
+  * Games Radar: [This Elden Ring app helps you track NPCs and side quests](https://www.gamesradar.com/this-elden-ring-app-helps-you-track-npcs-and-side-quests/)
+  * Eurogamer: [This Elden Ring fan created an iOS app to help players track quests](https://www.eurogamer.net/articles/2022-03-12-this-elden-ring-fan-created-an-ios-app-to-help-players-track-quests)
+  * MP1ST: [Elden Ring Side Quests Tracker "Shattered Ring" Developed by Fan Released](https://mp1st.com/news/elden-ring-side-quests-tracker-shattered-ring-developed-by-fan)
 
-After the App Store approved my app last week, I spent an hour or two reaching out to 5 video-game-related news sources every night. As far as I can tell, Video Games Chronicle was the first one to write about it on Friday, and then it started showing up everywhere. There are a ton of other websites that credit the original VGC article, but a few also seem to have gone to the [Shattered Ring][6] website and actually read up on what the app is and does.
+After the App Store approved my app last week, I spent an hour or two reaching out to 5 video-game-related news sources every night. As far as I can tell, Video Games Chronicle was the first one to write about it on Friday, and then it started showing up everywhere. There are a ton of other websites that credit the original VGC article, but a few also seem to have gone to the [Shattered Ring](https://shatteredring.com) website and actually read up on what the app is and does.
 
 It was Kay who noticed on Friday evening that my app was #7 in its category (Entertainment) on the App Store. And throughout the evening, we watched it slowly climb. The dog woke us up around 6am on Saturday asking to go outside, and I made the mistake of checking the app on my phone. And that's when I saw it:
 
@@ -61,25 +61,16 @@ Anyway. Unfortunately, after refactoring the navigation and adding the name edit
 
 I **hope** the update I shipped fixes the bugs. I will probably be low-grade stressed about it until I see reviews or get user feedback that I haven't introduced some horrible new bug. But the whole thing drove home something I hadn't really thought too much about while I was writing this app - now that I have taken money from people, I have a responsibility to them to make sure the thing I sold them actually works. _And_, being a people pleaser, I will probably sink way too much of my free time into shipping new features based on requests. I want people to be happy with the thing I made. I want them to like it.
 
-So, yeah. I wrote a best-selling app in its category on the App Store, at least for a little while. And at some point today, it made it all the way up to the #5 top-selling app on the App Store across all categories. That is pretty cool for a little hobby app that I wrote!<figure class="wp-block-image size-large">
+So, yeah. I wrote a best-selling app in its category on the App Store, at least for a little while. And at some point today, it made it all the way up to the #5 top-selling app on the App Store across all categories. That is pretty cool for a little hobby app that I wrote!
 
 ![Shattered Ring app at position number 5 in the App Store](/images/96540297-7A35-4EB3-A179-4C9223F66AEE_1_102_o-555x1200.jpeg)
 
 But, to quote a great line:
 
-<blockquote>
-  With great power comes great responsibility.
-</blockquote>
+> With great power comes great responsibility.
 
 There may be hundreds of people using my app now - but now I owe them something in return. And that is stability, and maybe also an app that gets even better at doing the thing they want to do with it. 
 
 I guess now I'm a real developer?
 
 P.S. I _am_ sorry to have disappointed all the folks who want an Android version. I had one angry person on Twitter say: "Why on earth anyone would make an iOS exclusive app is beyond me. Literally 70% of the mobile market is Android. Is this some American thing where the Apple delusion is just accepted?" Nope! Just that I don't own an Android device, and I don't know Java or Kotlin, and I'm one person who wrote this app quickly in their free time outside of their full-time job and family/social responsibilities... sorry, Android user, that an Android dev hasn't done the same by now. Although now that my app is out in the world, and has been splashed across a boatload of video game news sites, maybe some Android or multi-platform dev is out there writing something better!
-
- [1]: https://www.videogameschronicle.com/news/a-new-ios-app-lets-players-track-quests-and-npcs-in-elden-ring/
- [2]: https://metro.co.uk/2022/03/11/elden-ring-fan-creates-phone-app-so-you-never-forget-a-side-quest-16259604/
- [3]: https://www.gamesradar.com/this-elden-ring-app-helps-you-track-npcs-and-side-quests/
- [4]: https://www.eurogamer.net/articles/2022-03-12-this-elden-ring-fan-created-an-ios-app-to-help-players-track-quests
- [5]: https://mp1st.com/news/elden-ring-side-quests-tracker-shattered-ring-developed-by-fan
- [6]: https://shatteredring.com

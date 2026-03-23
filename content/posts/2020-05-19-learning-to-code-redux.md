@@ -13,7 +13,7 @@ A little over a year ago, I wrote here about how I was learning Swift because th
   
 Then came some health issues last fall, and then Christmas, and then this spring the whole world has turned upside down...  
   
-So here we are a year later, and I haven't written my apps, although I've been getting cozier with the code needed to modify the functionality in the static site generators we use for work (Jekyll and Hugo) and my Git foo has gotten to be second nature. But the actual proper "learning to code" I had wanted to do has been nagging away at me. So when one of my co-workers posted that [Stanford University's Engineering department was offering a free intro to coding class, Code in Place][1], I jumped at the chance to sign up.
+So here we are a year later, and I haven't written my apps, although I've been getting cozier with the code needed to modify the functionality in the static site generators we use for work (Jekyll and Hugo) and my Git foo has gotten to be second nature. But the actual proper "learning to code" I had wanted to do has been nagging away at me. So when one of my co-workers posted that [Stanford University's Engineering department was offering a free intro to coding class, Code in Place](https://engineering.stanford.edu/news/free-coding-education-time-covid-19), I jumped at the chance to sign up.
 
 Fast forward to six weeks later. I was one of 10,000 interested geeks-in-training who got accepted in this massive international experiment of teaching a diverse student base how to code in Python, entirely online. 
 
@@ -29,7 +29,7 @@ For my Code in Place final project, I've decided to write an app to solve this i
 
 So far, I've got the screenshot inventory piece working; I can create a list of all the screenshots in my technical documentation, and associate those screenshots with URLs in the app (dictionaries are awesome). I added some fun calculations to tell me how much coverage I've got in this screenshot inventory; for example, I've got 181 screenshots in my documentation, but have only inventoried 14 of them so far, so roughly 7% of my screenshots have been inventoried. I'll work toward 100% coverage, because that becomes more important when I get the second piece working: the visual diffing element.
 
-For the visual diffing element, I'm learning how to make API calls to [a visual regression tool, Diffy][2], that can generate visual diffs of pages across environments. So I can have it diff production and staging, for example, and tell me which of the pages that I'm tracking contain changes in staging. Then my app will give me a list of the screenshots associated with that page, so I'll know which screenshots I need to update when there are changes to the app.
+For the visual diffing element, I'm learning how to make API calls to [a visual regression tool, Diffy](https://diffy.website/), that can generate visual diffs of pages across environments. So I can have it diff production and staging, for example, and tell me which of the pages that I'm tracking contain changes in staging. Then my app will give me a list of the screenshots associated with that page, so I'll know which screenshots I need to update when there are changes to the app.
 
 Bonus: the process of making these associations has made me realize there are some nearly duplicate screenshots in my technical docs, which could be streamlined a bit. So hopefully this exercise will help me tighten up my documentation images and maintain fewer assets. Bonus win!
 
@@ -40,6 +40,3 @@ API calls are also out of scope of what we learned in Code in Place, but I've do
 At this point, though, I think I can finally check off the box that says: "learning to code." I've written an app that does a thing, and it's a step beyond the Hello World type stuff I've done so far in Swift. I'm enjoying the problem solving; I spend a couple of hours every evening working on code, and go to sleep with code in my head and wake up with problems solved. I might eventually pick up a Python web framework and give it a web UI, or maybe I'll leave it a command-line tool and change gears back to Swift now that I've actually _started_ and _written_ a thing.
 
 Or maybe I'll go even deeper down the rabbit hole, because learning is fun, and poke the Python/Swift interoperability stuff and give it an iOS app. Why not? The sky's the limit once you're well and truly started down the path of programming.
-
- [1]: https://engineering.stanford.edu/news/free-coding-education-time-covid-19
- [2]: https://diffy.website/

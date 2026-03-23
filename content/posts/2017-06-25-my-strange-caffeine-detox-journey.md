@@ -9,7 +9,7 @@ image: /images/caffiene-detox-hero.jpg
 tags: [Lifestyle,Personal]
 
 ---
-If you know me at all, you know I'm a devoted coffee snob. I have an AeroPress at home and a second one at the office where I've been contracting for almost a year. I have not one, but _two_ expensive burr grinders so I can always brew from fresh beans (one at home, one at the office). I temp the water before I brew. (Different beans extract ideally at different temps - I generally prefer anywhere from 85C to 95C depending on the bean, but 92C seems to be about my sweet spot.) And I buy rather expensive single-source beans from a local roaster.
+If you know me at all, you know I'm a devoted coffee snob. I have an AeroPress at home and a second one at the office where I've been contracting for almost a year. I have not one, but *two* expensive burr grinders so I can always brew from fresh beans (one at home, one at the office). I temp the water before I brew. (Different beans extract ideally at different temps - I generally prefer anywhere from 85C to 95C depending on the bean, but 92C seems to be about my sweet spot.) And I buy rather expensive single-source beans from a local roaster.
 
 So it came as a big surprise to my friends and family when, leading up to Memorial Day Weekend, I announced my intent to do a caffeine detox.
 
@@ -25,9 +25,9 @@ I was right.
 
 The extra day off wasn't really enough. I ended up working at home for a couple of days once the weekend was over. It wasn't until an entire week had passed since I last drank caffeine that the headaches let up. And we're talking migraine-level headaches for days 2-4, and then pretty bad headaches from 5-7. It was no walk in the park.
 
-Week two was about feeling exhausted, _**all the time**_. I never really thought about what that must be doing to my body - how every time I started to get tired during the day, I'd just add some more caffeine. As a result, I had unconsciously programmed my body that whenever it sent me a sleepy signal, I'd just give it a chemical upper. I had completely messed with my body's natural energy cycle, and it didn't really know what to do once the caffeine wasn't coming in again.
+Week two was about feeling exhausted, ***all the time***. I never really thought about what that must be doing to my body - how every time I started to get tired during the day, I'd just add some more caffeine. As a result, I had unconsciously programmed my body that whenever it sent me a sleepy signal, I'd just give it a chemical upper. I had completely messed with my body's natural energy cycle, and it didn't really know what to do once the caffeine wasn't coming in again.
 
-I'd wake up feeling relatively ok. But by the time an hour had passed - when I'd normally be drinking my morning latte or coffee - my eyelids didn't want to stay up on their own. I had _NO_ energy. I just wanted to go back to bed. Mid-morning, I'd be dragging. But mid-afternoon, when I always tend to get sleepy, was the worst. I'd literally be staring at my computer, and no matter how much effort I put into keeping my eyelids open, they would not stay open. I never fell asleep at my desk, but there were times when I'd sit there with my eyelids closed because I just literally couldn't keep them open. I'd give them thirty seconds and force them open again, or go for a walk to try to get some blood flowing and give me some energy. But I think week two was even harder than the headaches - I could barely focus, and there's something really debilitating about just being exhausted _all the time_.
+I'd wake up feeling relatively ok. But by the time an hour had passed - when I'd normally be drinking my morning latte or coffee - my eyelids didn't want to stay up on their own. I had *NO* energy. I just wanted to go back to bed. Mid-morning, I'd be dragging. But mid-afternoon, when I always tend to get sleepy, was the worst. I'd literally be staring at my computer, and no matter how much effort I put into keeping my eyelids open, they would not stay open. I never fell asleep at my desk, but there were times when I'd sit there with my eyelids closed because I just literally couldn't keep them open. I'd give them thirty seconds and force them open again, or go for a walk to try to get some blood flowing and give me some energy. But I think week two was even harder than the headaches - I could barely focus, and there's something really debilitating about just being exhausted *all the time*.
 
 By week three, I'd gotten a little apprehensive about what was going to come next. Was it going to be headaches again? Was the perpetual exhaustion about to descend on me again? When neither manifested, I thought: hey, maybe that's it. Maybe the withdrawal is done. I started thinking about when I might start drinking caffeine again, and what form that might take.
 
@@ -35,11 +35,11 @@ One day, in the afternoon, I was feeling sleepy and also craving chocolate, so I
 
 MAN, I felt that caffeine!
 
-That hot chocolate tasted effing amazing. And I felt SO GREAT after I drank it. I felt like I could do **_ALL THE THINGS_**. My mood lifted, I had so much more energy and focus, and I was super productive for the rest of the afternoon.
+That hot chocolate tasted effing amazing. And I felt SO GREAT after I drank it. I felt like I could do ***ALL THE THINGS***. My mood lifted, I had so much more energy and focus, and I was super productive for the rest of the afternoon.
 
 That's when I realized two things:
 
-  1. Wow, the body really adjusts quickly to not having caffeine. I thought I'd barely feel it, because I'd been drinking _so much_ caffeine before, but let me tell you I felt the results and was very aware that the caffeine was affecting me.
+  1. Wow, the body really adjusts quickly to not having caffeine. I thought I'd barely feel it, because I'd been drinking *so much* caffeine before, but let me tell you I felt the results and was very aware that the caffeine was affecting me.
   2. Oh shit. This might be worse than I realize. If even a little hot cocoa makes me feel this way, I'm going to have to be damn careful about how I re-introduce caffeine to my life. Maybe I shouldn't drink caffeine again at all?
 
 I wrestled with that for a few days. On Sunday, about five days after the hot cocoa and a little ways into week four, I decided to try a latte from one of my favorite local coffee shops. I was going to be deliberate about it - we sat there and had breakfast, and I savored the crap out of it. It was one of the most amazing coffee-drinking experiences I've ever had. And I realized: mindful coffee drinking is even more mind-blowing than habitual caffeine consumption. (This was the latte in the picture at the top of the post. Yes, I took a picture of it. It tasted even better than it looks.)
@@ -64,9 +64,9 @@ Now here we are into week five. It's Sunday, and I've just bought a mocha again.
 
 I thought, when I walked up the street to pick it up, that I finally had it figured out.
 
-I could have coffee-based drinks when I wanted them, and **_ONLY_** then. Not when I felt I needed them. Not when I was feeling sleepy, or tired, or cranky. Not out of any sort of craving or habitual need - I'd gotten used to lattes every morning, and again every afternoon/evening, and I don't want to get back to that state. Only when I deliberately, mindfully, _**WANTED**_ a coffee-based drink should I have one. I was pretty happy with that decision while I was sipping my mocha on the way home.
+I could have coffee-based drinks when I wanted them, and ***ONLY*** then. Not when I felt I needed them. Not when I was feeling sleepy, or tired, or cranky. Not out of any sort of craving or habitual need - I'd gotten used to lattes every morning, and again every afternoon/evening, and I don't want to get back to that state. Only when I deliberately, mindfully, ***WANTED*** a coffee-based drink should I have one. I was pretty happy with that decision while I was sipping my mocha on the way home.
 
-But now that I'm sitting here, typing this out and thinking about my reactions, I'm wondering if that's really a good call. I made the decision to have a mocha on Thursday because I was cranky and tired and couldn't keep my eyes open. Was it really that I _**WANTED**_ it, or did I feel I needed it?
+But now that I'm sitting here, typing this out and thinking about my reactions, I'm wondering if that's really a good call. I made the decision to have a mocha on Thursday because I was cranky and tired and couldn't keep my eyes open. Was it really that I ***WANTED*** it, or did I feel I needed it?
 
 How much can I trust myself to judge the difference between want and need?
 
@@ -74,7 +74,7 @@ I don't want to get back to a dependency state, because withdrawal was no good a
 
 There's also the fact that it feels wonderful to be so focused and productive when I drink caffeine. I feel like I get so much done. (I really do get so much done.) But it also just feels like a better mental state. And how is that different than any of the more serious, less socially-acceptable drugs? It feels like a slippery slope to me. Not that I ever have, or ever would, use "real" drugs - with my family history, that's just not a thing that would happen. But in terms of how it affects the body, and wondering whether I can trust my mind when I'm making a decision about whether or not to have caffeine - all of the same psychology of addiction applies, I'm beginning to realize.
 
-There's the added complication that this coffee-consumption is tied into my identity as a writer. I love sitting at my desk, typing away and drinking coffee. It's a _really_ satisfying ritual. But how much of that is habitual?
+There's the added complication that this coffee-consumption is tied into my identity as a writer. I love sitting at my desk, typing away and drinking coffee. It's a *really* satisfying ritual. But how much of that is habitual?
 
 And coffee helps me through those lagging cycles, where I want to stop and rest, instead letting me sit in front of my keyboard and just keep on working. But is that the healthiest thing? Shouldn't I instead get up and talk a walk, or exercise, or nap?
 

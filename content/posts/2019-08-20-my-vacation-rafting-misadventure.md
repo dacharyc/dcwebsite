@@ -15,9 +15,9 @@ Or that time I accidentally body-surfed a Class V rapid on the Penobscot River i
 
 ### The day so far...
 
-My husband and I were spending the week with four friends at a rented lake house in Lincoln, Maine. The friends and I had done a rafting trip the prior year on the Androscoggin River in New Hampshire with [ELC Outdoors,][1] and had really enjoyed it - in all it's mild Class I-II glory. It was mostly a float/paddle down the river, with a few mild rapid sections to get us wet and get the heart rate up. I had been bummed that the hubby missed that trip, and looked forward to getting him into rafting on this outing.
+My husband and I were spending the week with four friends at a rented lake house in Lincoln, Maine. The friends and I had done a rafting trip the prior year on the Androscoggin River in New Hampshire with [ELC Outdoors,](https://elcoutdoors.com/white-water-rafting-adventures-nh-maine/) and had really enjoyed it - in all it's mild Class I-II glory. It was mostly a float/paddle down the river, with a few mild rapid sections to get us wet and get the heart rate up. I had been bummed that the hubby missed that trip, and looked forward to getting him into rafting on this outing.
 
-For this outing, we arrived at [NEOC's][2] HQ bright and early for our all-day rafting trip, and everyone in our group - indeed, _everyone_ on the entire trip, about two busloads of people - opted to rent wet suits. Except me. I tend to run hot, and if you've ever been overweight, you know how fraught outdoor apparel shopping can be - apparently fat people never go outside or do anything - so I didn't want to deal with potentially not finding something that would fit, or being wrapped up like a sausage in an overly-tight wet suit. Ugh. No thanks.
+For this outing, we arrived at [NEOC's](https://www.neoc.com/white-water-rafting-in-maine/) HQ bright and early for our all-day rafting trip, and everyone in our group - indeed, _everyone_ on the entire trip, about two busloads of people - opted to rent wet suits. Except me. I tend to run hot, and if you've ever been overweight, you know how fraught outdoor apparel shopping can be - apparently fat people never go outside or do anything - so I didn't want to deal with potentially not finding something that would fit, or being wrapped up like a sausage in an overly-tight wet suit. Ugh. No thanks.
 
 After everyone was geared up, we had to stand around while a rafting guide gave us a safety briefing that felt like it went on far too long, and included too many attempts at humor that did not jive with my own sense of humor. 
 
@@ -25,7 +25,7 @@ The things I remember from that safety briefing are: if you end up in the water,
 
 (What I forgot, which one of my friends helpfully pointed out later, was that you are supposed to try to point your feet downstream, so they're the first thing to encounter rocks vs. your fragile helmeted head. Minor but important detail.)
 
-The morning was a relatively tame float down the "lower Penobscot." (An area below [Abol Bridge Campground and Store][3], maybe? I'm not sure exactly where it was, but we passed Abol's on the way to our morning landing, and then again when we were going to the afternoon landing.) 
+The morning was a relatively tame float down the "lower Penobscot." (An area below [Abol Bridge Campground and Store](https://www.facebook.com/abolbridge/), maybe? I'm not sure exactly where it was, but we passed Abol's on the way to our morning landing, and then again when we were going to the afternoon landing.) 
 
 There were a couple of rapids up to a Class IV, but you could more-or-less opt out of the Class IV which was mainly a drop down a "12-foot waterfall" at the beginning of the day, and then a little bit at the end of the trip. It was a good way to get our feet wet, build up some confidence, practice paddling at our guide's command, and hear a lot of dad jokes. In short, it whetted our appetite for a slightly more adventurous afternoon.
 
@@ -33,7 +33,7 @@ We had a riverside lunch, in which I literally stood around getting eaten alive 
 
 ### Ripogenus Gorge
 
-Our afternoon landing took us to [Ripogenus Gorge][4], to a hydroelectric dam. Right away, it was obvious that this was a different beast. We passed several warning signs: "Warning: the Upper Gorge is hazardous, proceed at your own risk" - and signs warning about danger when the siren sounds. The group was much smaller; only four rafts; and the terrain we had to portage the raft across was much rockier to get down to the river.
+Our afternoon landing took us to [Ripogenus Gorge](https://en.wikipedia.org/wiki/Ripogenus_Gorge), to a hydroelectric dam. Right away, it was obvious that this was a different beast. We passed several warning signs: "Warning: the Upper Gorge is hazardous, proceed at your own risk" - and signs warning about danger when the siren sounds. The group was much smaller; only four rafts; and the terrain we had to portage the raft across was much rockier to get down to the river.
 
 The first big rapid we had to navigate in the afternoon was the colorfully-named Exterminator, a Class-IV "hole." When we hit the hole, the amount of water that flooded over the front of the raft - because of course I wanted to be in the front of the raft - was enormous, almost sucking me out of the raft right then. I felt myself being pulled from my perch on the side of the raft, and tried to dig my feet harder into the footholds; one pocket in the floor, and the other foot wedged between the edge of the raft and the raft floor, willing my core muscles to engage and keep me on that raft. Fortunately, it was a brief moment, and I managed to stay in.
 
@@ -54,30 +54,20 @@ The sun had finally come out from behind the clouds. The Upper Gorge so far had 
 Because this was one of the biggest rapids of the trip, there was a photographer nearby waiting to capture photos of this section... so I'll let a few photos describe what happened next.
 
 
-<figure>
-    <img src="/images/vacation-rafting-misadventure-hero.jpg" alt="Image of 9 people on a raft entering a rapids" />
-    <figcaption>That's me in the front-left - the one not wearing a wetsuit!</figcaption>
-</figure> 
+![Image of 9 people on a raft entering a rapids](/images/vacation-rafting-misadventure-hero.jpg)
+*That's me in the front-left - the one not wearing a wetsuit!*
 
-<figure>
-    <img src="/images/Caleb_DSC_0091-1200x800.jpg" alt="Image of a raft partially-submerged in a pocket of rapids" />
-    <figcaption>And the raft goes into a massive wall of water...</figcaption>
-</figure> 
+![Image of a raft partially-submerged in a pocket of rapids](/images/Caleb_DSC_0091-1200x800.jpg)
+*And the raft goes into a massive wall of water...*
 
-<figure>
-    <img src="/images/Caleb_DSC_0092-1200x800.jpg" alt="Image of a raft coming out of a pocket of rapids minus one blue helmet" />
-    <figcaption>Note a missing blue helmet in the front left of the raft?</figcaption>
-</figure> 
+![Image of a raft coming out of a pocket of rapids minus one blue helmet](/images/Caleb_DSC_0092-1200x800.jpg)
+*Note a missing blue helmet in the front left of the raft?*
 
-<figure>
-    <img src="/images/Caleb_DSC_0111-1-1200x599.jpg" alt="Image of a person floating in the rapids behind a raft with an arrow pointing to the person" />
-    <figcaption>Aaand there's my arm and helmet in the water behind the raft...</figcaption>
-</figure> 
+![Image of a person floating in the rapids behind a raft with an arrow pointing to the person](/images/Caleb_DSC_0111-1-1200x599.jpg)
+*Aaand there's my arm and helmet in the water behind the raft...*
 
-<figure>
-    <img src="/images/Caleb_DSC_0112-1200x910.jpg" alt="Image of a person floating down the river through the rapids behind the raft" />
-    <figcaption>Bodysurfing the rapid.</figcaption>
-</figure> 
+![Image of a person floating down the river through the rapids behind the raft](/images/Caleb_DSC_0112-1200x910.jpg)
+*Bodysurfing the rapid.*
 
 ### What it felt like
 
@@ -169,7 +159,7 @@ The guys from NEOC were very solicitous as I carefully walked away from the rive
 
 He drove off in the truck, and my husband held my hand very tightly as we talked about what had happened. 
 
-I explained that I was worried about a possible concussion, and that my speech was thick and slurry when I got pulled out of the river; we're both trained [emergency medical responders][5], so I wanted to make sure I brain dumped my physical condition to him in case I deteriorated and he needed important details to pass on to medical providers. Even then, probably 10 or more minutes after I'd been pulled out of the river, my speech was still a bit thick and slurry; I made a concentrated effort to enunciate clearly so he could understand me. I also felt a headache forming, and while I didn't remember hitting my head on any rocks, I worried that I might have.
+I explained that I was worried about a possible concussion, and that my speech was thick and slurry when I got pulled out of the river; we're both trained [emergency medical responders](https://www.redcross.org/take-a-class/emergency-medical-response), so I wanted to make sure I brain dumped my physical condition to him in case I deteriorated and he needed important details to pass on to medical providers. Even then, probably 10 or more minutes after I'd been pulled out of the river, my speech was still a bit thick and slurry; I made a concentrated effort to enunciate clearly so he could understand me. I also felt a headache forming, and while I didn't remember hitting my head on any rocks, I worried that I might have.
 
 I looked down at my left knee; there were abrasions on the side of my left calf, and my left knee hurt and was starting to swell, but nothing was broken. I had some bruises and abrasions on the inside of my right calf, too, and on my inner thigh above my right knee, but I didn't remember hitting that leg on anything. I noticed that my Apple Watch screen was cracked, and as I lifted it up to check the time, it started glitching and then died. Apparently I'd hit the back of my left wrist on something, too, but didn't remember that, either.
 
@@ -246,9 +236,3 @@ In terms of the potential head injury, I am finding it a bit more difficult to f
 Emotionally... an experience like that raises the same old questions about what you're doing with life, and whether you're doing the work you should be doing, whether you're surrounded by the people and experiences you want in your life - all that stuff. I grapple with this stuff semi-regularly anyway, but a reminder of mortality makes answering these questions seem more urgent. So back to the gristmill for me.
 
 I guess I'll leave you with the parting words I had for my rescuer when he asked how I was doing: "I'm alive. I'm breathing." And that's a pretty good place to be, all told.
-
- [1]: https://elcoutdoors.com/white-water-rafting-adventures-nh-maine/
- [2]: https://www.neoc.com/white-water-rafting-in-maine/
- [3]: https://www.facebook.com/abolbridge/
- [4]: https://en.wikipedia.org/wiki/Ripogenus_Gorge
- [5]: https://www.redcross.org/take-a-class/emergency-medical-response

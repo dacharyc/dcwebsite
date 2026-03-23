@@ -29,7 +29,7 @@ When I lived with a partner who left the house for work, I'd have him go to the 
 
 ### Lights
 
-In 2015, after visiting a friend who had installed some [Philips Hue lights][1] behind her TV that provided some interesting mood lighting, we did the same. I thought it was a novelty; I could make it change colors depending on what I was watching, and it provided some additional lighting in a part of the room that wasn't well-lit. And hey, how fun - the Hue app for my iPhone would let me set up _Routines_, so I could have the lights do different things on an automated schedule.
+In 2015, after visiting a friend who had installed some [Philips Hue lights](https://www.amazon.com/Philips-797977-Hue-Bloom-Dimmable/dp/B00I811PG6) behind her TV that provided some interesting mood lighting, we did the same. I thought it was a novelty; I could make it change colors depending on what I was watching, and it provided some additional lighting in a part of the room that wasn't well-lit. And hey, how fun - the Hue app for my iPhone would let me set up _Routines_, so I could have the lights do different things on an automated schedule.
 
 I set the lights to come on in the morning, while we were puttering around and waking up in the living room. When I noticed that my husband was leaving slightly later and later for work every day, I set the lights to turn off a few minutes before he ought to leave for work. 
 
@@ -78,5 +78,3 @@ Getting enough sleep, and sleeping well, makes it possible to be more productive
 Good downtime is essential to avoiding burnout, or even just a slow-building, lingering resentment that gradually erodes work productivity. Stopping work at a set time and going off to do other things gives me protected downtime, which makes it easier to work during work time and enjoy downtime when it's time for that.
 
 Having a house that is optimized to give me exactly what I want where I want it - appropriate lighting and comfortable temperatures - makes it easier to move through the day, and be more productive.
-
- [1]: https://www.amazon.com/Philips-797977-Hue-Bloom-Dimmable/dp/B00I811PG6

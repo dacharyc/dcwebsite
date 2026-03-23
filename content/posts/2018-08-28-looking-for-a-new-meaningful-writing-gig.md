@@ -15,16 +15,12 @@ My plan had been to focus on publishing and doing my own writing full-time whene
 
 Given everything going on in the world... I want to do something a bit more meaningful. I want to use my writing skill-set to do something with more impact.
 
-I stumbled across the [high-impact job board at 80,000 hours][1]; they say:
+I stumbled across the [high-impact job board at 80,000 hours](https://80000hours.org/job-board/); they say:
 
-> They’re all high-impact opportunities at top organisations that are working on some of the [world’s most pressing problems][2].
+> They’re all high-impact opportunities at top organisations that are working on some of the [world’s most pressing problems](https://80000hours.org/problem-profiles/).
 
 The types of problems that these organizations work on are definitely interesting, and direly need to be addressed. Things like; positively shaping the development of artificial intelligence; biorisk reduction; promoting effective altruism; improving institutional decision-making; all these things are big-picture, high-impact problems where I'd find the work a lot more meaningful than making another rich company richer. Or maybe something with some social impact, like working on gender equality, or LGBT rights, or something along those lines.
 
-I'm currently looking around to see what's out there. But if you're reading this, and you happen to know an organization working on a meaningful problem that could use a writer, I'd love for you to reach out. Drop me a message via [my contact form][3].
+I'm currently looking around to see what's out there. But if you're reading this, and you happen to know an organization working on a meaningful problem that could use a writer, I'd love for you to reach out. Drop me a message via [my contact form](https://dacharycarey.com/contact/).
 
 Wish me luck!
-
- [1]: https://80000hours.org/job-board/
- [2]: https://80000hours.org/problem-profiles/
- [3]: https://dacharycarey.com/contact/

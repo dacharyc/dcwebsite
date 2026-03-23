@@ -72,3 +72,22 @@
 - [Protecting your digital empire](https://dacharycarey.com/2017/06/17/protecting-your-digital-empire/index.md): In which I explore the value of protecting your digital assets.
 - [Some days are harder than others](https://dacharycarey.com/2017/05/06/some-days-are-harder-than-others/index.md): In which I reflect on what it means to be a writer.
 - [Why We Don’t Mess with a Classic](https://dacharycarey.com/2017/04/02/beauty-and-the-beast-why-we-dont-mess-with-a-classic/index.md): In which I take issue with the Hollywood treatment of this classic fairy tale.
+
+## Topics
+
+- [AI](https://dacharycarey.com/tags/ai/index.md): Posts tagged "AI"
+- [Business](https://dacharycarey.com/tags/business/index.md): Posts tagged "Business"
+- [Coding](https://dacharycarey.com/tags/coding/index.md): Posts tagged "Coding"
+- [Documentation](https://dacharycarey.com/tags/documentation/index.md): Posts tagged "Documentation"
+- [Hackathon](https://dacharycarey.com/tags/hackathon/index.md): Posts tagged "Hackathon"
+- [Lifestyle](https://dacharycarey.com/tags/lifestyle/index.md): Posts tagged "Lifestyle"
+- [Personal](https://dacharycarey.com/tags/personal/index.md): Posts tagged "Personal"
+- [Review](https://dacharycarey.com/tags/review/index.md): Posts tagged "Review"
+- [Travel](https://dacharycarey.com/tags/travel/index.md): Posts tagged "Travel"
+- [Writing](https://dacharycarey.com/tags/writing/index.md): Posts tagged "Writing"
+
+## Listings
+
+- [Home](https://dacharycarey.com/index.md)
+- [All Posts](https://dacharycarey.com/posts/index.md): Browse all blog posts
+- [All Tags](https://dacharycarey.com/tags/index.md): Browse posts by topic

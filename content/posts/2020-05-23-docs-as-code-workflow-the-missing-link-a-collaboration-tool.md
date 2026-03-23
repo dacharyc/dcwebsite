@@ -9,7 +9,7 @@ image: /images/tugboat-hero.jpg
 tags: [Documentation, Writing]
 
 ---
-[Docs as code][1] is a technical documentation movement to use the same tools that developers use in the documentation workflow. It's a great way to enable collaboration with developers, and now that I've been doing it for more than a year, I can't imagine writing documentation for developers, with developers in any other toolchain. But one thing is missing from most docs-as-code workflows: a collaboration tool to easily share the work and solicit feedback.
+[Docs as code](https://www.writethedocs.org/guide/docs-as-code/) is a technical documentation movement to use the same tools that developers use in the documentation workflow. It's a great way to enable collaboration with developers, and now that I've been doing it for more than a year, I can't imagine writing documentation for developers, with developers in any other toolchain. But one thing is missing from most docs-as-code workflows: a collaboration tool to easily share the work and solicit feedback.
 
 ## Why do you need a collaboration tool in a docs-as-code workflow?
 
@@ -29,7 +29,7 @@ So how do you solve this problem? There are a number of ways you might approach 
 
 Setting up a CI solution requires adding services, having access to servers where the site can be deployed, etc. The organization may not have the appetite for that kind of infrastructure investment just for documentation. Even if it does, you'll need a developer to set it up and maintain it. But even if you can get a developer's time to set it up, that's the kind of project people wander away from, and when it inevitably breaks at some future point, good luck getting a developer's time again to debug it.
 
-This is where [Tugboat][2] comes in. It's a git pull request builder that automatically generates a working version of the website for every pull request/merge request. (This is also a developer tool that developers use when building websites, so it's a good match for the docs-as-code workflow. And who among us doesn't love introducing developers to a good tool they're going to love?)
+This is where [Tugboat](https://www.tugboat.qa/) comes in. It's a git pull request builder that automatically generates a working version of the website for every pull request/merge request. (This is also a developer tool that developers use when building websites, so it's a good match for the docs-as-code workflow. And who among us doesn't love introducing developers to a good tool they're going to love?)
 
 ## How Tugboat works
 
@@ -37,11 +37,11 @@ Using Tugboat involves a few steps: set up a project in Tugboat, link it to the 
 
 ![Screenshot of a GitHub repository with an arrow pointing to a .tugboat folder at the root of the directory](/images/add-tugboat-config-to-root-1200x549.png)
 
-The config gives Tugboat the instructions it needs to build your site. The documentation site (that I write!) offers [starter configs][3] for some common static site builders, as well as things like building a WordPress or Drupal website, with more configs and tutorials added as they're requested.
+The config gives Tugboat the instructions it needs to build your site. The documentation site (that I write!) offers [starter configs](https://docs.tugboat.qa/starter-configs/) for some common static site builders, as well as things like building a WordPress or Drupal website, with more configs and tutorials added as they're requested.
 
 ![Screenshot of the Tugboat documentation site showing available starter configs in the table of contents](/images/tugboat-starter-configs-1200x648.png)
 
-While the sample config files are helpful, you probably don't _need_ one that's specific to your static site builder. I made the Hugo and MkDocs files myself by working from the old config for our deprecated GitBook legacy documentation site. If you do get stuck, I'm happy to help, or Tugboat has a [Support Slack][4] that anyone can join to ask questions.
+While the sample config files are helpful, you probably don't _need_ one that's specific to your static site builder. I made the Hugo and MkDocs files myself by working from the old config for our deprecated GitBook legacy documentation site. If you do get stuck, I'm happy to help, or Tugboat has a [Support Slack](https://www.tugboat.qa/support/) that anyone can join to ask questions.
 
 With Tugboat configured, there are a couple of ways to view the website previews; either directly in the Tugboat UI:
 
@@ -70,8 +70,3 @@ Separately, there's a new tool being added to my company's app. As long as I'm u
 I don't have to worry about the user admin review being done, so I can then get the documentation for the new tool loaded to the staging server for sharing with relevant stakeholders, etc. And if the documentation for the new tool gets approved first, I can merge that PR and the Tugboat preview goes away, while the link to the user admin documentation change persists.
 
 I've been super happy with having this tool in my technical documentation workflow, and I wish I'd had it at prior jobs. Now that I do, I can't imagine working in a docs-as-code workflow without it.
-
- [1]: https://www.writethedocs.org/guide/docs-as-code/
- [2]: https://www.tugboat.qa/
- [3]: https://docs.tugboat.qa/starter-configs/
- [4]: https://www.tugboat.qa/support/

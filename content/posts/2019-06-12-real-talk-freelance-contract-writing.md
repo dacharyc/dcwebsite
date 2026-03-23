@@ -9,7 +9,7 @@ image: /images/shutterstock_1348169369-1200x795.jpg
 tags: [Business, Writing]
 
 ---
-Someone in the [Write the Docs Slack][1] was asking about things to consider as she pondered transitioning to a freelance/contract technical writing career, and I have Thoughts to share:
+Someone in the [Write the Docs Slack](https://www.writethedocs.org/slack/) was asking about things to consider as she pondered transitioning to a freelance/contract technical writing career, and I have Thoughts to share:
 
 ## Benefits and administrative overhead
 
@@ -43,7 +43,7 @@ In terms of slow-pay and no-pay clients, I look for level of professionalism. Ar
 
 ## Contract pitfalls
 
-As a freelance/contractor, you typically will not own rights to the work you produce. If it’s public, you may be able to point a future employer at it, but if it’s proprietary, you will not be able to show your work to future employers. This can become a major bummer when you’re hunting your next project/gig - I’ve done some awesome work I can’t show people because the IP belongs to the client. I even [wrote a blog post about][2] it a few months ago.
+As a freelance/contractor, you typically will not own rights to the work you produce. If it’s public, you may be able to point a future employer at it, but if it’s proprietary, you will not be able to show your work to future employers. This can become a major bummer when you’re hunting your next project/gig - I’ve done some awesome work I can’t show people because the IP belongs to the client. I even [wrote a blog post about](https://dacharycarey.com/2019/02/21/the-downside-of-works-for-hire-ndas-and-dead-links/) it a few months ago.
 
 Beware of contracts that generically state that work you do/writing you produce while working for X becomes the property of X. I’ve seen really generic clauses that could apply to work you do _outside_ of the client’s contract while you’re also contracting for the client. The most recent contract I signed had language specific to the work I produce for the client belongs to the client, and work I produce outside of client work is 100% mine, and I’ll be ripping off that language for every future contract.
 
@@ -62,6 +62,3 @@ More recently, I spent two years in a full-time gig, and then took some time off
 It helps to have strong samples, and be able to speak authoritatively to process; I’m currently working on an open source project in my free time, so I can show examples of my API work when my current engagements finish.
 
 Finally, YMMV but there’s a freelance developer on a Slack where I’m a member, and he routinely posts queries he gets from his Craigslist ads (developer offering services) when he doesn’t have the bandwidth to do them himself, so there may be some traction there; I’m not sure.
-
- [1]: https://www.writethedocs.org/slack/
- [2]: https://dacharycarey.com/2019/02/21/the-downside-of-works-for-hire-ndas-and-dead-links/

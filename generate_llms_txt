@@ -54,3 +54,41 @@ for file in $(ls -r "$SITE_DIR"/content/posts/*.md 2>/dev/null); do
     echo "- [$title](${BASE_URL}${url}index.md)" >> "$OUTPUT"
   fi
 done
+
+cat >> "$OUTPUT" << 'SECTION'
+
+## Topics
+
+SECTION
+
+# Add tag pages by extracting unique tags from posts
+for file in "$SITE_DIR"/content/posts/*.md; do
+  [ -f "$file" ] || continue
+
+  # Skip drafts
+  draft=$(sed -n '/^---$/,/^---$/{ /^draft:/p; }' "$file" | head -1 | sed 's/.*: *//; s/["\x27]//g')
+  [ "$draft" = "true" ] && continue
+
+  sed -n '/^---$/,/^---$/{ /^tags:/p; }' "$file" | head -1 | sed 's/tags: *\[//; s/\]//; s/, */\n/g'
+done | tr '[:upper:]' '[:lower:]' | sort -u | while read -r tag; do
+  [ -z "$tag" ] && continue
+  # Capitalize for display (special-case common abbreviations)
+  if [ "$tag" = "ai" ]; then
+    display_tag="AI"
+  else
+    first="$(echo "$tag" | cut -c1 | tr '[:lower:]' '[:upper:]')"
+    rest="$(echo "$tag" | cut -c2-)"
+    display_tag="${first}${rest}"
+  fi
+  echo "- [$display_tag](${BASE_URL}/tags/${tag}/index.md): Posts tagged \"${display_tag}\"" >> "$OUTPUT"
+done
+
+cat >> "$OUTPUT" << 'SECTION'
+
+## Listings
+
+SECTION
+
+echo "- [Home](${BASE_URL}/index.md)" >> "$OUTPUT"
+echo "- [All Posts](${BASE_URL}/posts/index.md): Browse all blog posts" >> "$OUTPUT"
+echo "- [All Tags](${BASE_URL}/tags/index.md): Browse posts by topic" >> "$OUTPUT"
