@@ -1,0 +1,4 @@
+url: https://dacharycarey.com
+options:
+  maxLinksToTest: 100
+  samplingStrategy: deterministic

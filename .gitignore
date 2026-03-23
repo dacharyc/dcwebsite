@@ -17,3 +17,6 @@ hugo.linux
 
 # Files for syncing
 /.linkedin
+
+# Node modules to support agent-friendly docs
+node_modules/

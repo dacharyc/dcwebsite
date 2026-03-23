@@ -1,0 +1,23 @@
+name: Agent-Friendly Docs
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  agent-docs-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - run: npm install
+
+      - name: Run agent-friendly docs checks
+        run: npm run test:agent-docs
+        timeout-minutes: 5
