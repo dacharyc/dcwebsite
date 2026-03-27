@@ -12,6 +12,7 @@
 
 ## Posts
 
+- [Drafting Editorial Content with AI](https://dacharycarey.com/2026/03/26/drafting-editorial-content-with-ai/index.md): In which I use AI to help draft content, and discover its limitations.
 - [Filtering AI News](https://dacharycarey.com/2026/03/24/filtering-ai-news/index.md): In which I build a system to filter AI-related content.
 - [When a Feature Request Becomes a Research Project](https://dacharycarey.com/2026/03/21/when-feature-request-becomes-research-project/index.md): In which someone asks for something in 'skill-validator' and I spin up a new community research project.
 - [Why a Platform Shouldn't Own an Open Spec](https://dacharycarey.com/2026/03/20/why-platform-shouldnt-own-open-spec/index.md): In which a platform breaks the Agent Skills spec for its own benefit.
