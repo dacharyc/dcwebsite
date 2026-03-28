@@ -12,6 +12,7 @@
 
 ## Posts
 
+- [How to Evaluate a Platform-Written Spec](https://dacharycarey.com/2026/03/28/how-to-evaluate-platform-written-spec/index.md): In which I find that a platform-published spec's omissions track financial incentives.
 - [Drafting Editorial Content with AI](https://dacharycarey.com/2026/03/26/drafting-editorial-content-with-ai/index.md): In which I use AI to help draft content, and discover its limitations.
 - [Filtering AI News](https://dacharycarey.com/2026/03/24/filtering-ai-news/index.md): In which I build a system to filter AI-related content.
 - [When a Feature Request Becomes a Research Project](https://dacharycarey.com/2026/03/21/when-feature-request-becomes-research-project/index.md): In which someone asks for something in 'skill-validator' and I spin up a new community research project.
