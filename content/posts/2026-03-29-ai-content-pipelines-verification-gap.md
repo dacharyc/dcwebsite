@@ -32,7 +32,7 @@ The models don't flag confident assertions as needing verification. They confabu
 
 And this problem isn't unique to editorial content. I recently participated in a project to create official company skills using AI systems sourcing from verified content. The input content was correct, derived from our human-authored documentation and a human SME-written book about our product. The output went through multiple AI-assisted QA passes: an [LLM-as-judge scoring system](https://github.com/agent-ecosystem/skill-validator) that evaluates clarity, actionability, token efficiency, and novelty (including flagging content that diverges from training data for human SME review), plus a dedicated skill review workflow that checks for structural issues, scope gating, and content quality.
 
-After all of that automated evaluation, a human subject matter expert still found hundreds of factual errors across 7 skills that took weeks of iteration to correct before publication. The most common category was incorrect usage of database aggregation pipelines and "best practice" advice that directly contradicted the source material or failed to understand it in context. Syntactically valid, plausible-looking, wrong.
+After all of that automated evaluation, a human subject matter expert still found hundreds of factual errors across 7 skills that took weeks of iteration to correct before publication. The most common categories of issues were incorrect usage of database aggregation pipelines and "best practice" advice that directly contradicted the source material or failed to understand it in context. Syntactically valid, plausible-looking, wrong.
 
 ## Better inputs don't solve this
 
