@@ -12,6 +12,7 @@
 
 ## Posts
 
+- [Confident-Sounding Gibberish](https://dacharycarey.com/2026/03/30/confident-sounding-gibberish/index.md): In which I share research about why LLM-generated output is hard to fact check.
 - [The Verification Gap in AI Content Pipelines](https://dacharycarey.com/2026/03/29/ai-content-pipelines-verification-gap/index.md): In which verification is the hardest unsolved problem in AI content pipelines, and most organizations don't know it.
 - [How to Evaluate a Platform-Written Spec](https://dacharycarey.com/2026/03/28/how-to-evaluate-platform-written-spec/index.md): In which I find that a platform-published spec's omissions track financial incentives.
 - [Drafting Editorial Content with AI](https://dacharycarey.com/2026/03/26/drafting-editorial-content-with-ai/index.md): In which I use AI to help draft content, and discover its limitations.
