@@ -12,6 +12,7 @@
 
 ## Posts
 
+- [Measure Agent Web Traffic Redux](https://dacharycarey.com/2026/04/04/measure-agent-web-traffic-redux/index.md): In which I revisit measuring agent web traffic, and dive deeper down the rabbit hole.
 - [Confident-Sounding Gibberish](https://dacharycarey.com/2026/03/30/confident-sounding-gibberish/index.md): In which I share research about why LLM-generated output is hard to fact check.
 - [The Verification Gap in AI Content Pipelines](https://dacharycarey.com/2026/03/29/ai-content-pipelines-verification-gap/index.md): In which verification is the hardest unsolved problem in AI content pipelines, and most organizations don't know it.
 - [How to Evaluate a Platform-Written Spec](https://dacharycarey.com/2026/03/28/how-to-evaluate-platform-written-spec/index.md): In which I find that a platform-published spec's omissions track financial incentives.
