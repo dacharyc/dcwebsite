@@ -12,6 +12,8 @@ I research how AI agents work, how they consume information, and how the ecosyst
 
 - **[State of Docs Report 2026](https://www.stateofdocs.com/2026)** - Featured discussing AI consumption of documentation. Podcast forthcoming.
 - **[Why AI Agents Struggle with Modern Documentation](https://youtu.be/T2rXZjtmhRI)** (YouTube, 2026) - Interview covering how agents access documentation in real time and the failure modes most docs teams don't know about.
+- **[Designing Documentation for Agents, Not Just Users](https://player.captivate.fm/episode/64f41216-9c3f-4167-a2e2-934ab10a641a)** (Behind the Docs podcast, March 2026) - How AI agents struggle to use existing documentation, common structural issues like truncation and hidden content, and the Agent-Friendly Documentation Spec as a solution framework.
+- **[When AI Reads the Docs: LLMs, Agents, and Documentation Design](https://www.youtube.com/live/_qo81CUu9us?si=LWneBlA9g-JxbNOo)** (Deborah Emeni's YouTube Coffee Chat, March 2026) - How LLMs and agents are two very different documentation consumers, what "AI-friendly documentation" actually means, how documentation structure affects machine interpretation, and how documentation practices may evolve as machines increasingly consume technical content.
 
 ---
 
