@@ -19,7 +19,7 @@ I research how AI agents work, how they consume information, and how the ecosyst
 
 ### Agent-Friendly Documentation Spec
 
-A specification defining 21 checks across 8 categories for evaluating how well a documentation site serves AI agent consumers. Covers llms.txt discovery, markdown availability, page size, content structure, URL stability, and more. Based on real-world agent access patterns I've been researching since late 2025.
+A specification defining 22 checks across 7 categories for evaluating how well a documentation site serves AI agent consumers. Covers llms.txt discovery, markdown availability, page size, content structure, URL stability, and more. Based on real-world agent access patterns I've been researching since late 2025.
 
 - **Links**: [agentdocsspec.com](https://agentdocsspec.com)
 
@@ -32,7 +32,7 @@ A specification defining 21 checks across 8 categories for evaluating how well a
 A CLI tool that implements the Agent-Friendly Documentation Spec and tests docs sites against it. Point it at a URL and it reports where your docs stand. Published on npm.
 
 - **Language**: TypeScript
-- **Links**: [GitHub](https://github.com/agent-ecosystem/afdocs) ・ [npm](https://www.npmjs.com/package/afdocs)
+- **Links**: [afdocs.dev](https://afdocs.dev) ・ [GitHub](https://github.com/agent-ecosystem/afdocs) ・ [npm](https://www.npmjs.com/package/afdocs)
 
 ### skill-validator
 

@@ -56,7 +56,7 @@ A CLI tool that tests documentation sites against the [Agent-Friendly Documentat
 
 - **Language**: TypeScript
 - **State**: Active development
-- **Links**: [GitHub](https://github.com/agent-ecosystem/afdocs) ・ [npm](https://www.npmjs.com/package/afdocs)
+- **Links**: [afdocs.dev](https://afdocs.dev) ・ [GitHub](https://github.com/agent-ecosystem/afdocs) ・ [npm](https://www.npmjs.com/package/afdocs)
 
 ### skill-validator
 
