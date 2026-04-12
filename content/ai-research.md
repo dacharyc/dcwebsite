@@ -11,6 +11,7 @@ I research how AI agents work, how they consume information, and how the ecosyst
 ## Talks & Interviews
 
 - **[State of Docs Report 2026](https://www.stateofdocs.com/2026)** - Featured discussing AI consumption of documentation. Podcast forthcoming.
+- **[Can ANY AI Pass This Agent Reading Test?](https://youtu.be/OlNZCtk100Q)** (BetterStack YouTube, 2026) - Walkthrough of the Agent Reading Test, a benchmark for measuring how AI agent web fetch pipelines handle documentation failure modes.
 - **[Why AI Agents Struggle with Modern Documentation](https://youtu.be/T2rXZjtmhRI)** (YouTube, 2026) - Interview covering how agents access documentation in real time and the failure modes most docs teams don't know about.
 - **[Designing Documentation for Agents, Not Just Users](https://player.captivate.fm/episode/64f41216-9c3f-4167-a2e2-934ab10a641a)** (Behind the Docs podcast, March 2026) - How AI agents struggle to use existing documentation, common structural issues like truncation and hidden content, and the Agent-Friendly Documentation Spec as a solution framework.
 - **[When AI Reads the Docs: LLMs, Agents, and Documentation Design](https://www.youtube.com/live/_qo81CUu9us?si=LWneBlA9g-JxbNOo)** (Deborah Emeni's YouTube Coffee Chat, March 2026) - How LLMs and agents are two very different documentation consumers, what "AI-friendly documentation" actually means, how documentation structure affects machine interpretation, and how documentation practices may evolve as machines increasingly consume technical content.
@@ -31,7 +32,7 @@ A specification defining 22 checks across 7 categories for evaluating how well a
 
 ### afdocs
 
-A CLI tool that implements the Agent-Friendly Documentation Spec and tests docs sites against it. Point it at a URL and it reports where your docs stand. Published on npm.
+A CLI tool that implements the Agent-Friendly Documentation Spec and tests docs sites against it. Point it at a URL and it reports where your docs stand. Published on npm. Fern's [Agent Score](https://buildwithfern.com/agent-score) directory uses afdocs to score API documentation sites at scale.
 
 - **Language**: TypeScript
 - **Links**: [afdocs.dev](https://afdocs.dev) ・ [GitHub](https://github.com/agent-ecosystem/afdocs) ・ [npm](https://www.npmjs.com/package/afdocs)
@@ -59,6 +60,12 @@ Empirical research into how agent platforms actually implement Agent Skill loadi
 
 - **Links**: [agentskillimplementation.com](https://agentskillimplementation.com) ・ [GitHub](https://github.com/agent-ecosystem/agent-skill-implementation) ・ [Blog post](https://dacharycarey.com/2026/03/21/when-feature-request-becomes-research-project/)
 
+### Agent Reading Test
+
+A benchmark for measuring how AI agent web fetch pipelines handle real-world documentation failure modes. 10 test pages target specific failures (truncation, SPA shells, tabbed content, redirects, soft 404s) using canary tokens embedded at strategic positions. Task-first design prevents relevance-layer priming, and human-side scoring avoids agent self-report inflation.
+
+- **Links**: [agentreadingtest.com](https://agentreadingtest.com) ・ [GitHub](https://github.com/agent-ecosystem/agent-reading-test) ・ [Blog post](https://dacharycarey.com/2026/04/06/designing-agent-reading-test/)
+
 ### Agent Web Fetch Behavior
 
 Research into how coding agents actually fetch and process web content, including truncation behavior, redirect handling, and content negotiation across platforms.
@@ -79,6 +86,9 @@ I write about agents, documentation, and the AI ecosystem on this blog and at [A
 
 **Selected articles:**
 
+- [Designing an Agent Reading Test](https://dacharycarey.com/2026/04/06/designing-agent-reading-test/) - Building a benchmark that survives score inflation, relevance-layer priming, and the Hawthorne effect
+- [Measure Agent Web Traffic Redux](https://dacharycarey.com/2026/04/04/measure-agent-web-traffic-redux/) - Revisiting agent web traffic measurement with updated methods
+- [The Verification Gap in AI Content Pipelines](https://dacharycarey.com/2026/03/29/ai-content-pipelines-verification-gap/) - Where AI content pipelines break down between generation and publication
 - [When a Feature Request Becomes a Research Project](https://dacharycarey.com/2026/03/21/when-feature-request-becomes-research-project/) - How an `evals/` directory question turned into a 26-platform empirical research project
 - [Why a Platform Shouldn't Own an Open Spec](https://dacharycarey.com/2026/03/20/why-platform-shouldnt-own-open-spec/) - How Anthropic's stewardship of the Agent Skills spec is fragmenting the ecosystem
 - [Is Your llms.txt Already Stale?](https://dacharycarey.com/2026/03/15/is-your-llms-txt-already-stale/) - Building a freshness check and discovering the tools were the problem

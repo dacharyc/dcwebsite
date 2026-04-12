@@ -5,7 +5,7 @@ permalink: /resume/
 
 # Dachary Carey
 
-**Developer Experience | Documentation Infrastructure | Ecosystem Analysis**
+**Developer Experience | Documentation Infrastructure | AI Agent Research**
 
 GitHub: [dacharyc](https://github.com/dacharyc) | LinkedIn: [dachary](https://www.linkedin.com/in/dachary/) | Web: [dacharycarey.com](https://dacharycarey.com)
 
@@ -17,11 +17,11 @@ GitHub: [dacharyc](https://github.com/dacharyc) | LinkedIn: [dachary](https://ww
 
 I build tools, infrastructure, and research that help developers succeed. My work combines nearly two decades of professional writing with software engineering, giving me an unusual ability to move between building systems and communicating about them clearly.
 
-At MongoDB, I design testing frameworks and audit tooling for code example quality across 40+ documentation projects. Independently, I conduct ecosystem-scale research on AI agent tooling, build developer tools in Go and Swift, and ship apps on the Mac App Store and iOS App Store.
+At MongoDB, I design testing frameworks and audit tooling for code example quality across 40+ documentation projects. Independently, I research how AI agents consume web content and documentation, author specifications adopted by commercial platforms, build developer tools in Go and TypeScript, and ship apps on the Mac App Store and iOS App Store.
 
-The thread connecting all of it: I'm driven to understand how systems actually work, not just how they're supposed to work. That curiosity has taken me from documenting SDKs to building cross-language testing infrastructure, from writing diff algorithms to analyzing hundreds of AI agent skills for structural and content quality.
+The thread connecting all of it: I'm driven to understand how systems actually work, not just how they're supposed to work. That curiosity has taken me from documenting SDKs to building cross-language testing infrastructure, from writing diff algorithms to designing benchmarks that reveal how agent fetch pipelines fail.
 
-For more detail, see [Documentation & Developer Education](/documentation/) and [Programming](/programming/).
+For more detail, see [AI & Agent Research](/ai-research/), [Documentation & Developer Education](/documentation/), and [Programming](/programming/).
 
 ---
 
@@ -76,6 +76,18 @@ From 2016: focused on developer documentation, API docs, and technical content s
 
 ## Independent Research
 
+### Agent-Friendly Documentation Spec (2026)
+
+Authored a specification defining 22 checks across 7 categories for evaluating how well documentation sites serve AI agent consumers. Covers llms.txt discovery, markdown availability, page size, content structure, URL stability, and more. Built the companion afdocs CLI (TypeScript, published on npm) that scores any docs site against the spec. Fern adopted afdocs to power their [Agent Score](https://buildwithfern.com/agent-score) directory, scoring API documentation sites at scale.
+
+### Agent Reading Test (2026)
+
+Designed a benchmark for measuring how AI agent web fetch pipelines handle real-world documentation failure modes. 10 test pages target specific failures (truncation, SPA shells, tabbed content, redirects, soft 404s) using embedded canary tokens. Iterative design addressed score inflation, relevance-layer priming, agent self-assessment bias, and the Hawthorne effect in reasoning models. Published at agentreadingtest.com.
+
+### Agent Skill Implementation Research (2026)
+
+Empirical research into how agent platforms actually implement skill loading, management, and presentation. Catalogs 23 checks across 9 categories with 17 benchmark skills containing canary phrases for testing platform behavior. Community-driven project accepting per-platform contributions. Published at agentskillimplementation.com.
+
 ### Agent Skill Ecosystem Analysis (2026)
 
 Conducted a systematic quality and content analysis of the Agent Skills ecosystem, evaluating 673 skills from 41 source repositories. Published findings as a research paper and interactive report.
@@ -100,12 +112,13 @@ Systematically validated 578 coding patterns across 20 skills, documenting how A
 
 ## Independent Software
 
-### Developer Tools (Go)
+### Developer Tools
 
-- **tokendiff**: Library and CLI for human-readable, token-level diffing using a histogram-based algorithm tuned for readability
-- **diffx**: Myers O(ND) diff algorithm implementation with a clean Element interface for custom diffing beyond strings
-- **fenestro**: CLI that ingests HTML and renders it in helpful windows for diff output visualization
-- **skill-validator**: Validates Agent Skills against the agentskills.io specification
+- **afdocs** (TypeScript): CLI that scores documentation sites against the Agent-Friendly Documentation Spec. Published on npm; powers Fern's Agent Score directory.
+- **tokendiff** (Go): Library and CLI for human-readable, token-level diffing using a histogram-based algorithm tuned for readability
+- **diffx** (Go): Myers O(ND) diff algorithm implementation with a clean Element interface for custom diffing beyond strings
+- **fenestro** (Go): CLI that ingests HTML and renders it in helpful windows for diff output visualization
+- **skill-validator** (Go): Validates Agent Skills against the agentskills.io specification
 
 ### Apps (Swift/SwiftUI)
 
@@ -114,6 +127,12 @@ Systematically validated 578 coding patterns across 20 skills, documenting how A
 - **TeaLixir**: iOS tea-tracking app with tasting notes and preference patterns. Live on App Store.
 - **Issuenator**: macOS app for watching GitHub repositories for new issues. TestFlight alpha.
 - **Pocket Codex**: iOS reference app with custom data pipeline (Go web crawling, HTML parsing, automated code generation). TestFlight alpha.
+
+---
+
+## Talks & Appearances
+
+Featured in the State of Docs Report 2026 discussing AI consumption of documentation. Interview and podcast appearances on agent documentation access, the Agent-Friendly Documentation Spec, and agent reading behavior. See [AI & Agent Research](/ai-research/) for the full list.
 
 ---
 
