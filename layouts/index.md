@@ -1,5 +1,7 @@
-{{ with .Title }}# {{ . }}{{ end }}
-{{ with .Site.Params.description }}
+> For AI agents: a documentation index is available at /llms.txt — markdown versions of all pages are available by appending index.md to any URL path.
+
+{{ with index .Site.Params.hero "hero__title" }}# {{ . }}{{ end }}
+{{ with index .Site.Params.hero "hero__description" }}
 > {{ . }}
 {{ end }}
 {{ .RawContent }}

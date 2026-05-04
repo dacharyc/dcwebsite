@@ -46,8 +46,8 @@
   </script>
 
   <!-- CSS -->
-  {{ with resources.Get "sass/main.scss" | toCSS | minify }}
-  <style>{{ .Content | safeCSS }}</style>
+  {{ with resources.Get "sass/main.scss" | toCSS | minify | fingerprint }}
+  <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}">
   {{ end }}
 
   <!-- Custom CSS (loaded last for overrides) -->
