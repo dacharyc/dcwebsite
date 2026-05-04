@@ -12,6 +12,7 @@
 
 ## Posts
 
+- [Astro Removed its llms.txt](https://dacharycarey.com/2026/05/04/astro-removed-llms-txt/index.md): In which Astro removes its llms.txt entirely, and I explore the result.
 - [GitHub Reimagined llms.txt as an API](https://dacharycarey.com/2026/05/01/github-docs-api-llms-txt/index.md): In which GitHub replaces the standard llms.txt URL list with a purpose-built agent API.
 - [What an Agent Score Can Tell You](https://dacharycarey.com/2026/04/18/what-agent-score-can-tell-you/index.md): In which I investigate what agent scoring tools actually measure.
 - [Designing an Agent Reading Test](https://dacharycarey.com/2026/04/06/designing-agent-reading-test/index.md): In which I try to give people tools to understand how agents read web content, and where they fail.
