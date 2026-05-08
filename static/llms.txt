@@ -12,6 +12,7 @@
 
 ## Posts
 
+- [Can Agent Skills Make Output Worse?](https://dacharycarey.com/2026/05/07/can-agent-skills-make-output-worse/index.md): In which I discover that a skill made LLM output 66% worse, and dig into why authoring official skills is a full product lifecycle, not a deliverable.
 - [Astro Removed its llms.txt](https://dacharycarey.com/2026/05/04/astro-removed-llms-txt/index.md): In which Astro removes its llms.txt entirely, and I explore the result.
 - [GitHub Reimagined llms.txt as an API](https://dacharycarey.com/2026/05/01/github-docs-api-llms-txt/index.md): In which GitHub replaces the standard llms.txt URL list with a purpose-built agent API.
 - [What an Agent Score Can Tell You](https://dacharycarey.com/2026/04/18/what-agent-score-can-tell-you/index.md): In which I investigate what agent scoring tools actually measure.
