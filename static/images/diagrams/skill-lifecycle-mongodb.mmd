@@ -1,0 +1,67 @@
+---
+title: Agent Skill Lifecycle (MongoDB, proposed)
+---
+%%{init: {"flowchart": {"rankSpacing": 20, "nodeSpacing": 8, "subGraphTitleMargin": {"top": 8, "bottom": 16}, "htmlLabels": true}}}%%
+flowchart TD
+    subgraph LEGEND ["Key: role"]
+        direction TB
+        L1[Docs / writing]:::docs
+        L2[Software eng]:::eng
+        L3[AI/ML evals]:::eval
+        L4[PM / program]:::pm
+        L5[UX research]:::ux
+        L6[Cross-functional]:::cross
+        L1 ~~~ L2 ~~~ L3 ~~~ L4 ~~~ L5 ~~~ L6
+    end
+    style LEGEND fill:#ffffff,stroke:#cccccc,stroke-width:1px
+
+    P1[Idea / proposal submission]:::cross
+    P2{Gating eval<br/>mustInclude / mustNotInclude}:::eval
+    P3{Triage<br/>JTBD + persona + cross-portfolio scope}:::pm
+    P4[Skill development<br/>markdown + scripts + refs]:::docs
+    P5[SME review<br/>technical accuracy]:::eng
+    P6[QA human review<br/>instructional quality + workflow risk]:::docs
+    P7[Security review<br/>credential + command-exec + OWASP]:::eng
+    P8[Functional evals<br/>cross-LLM x cross-platform]:::eval
+    P9[Routing evals<br/>collection-wide trigger conflicts]:::eng
+    P10[Multi-channel publishing<br/>Cursor / Claude Code / Gemini /<br/>Codex / VS Code / docs site]:::eng
+    P11[Update public skill catalog]:::docs
+    X([Don't ship]):::out
+
+    P1 --> P2
+    P2 -. reject .-> X
+    SPACER1[ ]:::invisible
+    SPACER2[ ]:::invisible
+    L6 ~~~ SPACER1 ~~~ SPACER2 ~~~ M1
+    P2 -- pass --> P3
+    P3 -. reject .-> X
+    P3 -- ship --> P4
+    P4 --> P5 --> P6 --> P7 --> P8 --> P9 --> P10 --> P11
+
+    M1[Regression evals on every<br/>model + harness release]:::eval
+    M2[Spec governance tracking]:::pm
+    M3[OWASP advisory monitoring +<br/>skill audit]:::eng
+    M4[Tool / product version<br/>tracking + skill version mapping]:::pm
+    M5[Change governance<br/>PRs / DRI sign-off / re-eval triggers]:::pm
+    M6[User testing +<br/>feedback synthesis]:::ux
+    M7[Deprecation policy +<br/>customer comms]:::docs
+
+    P11 --> MAINT([Continuous maintenance]):::cross
+    MAINT --> M1
+    MAINT --> M2
+    MAINT --> M3
+    MAINT --> M4
+    MAINT --> M5
+    MAINT --> M6
+    MAINT --> M7
+    M5 -. update request .-> P3
+
+    classDef docs fill:#fce4ec,stroke:#c2185b,stroke-width:2px
+    classDef eng fill:#e3f2fd,stroke:#1565c0,stroke-width:2px
+    classDef eval fill:#f3e5f5,stroke:#6a1b9a,stroke-width:2px
+    classDef pm fill:#fff3e0,stroke:#e65100,stroke-width:2px
+    classDef ux fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px
+    classDef cross fill:#f5f5f5,stroke:#666,stroke-width:2px
+    classDef out fill:#ffebee,stroke:#c62828,stroke-width:2px
+    classDef invisible fill:none,stroke:none,color:transparent
+    classDef title fill:none,stroke:none

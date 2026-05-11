@@ -227,3 +227,18 @@ code:not(pre code) {
 /* Error & Whitespace */
 :root[dark] .highlight .err { color: #f8f8f2; background-color: transparent; }
 :root[dark] .highlight .w { color: #f8f8f2; }
+
+/* PhotoSwipe click-to-zoom affordance */
+a.pswp-image {
+  display: inline-block;
+  cursor: zoom-in;
+  transition: opacity 0.15s ease;
+}
+a.pswp-image:hover {
+  opacity: 0.92;
+}
+a.pswp-image img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}

@@ -1,0 +1,13 @@
+{{- /*
+  Click-to-zoom image via PhotoSwipe.
+
+  Usage:
+    {{< pswp src="/images/diagrams/foo.svg" alt="..." width="3500" height="3900" >}}
+
+  width/height default to 3500x3900 (generous zoom for SVGs).
+*/ -}}
+{{- $src := .Get "src" -}}
+{{- $alt := .Get "alt" -}}
+{{- $width := default "3500" (.Get "width") -}}
+{{- $height := default "3900" (.Get "height") -}}
+<figure class="pswp-figure"><a href="{{ $src }}" class="pswp-image" data-pswp-width="{{ $width }}" data-pswp-height="{{ $height }}"><img src="{{ $src }}" alt="{{ $alt }}" style="aspect-ratio: {{ $width }} / {{ $height }}; width: 100%; height: auto;" /></a></figure>

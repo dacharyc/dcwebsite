@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" font-family="-apple-system, 'Trebuchet MS', Verdana, Arial, sans-serif">
+  <style>
+    .label { font-size: 22px; font-weight: 500; fill: #333; text-anchor: middle; dominant-baseline: middle; }
+    .central-label { font-size: 30px; font-weight: 600; fill: #ffffff; text-anchor: middle; dominant-baseline: middle; font-family: 'SF Mono', Menlo, Consolas, monospace; }
+    .spoke { stroke: #999; stroke-width: 2; stroke-linecap: round; }
+  </style>
+
+  <!-- Spokes: drawn first so they sit behind the nodes -->
+  <line class="spoke" x1="400" y1="300" x2="660" y2="300" />
+  <line class="spoke" x1="400" y1="300" x2="530" y2="525" />
+  <line class="spoke" x1="400" y1="300" x2="270" y2="525" />
+  <line class="spoke" x1="400" y1="300" x2="140" y2="300" />
+  <line class="spoke" x1="400" y1="300" x2="270" y2="75" />
+  <line class="spoke" x1="400" y1="300" x2="530" y2="75" />
+
+  <!-- Outer role nodes, six positions evenly around the center -->
+  <!-- Right -->
+  <rect x="560" y="265" width="200" height="70" rx="8" fill="#e3f2fd" stroke="#1565c0" stroke-width="2.5" />
+  <text class="label" x="660" y="300">Software eng</text>
+
+  <!-- Lower right -->
+  <rect x="430" y="490" width="200" height="70" rx="8" fill="#fce4ec" stroke="#c2185b" stroke-width="2.5" />
+  <text class="label" x="530" y="525">Docs / writing</text>
+
+  <!-- Lower left -->
+  <rect x="170" y="490" width="200" height="70" rx="8" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2.5" />
+  <text class="label" x="270" y="525">UX research</text>
+
+  <!-- Left -->
+  <rect x="40" y="265" width="200" height="70" rx="8" fill="#f5f5f5" stroke="#666666" stroke-width="2.5" />
+  <text class="label" x="140" y="300">Cross-functional</text>
+
+  <!-- Upper left -->
+  <rect x="170" y="40" width="200" height="70" rx="8" fill="#f3e5f5" stroke="#6a1b9a" stroke-width="2.5" />
+  <text class="label" x="270" y="75">AI/ML evals</text>
+
+  <!-- Upper right -->
+  <rect x="430" y="40" width="200" height="70" rx="8" fill="#fff3e0" stroke="#e65100" stroke-width="2.5" />
+  <text class="label" x="530" y="75">PM / program</text>
+
+  <!-- Center node: SKILL.md -->
+  <rect x="320" y="260" width="160" height="80" rx="6" fill="#2c2c2c" stroke="#000000" stroke-width="3" />
+  <text class="central-label" x="400" y="300">SKILL.md</text>
+</svg>
