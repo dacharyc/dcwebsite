@@ -78,11 +78,11 @@ From 2016: focused on developer documentation, API docs, and technical content s
 
 ### Agent-Friendly Documentation Spec (2026)
 
-Authored a specification defining 23 checks across 7 categories for evaluating how well documentation sites serve AI agent consumers. Covers llms.txt discovery, markdown availability, page size, content structure, URL stability, and more. Built the companion afdocs CLI (TypeScript, published on npm) that scores any docs site against the spec. Fern adopted afdocs to power their [Agent Score](https://buildwithfern.com/agent-score) directory, scoring API documentation sites at scale.
+Authored a specification defining 23 checks across 7 categories for evaluating how well documentation sites serve AI agent consumers. Covers llms.txt discovery, markdown availability, page size, content structure, URL stability, and more. Built the companion afdocs CLI (TypeScript, published on npm) that scores any docs site against the spec. Co-built into Fern's public [Agent Score](https://buildwithfern.com/agent-score) directory; CEOs of OpenRouter and Resend endorsed the category at launch. ~9k npm downloads in trailing 14 days (3.5x growth over prior 8 weeks).
 
 ### Agent Reading Test (2026)
 
-Designed a benchmark for measuring how AI agent web fetch pipelines handle real-world documentation failure modes. 10 test pages target specific failures (truncation, SPA shells, tabbed content, redirects, soft 404s) using embedded canary tokens. Iterative design addressed score inflation, relevance-layer priming, agent self-assessment bias, and the Hawthorne effect in reasoning models. Published at agentreadingtest.com.
+Designed a benchmark for measuring how AI agent web fetch pipelines handle real-world documentation failure modes. 10 test pages target specific failures (truncation, SPA shells, tabbed content, redirects, soft 404s) using embedded canary tokens. Iterative design addressed score inflation, relevance-layer priming, agent self-assessment bias, and the Hawthorne effect in reasoning models. Published at agentreadingtest.com; hit Hacker News front page (~100k views in 24 hours); Better Stack and GitBook DevRel produced follow-on content; listed in former Django president Thibaud Colas's curated resources.
 
 ### Agent Skill Implementation Research (2026)
 
@@ -92,7 +92,7 @@ Empirical research into how agent platforms actually implement skill loading, ma
 
 Conducted a systematic quality and content analysis of the Agent Skills ecosystem, evaluating 673 skills from 41 source repositories. Published findings as a research paper and interactive report.
 
-- Built skill-validator (Go): validates Agent Skills against the agentskills.io specification, checking structure, frontmatter, content quality, cross-contamination risk, and token budget composition
+- Built skill-validator (Go): validates Agent Skills against the agentskills.io specification, checking structure, frontmatter, content quality, cross-contamination risk, and token budget composition. 25+ public CI adopters including Microsoft (multiple dotnet repos), GitHub, MongoDB, Autodesk, Netlify
 - Found that 22% of skills fail structural validation; company-published skills (79.2% pass rate) perform worse than community collections (94.0%)
 - Identified that 52% of all tokens across the ecosystem are nonstandard files wasting context window space
 - Discovered six content-specific interference mechanisms through behavioral evaluation of 19 representative skills
