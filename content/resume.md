@@ -78,7 +78,7 @@ From 2016: focused on developer documentation, API docs, and technical content s
 
 ### Agent-Friendly Documentation Spec (2026)
 
-Authored a specification defining 22 checks across 7 categories for evaluating how well documentation sites serve AI agent consumers. Covers llms.txt discovery, markdown availability, page size, content structure, URL stability, and more. Built the companion afdocs CLI (TypeScript, published on npm) that scores any docs site against the spec. Fern adopted afdocs to power their [Agent Score](https://buildwithfern.com/agent-score) directory, scoring API documentation sites at scale.
+Authored a specification defining 23 checks across 7 categories for evaluating how well documentation sites serve AI agent consumers. Covers llms.txt discovery, markdown availability, page size, content structure, URL stability, and more. Built the companion afdocs CLI (TypeScript, published on npm) that scores any docs site against the spec. Fern adopted afdocs to power their [Agent Score](https://buildwithfern.com/agent-score) directory, scoring API documentation sites at scale.
 
 ### Agent Reading Test (2026)
 

@@ -14,6 +14,32 @@ hugo                    # local production build only (output in public/)
 
 `build_and_sync` is the canonical deploy. It calls `generate_llms_txt` first, then `hugo`, then rsyncs `public/` to the live host. Don't run `hugo` and `rsync` separately for deploys; the llms.txt step is required.
 
+### Resume PDF
+
+The downloadable resume at `static/dachary-carey-resume.pdf` is generated from `.linkedin/resume.md`, not from `content/resume.md`. The two files have nearly identical body content, but `.linkedin/resume.md` is the PDF-ready version: no Hugo frontmatter, no HTML download button, and a couple of internal markdown links replaced with plain URLs so they render as readable text in print. `content/resume.md` is the live website version.
+
+When the resume changes:
+
+1. Edit both `.linkedin/resume.md` and `content/resume.md` to keep body content in sync. They drift naturally because each is tuned for its output medium; diff them if unsure.
+2. Regenerate the PDF.
+3. Commit and deploy. The PDF is served as a static asset, so a normal `./build_and_sync` picks it up.
+
+Regenerate command:
+
+```bash
+pandoc .linkedin/resume.md \
+  -V geometry:margin=0.6in \
+  -V fontsize=10pt \
+  -V colorlinks=true \
+  -o static/dachary-carey-resume.pdf
+```
+
+Flag rationale:
+- `geometry:margin=0.6in` + `fontsize=10pt` together hit a 3-page layout. Either flag alone produces 4+ pages with current resume length.
+- `colorlinks=true` renders URLs as blue. Default pandoc treats them as plain text, losing the visual cue at the top of the resume (GitHub / LinkedIn / Web).
+
+Requires a working LaTeX install (`pdflatex` is sufficient). The metadata signature on the resulting PDF is `Creator: LaTeX via pandoc`, `Producer: pdfTeX-1.40.27`.
+
 ## Content structure
 
 - `content/posts/YYYY-MM-DD-slug.md` — published posts. Filename date prefix sorts the directory; the canonical date for sorting and URLs lives in frontmatter (`date:` and `url:`).
