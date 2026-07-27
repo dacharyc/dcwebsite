@@ -4,7 +4,7 @@ permalink: /documentation/
 image: '/images/audit-cli-analyze.png'
 ---
 
-I've spent nine years building documentation systems, testing infrastructure, and creating developer education content. This page covers that work - for my programming projects, see [Programming](/programming/).
+I've spent a decade building documentation systems, testing infrastructure, and creating developer education content. This page covers that work - for my programming projects, see [Programming](/programming/).
 
 ---
 
@@ -20,13 +20,19 @@ I write about this work extensively on my blog (see the [ai](/tags/ai/) tag) and
 
 ---
 
-## MongoDB (2021 - Present)
+## NVIDIA (2026 - Present)
 
-I joined MongoDB's Developer Education team as the first writer on a team of developers. What started as SDK documentation evolved into building infrastructure for code example quality at scale.
+As Developer Experience Manager, Agents, I define agent experience (AX) standards across NVIDIA's developer ecosystem. The role puts my agent-friendly documentation and Agent Skill research into practice at scale: content sizing and budgeting standards, information architecture, discoverability (llms.txt, content negotiation), and guidance on agent-facing tooling like MCP servers and Agent Skills across developer surfaces.
 
-### Current Focus: Documentation Infrastructure
+---
 
-I design and build tooling for code example quality across MongoDB's developer documentation:
+## MongoDB (2021 - 2026)
+
+I joined MongoDB's Developer Education team as the first writer on a team of developers. What started as SDK documentation evolved into building infrastructure for code example quality at scale, and in my final year, AI builder experience: I was quality and launch-readiness owner for MongoDB's first official Agent Skills, building security scanning for skill pull requests, enterprise validation tooling, and authoring and review guidance.
+
+### Documentation Infrastructure
+
+I designed and built tooling for code example quality across MongoDB's developer documentation:
 
 - **[Audit CLI](https://github.com/grove-platform/audit-cli)** (Go): Analyzes code examples, includes, and cross-references across 40+ documentation projects, many with their own versions, with monorepo structure awareness. Used to audit content and infrastructure to perform maintenance work, product updates, or identify needed process improvements and education opportunities.
 
@@ -58,7 +64,7 @@ Designed the testing infrastructure for MongoDB's developer documentation code e
 
 **Education Resources:** Three workshops, an early adopter/UAT working group, and documentation at: [Grove Platform](https://www.mongodb.com/docs/meta/grove/)
 
-### Previous: SDK Documentation
+### Earlier: SDK Documentation
 
 Before the infrastructure focus, I owned documentation and code examples for several Realm SDKs:
 

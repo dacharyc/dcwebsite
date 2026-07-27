@@ -70,7 +70,7 @@ A Go CLI that validates Agent Skills against the agentskills.io specification. C
 
 ## Documentation Infrastructure
 
-Tools built for my work at MongoDB, focused on code example quality at scale.
+Tools I built during my time at MongoDB (2021 - 2026), focused on code example quality at scale.
 
 ### Audit CLI
 
@@ -79,7 +79,7 @@ A Go CLI for analyzing documentation source files - tracking code examples, incl
 Used to audit content and infrastructure to perform maintenance work, product updates, or identify needed process improvements and education opportunities.
 
 - **Language**: Go
-- **State**: Active development
+- **State**: In production at MongoDB
 - **Scope**: 40+ documentation projects, 35,000+ code examples, one zillion documentation source files
 - **Links**: [GitHub](https://github.com/grove-platform/audit-cli) ・ [Documentation](https://www.mongodb.com/docs/meta/grove/audit-cli/)
 
@@ -88,21 +88,21 @@ Used to audit content and infrastructure to perform maintenance work, product up
 Fetches and analyzes documentation data from internal APIs, tracking code examples and page metadata. Used to audit 35,000+ code examples across 40+ repositories, resulting in an 88-page analysis for documentation leadership.
 
 - **Language**: Go
-- **State**: Maintenance mode (used weekly)
+- **State**: In production at MongoDB
 
 ### DODEC (Database of Devoured Code)
 
 Query tool for aggregating and reporting on code example data stored in MongoDB. Supports weekly and monthly reporting and trend analysis.
 
 - **Language**: Go
-- **State**: Maintenance mode (used weekly)
+- **State**: In production at MongoDB
 
 ### Cross-Language Comparison Frameworks
 
 Testing utilities for validating code example output across programming languages. Each implementation provides a fluent API for comparing actual output against expected results, with support for MongoDB-specific types, ellipsis patterns, and flexible matching.
 
 - **Languages**: Go, Java, Python, C#/.NET, JavaScript, MongoDB Shell
-- **State**: Active development
+- **State**: In production at MongoDB
 - **Scope**: Used across MongoDB's documentation
 
 ---

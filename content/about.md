@@ -9,7 +9,7 @@ A Few Words About Me
 
 Hello. I'm Dachary Carey. I build things that help developers succeed.
 
-By day, I work on developer education and documentation infrastructure at MongoDB - building tools that ensure code examples actually work, testing frameworks that catch errors before developers encounter them, and processes that keep documentation accurate at scale.
+By day, I work on agent experience (AX) at NVIDIA - defining the standards that make developer surfaces work for both human developers and the AI agents they bring with them. That spans content sizing and discoverability, information architecture, and agent-facing tooling like MCP servers and Agent Skills.
 
 By night (and weekends), I build apps. I've shipped [PR Focus](https://prfocus.app), a macOS app for managing pull request reviews, and I'm working on a few iOS apps that scratch various personal itches. I write [Go libraries for semantic diffing](/2025/12/29/diff-algorithm-spelunking/), CLI tools for documentation auditing, and whatever else solves a problem I'm having.
 
@@ -19,7 +19,7 @@ I also love coffee. Good coffee, though. None of this mass-produced Dunkin' Donu
 
 I've been a professional writer for over 18 years - starting with freelance work in 2007, then pivoting to software documentation in 2016. I joined MongoDB's Developer Education team in 2021 as the first writer on a team of developers.
 
-That role pushed me to grow. I went from documenting SDKs to building testing infrastructure. From writing code examples to building tools that audit 35,000+ code examples across 40+ repositories. The line between "technical writer" and "developer" got blurry, and I discovered I liked it that way.
+That role pushed me to grow. I went from documenting SDKs to building testing infrastructure. From writing code examples to building tools that audit 35,000+ code examples across 40+ repositories. The line between "technical writer" and "developer" got blurry, and I discovered I liked it that way. I finished my 5.5 years at MongoDB as quality owner for the company's first official Agent Skills, and in 2026 that work led me to NVIDIA, where I now define agent experience standards for the developer experience team.
 
 I'm driven by curiosity - when I encounter a system or ecosystem, I want to understand how it actually works, not just how it's supposed to work. That impulse has led me from building audit tooling to conducting ecosystem-scale research: analyzing hundreds of data points, identifying patterns, and publishing findings. The tools I build often start as "I want to understand this" and end up as something others can use too.
 

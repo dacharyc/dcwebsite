@@ -5,7 +5,7 @@ permalink: /resume/
 
 # Dachary Carey
 
-**Developer Experience | Documentation Infrastructure | AI Agent Research**
+**Agent Experience | Developer Tooling | AI Agent Research**
 
 GitHub: [dacharyc](https://github.com/dacharyc) | LinkedIn: [dachary](https://www.linkedin.com/in/dachary/) | Web: [dacharycarey.com](https://dacharycarey.com)
 
@@ -17,7 +17,7 @@ GitHub: [dacharyc](https://github.com/dacharyc) | LinkedIn: [dachary](https://ww
 
 I build tools, infrastructure, and research that help developers succeed. My work combines nearly two decades of professional writing with software engineering, giving me an unusual ability to move between building systems and communicating about them clearly.
 
-At MongoDB, I design testing frameworks and audit tooling for code example quality across 40+ documentation projects. Independently, I research how AI agents consume web content and documentation, author specifications adopted by commercial platforms, build developer tools in Go and TypeScript, and ship apps on the Mac App Store and iOS App Store.
+At NVIDIA, I define agent experience (AX) standards that make developer surfaces work for both human developers and the AI agents they bring with them. Before that, at MongoDB, I owned Agent Skill quality standards and designed the testing frameworks and audit tooling behind code example quality across 40+ documentation projects. Independently, I research how AI agents consume web content and documentation, author specifications adopted by commercial platforms, build developer tools in Go and TypeScript, and ship apps on the Mac App Store and iOS App Store.
 
 The thread connecting all of it: I'm driven to understand how systems actually work, not just how they're supposed to work. That curiosity has taken me from documenting SDKs to building cross-language testing infrastructure, from writing diff algorithms to designing benchmarks that reveal how agent fetch pipelines fail.
 
@@ -27,26 +27,37 @@ For more detail, see [AI & Agent Research](/ai-research/), [Documentation & Deve
 
 ## Experience
 
-### Senior Programmer Writer — MongoDB (2021 - Present)
+### Developer Experience Manager, Agents — NVIDIA (2026 - Present)
 
-Developer Education team. Started as the first writer on a team of developers; evolved from SDK documentation into infrastructure and tooling work.
+I define agent experience (AX) standards across NVIDIA's developer ecosystem, making developer surfaces work for both human developers and the AI agents they bring with them.
 
-**Documentation Infrastructure & Tooling**
+- Building integrated developer journeys across NIM, NGC, NeMo, AI Blueprints, and CUDA surfaces for developers and their coding agents
+- Defining practical AX standards: content sizing and budgeting, information architecture, discoverability (llms.txt, content negotiation), onboarding patterns
+- Guiding teams on agent-facing tooling: MCP servers, Agent Skills, API documentation patterns, agent-consumable tests
+- Evaluating content performance using human engagement metrics and agent traffic signals
 
-- Designed Grove, a cross-language code example testing framework supporting 6 languages (Go, Java, Python, C#, JavaScript, MongoDB Shell) across 40+ documentation projects
-- Built Audit CLI (Go): 15+ commands for documentation analysis, including code extraction, include dependency trees, cross-version comparison, and page/example metrics
-- Created comparison libraries with configurable matching (ordered/unordered arrays, field value ignoring for dynamic data like ObjectIds and timestamps, MongoDB type support)
-- Built sample data utilities that automatically skip tests when datasets aren't available, reducing contributor friction while CI runs the full suite
-- Led audit of 35,000+ code examples across 40+ repositories, producing an 88-page analysis with recommendations for documentation leadership
-- Created OASprey (TypeScript): OpenAPI validation library published to npm for verifying API response schemas at test time
+### Senior Programmer Writer — MongoDB (2021 - 2026)
+
+Developer Education team. Started as the first writer on a team of developers; grew from SDK documentation into code quality infrastructure and AI builder experience across 5.5 years.
+
+**AI Builder Experience (2026)**
+
+- Quality and launch-readiness owner for MongoDB's first official Agent Skills: built skill-gate (security scanning for skill pull requests), enterprise validation tooling, and authoring and review guidance
+- Authored the Agent-Friendly Docs product definition and open-model/open-harness research briefs that informed AI strategy
+- Co-built an AI news aggregation and tagging pipeline (Skunkworks 2026), retained as a permanent internal AI-strategy resource
+
+**Code Quality Infrastructure (2024 - 2026)**
+
+- Designed Grove, a cross-language code example testing framework spanning 6 languages (Go, Java, Python, C#, JavaScript, MongoDB Shell) across 40+ documentation projects, with comparison libraries and sample data utilities that let technical writers validate examples without learning developer test frameworks
+- Led the first programmatic audit of MongoDB's 35,000+ code examples; findings became the basis for the org's FY27 code examples strategy
+- Built Audit CLI (Go, 15+ commands for documentation analysis) and modernized OASprey (TypeScript OpenAPI validator on npm, used to verify the Cloud Status API docs before publication)
 - Designed and delivered three workshops on code example testing for technical writers
 
-**SDK Documentation (earlier focus)**
+**SDK Documentation (2021 - 2025)**
 
-- Owned documentation and tested code examples for Swift SDK, SwiftUI, C++ SDK; contributed to Kotlin, TypeScript, JavaScript, Flutter/Dart
-- Led information architecture overhaul from Diataxis framework to task-based structure, informed by user research
-- Led Docs Maintenance Working Group; created processes now part of content strategy
-- Built GitHub workflow for automated readability scoring on pull requests
+- #1 contributor to both the Realm/Device SDK and App Services docs repos over 4+ years; stood up the entire C++ SDK documentation from scratch and was primary author for the Swift SDK
+- Pioneered topic-based information architecture on the Swift SDK and drove its rollout across the SDK docs
+- Built automated readability scoring for pull requests; mentored writers and interns into developer-writer roles
 
 ### Technical Content Strategist — Tugboat (2019 - 2021)
 
