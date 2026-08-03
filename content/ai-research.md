@@ -37,12 +37,33 @@ A CLI tool that implements the Agent-Friendly Documentation Spec and tests docs 
 - **Language**: TypeScript
 - **Links**: [afdocs.dev](https://afdocs.dev) ・ [GitHub](https://github.com/agent-ecosystem/afdocs) ・ [npm](https://www.npmjs.com/package/afdocs)
 
+### agentsummons
+
+A Go library and CLI for invoking agent harnesses (Antigravity CLI, Claude Code, Codex CLI) in headless mode. Every headless-agent experiment rediscovers the same lore: which binary, which permission-bypass flag, which harness swallows your prompt. agentsummons owns that knowledge once, behind one API and one CLI.
+
+- **Language**: Go
+- **Links**: [agentsummons.dev](https://agentsummons.dev) ・ [GitHub](https://github.com/agent-ecosystem/agentsummons) ・ [npm](https://www.npmjs.com/package/agentsummons) ・ [PyPI](https://pypi.org/project/agentsummons/)
+
+### agentminutes
+
+Meeting minutes for your agents: a Go library and CLI that parses native agent harness session transcripts into one unified, comparable event schema. Transcripts are ground truth for how an agent actually behaved (which tools it chose, what it saw back, what it spent); agentminutes makes them analyzable and comparable across harnesses. Companion to agentsummons: agentsummons convenes the meeting, agentminutes takes the minutes.
+
+- **Language**: Go
+- **Links**: [agentminutes.dev](https://agentminutes.dev) ・ [GitHub](https://github.com/agent-ecosystem/agentminutes) ・ [npm](https://www.npmjs.com/package/agentminutes) ・ [PyPI](https://pypi.org/project/agentminutes/)
+
 ### skill-validator
 
 A CLI that validates Agent Skills against the agentskills.io specification. Checks directory structure, frontmatter, content quality, cross-contamination risk, and token budget composition.
 
 - **Language**: Go
 - **Links**: [GitHub](https://github.com/agent-ecosystem/skill-validator)
+
+### skillxp
+
+A skill invocation runner: installs an Agent Skill in a fresh fixture, invokes an agent harness headlessly, and reports what actually reached the model, with transcript evidence rather than model self-reporting. Builds on agentsummons and agentminutes, and powers the agent-skill-implementation loading benchmark.
+
+- **Language**: Go
+- **Links**: [skillxp.dev](https://skillxp.dev) ・ [GitHub](https://github.com/agent-ecosystem/skillxp) ・ [npm](https://www.npmjs.com/package/skillxp) ・ [PyPI](https://pypi.org/project/skillxp/)
 
 ---
 
@@ -56,7 +77,7 @@ An ecosystem-scale analysis of 673 Agent Skills across 41 repositories, examinin
 
 ### Agent Skill Implementation Research
 
-Empirical research into how agent platforms actually implement Agent Skill loading, management, and presentation. Catalogs 23 checks across 9 categories, with 17 benchmark skills containing canary phrases for testing platform behavior without relying on model self-reporting. A community-driven project accepting per-platform contributions.
+Empirical research into how agent platforms actually implement Agent Skill loading, management, and presentation. Catalogs 40 checks across 10 categories, with 33 benchmark skills containing canary phrases for testing platform behavior without relying on model self-reporting. An automated benchmark runner generates reports for Antigravity CLI, Claude Code, and Codex CLI.
 
 - **Links**: [agentskillimplementation.com](https://agentskillimplementation.com) ・ [GitHub](https://github.com/agent-ecosystem/agent-skill-implementation) ・ [Blog post](https://dacharycarey.com/2026/03/21/when-feature-request-becomes-research-project/)
 

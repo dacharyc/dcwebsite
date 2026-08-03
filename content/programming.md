@@ -58,6 +58,26 @@ A CLI tool that tests documentation sites against the [Agent-Friendly Documentat
 - **State**: Active development
 - **Links**: [afdocs.dev](https://afdocs.dev) ・ [GitHub](https://github.com/agent-ecosystem/afdocs) ・ [npm](https://www.npmjs.com/package/afdocs)
 
+### agentsummons
+
+A Go library and CLI for invoking agent harnesses (Antigravity CLI, Claude Code, Codex CLI) in headless mode.
+
+Every headless-agent experiment rediscovers the same invocation lore: which binary, which permission-bypass flag, which harness swallows your prompt. agentsummons owns that knowledge once so your scripts and experiments don't have to. Distributed via Homebrew, npm, and PyPI with prebuilt static binaries.
+
+- **Language**: Go
+- **State**: Active development
+- **Links**: [agentsummons.dev](https://agentsummons.dev) ・ [GitHub](https://github.com/agent-ecosystem/agentsummons) ・ [npm](https://www.npmjs.com/package/agentsummons) ・ [PyPI](https://pypi.org/project/agentsummons/)
+
+### agentminutes
+
+A Go library and CLI that parses native agent harness session transcripts into one unified, comparable event schema.
+
+Every harness invents its own transcript format, and those transcripts are ground truth for how an agent actually behaved: which tools it chose, what it saw back, what it spent. agentminutes makes sessions analyzable and comparable across harnesses. Companion to agentsummons: agentsummons convenes the meeting, agentminutes takes the minutes.
+
+- **Language**: Go
+- **State**: Active development
+- **Links**: [agentminutes.dev](https://agentminutes.dev) ・ [GitHub](https://github.com/agent-ecosystem/agentminutes) ・ [npm](https://www.npmjs.com/package/agentminutes) ・ [PyPI](https://pypi.org/project/agentminutes/)
+
 ### skill-validator
 
 A Go CLI that validates Agent Skills against the agentskills.io specification. Checks directory structure, frontmatter, content quality, cross-contamination risk, and token budget composition. Built to support my ecosystem-scale analysis of 673 skills across 41 repositories.
@@ -65,6 +85,16 @@ A Go CLI that validates Agent Skills against the agentskills.io specification. C
 - **Language**: Go
 - **State**: Active development
 - **Links**: [GitHub](https://github.com/agent-ecosystem/skill-validator) ・ [Blog post: Agent Skill Analysis](/2026/02/13/agent-skill-analysis/) ・ [Interactive Report](https://agentskillreport.com)
+
+### skillxp
+
+A skill invocation runner: installs an Agent Skill in a fresh fixture, invokes an agent harness headlessly, and reports what actually reached the model.
+
+Skill authors publish for 25+ platforms that each load, present, and manage skills differently, and mostly invisibly. skillxp answers "what did the platform actually do with my skill" from transcript evidence rather than model self-reporting. Builds on agentsummons and agentminutes, and powers the agent-skill-implementation loading benchmark.
+
+- **Language**: Go
+- **State**: Active development
+- **Links**: [skillxp.dev](https://skillxp.dev) ・ [GitHub](https://github.com/agent-ecosystem/skillxp) ・ [npm](https://www.npmjs.com/package/skillxp) ・ [PyPI](https://pypi.org/project/skillxp/)
 
 ---
 
