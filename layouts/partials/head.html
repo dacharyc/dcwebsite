@@ -26,6 +26,9 @@
   <meta property="og:description" content="{{ with .Description }}{{ . }}{{ else }}{{if .IsPage}}{{ .Summary }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end }}">
   {{ if .IsHome}}<meta property="og:image" content="{{ .Site.Params.hero.hero__image | absURL }}">{{ else }}<meta property="og:image" content="{{ .Params.Image | absURL }}">{{ end }}
 
+  <!-- Mastodon author attribution: https://docs.joinmastodon.org/user/profile/#attribution -->
+  {{ with .Site.Params.author.author__mastodon }}<meta name="fediverse:creator" content="{{ . }}">{{ end }}
+
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.gstatic.com">
 

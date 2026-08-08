@@ -62,6 +62,7 @@ paginate = 9
     author__name = "Dachary Carey"
     author__bio = "Tools, apps, and strong opinions about coffee"
     author__avatar = "/images/dc.jpeg"
+    author__mastodon = "@dachary@dacharycarey.social"
 
   [[params.social]]
     # icon = "ion-logo-mastodon"
