@@ -65,6 +65,7 @@ These are derived from the established hero image aesthetic on dacharycarey.com:
 - No stock-photo energy (no smiling people at laptops, no handshakes, no abstract geometric patterns)
 - No overt AI imagery (no glowing brains, no neural networks, no circuit boards unless the article is specifically about hardware)
 - Don't overuse the magnifying glass as metaphor
+- **Any human figure must be explicitly female.** Midjourney defaults to male figures for almost any role (mechanic, inspector, engineer, worker), and unspecified figures come out male nearly every time. Whenever a prompt includes a person, name her as a woman in the prompt text: "a woman in profile silhouette," "a woman seen from behind," "a female mechanic," "a girl holding a page up to the light." This applies even when the figure is a silhouette, a tiny miniature, or seen from behind; the gender still has to be stated or the default takes over.
 
 **What works on this site (reference examples):**
 - Redlined document with scissors on a moody desk (editorial evaluation)
