@@ -3,11 +3,11 @@ title: Agent Data Seeking Patterns
 author: Dachary Carey
 layout: post
 description: In which I examine agent website traffic logs to see what they're actually reaching for.
-date: 2026-09-20 07:00:00 -0500
+date: 2026-09-23 07:00:00 -0500
 url: /2026/09/23/agent-data-seeking-patterns/
 image: /images/agent-data-seeking-patterns-hero.jpg
 tags: [ai]
-draft: true
+draft: false
 ---
 
 Two conversations this month sent me back into my server logs. The first was the ongoing industry debate about whether `llms.txt` does anything, which flares up every time a well-known project [adds one or removes one](https://dacharycarey.com/2026/05/04/astro-removed-llms-txt/). The second was a colleague mentioning that answer engines and crawlers were fetching an `llms-info` file from their site, which was news to me, because I'd never seen a request for one.
@@ -31,13 +31,15 @@ Some scope first, because the numbers only mean something in context. Twelve sit
 | Feed readers, social previews, search crawlers, SEO tools | 15% |
 | Self-identified coding agents | 0.6% |
 
-The human rows need explaining, because my first pass had a single "human browsers" row at 58%. My classifier calls anything with a browser user agent and no bot marker human, and this audit showed a quarter of all traffic wearing that costume without behaving like a browser. The largest piece is one distributed crawler: about 9,000 requests from nearly 1,000 IPs, mostly in Tencent Cloud address space, using a frozen set of thirty early-2024 browser user agents (Chrome 120 to 123, Edge 122, Firefox 123, Safari 17.3, an iOS 13 iPhone). It sends browser security headers to look real, but gets them wrong in ways a browser can't: the Firefox and Safari costumes send Chromium client hints, and the Chrome ones report a version that disagrees with their own user agent. Its request rate is flat around the clock, it averages two requests per IP, and almost none of those IPs ever load a stylesheet or an image.
+The human rows need explaining, because my first pass had a single "human browsers" row at 58%, rather than the 23% it currently shows. My classifier calls anything with a browser user agent and no bot marker human, and this audit initially showed a quarter of all traffic wearing that costume without behaving like a browser. But what does that mean?
 
-The second piece is generic Chrome/131 traffic from a couple hundred IPs that turns out to be vulnerability scanners and fetch frameworks sharing a user agent string.
+The largest piece is one distributed crawler: about 9,000 requests from nearly 1,000 IPs, mostly in Tencent Cloud address space, using a frozen set of thirty early-2024 browser user agents (Chrome 120 to 123, Edge 122, Firefox 123, Safari 17.3, an iOS 13 iPhone). It sends browser security headers to look real, but gets them wrong in ways a browser mechanically can't: the Firefox and Safari costumes send Chromium client hints, and the Chrome ones report a version that disagrees with their own user agent. Its request rate is flat around the clock, it averages two requests per IP, and almost none of those IPs ever load a stylesheet or an image. That's not a human, or at least not in the sense that traffic metrics mean it.
 
-Remove both and about a third of traffic is left, and only the part that loads assets or navigates within the site behaves like a rendering browser. That 23% is the ceiling on humans, but we can't be certain about how many of those are actually human, because an agent driving a real browser looks exactly the same in the logs.
+The second piece is generic Chrome/131 traffic from a couple hundred IPs that turns out to be vulnerability scanners and fetch frameworks sharing a user agent string. (If you ever want to feel concerned about running WordPress, check your server logs for vulnerability scanners. 😬)
 
-Coding agents are a rounding error in raw request counts. They only become visible through my custom signal tracker, a small shim on each site that logs full request headers when a request negotiates for markdown, fetches a `.md` URL directly, or fetches `llms.txt`. Those three triggers produced about 1,240 signal entries over the nine days, and those entries are where I found all the interesting behavior.
+Remove these two initially-misclassified-as-human traffic sources, and about a third of human-looking traffic is left. Only the part that loads assets or navigates within the site behaves like a rendering browser. That 23% is the ceiling on humans, but we can't be certain about how many of those are actually human, because an agent driving a real browser looks exactly the same in the logs.
+
+Detectable coding agents are a rounding error in raw request counts. They only become visible through my custom signal tracker, a small shim on each site that logs full request headers when a request negotiates for markdown, fetches a `.md` URL directly, or fetches `llms.txt`. Those three triggers produced about 1,240 signal entries over the nine days, and those entries are where I found all the interesting behavior.
 
 Related note: the audit turned up a lot of drift in my classifier since April: new self-identifying agents (GitHub Copilot's fetch runtime, Qoder, ZCode, Grok's agent, DeepSeek's harness), a batch of new AI crawlers and search bots from Moonshot, Tencent, Huawei, Alibaba, Zhipu, xAI, and Mistral, and a couple of outright bugs in my heuristics. I fixed those before drawing any conclusions, so the categories above reflect the corrected classifier. My takeaway: five months is too long to let something like this sit in the fast-paced world of AI/agents, so it needs to be re-validated more often.
 
@@ -79,7 +81,9 @@ Now the file everyone argues about. `llms.txt` got 198 requests over the nine da
 
 The intended audience never showed up. `llms.txt` was [proposed](https://llmstxt.org) for LLM inference and training, and the fetchers that serve that purpose ignored it completely. Every user-facing assistant and answer engine fetched thousands of pages for people this week and requested `llms.txt` zero times: Amazon Quick 0 of 3,223 requests, OAI-SearchBot 0 of 632, ChatGPT-User 0 of 404, PerplexityBot 0 of 403, Claude-User 0 of 141, DuckAssistBot 0 of 116. Meta's, Google's, Mistral's, and xAI's fetchers all had the same zero. The training crawlers hit it at about the rate they hit any other URL (ClaudeBot: once in 1,319 requests) and did nothing with it afterward. Whatever the spec intended, that audience isn't reading.
 
-In my initial data spelunking, it looked like 46 human readers had visited the file, but 34 of the 46 turned out to be the spoofing crawler, sending client hints that contradict their own user agent. So the file's largest reader by volume is a scraper pretending to be people, and it is specifically collecting `llms.txt` and `.md` URLs while it does so. Whoever runs it wants the agent-friendly version of the content and would rather not be seen taking it. The dozen in-page fetches are something running inside real visitors' browsers that requests `/llms.txt` from the page they're on. My sites don't do that, so it's an extension or an agent working in the user's browser; two of those visitors had full sessions with assets and page-to-page navigation, and I can't tell which it was.
+In my initial data spelunking, it looked like 46 human readers had visited the file, but 34 of the 46 turned out to be the spoofing crawler, sending client hints that contradict their own user agent. So the file's largest reader by volume is a scraper pretending to be people, and it is specifically collecting `llms.txt` and `.md` URLs while it does so. Whoever runs it wants the agent-friendly version of the content and would rather not be seen taking it.
+
+The dozen in-page fetches are something running inside real visitors' browsers that requests `/llms.txt` from the page they're on. My sites don't do that, so it's an extension or an agent working in the user's browser; two of those visitors had full sessions with assets and page-to-page navigation, and I can't tell which it was.
 
 The audience that did show up was not on anyone's roadmap. Two coding agents fetched `llms.txt` this week, across six sessions, and in five of them the agent then fetched the pages it linked to.
 
