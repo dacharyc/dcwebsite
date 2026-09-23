@@ -7,7 +7,7 @@ date: 2026-07-21 07:00:00 -0500
 url: /2026/07/21/agent-know-what-it-can-do/
 image: /images/agent-know-what-it-can-do-hero.jpg
 tags: [ai]
-draft: true
+draft: false
 ---
 
 I've been building some new tools lately, and have noticed some interesting patterns in Claude Code around discovering its own capabilities and limitations. It reminded me of some conversations I've been having with fellow AI researcher, [Rhyannon Rodriguez](https://www.rhyannon-rodriguez.com), about how agent harnesses often lack introspection/awareness and debugging around their own capabilities. I think there are interesting observations here for agent harness developers, and open questions for the rest of us, about how agents understand our products.
