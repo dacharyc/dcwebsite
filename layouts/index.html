@@ -3,16 +3,16 @@
 {{ partial "hero.html" . }}
 
 {{/* Project override of the theme home page: the post grid gets a microblog sidebar. */}}
+{{ $paginator := .Paginate (where .Site.RegularPages "Type" "posts") 8 }}
 <div class="container">
   <div class="row home__layout">
 
-    <div class="col col-8 col-d-12 home__main">
+    <div class="col {{ if eq $paginator.PageNumber 1 }}col-8{{ else }}col-12{{ end }} col-d-12 home__main">
       <div class="home__col-head">
         <h2 id="home-articles-title" class="home__col-title"><a href="/posts/">Full articles</a></h2>
         <a href="/index.xml" class="home__col-rss" title="Articles RSS feed"><ion-icon name="logo-rss" aria-hidden="true"></ion-icon><span class="screen-reader-text">RSS</span></a>
       </div>
       <div class="row animate" aria-labelledby="home-articles-title">
-        {{ $paginator := .Paginate (where .Site.RegularPages "Type" "posts") 8 }}
         {{ range $paginator.Pages }}
           {{ partial "article-content.html" . }}
         {{ end }}
@@ -22,6 +22,8 @@
       </div>
     </div>
 
+    {{/* Only on the first page: repeating the sidebar on /page/N/ made Safari Reader, which follows the Next link, show it ten times over. */}}
+    {{ if eq $paginator.PageNumber 1 }}
     <aside class="col col-4 col-d-12 home__aside" aria-labelledby="home-microblog-title">
       <div class="home__col-head">
         <h2 id="home-microblog-title" class="home__col-title"><a href="/microblog/">Microblog</a></h2>
@@ -34,6 +36,7 @@
       </div>
       <p class="home__aside-more"><a href="/microblog/">All microblog posts</a></p>
     </aside>
+    {{ end }}
 
   </div>
 </div>
