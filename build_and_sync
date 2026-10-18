@@ -1,4 +1,32 @@
 #!/bin/sh
+#
+# Canonical deploy: preflight → llms.txt → hugo → rsync.
+# Drafts (draft: true, or anything under content/drafts/) are never published.
+
+set -e
+cd "$(dirname "$0")"
+
+# Preflight: refuse to publish a post whose hero image doesn't exist yet.
+# A placeholder like `image: /images/<TBD>.jpg` is the usual sign of an
+# unfinished post that still has `draft: false`.
+for f in content/posts/*.md; do
+  [ -f "$f" ] || continue
+  draft=$(sed -n '/^---$/,/^---$/{ /^draft:/p; }' "$f" | head -1 | sed 's/.*: *//; s/["\x27]//g')
+  [ "$draft" = "true" ] && continue
+  img=$(sed -n '/^---$/,/^---$/{ /^image:/p; }' "$f" | head -1 | sed "s/^image: *['\"]\\{0,1\\}//; s/['\"]\\{0,1\\}$//")
+  if [ -n "$img" ] && [ ! -f "static$img" ]; then
+    echo "ABORT: $f references missing hero image: $img" >&2
+    echo "       Set 'draft: true' (or move it to content/drafts/) if the post isn't ready." >&2
+    exit 1
+  fi
+done
+
 ./generate_llms_txt
-hugo
+
+# --cleanDestinationDir removes stale pages from public/ (e.g. a post that was
+# built once and later marked draft). Without it, rsync re-uploads them forever.
+hugo --cleanDestinationDir
+
+# Do NOT add --delete: the server holds files not in public/ (.well-known/
+# ACME challenge, robots.txt, legacy URLs). Remove stray paths by hand over ssh.
 rsync -avz public/ dacharycarey.com:dacharycarey.com/
