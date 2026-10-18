@@ -1,0 +1,671 @@
+#!/usr/bin/env python3
+"""
+Build content/microblog/ from a LinkedIn data export.
+
+Two subcommands:
+
+  ./import_linkedin_notes manifest
+      Read .linkedin/export/Shares_*.csv and (re)generate
+      .linkedin/notes-manifest.csv. Automatic include/exclude decisions
+      land in auto_include / auto_reason. The editable columns
+      (include, title, slug) are preserved across regenerations, so
+      curation edits in the manifest survive a re-run.
+
+  ./import_linkedin_notes build
+      Write one markdown file per included post into content/microblog/.
+      Resolves lnkd.in short links (cached in .linkedin/lnkd-cache.json),
+      attaches links from "link in the comments" posts by matching your
+      own comments within a few hours of the post. People named in a post
+      are replaced with a linked GitHub handle when .linkedin/people.json
+      maps the name ("Full Name": "login"), or trimmed to a first name
+      when the map value is "first-name-only"; a post that still names
+      someone unmapped is written as draft: true with a needs_review
+      field so it can be checked before it publishes.
+
+  ./import_linkedin_notes stamp content/microblog/FILE.md [LINK]
+      For a hand-written post: resolve the LinkedIn link in its frontmatter
+      (or LINK, which may be a lnkd.in/p/ short link, a /posts/ URL, a
+      /feed/update/ URL, or a bare share ID) to the canonical
+      https://www.linkedin.com/feed/update/urn:li:share:ID form, and set
+      the exact `date:` from the timestamp embedded in the ID. LinkedIn
+      IDs are Snowflake-style: the top 41 bits are milliseconds since the
+      Unix epoch, accurate to the second against the export.
+
+Hand-written posts are left alone by `build`: it only deletes files it
+recorded in the manifest's `file` column, and skips any export post whose
+share ID already appears in a hand-written file's `linkedin:` field.
+Posts written by hand use the same frontmatter; see archetypes/microblog.md
+and CLAUDE.md.
+"""
+
+import csv
+import glob
+import html
+import json
+import os
+import re
+import sys
+import urllib.parse
+import urllib.request
+from datetime import datetime, timedelta, timezone
+from zoneinfo import ZoneInfo
+
+ROOT = os.path.dirname(os.path.abspath(__file__))
+EXPORT_DIR = os.path.join(ROOT, ".linkedin", "export")
+MANIFEST = os.path.join(ROOT, ".linkedin", "notes-manifest.csv")
+LINK_CACHE = os.path.join(ROOT, ".linkedin", "lnkd-cache.json")
+PEOPLE_MAP = os.path.join(ROOT, ".linkedin", "people.json")
+FIRST_NAME_ONLY = "first-name-only"  # people.json value meaning "trim to first name"
+NOTES_DIR = os.path.join(ROOT, "content", "microblog")
+LOCAL_TZ = ZoneInfo("America/New_York")
+
+MIN_LENGTH = 300
+COMMENT_WINDOW = timedelta(hours=3)
+OWN_SITES = ("dacharycarey.com/20", "aeshift.com/posts/")
+
+IMAGE_DIR = os.path.join(ROOT, "static", "images", "microblog")
+IMAGE_EXTS = (".jpg", ".jpeg", ".png", ".webp", ".gif")
+
+MANIFEST_COLUMNS = [
+    "id", "idx", "date", "include", "auto_include", "auto_reason", "has_media", "image_alt", "shared_link", "shared_title",
+    "people", "topics", "auto_topics", "title", "auto_title", "slug", "auto_slug", "linkedin_url", "preview", "file",
+]
+
+PLUG_PATTERNS = [
+    r"\bis hiring\b", r"\bwe are hiring\b", r"\bhiring for\b", r"\bjob posting\b",
+    r"\blooking for his next\b", r"\bHelp \w+ find someone\b",
+    r"\bJoin us\b", r"\bwebinar\b", r"\bcon \.live\b", r"\bCome join\b",
+    r"\bdon't miss this\b", r"\bsessions are al",
+]
+
+
+# --------------------------------------------------------------------------
+# Export readers
+# --------------------------------------------------------------------------
+
+def find_csv(pattern):
+    matches = sorted(glob.glob(os.path.join(EXPORT_DIR, pattern)))
+    if not matches:
+        sys.exit(f"No file matching {pattern} in {EXPORT_DIR}. Unzip the export there first.")
+    return matches[-1]
+
+
+def read_csv(path, skip_preamble=False):
+    with open(path, newline="", encoding="utf-8") as f:
+        if skip_preamble:
+            # Connections.csv starts with a few free-text lines before the header.
+            pos = f.tell()
+            while True:
+                line = f.readline()
+                if not line:
+                    return []
+                if line.startswith("First Name,"):
+                    f.seek(pos)
+                    break
+                pos = f.tell()
+        return list(csv.DictReader(f))
+
+
+def parse_date(s):
+    return datetime.strptime(s, "%Y-%m-%d %H:%M:%S").replace(tzinfo=timezone.utc)
+
+
+def load_shares():
+    rows = read_csv(find_csv("Shares_*.csv"))
+    shares = []
+    for r in rows:
+        text = r["ShareCommentary"]
+        if not text.strip():
+            continue
+        shares.append({
+            "id": re.search(r"(\d+)$", r["ShareLink"]).group(1),
+            "date": parse_date(r["Date"]),
+            "link": urllib.parse.unquote(r["ShareLink"]),
+            "text": decode_text(text),
+            "shared_url": r["SharedUrl"].strip(),
+        })
+    # Export is newest-first; keep that ordering for idx stability.
+    for i, s in enumerate(shares):
+        s["idx"] = i
+    return shares
+
+
+def load_comment_links():
+    rows = read_csv(find_csv("Comments_*.csv"))
+    out = []
+    for r in rows:
+        msg = r.get("Message") or ""
+        urls = re.findall(r"https?://[^\s\"'<>)]+", msg)
+        if urls:
+            out.append({"date": parse_date(r["Date"]), "urls": [u.rstrip(".,") for u in urls]})
+    return out
+
+
+def load_media_times():
+    """Timestamps of uploaded feed photos from Rich_Media.csv (the export has no image files)."""
+    path = os.path.join(EXPORT_DIR, "Rich_Media.csv")
+    times = []
+    if os.path.exists(path):
+        for r in read_csv(path):
+            m = re.search(r"on (\w+ \d+, \d{4}) at (\d+:\d+ [AP]M)", r.get("Date/Time", ""))
+            if m:
+                times.append(datetime.strptime(m.group(1) + " " + m.group(2), "%B %d, %Y %I:%M %p").replace(tzinfo=timezone.utc))
+    return times
+
+
+def has_media(share, media_times):
+    if "ugcPost" in share["link"]:
+        return True
+    return any(abs(t - share["date"]) <= timedelta(minutes=3) for t in media_times)
+
+
+def images_for(stem):
+    """Images named <stem>.<ext> (single) or <stem>-1.<ext>, <stem>-2.<ext>, ... (several), in order."""
+    found = []
+    for name in sorted(os.listdir(IMAGE_DIR)) if os.path.isdir(IMAGE_DIR) else []:
+        base, ext = os.path.splitext(name)
+        if ext.lower() in IMAGE_EXTS and (base == stem or re.fullmatch(re.escape(stem) + r"-\d+", base)):
+            found.append(f"/images/microblog/{name}")
+    return found
+
+
+def load_people():
+    """Names of connections, used to flag posts that mention people."""
+    names = set()
+    path = os.path.join(EXPORT_DIR, "Connections.csv")
+    if os.path.exists(path):
+        for r in read_csv(path, skip_preamble=True):
+            first, last = (r.get("First Name") or "").strip(), (r.get("Last Name") or "").strip()
+            if len(first) > 1 and len(last) > 1:
+                names.add(f"{first} {last}")
+    return names
+
+
+# --------------------------------------------------------------------------
+# Text cleanup
+# --------------------------------------------------------------------------
+
+def decode_text(raw):
+    """LinkedIn encodes every newline inside ShareCommentary as a quoted
+    newline: the character sequence `"` newline `"`. Undo that."""
+    return raw.replace('"\n"', "\n")
+
+
+HASHTAG_LINE = re.compile(r"^\s*(#\w+\s*)+$")
+
+
+def clean_body(text, link_map):
+    lines = []
+    for line in text.split("\n"):
+        line = line.rstrip()
+        if HASHTAG_LINE.match(line):
+            continue
+        if line.startswith("#") and not line.startswith("# "):
+            line = "\\" + line  # inline hashtag at line start would render as a heading
+        lines.append(line)
+    body = "\n".join(lines).strip()
+    # LinkedIn @-mentions leave a stray space before possessives and commas.
+    body = re.sub(r"(\w) [‘'’]s\b", r"\1's", body)
+    body = re.sub(r"(\w) ,", r"\1,", body)
+    for short, full in link_map.items():
+        body = body.replace(short, full)
+    # Collapse runs of blank lines.
+    body = re.sub(r"\n{3,}", "\n\n", body)
+    return body
+
+
+EMOJI = re.compile(
+    "[\U0001F300-\U0001FAFF\U00002600-\U000027BF\U0001F000-\U0001F2FF⭐⬆↔-↪️‍]+"
+)
+
+
+def make_title(text, max_len=80):
+    first = text.split("\n", 1)[0].strip()
+    first = EMOJI.sub("", first)
+    first = first.replace("*", "").replace("`", "").replace("_", "")
+    first = re.sub(r"https?://\S+", "", first).strip()
+    first = first.strip('"“”')
+    # Prefer a sentence boundary, then a colon, then a word boundary.
+    m = re.match(r"(.+?[.!?])(\s|$)", first)
+    if m and len(m.group(1)) <= max_len + 10:
+        title = m.group(1)
+    elif ":" in first and len(first.split(":", 1)[0]) <= max_len:
+        title = first.split(":", 1)[0]
+    elif len(first) <= max_len:
+        title = first
+    else:
+        cut = first[:max_len].rsplit(" ", 1)[0]
+        title = cut.rstrip(",;:- ") + "…"
+    title = title.strip().rstrip(".").strip('"“”')
+    return re.sub(r"\s+", " ", title)
+
+
+def make_slug(title, max_len=60):
+    s = title.lower()
+    s = re.sub(r"[’'‘]", "", s)
+    s = re.sub(r"[^a-z0-9]+", "-", s).strip("-")
+    if len(s) > max_len:
+        s = s[:max_len].rsplit("-", 1)[0]
+    return s or "note"
+
+
+# --------------------------------------------------------------------------
+# Link resolution
+# --------------------------------------------------------------------------
+
+def load_link_cache():
+    if os.path.exists(LINK_CACHE):
+        with open(LINK_CACHE, encoding="utf-8") as f:
+            return json.load(f)
+    return {}
+
+
+def save_link_cache(cache):
+    with open(LINK_CACHE, "w", encoding="utf-8") as f:
+        json.dump(cache, f, indent=2, sort_keys=True)
+
+
+def resolve_lnkd(short, cache):
+    """lnkd.in serves an interstitial page rather than a redirect. The
+    destination appears in that page as the only non-LinkedIn URL."""
+    if short in cache:
+        return cache[short]
+    try:
+        req = urllib.request.Request(short, headers={"User-Agent": "Mozilla/5.0"})
+        with urllib.request.urlopen(req, timeout=15) as resp:
+            page = resp.read().decode("utf-8", "replace")
+    except Exception as e:  # noqa: BLE001
+        print(f"  could not resolve {short}: {e}", file=sys.stderr)
+        return None
+    candidates = set()
+    for u in re.findall(r"https?://[^\"'<> ]+", page):
+        u = html.unescape(u)
+        if re.search(r"linkedin\.com|licdn\.com|lnkd\.in|schema\.org|w3\.org", u):
+            continue
+        candidates.add(u)
+    if len(candidates) == 1:
+        cache[short] = candidates.pop()
+    elif candidates:
+        # Pick the one that appears first in the page.
+        first = min(candidates, key=lambda u: page.find(u))
+        cache[short] = first
+    else:
+        cache[short] = None
+    return cache[short]
+
+
+SHARE_ID_RE = re.compile(r"(?:share|activity|ugcPost)(?:%3A|:|-)(\d{15,})")
+
+
+def share_id_from(link, cache=None):
+    """Extract a LinkedIn share ID from any of the link shapes LinkedIn hands out."""
+    link = link.strip()
+    if re.fullmatch(r"\d{15,}", link):
+        return link
+    if "lnkd.in" in link:
+        try:
+            req = urllib.request.Request(link, headers={"User-Agent": "Mozilla/5.0"})
+            with urllib.request.urlopen(req, timeout=15) as resp:
+                final = resp.geturl()
+                m = SHARE_ID_RE.search(urllib.parse.unquote(final))
+                if m:
+                    return m.group(1)
+        except Exception:  # noqa: BLE001
+            pass
+        resolved = resolve_lnkd(link, cache if cache is not None else {})
+        link = resolved or link
+    m = SHARE_ID_RE.search(urllib.parse.unquote(link))
+    return m.group(1) if m else None
+
+
+def canonical_link(share_id):
+    return f"https://www.linkedin.com/feed/update/urn:li:share:{share_id}"
+
+
+def id_to_datetime(share_id):
+    return datetime.fromtimestamp((int(share_id) >> 22) / 1000, tz=timezone.utc).astimezone(LOCAL_TZ)
+
+
+def frontmatter_link_ids(path):
+    """Share IDs from a microblog file's `linkedin:` field (if any)."""
+    with open(path, encoding="utf-8") as f:
+        head = f.read(3000)
+    m = re.search(r"^linkedin:\s*(\S+)", head, re.M)
+    if not m:
+        return None
+    return share_id_from(m.group(1))
+
+
+def links_in(text):
+    return [u.rstrip(".,)") for u in re.findall(r"https?://[^\s\"'<>)]+", text)]
+
+
+# --------------------------------------------------------------------------
+# Decisions
+# --------------------------------------------------------------------------
+
+def comment_links_for(share, comment_links):
+    urls = []
+    for c in comment_links:
+        if timedelta(0) <= c["date"] - share["date"] <= COMMENT_WINDOW:
+            urls.extend(c["urls"])
+    # Drop links that are just LinkedIn permalinks to the post itself.
+    return [u for u in dict.fromkeys(urls) if "linkedin.com" not in u]
+
+
+def find_people(text, people):
+    found = [n for n in people if n in text]
+    # LinkedIn mention artifacts: "Name Surname ‘s", "Name Surname ,"
+    for m in re.finditer(r"\b([A-Z][\w'-]+(?: [A-Z][\w'-]+){1,2}) (?:[‘'’]s\b|,)", text):
+        found.append(m.group(1))
+    # Credits and shout-outs to people who aren't connections.
+    credit = (r"(?:[Tt]hanks?(?: you)? to|[Tt]hank-you to|[Ss]hout-? ?outs? to|[Kk]udos to|"
+              r"chat(?:ting)? with|sat down with|partner(?:ed)? with|credit to|contributions? from)\s+"
+              r"([A-Z][\w'-]+ [A-Z][\w'-]*\.?)")
+    for m in re.finditer(credit, text):
+        found.append(m.group(1).rstrip("."))
+        tail = text[m.end():m.end() + 80]
+        for n in re.findall(r"(?:,| and) ([A-Z][\w'-]+ [A-Z][\w'-]+)", tail):
+            found.append(n)
+    skip = {"Claude Code", "Agent Skills", "Agent Skill", "Write the Docs", "Hacker News", "Google Docs", "Home Assistant"}
+    return sorted({n for n in found if n not in skip and not n.endswith(" The")})
+
+
+TOPIC_RULES = [
+    ("ai", r"\bagents?\b|\bLLMs?\b|Claude|Copilot|Codex|Cursor|\bAI\b|Agent Skills?|afdocs|AFDocs|\bevals?\b|llms\.txt|skill-validator|Fable|Opus|Augment|Ollama|Pi\b"),
+    ("agents", r"\bagents?\b|Agent Skills?|\bharness|Claude Code|Copilot|Codex|Cursor|Antigravity|afdocs|AFDocs|llms\.txt|agent-friendly|skill-validator|agentminutes|agentsummons|\bevals?\b|\bMCP\b|web fetch|WebFetch"),
+    ("documentation", r"\bdocs\b|documentation|technical writ|documentarian|code examples?|llms\.txt|OpenAPI|readability|Write the Docs"),
+    ("coding", r"\bapp\b|\biOS\b|macOS|Swift|\bGo\b|\bCLI\b|GitHub|PR Focus|TestFlight|Realm|MongoDB|Python|FastAPI|\bscript\b|hackathon|Home Assistant|Raspberry Pi|DevOps|Xcode|JetBrains"),
+    ("personal", r"tractor|motorcycle|Vermont|\bwife\b|wifey|hubby|husband|\bfriends?\b|holiday|vacation|staycation|Kiva|surgery|keyboard|\bdogs?\b|\bpond\b|remote work|gaming|\bVR\b"),
+    ("business", r"hiring|job market|laid off|layoff|new job|New Job|anniversary|career|new role|company culture|leadership|interview|stakeholders"),
+]
+
+
+def auto_topics(text, limit=4):
+    found = []
+    for topic, pattern in TOPIC_RULES:
+        if re.search(pattern, text):
+            found.append(topic)
+    if "agents" in found and "ai" not in found:
+        found.insert(0, "ai")
+    return found[:limit]
+
+
+def auto_decision(share, all_links):
+    text = share["text"]
+    if len(text) < MIN_LENGTH:
+        return "no", "too short"
+    for p in PLUG_PATTERNS:
+        if re.search(p, text, re.I):
+            return "no", "hiring or event plug"
+    for u in all_links:
+        if any(s in u for s in OWN_SITES):
+            return "no", "announces own article"
+    return "yes", "original post"
+
+
+def load_people_map():
+    if os.path.exists(PEOPLE_MAP):
+        with open(PEOPLE_MAP, encoding="utf-8") as f:
+            return json.load(f)
+    return {}
+
+
+def link_people(body, people, people_map):
+    """Replace full names with linked GitHub handles. Returns the new body
+    and the names that had no mapping."""
+    unmapped = []
+    for name in sorted(people, key=len, reverse=True):
+        login = people_map.get(name)
+        if not login:
+            unmapped.append(name)
+        elif login == FIRST_NAME_ONLY:
+            body = body.replace(name, name.split()[0])
+        else:
+            body = body.replace(name, f"[@{login}](https://github.com/{login})")
+    return body, unmapped
+
+
+def existing_manifest():
+    if not os.path.exists(MANIFEST):
+        return {}
+    with open(MANIFEST, newline="", encoding="utf-8") as f:
+        return {r["id"]: r for r in csv.DictReader(f)}
+
+
+# --------------------------------------------------------------------------
+# Commands
+# --------------------------------------------------------------------------
+
+def cmd_manifest():
+    shares = load_shares()
+    comment_links = load_comment_links()
+    people = load_people()
+    old = existing_manifest()
+    cache = load_link_cache()
+    people_map = load_people_map()
+    media_times = load_media_times()
+
+    rows = []
+    for s in shares:
+        body_links = links_in(s["text"])
+        resolved = []
+        for u in body_links:
+            if "lnkd.in" in u:
+                r = resolve_lnkd(u, cache)
+                if r:
+                    resolved.append(r)
+            else:
+                resolved.append(u)
+        all_links = resolved + comment_links_for(s, comment_links) + ([s["shared_url"]] if s["shared_url"] else [])
+        auto_inc, reason = auto_decision(s, all_links)
+        prev = old.get(s["id"], {})
+        found_people = find_people(s["text"], people)
+        # Titles and slugs use plain @handles for mapped people, never full names.
+        title_text = s["text"]
+        for name in sorted(found_people, key=len, reverse=True):
+            login = people_map.get(name)
+            if login == FIRST_NAME_ONLY:
+                title_text = title_text.replace(name, name.split()[0])
+            elif login:
+                title_text = title_text.replace(name, "@" + login)
+        auto_title = make_title(title_text)
+        title = prev.get("title") if prev.get("title") and prev.get("title") != prev.get("auto_title") else auto_title
+        auto_slug = make_slug(auto_title)
+        slug = prev.get("slug") if prev.get("slug") and prev.get("slug") != prev.get("auto_slug") else auto_slug
+        rows.append({
+            "id": s["id"],
+            "idx": s["idx"],
+            "date": s["date"].strftime("%Y-%m-%d"),
+            "include": prev.get("include") or auto_inc,
+            "auto_include": auto_inc,
+            "auto_reason": reason,
+            "has_media": "yes" if has_media(s, media_times) else "",
+            "image_alt": prev.get("image_alt", ""),
+            "shared_link": prev.get("shared_link", ""),
+            "shared_title": prev.get("shared_title", ""),
+            "people": "; ".join(found_people),
+            "topics": (prev.get("topics") if prev.get("topics") and prev.get("topics") != prev.get("auto_topics") else ", ".join(auto_topics(s["text"]))),
+            "auto_topics": ", ".join(auto_topics(s["text"])),
+            "title": title,
+            "auto_title": auto_title,
+            "slug": slug,
+            "auto_slug": auto_slug,
+            "linkedin_url": s["link"],
+            "preview": re.sub(r"\s+", " ", s["text"])[:140],
+            "file": prev.get("file", ""),
+        })
+    save_link_cache(cache)
+    with open(MANIFEST, "w", newline="", encoding="utf-8") as f:
+        w = csv.DictWriter(f, fieldnames=MANIFEST_COLUMNS)
+        w.writeheader()
+        w.writerows(rows)
+    inc = sum(1 for r in rows if r["include"] == "yes")
+    flagged = sum(1 for r in rows if r["include"] == "yes" and r["people"])
+    print(f"wrote {MANIFEST}: {len(rows)} posts, {inc} included, {flagged} included posts name people")
+
+
+def yaml_str(s):
+    return json.dumps(s, ensure_ascii=False)
+
+
+def cmd_build():
+    shares = {s["id"]: s for s in load_shares()}
+    comment_links = load_comment_links()
+    manifest = existing_manifest()
+    if not manifest:
+        sys.exit("No manifest. Run `./import_linkedin_notes manifest` first.")
+    cache = load_link_cache()
+    people_map = load_people_map()
+
+    os.makedirs(NOTES_DIR, exist_ok=True)
+    # Remove only the files this script wrote last time (recorded in the manifest),
+    # so excluded posts disappear and hand-written posts are never touched.
+    for row in manifest.values():
+        if row.get("file"):
+            path = os.path.join(NOTES_DIR, row["file"])
+            if os.path.exists(path):
+                os.remove(path)
+            row["file"] = ""
+    hand_written = {}
+    for path in glob.glob(os.path.join(NOTES_DIR, "*.md")):
+        if os.path.basename(path) == "_index.md":
+            continue
+        sid = frontmatter_link_ids(path)
+        if sid:
+            hand_written[sid] = os.path.basename(path)
+
+    written = flagged = kept = 0
+    missing_images, missing_alt = [], []
+    slugs_seen = set()
+    for row in manifest.values():
+        if row["include"] != "yes":
+            continue
+        s = shares.get(row["id"])
+        if not s:
+            print(f"  manifest id {row['id']} not in export, skipping", file=sys.stderr)
+            continue
+        if row["id"] in hand_written:
+            print(f"  keeping hand-written {hand_written[row['id']]} (share {row['id']})")
+            kept += 1
+            continue
+
+        link_map = {}
+        for u in links_in(s["text"]):
+            if "lnkd.in" in u:
+                r = resolve_lnkd(u, cache)
+                if r:
+                    link_map[u] = r
+        body = clean_body(s["text"], link_map)
+
+        extra = comment_links_for(s, comment_links)
+        if s["shared_url"] and s["shared_url"] not in body and s["shared_url"] not in extra:
+            extra.append(s["shared_url"])
+        extra = [u for u in extra if u not in body]
+        if extra:
+            body += "\n\n**Links from the comments:**\n\n" + "\n".join(f"- <{u}>" for u in extra)
+        # Reposts: the post was commentary on someone else's LinkedIn post (or another page).
+        if row.get("shared_link"):
+            if row.get("shared_title"):
+                body += f"\n\n**Sharing:** [{row['shared_title']}]({row['shared_link']})"
+            else:
+                body += f"\n\n**Sharing:** <{row['shared_link']}>"
+
+        local = s["date"].astimezone(LOCAL_TZ)
+        slug = row["slug"] or make_slug(row["title"])
+        key = (local.strftime("%Y-%m-%d"), slug)
+        if key in slugs_seen:
+            slug = f"{slug}-{row['id'][-4:]}"
+        slugs_seen.add(key)
+        url = f"/microblog/{local:%Y/%m/%d}/{slug}/"
+        people = [p for p in row["people"].split("; ") if p]
+        body, people = link_people(body, people, people_map)
+
+        fm = [
+            "---",
+            f"title: {yaml_str(row['title'])}",
+            "author: Dachary Carey",
+            f"date: {local:%Y-%m-%d %H:%M:%S %z}",
+            f"url: {url}",
+            f"linkedin: {s['link']}",
+        ]
+        topics = [t.strip() for t in (row.get("topics") or "").split(",") if t.strip()]
+        if topics:
+            fm.insert(5, f"topics: [{', '.join(topics)}]")
+        filename = f"{local:%Y-%m-%d}-{slug}.md"
+        images = images_for(filename[:-3])
+        if images:
+            alts = [a.strip() for a in (row.get("image_alt") or "").split("||")]
+            fm.append("images:")
+            for i, src in enumerate(images):
+                alt = alts[i] if i < len(alts) else ""
+                fm.append(f"  - src: {src}")
+                fm.append(f"    alt: {yaml_str(alt)}")
+                if not alt:
+                    missing_alt.append(filename)
+        elif row.get("has_media") and not row.get("shared_link"):
+            missing_images.append(filename)
+        if people:
+            fm.append(f"needs_review: {yaml_str('names people: ' + ', '.join(people))}")
+            fm.append("draft: true")
+            flagged += 1
+        else:
+            fm.append("draft: false")
+        fm.append("---")
+
+        with open(os.path.join(NOTES_DIR, filename), "w", encoding="utf-8") as f:
+            f.write("\n".join(fm) + "\n\n" + body + "\n")
+        row["file"] = filename
+        written += 1
+
+    save_link_cache(cache)
+    with open(MANIFEST, "w", newline="", encoding="utf-8") as f:
+        w = csv.DictWriter(f, fieldnames=MANIFEST_COLUMNS)
+        w.writeheader()
+        w.writerows(manifest.values())
+    print(f"wrote {written} notes to {NOTES_DIR} ({flagged} marked draft for review, {kept} hand-written posts kept)")
+    if missing_images:
+        print(f"\n{len(missing_images)} posts had media on LinkedIn but have no image in {IMAGE_DIR}:")
+        print("  save each as <post filename>.jpg (or .png) and rebuild:")
+        for fn in missing_images:
+            print(f"  - {fn[:-3]}")
+    if missing_alt:
+        print(f"\n{len(missing_alt)} images lack alt text; fill the image_alt column in the manifest (separate several with ' || ') and rebuild:")
+        for fn in dict.fromkeys(missing_alt):
+            print(f"  - {fn}")
+
+
+def cmd_stamp(path, link=None):
+    with open(path, encoding="utf-8") as f:
+        s = f.read()
+    m = re.search(r"^linkedin:\s*(.*)$", s, re.M)
+    raw = link or (m.group(1).strip() if m else "")
+    if not raw or "<" in raw:
+        sys.exit("No LinkedIn link to resolve. Pass one as the second argument.")
+    cache = load_link_cache()
+    sid = share_id_from(raw, cache)
+    save_link_cache(cache)
+    if not sid:
+        sys.exit(f"Could not find a share ID in {raw}")
+    when = id_to_datetime(sid)
+    s = re.sub(r"^linkedin:.*$", f"linkedin: {canonical_link(sid)}", s, count=1, flags=re.M)
+    s = re.sub(r"^date:.*$", f"date: {when:%Y-%m-%d %H:%M:%S %z}", s, count=1, flags=re.M)
+    s, n = re.subn(r"^(url:\s*/microblog/)\d{4}/\d{2}/\d{2}/", lambda mm: f"{mm.group(1)}{when:%Y/%m/%d}/", s, count=1, flags=re.M)
+    with open(path, "w", encoding="utf-8") as f:
+        f.write(s)
+    print(f"{os.path.basename(path)}: linkedin -> {canonical_link(sid)}")
+    print(f"  date -> {when:%Y-%m-%d %H:%M:%S %z}")
+    if not os.path.basename(path).startswith(f"{when:%Y-%m-%d}-"):
+        print(f"  note: filename date prefix differs from the post date ({when:%Y-%m-%d}); rename the file if you want them to match")
+
+
+if __name__ == "__main__":
+    cmd = sys.argv[1] if len(sys.argv) > 1 else ""
+    if cmd == "manifest":
+        cmd_manifest()
+    elif cmd == "build":
+        cmd_build()
+    elif cmd == "stamp" and len(sys.argv) > 2:
+        cmd_stamp(sys.argv[2], sys.argv[3] if len(sys.argv) > 3 else None)
+    else:
+        sys.exit(__doc__)

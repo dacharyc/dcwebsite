@@ -57,6 +57,31 @@ done
 
 cat >> "$OUTPUT" << 'SECTION'
 
+## Microblog
+
+Short posts, syndicated to LinkedIn.
+
+SECTION
+
+# Add published microblog posts, sorted by date descending
+for file in $(ls -r "$SITE_DIR"/content/microblog/*.md 2>/dev/null); do
+  [ -f "$file" ] || continue
+  [ "$(basename "$file")" = "_index.md" ] && continue
+
+  # Skip drafts
+  draft=$(sed -n '/^---$/,/^---$/{ /^draft:/p; }' "$file" | head -1 | sed 's/.*: *//; s/["\x27]//g')
+  [ "$draft" = "true" ] && continue
+
+  title=$(sed -n '/^---$/,/^---$/{ /^title:/p; }' "$file" | head -1 | sed "s/^title: *//; s/^\"//; s/\"$//; s/\\\"/\"/g")
+  url=$(sed -n '/^---$/,/^---$/{ /^url:/p; }' "$file" | head -1 | sed "s/.*: *['\"]\{0,1\}//; s/['\"]\{0,1\}$//" )
+
+  [ -z "$url" ] && continue
+
+  echo "- [$title](${BASE_URL}${url}index.md)" >> "$OUTPUT"
+done
+
+cat >> "$OUTPUT" << 'SECTION'
+
 ## Topics
 
 SECTION
@@ -91,4 +116,5 @@ SECTION
 
 echo "- [Home](${BASE_URL}/index.md)" >> "$OUTPUT"
 echo "- [All Posts](${BASE_URL}/posts/index.md): Browse all blog posts" >> "$OUTPUT"
+echo "- [Microblog](${BASE_URL}/microblog/index.md): Browse all short posts" >> "$OUTPUT"
 echo "- [All Tags](${BASE_URL}/tags/index.md): Browse posts by topic" >> "$OUTPUT"

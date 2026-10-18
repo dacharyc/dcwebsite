@@ -1,0 +1,18 @@
+{{ define "main" }}
+
+<div class="microblog microblog--single">
+  <div class="container">
+    <div class="row animate">
+      <div class="col col-12">
+        <p class="microblog__kicker"><a href="/microblog/">Microblog</a></p>
+        <h1 class="screen-reader-text">{{ .Title }}</h1>
+        <div class="microblog__feed">
+          {{ partial "microblog-card.html" (dict "page" . "mode" "full") }}
+        </div>
+        <p class="microblog__nav"><a href="/microblog/">All microblog posts</a> &middot; <a href="/microblog/index.xml">RSS</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+{{ end }}

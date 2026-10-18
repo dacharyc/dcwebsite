@@ -25,3 +25,67 @@
     lightbox.init();
   }
 </script>
+
+<!-- Microblog: expand a home page teaser in place, hiding the other teasers while it's open.
+     The "Full post" link is upgraded to a disclosure button (WAI-ARIA disclosure pattern) when JS runs. -->
+<script>
+  (function () {
+    var cards = document.querySelectorAll('.mb-card--teaser');
+    if (!cards.length) return;
+    cards.forEach(function (card) {
+      var feed = card.closest('.microblog__feed');
+      var teaser = card.querySelector('.mb-card__teaser');
+      var full = card.querySelector('.mb-card__full');
+      var link = card.querySelector('[data-toggle]');
+      var whenExpanded = card.querySelectorAll('[data-when-expanded]');
+      if (!link || !full || !teaser) return;
+
+      var toggle = document.createElement('button');
+      toggle.type = 'button';
+      toggle.className = link.className;
+      toggle.setAttribute('aria-expanded', 'false');
+      toggle.setAttribute('aria-controls', link.getAttribute('data-controls'));
+      toggle.innerHTML = link.innerHTML;
+      link.replaceWith(toggle);
+      var icon = toggle.querySelector('ion-icon');
+      var label = toggle.querySelector('span');
+
+      function setExpanded(on) {
+        card.classList.toggle('is-expanded', on);
+        if (feed) feed.classList.toggle('has-expanded', on);
+        teaser.hidden = on;
+        full.hidden = !on;
+        toggle.setAttribute('aria-expanded', on ? 'true' : 'false');
+        if (icon) icon.setAttribute('name', on ? 'chevron-up-outline' : 'chevron-down-outline');
+        if (label) label.textContent = on ? 'Collapse' : 'Full post';
+        whenExpanded.forEach(function (el) { el.hidden = !on; });
+        if (!on) card.scrollIntoView({ block: 'nearest' });
+      }
+      toggle.addEventListener('click', function () { setExpanded(toggle.getAttribute('aria-expanded') !== 'true'); });
+      card.querySelectorAll('[data-expand]').forEach(function (el) {
+        el.addEventListener('click', function (e) { e.preventDefault(); setExpanded(true); });
+      });
+    });
+  })();
+</script>
+
+<!-- Microblog: show social-style relative dates for recent posts (absolute date stays in the DOM for everything else) -->
+<script>
+  (function () {
+    var times = document.querySelectorAll('time.mb-card__date');
+    if (!times.length) return;
+    var now = Date.now();
+    times.forEach(function (t) {
+      var then = Date.parse(t.getAttribute('datetime'));
+      if (isNaN(then)) return;
+      var s = Math.max(0, (now - then) / 1000);
+      var label = null;
+      if (s < 60) label = 'now';
+      else if (s < 3600) label = Math.floor(s / 60) + 'm';
+      else if (s < 86400) label = Math.floor(s / 3600) + 'h';
+      else if (s < 86400 * 7) label = Math.floor(s / 86400) + 'd';
+      else if (s < 86400 * 30) label = Math.floor(s / (86400 * 7)) + 'w';
+      if (label) t.textContent = label;
+    });
+  })();
+</script>

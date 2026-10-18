@@ -1,0 +1,43 @@
+{{ define "main" }}
+
+{{ partial "hero.html" . }}
+
+{{/* Project override of the theme home page: the post grid gets a microblog sidebar. */}}
+<div class="container">
+  <div class="row home__layout">
+
+    <div class="col col-8 col-d-12 home__main">
+      <div class="home__col-head">
+        <h2 id="home-articles-title" class="home__col-title"><a href="/posts/">Full articles</a></h2>
+        <a href="/index.xml" class="home__col-rss" title="Articles RSS feed"><ion-icon name="logo-rss" aria-hidden="true"></ion-icon><span class="screen-reader-text">RSS</span></a>
+      </div>
+      <div class="row animate" aria-labelledby="home-articles-title">
+        {{ $paginator := .Paginate (where .Site.RegularPages "Type" "posts") 8 }}
+        {{ range $paginator.Pages }}
+          {{ partial "article-content.html" . }}
+        {{ end }}
+      </div>
+      <div class="home__pagination">
+        {{ partial "pagination.html" . }}
+      </div>
+    </div>
+
+    <aside class="col col-4 col-d-12 home__aside" aria-labelledby="home-microblog-title">
+      <div class="home__col-head">
+        <h2 id="home-microblog-title" class="home__col-title"><a href="/microblog/">Microblog</a></h2>
+        <a href="/microblog/index.xml" class="home__col-rss" title="Microblog RSS feed"><ion-icon name="logo-rss" aria-hidden="true"></ion-icon><span class="screen-reader-text">RSS</span></a>
+      </div>
+      <div class="microblog__feed microblog__feed--aside">
+        {{ range first 5 (where .Site.RegularPages "Type" "microblog") }}
+          {{ partial "microblog-card.html" (dict "page" . "mode" "teaser") }}
+        {{ end }}
+      </div>
+      <p class="home__aside-more"><a href="/microblog/">All microblog posts</a></p>
+    </aside>
+
+  </div>
+</div>
+
+{{ partial "section-tags.html" . }}
+
+{{ end }}

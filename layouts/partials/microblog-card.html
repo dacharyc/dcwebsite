@@ -1,0 +1,64 @@
+{{- /*
+  Social-media style card for a microblog post.
+  Call with (dict "page" $page "mode" "full"|"teaser").
+  teaser: truncated text + "Read more" link, used on the home page sidebar.
+  full:   complete post content, used on the microblog list and single pages.
+*/ -}}
+{{- $p := .page -}}
+{{- $mode := .mode | default "full" -}}
+{{- $site := $p.Site -}}
+<article class="mb-card mb-card--{{ $mode }}">
+  <header class="mb-card__head">
+    <a href="/about/" class="mb-card__avatar" aria-hidden="true" tabindex="-1">
+      <img src="{{ $site.Params.author.author__avatar }}" alt="" width="48" height="48" loading="lazy">
+    </a>
+    <div class="mb-card__meta">
+      <div class="mb-card__byline">
+        <a href="/about/" class="mb-card__name">{{ $site.Params.author.author__name }}</a>
+        <span class="mb-card__sep" aria-hidden="true">&middot;</span>
+        <a href="{{ $p.RelPermalink }}" class="mb-card__datelink"><time class="mb-card__date" datetime="{{ $p.Date.Format "2006-01-02T15:04:05Z07:00" }}" title="{{ $p.Date.Format "January 2, 2006 at 3:04 PM MST" }}">{{ $p.Date.Format "Jan 2, 2006" }}</time></a>
+      </div>
+      <div class="mb-card__topics">
+        {{- with $p.Params.topics -}}
+          {{- range $i, $t := . -}}{{ if $i }}<span class="mb-card__pipe" aria-hidden="true"> | </span>{{ end }}<span class="mb-card__topic">{{ if eq $t "ai" }}AI{{ else }}{{ $t | humanize }}{{ end }}</span>{{- end -}}
+        {{- else -}}
+          {{ $site.Params.author.author__bio }}
+        {{- end -}}
+      </div>
+    </div>
+  </header>
+  <div class="mb-card__body">
+    {{- if eq $mode "teaser" -}}
+      {{- /* .Plain is already HTML-escaped; unescape once so the template's own escaping doesn't double it (&quot; showing literally). */ -}}
+      {{- $text := $p.Plain | htmlUnescape -}}
+      {{- $short := truncate 280 "" $text -}}
+      {{- $long := ne $short $text -}}
+      <div class="mb-card__teaser"><p>{{ $short }}{{ if $long }}<button type="button" class="mb-card__ellipsis" data-expand aria-label="Show the full post">&hellip;</button>{{ end }}</p></div>
+      <div class="mb-card__full" id="mb-full-{{ $p.RelPermalink | md5 }}" hidden>{{ $p.Content }}</div>
+    {{- else -}}
+      {{ $p.Content }}
+    {{- end -}}
+  </div>
+  {{- with $p.Params.images }}
+  <div class="mb-card__media mb-card__media--{{ if gt (len .) 1 }}grid{{ else }}single{{ end }}">
+    {{- range . }}
+    {{- $dims := imageConfig (printf "static%s" .src) }}
+    <a class="pswp-image mb-card__media-item" href="{{ .src | absURL }}" data-pswp-width="{{ $dims.Width }}" data-pswp-height="{{ $dims.Height }}" target="_blank" rel="noopener">
+      <img src="{{ .src | absURL }}" alt="{{ .alt }}" width="{{ $dims.Width }}" height="{{ $dims.Height }}" loading="lazy">
+    </a>
+    {{- end }}
+  </div>
+  {{- end }}
+  <footer class="mb-card__foot">
+    {{- if eq $mode "teaser" -}}
+      {{- /* Rendered as a link to the post; JS upgrades it to a disclosure button that expands the card in place. */}}
+      <a href="{{ $p.RelPermalink }}" class="mb-card__toggle" data-toggle data-controls="mb-full-{{ $p.RelPermalink | md5 }}"><ion-icon name="chevron-down-outline" aria-hidden="true"></ion-icon><span>Full post</span></a>
+      <a href="{{ $p.RelPermalink }}" class="mb-card__permalink" data-when-expanded hidden><ion-icon name="link-outline" aria-hidden="true"></ion-icon><span>Permalink</span></a>
+    {{- else -}}
+      <a href="{{ $p.RelPermalink }}" class="mb-card__permalink"><ion-icon name="link-outline" aria-hidden="true"></ion-icon><span>Permalink</span></a>
+    {{- end -}}
+    {{- with $p.Params.linkedin }}
+      <a href="{{ . }}" class="mb-card__linkedin" rel="noopener"><ion-icon name="logo-linkedin" aria-hidden="true"></ion-icon><span>On LinkedIn</span></a>
+    {{- end }}
+  </footer>
+</article>

@@ -8,7 +8,7 @@
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
   <link rel="manifest" href="/site.webmanifest">
 
-  <title>{{ if not .IsHome }}{{ humanize .Title }} | {{ end }}{{ .Site.Title }}</title>
+  <title>{{ if not .IsHome }}{{ .Title }} | {{ end }}{{ .Site.Title }}</title>
   <meta name="description" content="{{if .IsHome}}{{ .Site.Params.description }}{{else}}{{ .Description }}{{end}}">
 
   {{ with .OutputFormats.Get "rss" -}}
@@ -24,7 +24,7 @@
   <!-- Facebook OpenGraph -->
   <meta property="og:title" content="{{ if not .IsHome }}{{ .Title }} | {{ end }}{{ .Site.Title }}">
   <meta property="og:description" content="{{ with .Description }}{{ . }}{{ else }}{{if .IsPage}}{{ .Summary }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end }}">
-  {{ if .IsHome}}<meta property="og:image" content="{{ .Site.Params.hero.hero__image | absURL }}">{{ else }}<meta property="og:image" content="{{ .Params.Image | absURL }}">{{ end }}
+  {{ if .IsHome}}<meta property="og:image" content="{{ .Site.Params.hero.hero__image | absURL }}">{{ else }}{{ $og := .Params.Image }}{{ if and (not $og) .Params.images }}{{ $og = (index .Params.images 0).src }}{{ end }}<meta property="og:image" content="{{ $og | absURL }}">{{ end }}
 
   <!-- Mastodon author attribution: https://docs.joinmastodon.org/user/profile/#attribution -->
   {{ with .Site.Params.author.author__mastodon }}<meta name="fediverse:creator" content="{{ . }}">{{ end }}

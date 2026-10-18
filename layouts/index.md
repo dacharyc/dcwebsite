@@ -9,9 +9,22 @@
 {{ range .Site.Menus.main }}
 - [{{ .Name }}]({{ .URL | absURL }}/index.md)
 {{ end }}{{ end }}
-## Recent Posts
-{{ range first 10 .Site.RegularPages }}{{ if not .Draft }}
+## Full Articles
+{{ range first 10 (where .Site.RegularPages "Type" "posts") }}{{ if not .Draft }}
 ### [{{ .Title }}]({{ .Permalink }}index.md)
 
 {{ with .Description }}{{ . }}{{ end }}
+{{ end }}{{ end }}
+## Microblog
+
+Short posts, syndicated to LinkedIn. Full list: https://dacharycarey.com/microblog/index.md
+{{ range first 5 (where .Site.RegularPages "Type" "microblog") }}{{ if not .Draft }}
+### [{{ .Title }}]({{ .Permalink }}index.md)
+
+*{{ .Date.Format "January 2, 2006" }}*
+
+{{ .RawContent }}
+{{ range .Params.images }}
+![{{ .alt }}]({{ .src | absURL }})
+{{ end }}
 {{ end }}{{ end }}

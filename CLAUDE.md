@@ -45,6 +45,7 @@ Requires a working LaTeX install (`pdflatex` is sufficient). The metadata signat
 - `content/posts/YYYY-MM-DD-slug.md` — published posts. Filename date prefix sorts the directory; the canonical date for sorting and URLs lives in frontmatter (`date:` and `url:`).
 - `content/drafts/` — work-in-progress posts. Frontmatter has `draft: true`. Promotion to published means moving the file into `content/posts/`, setting `draft: false`, and confirming `date` / `url` are right.
 - `content/{about,ai-research,contact,documentation,programming,resume}.md` — top-level pages.
+- `content/microblog/YYYY-MM-DD-slug.md` — short social-style posts syndicated to LinkedIn. See "Microblog" below.
 
 Post frontmatter convention (see any recent post for an example):
 
@@ -62,7 +63,70 @@ draft: false
 ---
 ```
 
+## Microblog (short posts, syndicated to LinkedIn)
+
+`content/microblog/` holds short social-style posts that get syndicated to LinkedIn. The site is the canonical copy; LinkedIn is the syndication target (POSSE). The microblog has its own feed at `/microblog/index.xml`, its own section in `llms.txt`, and a sidebar of the five latest posts on the home page. The main feed (`/index.xml`), the home page post grid, the header menu, and the search index stay posts-only; see `layouts/_default/rss.xml` and `layouts/index.html`.
+
+Rendering lives in `layouts/microblog/` (list, single, and their markdown twins) and `layouts/partials/microblog-card.html`, a social-media style card: squircle avatar, name, topic line, relative date (JS, falls back to the absolute date), post text, and a link to the LinkedIn original. Titles exist for RSS, `llms.txt`, and the markdown output but are visually hidden on the HTML pages; the first sentence of the post does that job, as on LinkedIn.
+
+Microblog frontmatter (see `archetypes/microblog.md`; `hugo new microblog/YYYY-MM-DD-slug.md` scaffolds it):
+
+```yaml
+---
+title: First sentence or a short label (used by RSS, llms.txt, markdown output)
+author: Dachary Carey
+date: YYYY-MM-DD HH:MM:SS -0400
+url: /microblog/YYYY/MM/DD/slug/
+topics: [ai, documentation]   # shown under the name in place of the LinkedIn tagline; display only, not a taxonomy
+linkedin: https://www.linkedin.com/feed/update/urn:li:share:NNNN   # add after posting
+draft: false
+---
+```
+
+Going-forward workflow:
+
+1. Write the post here (`hugo new microblog/YYYY-MM-DD-slug.md`), post the text to LinkedIn.
+2. Use LinkedIn's "Copy link to post" (a `lnkd.in/p/...` short link) and paste it into `linkedin:`.
+3. Run `./import_linkedin_notes stamp content/microblog/FILE.md`. It resolves the short link to the canonical `https://www.linkedin.com/feed/update/urn:li:share:ID` form and sets `date:` and the `url:` date path from the exact timestamp embedded in the post ID (LinkedIn IDs are Snowflake-style; the top 41 bits are milliseconds since the epoch, accurate to the second against the export). The LinkedIn UI only shows relative times, so this is the way to get the real one.
+4. Deploy.
+
+No description. Future export imports recognise hand-written posts by that share ID and leave the file alone.
+
+**Images.** A post can carry attached images, shown below the text like LinkedIn does: one image full width, two or more as square tiles in a two-column grid. Every image is click-to-zoom through the site's PhotoSwipe setup, so cropped tiles open at full size. Save a single image as `static/images/microblog/<post filename stem>.jpg` (or `.jpeg`, `.png`, `.webp`); for several, suffix `-1`, `-2`, ... in display order. Frontmatter:
+
+```yaml
+images:
+  - src: /images/microblog/2026-10-18-slug-1.jpeg
+    alt: "Describe each image thoroughly; this is the only description in RSS, the markdown output, and for screen readers."
+  - src: /images/microblog/2026-10-18-slug-2.jpeg
+    alt: "..."
+```
+
+The first image doubles as the social-card image (`og:image`). LinkedIn's export has no image files, so backfilled posts get images only by downloading them from LinkedIn by hand. The importer matches on the filename stem: drop the files in, put the alt text in the manifest's `image_alt` column (several separated by ` || `, in order), and `build` writes the list. `build` prints the posts that had media on LinkedIn but still have no image file, and the ones with an image but no alt text. A post that was a repost of someone else's LinkedIn post (or a shared page) gets a `shared_link` and optional `shared_title` in the manifest instead of an image; `build` appends a "Sharing:" link line and stops asking for an image. Keep images at or under 1200px wide; LinkedIn originals can be 2000px and over 1MB. Resize with sharp-cli before committing:
+
+```bash
+npx --yes sharp-cli --input static/images/microblog/FILE.jpeg --output /tmp/FILE.jpeg resize 1200 && mv /tmp/FILE.jpeg static/images/microblog/FILE.jpeg
+```
+
+### Backfill from a LinkedIn export
+
+`./import_linkedin_notes` builds microblog posts from a LinkedIn data export unzipped into `.linkedin/export/` (gitignored). `manifest` writes `.linkedin/notes-manifest.csv` with automatic include/exclude decisions, keyword-derived topics, people flags, and generated titles; `build` writes `content/microblog/*.md` for rows marked `include: yes`. Manual edits to `include`, `title`, `slug`, and `topics` in the manifest survive a regenerate. The script resolves `lnkd.in` short links (cached in `.linkedin/lnkd-cache.json`), attaches links from "link in the comments" posts by matching your own comments within three hours, and swaps people's full names for linked GitHub handles using `.linkedin/people.json` (`"Full Name": "login"`), in titles and slugs as a plain `@login` and in the body as a link; a value of `first-name-only` trims the name to its first word instead. Posts that still name someone unmapped are written as `draft: true` with a `needs_review` field. `build` only deletes files it recorded in the manifest's `file` column and skips any export post whose share ID already appears in a hand-written file's `linkedin:` field, so hand-written posts are never overwritten.
+
+Vale is relaxed for `content/microblog/` (see `.vale.ini`) because backfilled posts are historical LinkedIn writing.
+
 ## Conventions
+
+### Tags
+
+Tags are lowercase in frontmatter (`tags: [ai, agents, documentation]`); Hugo merges case variants but the files should stay consistent. Current vocabulary and what each means:
+
+- `ai` — umbrella for anything involving LLMs or AI tooling, including writing and research with AI.
+- `agents` — coding agents as consumers of docs and products: skills, harnesses, evals, agent web traffic, agent-friendly docs. Always paired with `ai`.
+- `documentation`, `coding`, `writing`, `business`, `personal`, `lifestyle`, `hackathon`, `travel`, `review` — as named.
+
+Add a finer tag (for example `agent-skills`) only once a cluster is past a dozen posts. Microblog posts use the same words in `topics:`, which is display-only (not a taxonomy); the importer derives them from keywords.
+
+The home page "Tags" strip (`layouts/partials/section-tags.html`) shows the four most-used tags. Tag page titles come from `content/tags/<tag>/_index.md` when Hugo's auto-capitalization is wrong (`ai` → "AI").
 
 ### Zoomable diagrams and images
 

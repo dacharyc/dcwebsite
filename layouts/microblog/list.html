@@ -1,0 +1,36 @@
+{{ define "main" }}
+
+<div class="archive microblog">
+
+  <div class="container">
+    <div class="row">
+      <div class="col col-12">
+        <div class="archive__box">
+          <span class="archive__counter">{{ len .Pages }} Posts</span>
+          <h1 class="archive__title">{{ .Title }}</h1>
+        </div>
+        <div class="microblog__intro">
+          {{ .Content }}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {{ $paginator := .Paginate .Pages 10 }}
+  <div class="container">
+    <div class="row animate">
+      <div class="col col-12">
+        <div class="microblog__feed">
+          {{ range $paginator.Pages }}
+            {{ partial "microblog-card.html" (dict "page" . "mode" "full") }}
+          {{ end }}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {{ partial "pagination.html" . }}
+
+</div>
+
+{{ end }}
