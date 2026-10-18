@@ -93,6 +93,7 @@
 
 Short posts, syndicated to LinkedIn.
 
+- [Last vacation post - I've liberated my content from LinkedIn](https://dacharycarey.com/microblog/2026/10/18/last-vacation-post-ive-liberated-my-content-from-linkedin/index.md)
 - [I've been getting a lot of messages lately from people](https://dacharycarey.com/microblog/2026/10/18/ive-been-getting-a-lot-of-messages-lately-from-people/index.md)
 - [This week's 'what I'm thinking about this week'](https://dacharycarey.com/microblog/2026/10/16/this-weeks-what-im-thinking-about-this-week/index.md)
 - [My new lib is out! This one contains the logic that runs](https://dacharycarey.com/microblog/2026/10/15/my-new-lib-is-out-this-one-contains-the-logic-that-runs/index.md)
