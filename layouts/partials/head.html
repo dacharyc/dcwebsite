@@ -9,22 +9,38 @@
   <link rel="manifest" href="/site.webmanifest">
 
   <title>{{ if not .IsHome }}{{ .Title }} | {{ end }}{{ .Site.Title }}</title>
-  <meta name="description" content="{{if .IsHome}}{{ .Site.Params.description }}{{else}}{{ .Description }}{{end}}">
+  {{- /* Shared social-card values.
+       description: frontmatter description, else the page's own summary (microblog posts have no description), else the site's.
+       image: frontmatter image, else the first attached microblog image, else the author avatar for microblog posts, else the site hero.
+       card: a square "summary" card when the image is the avatar, otherwise a large image card. */ -}}
+  {{- $desc := .Description -}}
+  {{- if and (not $desc) .IsPage }}{{ $desc = .Summary | plainify | htmlUnescape | truncate 200 }}{{ end -}}
+  {{- if not $desc }}{{ $desc = .Site.Params.description }}{{ end -}}
+  {{- $img := .Params.image -}}
+  {{- if and (not $img) .Params.images }}{{ $img = (index .Params.images 0).src }}{{ end -}}
+  {{- $card := "summary_large_image" -}}
+  {{- if .IsHome }}{{ $img = .Site.Params.hero.hero__image }}{{ end -}}
+  {{- if and (not $img) (eq .Type "microblog") }}{{ $img = .Site.Params.author.author__avatar }}{{ $card = "summary" }}{{ end -}}
+  {{- if not $img }}{{ $img = .Site.Params.hero.hero__image }}{{ end -}}
+  <meta name="description" content="{{ if .IsHome }}{{ .Site.Params.description }}{{ else }}{{ $desc }}{{ end }}">
 
   {{ with .OutputFormats.Get "rss" -}}
   {{ printf `<link rel="%s" type="%s" href="%s" title="%s">` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
   {{ end }}
 
   <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:card" content="{{ $card }}">
   <meta name="twitter:title" content="{{ if not .IsHome }}{{ .Title }} | {{ end }}{{ .Site.Title }}">
-  <meta name="twitter:description" content="{{ with .Description }}{{ . }}{{ else }}{{ if .IsPage }}{{ .Summary }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end }}">
-  {{ if .IsHome}}<meta name="twitter:image" content="{{ .Site.Params.hero.hero__image | absURL }}">{{ else }}<meta name="twitter:image" content="{{ .Params.Image | absURL }}">{{ end }}
+  <meta name="twitter:description" content="{{ $desc }}">
+  <meta name="twitter:image" content="{{ $img | absURL }}">
 
   <!-- Facebook OpenGraph -->
+  <meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
+  <meta property="og:url" content="{{ .Permalink }}">
+  <meta property="og:site_name" content="{{ .Site.Title }}">
   <meta property="og:title" content="{{ if not .IsHome }}{{ .Title }} | {{ end }}{{ .Site.Title }}">
-  <meta property="og:description" content="{{ with .Description }}{{ . }}{{ else }}{{if .IsPage}}{{ .Summary }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end }}">
-  {{ if .IsHome}}<meta property="og:image" content="{{ .Site.Params.hero.hero__image | absURL }}">{{ else }}{{ $og := .Params.Image }}{{ if and (not $og) .Params.images }}{{ $og = (index .Params.images 0).src }}{{ end }}<meta property="og:image" content="{{ $og | absURL }}">{{ end }}
+  <meta property="og:description" content="{{ $desc }}">
+  <meta property="og:image" content="{{ $img | absURL }}">
 
   <!-- Mastodon author attribution: https://docs.joinmastodon.org/user/profile/#attribution -->
   {{ with .Site.Params.author.author__mastodon }}<meta name="fediverse:creator" content="{{ . }}">{{ end }}
