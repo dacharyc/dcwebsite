@@ -11,7 +11,7 @@ tags: [Lifestyle, Personal]
 ---
 Or why I love good coffee, and how you can learn to love it, too.
 
-TL;DR: Check out [this coffee tasting wheel](https://dacharycarey.com/wp-content/uploads/2020/01/CCC_FlavorWheel_english.pdf) from Counter Culture Coffee - there's more than bitter/burnt in coffee flavors!
+TL;DR: Check out [this coffee tasting wheel](https://counterculturecoffee.com/pages/wheel) from Counter Culture Coffee - there's more than bitter/burnt in coffee flavors!
 
 ## ZOMG COFFEE
 

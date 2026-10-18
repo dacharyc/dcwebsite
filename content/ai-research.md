@@ -4,7 +4,7 @@ permalink: /ai-research/
 image: '/images/ai-research.jpg'
 ---
 
-I research how AI agents work, how they consume information, and how the ecosystems around them are evolving. This page collects that work in one place. For my documentation background, see [Documentation & Developer Education](/documentation/). For my programming projects, see [Programming](/programming/).
+I research how AI agents work, how they consume information, and how the ecosystems around them are evolving. This page collects that work in one place. For my documentation background, see [Documentation & Developer Education](https://dacharycarey.com/documentation/). For my programming projects, see [Programming](https://dacharycarey.com/programming/).
 
 ---
 
@@ -129,4 +129,4 @@ I write about agents, documentation, and the AI ecosystem on this blog and at [A
 - [Make Your Hugo Site Agent-Friendly](https://dacharycarey.com/2026/03/01/make-hugo-site-agent-friendly/) - Practical how-to for static site owners
 - [Upskilling in the AI Age](https://dacharycarey.com/2026/02/23/upskilling-in-ai-age/) - Advice for people getting started with AI tools
 
-For all AI-related posts, see the [ai tag](/tags/ai/).
+For all AI-related posts, see the [ai tag](https://dacharycarey.com/tags/ai/).

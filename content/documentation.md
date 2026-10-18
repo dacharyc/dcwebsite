@@ -4,7 +4,7 @@ permalink: /documentation/
 image: '/images/audit-cli-analyze.png'
 ---
 
-I've spent a decade building documentation systems, testing infrastructure, and creating developer education content. This page covers that work - for my programming projects, see [Programming](/programming/).
+I've spent a decade building documentation systems, testing infrastructure, and creating developer education content. This page covers that work - for my programming projects, see [Programming](https://dacharycarey.com/programming/).
 
 ---
 
@@ -16,7 +16,7 @@ I've been researching how AI agents consume documentation and building tools to 
 
 - **[afdocs](https://afdocs.dev)**: A CLI tool that implements the spec and tests docs sites against it. Point it at a URL and it reports where your docs stand. Published on npm as `afdocs`. CNCF's CLOMonitor uses it for agent-readiness checks, Cloudflare tests its docs against it, and hosted scoring tools from Fern, Mintlify, and Document360 are built on it.
 
-I write about this work extensively on my blog (see the [ai](/tags/ai/) tag) and at [AE Shift](https://aeshift.com).
+I write about this work extensively on my blog (see the [ai](https://dacharycarey.com/tags/ai/) tag) and at [AE Shift](https://aeshift.com).
 
 ---
 

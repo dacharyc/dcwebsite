@@ -11,7 +11,7 @@ tags: [ai]
 
 Organizations have been pushing official company skills out the door because skills look like just a markdown file, and that seems simple and trivial. But when you dig into the lifecycle of an official skill that you intend to support, distribute, and stand behind, it's a lot more than a markdown file. I'm not sure a single organization shipping skills today recognizes how much more.
 
-This is the article I promised at the end of [Can Agent Skills Make Output Worse?](/2026/05/07/can-agent-skills-make-output-worse/), where I closed by saying I'd been ideating around what skill lifecycle management looks like and would write more about it as I proposed process and tooling around it. This is the lifecycle that I'm picturing. Let me tell you what's actually involved, where the work falls, and where the org chart runs out of people to do it.
+This is the article I promised at the end of [Can Agent Skills Make Output Worse?](https://dacharycarey.com/2026/05/07/can-agent-skills-make-output-worse/), where I closed by saying I'd been ideating around what skill lifecycle management looks like and would write more about it as I proposed process and tooling around it. This is the lifecycle that I'm picturing. Let me tell you what's actually involved, where the work falls, and where the org chart runs out of people to do it.
 
 ## Are skills software, or documentation?
 

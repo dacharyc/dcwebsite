@@ -7,7 +7,7 @@
 {{ .RawContent }}
 {{ if .Site.Menus.main }}## Pages
 {{ range .Site.Menus.main }}
-- [{{ .Name }}]({{ .URL }}/index.md)
+- [{{ .Name }}]({{ .URL | absURL }}/index.md)
 {{ end }}{{ end }}
 ## Recent Posts
 {{ range first 10 .Site.RegularPages }}{{ if not .Draft }}

@@ -20,7 +20,7 @@ Standard diff tools optimize for minimal edit distance, but often produce output
 
 - **Language**: Go
 - **State**: Released
-- **Links**: [GitHub](https://github.com/dacharyc/tokendiff) ・ [Blog post: Diff Algorithm Spelunking](/2025/12/29/diff-algorithm-spelunking/)
+- **Links**: [GitHub](https://github.com/dacharyc/tokendiff) ・ [Blog post: Diff Algorithm Spelunking](https://dacharycarey.com/2025/12/29/diff-algorithm-spelunking/)
 
 ### diffx
 
@@ -84,7 +84,7 @@ A Go CLI that validates Agent Skills against the agentskills.io specification. C
 
 - **Language**: Go
 - **State**: Active development
-- **Links**: [GitHub](https://github.com/agent-ecosystem/skill-validator) ・ [Blog post: Agent Skill Analysis](/2026/02/13/agent-skill-analysis/) ・ [Interactive Report](https://agentskillreport.com)
+- **Links**: [GitHub](https://github.com/agent-ecosystem/skill-validator) ・ [Blog post: Agent Skill Analysis](https://dacharycarey.com/2026/02/13/agent-skill-analysis/) ・ [Interactive Report](https://agentskillreport.com)
 
 ### skillxp
 
@@ -206,9 +206,9 @@ Technical content about building software.
 
 I write about software development, documentation infrastructure, and the tools I build:
 
-- [Diff Algorithm Spelunking](/2025/12/29/diff-algorithm-spelunking/) - Designing human-readable diff output
-- [Code Example Audit Series](/2025/03/02/code-example-audit-overview/) - Auditing 35,000+ code examples at scale
-- [Testing Documentation Code Examples](/2024/01/12/how-to-test-docs-code-examples/) - Unit testing approaches across 9 SDKs
+- [Diff Algorithm Spelunking](https://dacharycarey.com/2025/12/29/diff-algorithm-spelunking/) - Designing human-readable diff output
+- [Code Example Audit Series](https://dacharycarey.com/2025/03/02/code-example-audit-overview/) - Auditing 35,000+ code examples at scale
+- [Testing Documentation Code Examples](https://dacharycarey.com/2024/01/12/how-to-test-docs-code-examples/) - Unit testing approaches across 9 SDKs
 
 ### Workshops
 

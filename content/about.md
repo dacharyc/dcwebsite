@@ -13,7 +13,7 @@ By day, I work on agent experience (AX) at NVIDIA, helping products become agent
 
 Independently, I maintain open source specs and tools for agent-friendly developer content. I wrote the [Agent-Friendly Documentation Spec](https://agentdocsspec.com) and its reference implementation, [afdocs](https://afdocs.dev). CNCF's [CLOMonitor](https://clomonitor.io/docs/topics/checks/#agent-readiness) uses afdocs for its agent-readiness checks, the Linux Foundation is building docs scoring for LFX Insights on it, [Cloudflare tests its docs against it](https://blog.cloudflare.com/agent-readiness/), and hosted scoring tools from [Fern](https://buildwithfern.com/agent-score), [Mintlify](https://www.mintlify.com/score), and [Document360](https://document360.com/agent-score/) are built on it. I also built [skill-validator](https://github.com/agent-ecosystem/skill-validator), which checks Agent Skills in CI at Intel, MongoDB, Confluent, Redis, Netlify, and many other orgs.
 
-By night (and weekends), I build apps. I've shipped [PR Focus](https://prfocus.app), a macOS app for managing pull request reviews, and I'm working on a few iOS apps that scratch various personal itches. I write [Go libraries for semantic diffing](/2025/12/29/diff-algorithm-spelunking/), CLI tools for documentation auditing, and whatever else solves a problem I'm having.
+By night (and weekends), I build apps. I've shipped [PR Focus](https://prfocus.app), a macOS app for managing pull request reviews, and I'm working on a few iOS apps that scratch various personal itches. I write [Go libraries for semantic diffing](https://dacharycarey.com/2025/12/29/diff-algorithm-spelunking/), CLI tools for documentation auditing, and whatever else solves a problem I'm having.
 
 I also love coffee. Good coffee, though. None of this mass-produced Dunkin' Donuts swill. (Yes, I live in New England and am well-aware of the blasphemy in that statement. I stand by it.)
 
@@ -25,7 +25,7 @@ That role pushed me to grow. I went from documenting SDKs to building testing in
 
 I'm driven by curiosity - when I encounter a system or ecosystem, I want to understand how it actually works, not just how it's supposed to work. That impulse has led me from building audit tooling to conducting ecosystem-scale research: analyzing hundreds of data points, identifying patterns, and publishing findings. The tools I build often start as "I want to understand this" and end up as something others can use too.
 
-These days, my work sits at the intersection of development, communication, and analysis. I build tools, I write documentation, I investigate ecosystems, and I help other people do all of it more effectively. I also write commentary and analysis about the agent ecosystem at [AE Shift](https://aeshift.com). For more on my documentation background, see [Documentation & Developer Education](/documentation/).
+These days, my work sits at the intersection of development, communication, and analysis. I build tools, I write documentation, I investigate ecosystems, and I help other people do all of it more effectively. I also write commentary and analysis about the agent ecosystem at [AE Shift](https://aeshift.com). For more on my documentation background, see [Documentation & Developer Education](https://dacharycarey.com/documentation/).
 
 ## The Personal Stuff
 

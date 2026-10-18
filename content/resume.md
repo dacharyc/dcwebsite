@@ -21,7 +21,7 @@ At NVIDIA, I work on agent experience (AX): helping products become agent-ready 
 
 The thread connecting all of it: I'm driven to understand how systems actually work, not just how they're supposed to work. That curiosity has taken me from documenting SDKs to building cross-language testing infrastructure, from writing diff algorithms to designing benchmarks that reveal how agent fetch pipelines fail.
 
-For more detail, see [AI & Agent Research](/ai-research/), [Documentation & Developer Education](/documentation/), and [Programming](/programming/).
+For more detail, see [AI & Agent Research](https://dacharycarey.com/ai-research/), [Documentation & Developer Education](https://dacharycarey.com/documentation/), and [Programming](https://dacharycarey.com/programming/).
 
 ---
 
@@ -143,7 +143,7 @@ Systematically validated 578 coding patterns across 20 skills, documenting how A
 
 ## Talks & Appearances
 
-Featured in the State of Docs Report 2026 discussing AI consumption of documentation. Interview and podcast appearances on agent documentation access, the Agent-Friendly Documentation Spec, and agent reading behavior. Work built on in Tom Cranstoun's *MX-Protocols* book. See [AI & Agent Research](/ai-research/) for the full list.
+Featured in the State of Docs Report 2026 discussing AI consumption of documentation. Interview and podcast appearances on agent documentation access, the Agent-Friendly Documentation Spec, and agent reading behavior. Work built on in Tom Cranstoun's *MX-Protocols* book. See [AI & Agent Research](https://dacharycarey.com/ai-research/) for the full list.
 
 ---
 

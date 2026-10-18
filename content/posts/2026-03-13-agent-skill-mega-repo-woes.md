@@ -10,7 +10,7 @@ tags: [ai, Coding]
 draft: false
 ---
 
-A month ago, I published an [ecosystem-scale analysis](/2026/02/13/agent-skill-analysis/) of 673 Agent Skills from 41 repositories. I looked at Anthropic's own skills, company-published collections from Microsoft and Stripe, community collections, and individual repos. The takeaway was that the ecosystem has real quality problems: 22% of skills fail structural validation, over half of all tokens are wasted on non-standard files, and broken links are everywhere.
+A month ago, I published an [ecosystem-scale analysis](https://dacharycarey.com/2026/02/13/agent-skill-analysis/) of 673 Agent Skills from 41 repositories. I looked at Anthropic's own skills, company-published collections from Microsoft and Stripe, community collections, and individual repos. The takeaway was that the ecosystem has real quality problems: 22% of skills fail structural validation, over half of all tokens are wasted on non-standard files, and broken links are everywhere.
 
 Today, I saw a post on LinkedIn about [antigravity-awesome-skills](https://github.com/sickn33/antigravity-awesome-skills), a single mega repo that claims over 1,200 Agent Skills and has 23.7k GitHub stars. That star count makes it one of the most popular skill sources in the ecosystem. People are presumably cloning this repo and loading these skills into their agents.
 
