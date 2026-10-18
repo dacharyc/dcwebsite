@@ -12,9 +12,9 @@ I've spent a decade building documentation systems, testing infrastructure, and 
 
 I've been researching how AI agents consume documentation and building tools to help docs teams optimize for this new access pattern. Agents fetch docs in real time, but face constraints that human readers don't: truncation limits, inability to render JavaScript, unreliable redirect handling, and more. Most docs teams are being told to "make docs AI-friendly" without a clear picture of what that means in practice.
 
-- **[Agent-Friendly Documentation Spec](https://agentdocsspec.com)**: A specification defining 23 checks across 7 categories for evaluating how well a docs site serves AI agent consumers. Covers llms.txt discovery, markdown availability, page size, content structure, URL stability, and more.
+- **[Agent-Friendly Documentation Spec](https://agentdocsspec.com)**: A specification defining 28 checks across 7 categories for evaluating how well a docs site serves AI agent consumers. Covers llms.txt discovery, markdown availability, page size, content structure, URL stability, and more.
 
-- **[afdocs](https://afdocs.dev)**: A CLI tool that implements the spec and tests docs sites against it. Point it at a URL and it reports where your docs stand. Published on npm as `afdocs`.
+- **[afdocs](https://afdocs.dev)**: A CLI tool that implements the spec and tests docs sites against it. Point it at a URL and it reports where your docs stand. Published on npm as `afdocs`. CNCF's CLOMonitor uses it for agent-readiness checks, Cloudflare tests its docs against it, and hosted scoring tools from Fern, Mintlify, and Document360 are built on it.
 
 I write about this work extensively on my blog (see the [ai](/tags/ai/) tag) and at [AE Shift](https://aeshift.com).
 

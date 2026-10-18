@@ -17,7 +17,7 @@ GitHub: [dacharyc](https://github.com/dacharyc) | LinkedIn: [dachary](https://ww
 
 I build tools, infrastructure, and research that help developers succeed. My work combines nearly two decades of professional writing with software engineering, giving me an unusual ability to move between building systems and communicating about them clearly.
 
-At NVIDIA, I define agent experience (AX) standards that make developer surfaces work for both human developers and the AI agents they bring with them. Before that, at MongoDB, I owned Agent Skill quality standards and designed the testing frameworks and audit tooling behind code example quality across 40+ documentation projects. Independently, I research how AI agents consume web content and documentation, author specifications adopted by commercial platforms, build developer tools in Go and TypeScript, and ship apps on the Mac App Store and iOS App Store.
+At NVIDIA, I work on agent experience (AX): helping products become agent-ready by measuring how AI agents discover, use, and recover when working with NVIDIA technologies. Before that, at MongoDB, I owned Agent Skill quality standards and designed the testing frameworks and audit tooling behind code example quality across 40+ documentation projects. Independently, I research how AI agents consume web content and documentation, author specifications adopted by commercial platforms, build developer tools in Go and TypeScript, and ship apps on the Mac App Store and iOS App Store.
 
 The thread connecting all of it: I'm driven to understand how systems actually work, not just how they're supposed to work. That curiosity has taken me from documenting SDKs to building cross-language testing infrastructure, from writing diff algorithms to designing benchmarks that reveal how agent fetch pipelines fail.
 
@@ -29,12 +29,12 @@ For more detail, see [AI & Agent Research](/ai-research/), [Documentation & Deve
 
 ### Developer Experience Manager, Agents — NVIDIA (2026 - Present)
 
-I define agent experience (AX) standards across NVIDIA's developer ecosystem, making developer surfaces work for both human developers and the AI agents they bring with them.
+I help NVIDIA products become agent-ready by reducing friction in how AI agents discover, use, and recover when working with NVIDIA technologies. Across product, docs, and research teams, I measure what agents do, not what we assume.
 
-- Building integrated developer journeys across NIM, NGC, NeMo, AI Blueprints, and CUDA surfaces for developers and their coding agents
-- Defining practical AX standards: content sizing and budgeting, information architecture, discoverability (llms.txt, content negotiation), onboarding patterns
-- Guiding teams on agent-facing tooling: MCP servers, Agent Skills, API documentation patterns, agent-consumable tests
-- Evaluating content performance using human engagement metrics and agent traffic signals
+- Designing agent-readiness evals with product and technical marketing teams: focused agent tasks (set up, use, recover) run against real coding agents, reading trajectories to find where products and docs trip agents up
+- Running a company-wide eval design forum where teams share how they evaluate agents, skills, and docs, and building a workshop series for colleagues new to eval design, from first LLM evals through harnesses and ablations
+- Testing agent-facing surfaces empirically: whether Agent Skills improve outcomes, machine-readable API catalogs, docs discoverability (llms.txt, markdown delivery, caching), and whether product terminology confuses agents
+- Scaling AX practice beyond one-off engagements: a newsletter that turns field findings into concrete actions for product teams, and an AX research agenda so others can pick up open questions
 
 ### Senior Programmer Writer — MongoDB (2021 - 2026)
 
@@ -89,7 +89,7 @@ From 2016: focused on developer documentation, API docs, and technical content s
 
 ### Agent-Friendly Documentation Spec (2026)
 
-Authored a specification defining 23 checks across 7 categories for evaluating how well documentation sites serve AI agent consumers. Covers llms.txt discovery, markdown availability, page size, content structure, URL stability, and more. Built the companion afdocs CLI (TypeScript, published on npm) that scores any docs site against the spec. Co-built into Fern's public [Agent Score](https://buildwithfern.com/agent-score) directory; CEOs of OpenRouter and Resend endorsed the category at launch. ~9k npm downloads in trailing 14 days (3.5x growth over prior 8 weeks).
+Authored a specification defining 28 checks across 7 categories for evaluating how well documentation sites serve AI agent consumers. Covers llms.txt discovery, markdown availability, page size, content structure, URL stability, and more. Built the companion afdocs CLI (TypeScript, published on npm) that scores any docs site against the spec. CNCF's [CLOMonitor](https://clomonitor.io/docs/topics/checks/#agent-readiness) uses afdocs for its agent-readiness checks, the Linux Foundation is building docs scoring for LFX Insights on it, [Cloudflare tests its docs against it](https://blog.cloudflare.com/agent-readiness/), and hosted scoring tools from [Fern](https://buildwithfern.com/agent-score), [Mintlify](https://www.mintlify.com/score), and [Document360](https://document360.com/agent-score/) are built on it. Also used in the docs builds of Medusa, Kysely, Docsy, and CircleCI, and implemented or cited by Apache TinkerPop, CNCF projects, and Canonical.
 
 ### Agent Reading Test (2026)
 
@@ -103,7 +103,7 @@ Empirical research into how agent platforms actually implement skill loading, ma
 
 Conducted a systematic quality and content analysis of the Agent Skills ecosystem, evaluating 673 skills from 41 source repositories. Published findings as a research paper and interactive report.
 
-- Built skill-validator (Go): validates Agent Skills against the agentskills.io specification, checking structure, frontmatter, content quality, cross-contamination risk, and token budget composition. 25+ public CI adopters including Microsoft (multiple dotnet repos), GitHub, MongoDB, Autodesk, Netlify
+- Built skill-validator (Go): validates Agent Skills against the agentskills.io specification, checking structure, frontmatter, content quality, cross-contamination risk, and token budget composition. Runs in CI across 60+ public repositories (October 2026), including Intel (via a shared internal GitHub Action), MongoDB, Confluent, Redis, Netlify, and Autodesk's Dynamo. Elastic adapted its criteria as a review rubric; Pantheon ported it to Rust
 - Found that 22% of skills fail structural validation; company-published skills (79.2% pass rate) perform worse than community collections (94.0%)
 - Identified that 52% of all tokens across the ecosystem are nonstandard files wasting context window space
 - Discovered six content-specific interference mechanisms through behavioral evaluation of 19 representative skills
@@ -125,11 +125,11 @@ Systematically validated 578 coding patterns across 20 skills, documenting how A
 
 ### Developer Tools
 
-- **afdocs** (TypeScript): CLI that scores documentation sites against the Agent-Friendly Documentation Spec. Published on npm; powers Fern's Agent Score directory.
+- **afdocs** (TypeScript): CLI that scores documentation sites against the Agent-Friendly Documentation Spec. Published on npm; used by CNCF's CLOMonitor, Cloudflare, and the Fern, Mintlify, and Document360 scoring tools.
 - **tokendiff** (Go): Library and CLI for human-readable, token-level diffing using a histogram-based algorithm tuned for readability
 - **diffx** (Go): Myers O(ND) diff algorithm implementation with a clean Element interface for custom diffing beyond strings
 - **fenestro** (Go): CLI that ingests HTML and renders it in helpful windows for diff output visualization
-- **skill-validator** (Go): Validates Agent Skills against the agentskills.io specification
+- **skill-validator** (Go): Validates Agent Skills against the agentskills.io specification. Runs in CI at Intel, MongoDB, Confluent, Redis, Netlify, and 60+ other orgs
 
 ### Apps (Swift/SwiftUI)
 
@@ -143,7 +143,7 @@ Systematically validated 578 coding patterns across 20 skills, documenting how A
 
 ## Talks & Appearances
 
-Featured in the State of Docs Report 2026 discussing AI consumption of documentation. Interview and podcast appearances on agent documentation access, the Agent-Friendly Documentation Spec, and agent reading behavior. See [AI & Agent Research](/ai-research/) for the full list.
+Featured in the State of Docs Report 2026 discussing AI consumption of documentation. Interview and podcast appearances on agent documentation access, the Agent-Friendly Documentation Spec, and agent reading behavior. Work built on in Tom Cranstoun's *MX-Protocols* book. See [AI & Agent Research](/ai-research/) for the full list.
 
 ---
 

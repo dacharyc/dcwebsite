@@ -12,9 +12,18 @@ I research how AI agents work, how they consume information, and how the ecosyst
 
 - **[State of Docs Report 2026](https://www.stateofdocs.com/2026)** - Featured discussing AI consumption of documentation. Podcast forthcoming.
 - **[Can ANY AI Pass This Agent Reading Test?](https://youtu.be/OlNZCtk100Q)** (BetterStack YouTube, 2026) - Walkthrough of the Agent Reading Test, a benchmark for measuring how AI agent web fetch pipelines handle documentation failure modes.
-- **[Why AI Agents Struggle with Modern Documentation](https://youtu.be/T2rXZjtmhRI)** (YouTube, 2026) - Interview covering how agents access documentation in real time and the failure modes most docs teams don't know about.
+- **[AI Agents Are Struggling With Your Docs Right Now](https://youtu.be/T2rXZjtmhRI)** (Technical Writing Uncensored with Diana Payton, YouTube, March 2026) - Interview covering how agents access documentation in real time and the failure modes most docs teams don't know about.
 - **[Designing Documentation for Agents, Not Just Users](https://player.captivate.fm/episode/64f41216-9c3f-4167-a2e2-934ab10a641a)** (Behind the Docs podcast, March 2026) - How AI agents struggle to use existing documentation, common structural issues like truncation and hidden content, and the Agent-Friendly Documentation Spec as a solution framework.
 - **[When AI Reads the Docs: LLMs, Agents, and Documentation Design](https://www.youtube.com/live/_qo81CUu9us?si=LWneBlA9g-JxbNOo)** (Deborah Emeni's YouTube Coffee Chat, March 2026) - How LLMs and agents are two very different documentation consumers, what "AI-friendly documentation" actually means, how documentation structure affects machine interpretation, and how documentation practices may evolve as machines increasingly consume technical content.
+
+## Coverage & Citations
+
+Where other people have built on, taught, or cited this work.
+
+- **[Introducing the Agent Readiness score](https://blog.cloudflare.com/agent-readiness/)** (Cloudflare engineering blog, April 2026) - Cloudflare tests its docs against afdocs and built an internal audit dashboard on it.
+- **[MX-Protocols](https://github.com/Digital-Domain-Technologies-Ltd/MX-outputs)** (Tom Cranstoun, 2026) - Two appendices build on the Agent Reading Test's canary-token method and its catalog of agent reading failure modes.
+- **[Agents grew up, so did our docs](https://neon.com/blog/agents-grew-up-so-did-our-docs)** (Neon engineering blog, April 2026) - How Neon used afdocs and the spec to rework its documentation for agents.
+- **Spec implementers** - Apache TinkerPop validates its published docs against the spec, and CNCF projects and Canonical cite it in their docs tooling.
 
 ---
 
@@ -22,7 +31,7 @@ I research how AI agents work, how they consume information, and how the ecosyst
 
 ### Agent-Friendly Documentation Spec
 
-A specification defining 23 checks across 7 categories for evaluating how well a documentation site serves AI agent consumers. Covers llms.txt discovery, markdown availability, page size, content structure, URL stability, and more. Based on real-world agent access patterns I've been researching since late 2025.
+A specification defining 28 checks across 7 categories for evaluating how well a documentation site serves AI agent consumers. Covers llms.txt discovery, markdown availability, page size, content structure, URL stability, and more. Based on real-world agent access patterns I've been researching since late 2025. Hosted scoring tools from Fern, Mintlify, and Document360 are built on it, and Apache TinkerPop, CNCF projects, and Canonical implement or cite it.
 
 - **Links**: [agentdocsspec.com](https://agentdocsspec.com)
 
@@ -32,7 +41,7 @@ A specification defining 23 checks across 7 categories for evaluating how well a
 
 ### afdocs
 
-A CLI tool that implements the Agent-Friendly Documentation Spec and tests docs sites against it. Point it at a URL and it reports where your docs stand. Published on npm. Fern's [Agent Score](https://buildwithfern.com/agent-score) directory uses afdocs to score API documentation sites at scale.
+A CLI tool that implements the Agent-Friendly Documentation Spec and tests docs sites against it. Point it at a URL and it reports where your docs stand. Published on npm. CNCF's [CLOMonitor](https://clomonitor.io/docs/topics/checks/#agent-readiness) uses afdocs for its agent-readiness checks, the Linux Foundation is building docs scoring for LFX Insights on it, [Cloudflare tests its docs against it](https://blog.cloudflare.com/agent-readiness/), and hosted scoring tools from [Fern](https://buildwithfern.com/agent-score), [Mintlify](https://www.mintlify.com/score), and [Document360](https://document360.com/agent-score/) are built on it.
 
 - **Language**: TypeScript
 - **Links**: [afdocs.dev](https://afdocs.dev) ・ [GitHub](https://github.com/agent-ecosystem/afdocs) ・ [npm](https://www.npmjs.com/package/afdocs)
@@ -53,7 +62,7 @@ Meeting minutes for your agents: a Go library and CLI that parses native agent h
 
 ### skill-validator
 
-A CLI that validates Agent Skills against the agentskills.io specification. Checks directory structure, frontmatter, content quality, cross-contamination risk, and token budget composition.
+A CLI that validates Agent Skills against the agentskills.io specification. Checks directory structure, frontmatter, content quality, cross-contamination risk, and token budget composition. Runs in CI at Intel, MongoDB, Confluent, Redis, Netlify, and Autodesk's Dynamo, among 60+ public repositories. [Elastic](https://github.com/elastic/elastic-docs-skills) uses its criteria as the review rubric for skills PRs, and [Pantheon](https://github.com/pantheon-org/tekhne) ported it to Rust.
 
 - **Language**: Go
 - **Links**: [GitHub](https://github.com/agent-ecosystem/skill-validator)

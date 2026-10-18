@@ -52,7 +52,7 @@ A Go CLI that ingests HTML and renders it in helpful windows. Built to support d
 
 ### afdocs
 
-A CLI tool that tests documentation sites against the [Agent-Friendly Documentation Spec](https://agentdocsspec.com). Checks llms.txt discovery, markdown availability, page size risks, content negotiation, URL stability, and more. Point it at a docs URL and it reports how well the site serves AI agent consumers.
+A CLI tool that tests documentation sites against the [Agent-Friendly Documentation Spec](https://agentdocsspec.com). Checks llms.txt discovery, markdown availability, page size risks, content negotiation, URL stability, and more. Point it at a docs URL and it reports how well the site serves AI agent consumers. CNCF's CLOMonitor uses it for agent-readiness checks, Cloudflare tests its docs against it, hosted scoring tools from Fern, Mintlify, and Document360 are built on it, and Medusa, Kysely, and Docsy run it in their docs builds.
 
 - **Language**: TypeScript
 - **State**: Active development
@@ -80,7 +80,7 @@ Every harness invents its own transcript format, and those transcripts are groun
 
 ### skill-validator
 
-A Go CLI that validates Agent Skills against the agentskills.io specification. Checks directory structure, frontmatter, content quality, cross-contamination risk, and token budget composition. Built to support my ecosystem-scale analysis of 673 skills across 41 repositories.
+A Go CLI that validates Agent Skills against the agentskills.io specification. Checks directory structure, frontmatter, content quality, cross-contamination risk, and token budget composition. Built to support my ecosystem-scale analysis of 673 skills across 41 repositories; now runs in CI at Intel, MongoDB, Confluent, Redis, and Netlify. Elastic uses its criteria as a review rubric, and Pantheon ported it to Rust.
 
 - **Language**: Go
 - **State**: Active development

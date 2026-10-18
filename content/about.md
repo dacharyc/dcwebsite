@@ -9,7 +9,9 @@ A Few Words About Me
 
 Hello. I'm Dachary Carey. I build things that help developers succeed.
 
-By day, I work on agent experience (AX) at NVIDIA - defining the standards that make developer surfaces work for both human developers and the AI agents they bring with them. That spans content sizing and discoverability, information architecture, and agent-facing tooling like MCP servers and Agent Skills.
+By day, I work on agent experience (AX) at NVIDIA, helping products become agent-ready by measuring how AI agents discover, use, and recover when working with NVIDIA technologies. That means designing agent-readiness evals with product teams, testing agent-facing surfaces like Agent Skills and docs discoverability empirically, and turning what we learn into practical guidance teams can act on.
+
+Independently, I maintain open source specs and tools for agent-friendly developer content. I wrote the [Agent-Friendly Documentation Spec](https://agentdocsspec.com) and its reference implementation, [afdocs](https://afdocs.dev). CNCF's [CLOMonitor](https://clomonitor.io/docs/topics/checks/#agent-readiness) uses afdocs for its agent-readiness checks, the Linux Foundation is building docs scoring for LFX Insights on it, [Cloudflare tests its docs against it](https://blog.cloudflare.com/agent-readiness/), and hosted scoring tools from [Fern](https://buildwithfern.com/agent-score), [Mintlify](https://www.mintlify.com/score), and [Document360](https://document360.com/agent-score/) are built on it. I also built [skill-validator](https://github.com/agent-ecosystem/skill-validator), which checks Agent Skills in CI at Intel, MongoDB, Confluent, Redis, Netlify, and many other orgs.
 
 By night (and weekends), I build apps. I've shipped [PR Focus](https://prfocus.app), a macOS app for managing pull request reviews, and I'm working on a few iOS apps that scratch various personal itches. I write [Go libraries for semantic diffing](/2025/12/29/diff-algorithm-spelunking/), CLI tools for documentation auditing, and whatever else solves a problem I'm having.
 
@@ -19,7 +21,7 @@ I also love coffee. Good coffee, though. None of this mass-produced Dunkin' Donu
 
 I've been a professional writer for over 18 years - starting with freelance work in 2007, then pivoting to software documentation in 2016. I joined MongoDB's Developer Education team in 2021 as the first writer on a team of developers.
 
-That role pushed me to grow. I went from documenting SDKs to building testing infrastructure. From writing code examples to building tools that audit 35,000+ code examples across 40+ repositories. The line between "technical writer" and "developer" got blurry, and I discovered I liked it that way. I finished my 5.5 years at MongoDB as quality owner for the company's first official Agent Skills, and in 2026 that work led me to NVIDIA, where I now define agent experience standards for the developer experience team.
+That role pushed me to grow. I went from documenting SDKs to building testing infrastructure. From writing code examples to building tools that audit 35,000+ code examples across 40+ repositories. The line between "technical writer" and "developer" got blurry, and I discovered I liked it that way. I finished my 5.5 years at MongoDB as quality owner for the company's first official Agent Skills, and in 2026 that work led me to NVIDIA, where I now work on agent experience for the developer experience team.
 
 I'm driven by curiosity - when I encounter a system or ecosystem, I want to understand how it actually works, not just how it's supposed to work. That impulse has led me from building audit tooling to conducting ecosystem-scale research: analyzing hundreds of data points, identifying patterns, and publishing findings. The tools I build often start as "I want to understand this" and end up as something others can use too.
 
