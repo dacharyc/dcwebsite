@@ -6,8 +6,7 @@ description: In which I explore why unnecessarily gendered language can be hurtf
 date: 2018-04-08 15:01:35 +0300
 url: /2018/04/08/unnecessarily-gendered-language/
 image: /images/unnecessarily-gendered-language-hero.jpg
-tags: [Personal]
-
+tags: [personal]
 ---
 I was chatting with someone the other day, and caught myself using "guys" - as in, "you guys" - when talking with a woman about her relationship with her wife. I've been sensitive to using that word for years now, and I stopped myself, explained that it was one of those unfortunate verbal habits I've been trying to break, and re-framed the inquiry with "you ladies."
 

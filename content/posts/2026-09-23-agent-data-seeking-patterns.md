@@ -6,7 +6,7 @@ description: In which I examine agent website traffic logs to see what they're a
 date: 2026-09-23 07:00:00 -0500
 url: /2026/09/23/agent-data-seeking-patterns/
 image: /images/agent-data-seeking-patterns-hero.jpg
-tags: [ai]
+tags: [ai, agents]
 draft: false
 ---
 

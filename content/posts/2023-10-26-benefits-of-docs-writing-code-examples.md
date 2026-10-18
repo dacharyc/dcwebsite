@@ -6,7 +6,7 @@ description: In which I discuss the benefits of having a documentation team writ
 date: 2023-10-26 12:00:00 -0400
 url: /2023/10/26/benefits-of-docs-writing-code-examples/
 image: /images/docs-writing-code-examples-hero.png
-tags: [Documentation, Coding, Writing]
+tags: [documentation, coding, writing]
 ---
 
 A few weeks ago, I wrote about [the benefits of testing the code examples in your documentation](https://dacharycarey.com/2023/10/10/test-docs-code-examples/).

@@ -6,7 +6,7 @@ description: In which I deep dive into the problem domain to discuss the problem
 date: 2026-01-17 10:00:00 -0500
 url: /2026/01/17/inside-comparison-apis/
 image: /images/inside-comparison-apis-hero.png
-tags: [Coding, Documentation]
+tags: [coding, documentation]
 draft: false
 ---
 

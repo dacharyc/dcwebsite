@@ -6,8 +6,7 @@ description: In which I ramble about why I love good coffee, and how you can lea
 date: 2020-01-15 15:01:35 +0300
 url: /2020/01/14/what-does-coffee-taste-like/
 image: /images/mark-daynes-unsplash-1200x800.jpg
-tags: [Lifestyle, Personal]
-
+tags: [lifestyle, personal]
 ---
 Or why I love good coffee, and how you can learn to love it, too.
 

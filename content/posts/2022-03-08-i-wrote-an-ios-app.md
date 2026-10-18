@@ -6,8 +6,7 @@ description: In which I write an iOS app to track RPG playthrough details.
 date: 2022-03-09 15:01:35 +0300
 url: /2022/03/08/i-wrote-an-ios-app/
 image: /images/wrote-ios-app-hero.jpg
-tags: [Coding]
-
+tags: [coding]
 ---
 I've had a handful of iOS app ideas in the past few years that I could never quite figure out how to turn into reality. I found it frustrating, though, because I really want to _use_ the apps I've had ideas for. Finally, I've had enough practice with smaller projects that I managed to turn an idea into reality: my first iOS app is live on the App Store!
 

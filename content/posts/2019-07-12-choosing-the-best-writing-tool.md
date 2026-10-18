@@ -6,8 +6,7 @@ description: In which I lay out a generalist approach to choosing writing tools.
 date: 2019-07-12 15:01:35 +0300
 url: /2019/07/12/choosing-the-best-writing-tool/
 image: /images/best-tool-for-the-job-hero.jpg
-tags: [Business, Writing]
-
+tags: [business, writing]
 ---
 In my recent technical writing job search and interviewing process, I've encountered a lot of discussion around tooling. I always ask about the toolchain for a position I'm considering, and I'm happy to talk tools all day long. But the truth is, I'm tool agnostic. My questions about toolchain aren't about deciding if you use a tool I like; they're about discovering the maturity of your process.
 

@@ -6,7 +6,7 @@ description: In which I explore WHAT to test in docs code examples.
 date: 2024-02-11 10:00:00 -0500
 url: /2024/02/11/what-to-test-in-docs-code-examples/
 image: /images/what-to-test-in-docs-code-examples-hero.png
-tags: [Documentation, Coding, Writing]
+tags: [documentation, coding, writing]
 ---
 
 I wrote last month about [how to test docs code examples](https://dacharycarey.com/2024/01/12/how-to-test-docs-code-examples/).  Now, let's look at *what* to test in docs code examples.

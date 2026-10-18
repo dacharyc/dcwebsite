@@ -6,7 +6,7 @@ description: In which I work through the actual lifecycle of an official company
 date: 2026-05-11 07:00:00 -0500
 url: /2026/05/11/agent-skill-more-than-markdown/
 image: /images/agent-skill-more-than-markdown-hero.png
-tags: [ai]
+tags: [ai, agents]
 ---
 
 Organizations have been pushing official company skills out the door because skills look like just a markdown file, and that seems simple and trivial. But when you dig into the lifecycle of an official skill that you intend to support, distribute, and stand behind, it's a lot more than a markdown file. I'm not sure a single organization shipping skills today recognizes how much more.

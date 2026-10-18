@@ -6,8 +6,7 @@ description: In which I lament the vagaries of showing a portfolio as a freelanc
 date: 2019-02-21 15:01:35 +0300
 url: /2019/02/21/the-downside-of-works-for-hire-ndas-and-dead-links/
 image: /images/nda-hero.jpg
-tags: [Business]
-
+tags: [business]
 ---
 I'm applying for jobs again, which brings me once again to the Hell that is "provide links to your work."
 

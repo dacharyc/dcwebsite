@@ -6,7 +6,7 @@ description: In which I explore lessons learned in the first month of a project 
 date: 2024-06-26 15:00:00 -0500
 url: /2024/06/26/docs-consolidation-project-one-month-check-in/
 image: /images/docs-consolidation-one-month-check-in-hero.png
-tags: [Documentation, Writing]
+tags: [documentation, writing]
 ---
 
 My team documents a product that represents 9 different SDKs in 9 different programming languages. (And these things are not a 1:1 correlation!)

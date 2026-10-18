@@ -6,7 +6,7 @@ description: In which I find that a platform-published spec's omissions track fi
 date: 2026-03-28 15:00:00 -0500
 url: /2026/03/28/how-to-evaluate-platform-written-spec/
 image: /images/how-to-evaluate-platform-written-spec-hero.jpg
-tags: [ai, documentation]
+tags: [ai, agents, documentation]
 draft: false
 ---
 

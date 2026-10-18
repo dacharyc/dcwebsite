@@ -6,7 +6,7 @@ description: In which I abandon one of my favorite franchises due to enshittific
 date: 2023-12-09 7:00:00 -0400
 url: /2023/12/09/farewell-critical-role/
 image: /images/gaming-table-hero.png
-tags: [Personal]
+tags: [personal]
 ---
 
 I have been a fan of the folks at Critical Role for many years. I've watched them since their Geek & Sundry days, when they were just a plucky group of friends live-streaming their home game at a few crappy folding tables in some Geek & Sundry lunchroom or break room or whatever it was. I have been so happy for their success. I have laughed, and cried, at the stories they've told. As they have grown and expanded into a corporation with their own production company, a publishing arm, lots of merch, and their own game systems in development, I have had such joy to see them grow into a company that sustains so many talented and passionate employees.

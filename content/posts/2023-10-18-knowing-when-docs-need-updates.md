@@ -6,7 +6,7 @@ description: In which I discuss the strategies for knowing when docs need update
 date: 2023-10-18 12:00:00 -0400
 url: /2023/10/18/knowing-when-docs-need-updates/
 image: /images/docs-needed-hero.png
-tags: [Documentation, Coding, Writing]
+tags: [documentation, coding, writing]
 ---
 
 As documentarians, our role doesn't stop at creating new documentation. We're also responsible for keeping existing documentation updated. If you’re part of a downstream team that is not involved in planning, finding out when the documentation needs updates can be challenging.

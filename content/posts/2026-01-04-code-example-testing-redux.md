@@ -6,7 +6,7 @@ description: In which I design systems to scale code example testing across the 
 date: 2026-01-04 23:00:00 -0000
 url: /2026/01/04/code-example-testing-redux/
 image: /images/code-example-testing-redux.png
-tags: [Coding, Documentation]
+tags: [coding, documentation]
 draft: false
 ---
 

@@ -6,7 +6,7 @@ description: In which I explore changes in agent traffic from April to October.
 date: 2026-10-18 12:00:00 -0500
 url: /2026/10/18/what-changed-in-agent-traffic/
 image: /images/what-changed-in-agent-traffic-hero.jpg
-tags: [ai]
+tags: [ai, agents]
 draft: false
 ---
 

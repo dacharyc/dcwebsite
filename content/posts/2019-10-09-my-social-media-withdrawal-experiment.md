@@ -6,8 +6,7 @@ description: In which I talk about why I took a hiatus from social media, and ho
 date: 2019-10-09 15:01:35 +0300
 url: /2019/10/09/my-social-media-withdrawal-experiment/
 image: /images/daria-nepriakhina-gGoi4QTXXBA-unsplash-1200x800.jpg
-tags: [Lifestyle, Personal]
-
+tags: [lifestyle, personal]
 ---
 In the past few years, I've gradually trimmed down my social media exposure. In the past month, I've eliminated social media almost entirely. Why take such a drastic step, and how do I feel about it now?
 

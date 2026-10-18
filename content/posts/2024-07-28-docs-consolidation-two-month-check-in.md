@@ -6,7 +6,7 @@ description: In which I explore lessons learned in the second month of a project
 date: 2024-07-28 15:00:00 -0500
 url: /2024/07/28/docs-consolidation-project-two-month-check-in/
 image: /images/docs-consolidation-two-month-check-in-hero.png
-tags: [Documentation, Writing]
+tags: [documentation, writing]
 ---
 
 My team documents a product that represents 9 different SDKs in 9 different programming languages. (And these things are not a 1:1 correlation!) To date, we have maintained 9 individual sets of SDK documentation - one for each SDK. I successfully made the case that we should consoldiate these individual doc sets into one single set of documentation, but now we have to do the work! This is the second in a series of posts that will continue until the project is complete. For the month one post, check out [Docs Consolidation Project - One Month Check-In](https://dacharycarey.com/2024/06/26/docs-consolidation-project-one-month-check-in/).

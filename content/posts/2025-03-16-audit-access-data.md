@@ -6,7 +6,7 @@ description: In which we explore the best way to get content and work with audit
 date: 2025-03-16 13:00:00 -0000
 url: /2025/03/16/audit-access-data/
 image: /images/access-audit-data-hero.png
-tags: [Documentation, Coding]
+tags: [documentation, coding]
 ---
 
 Having defined categories to better quantify our code examples, and identified the data we wanted to track, we were ready to start the audit - right? One more technical design decision awaited us - how should we access the content we wanted to audit? Our directive was to "count the code examples in our documentation" with the ability to "break down counts by programming language." Our documentation content source spans more than 50 git repositories, across tens of thousands of files, and with *many* different git branching schemes. So, how were we going to source the content we wanted to audit? And how were we going to access the data once we knew what content we wanted to audit?

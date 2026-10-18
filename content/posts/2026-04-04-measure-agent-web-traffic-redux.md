@@ -6,7 +6,7 @@ description: In which I revisit measuring agent web traffic, and dive deeper dow
 date: 2026-04-04 20:00:00 -0500
 url: /2026/04/04/measure-agent-web-traffic-redux/
 image: /images/measure-agent-web-traffic-redux-hero.jpg
-tags: [ai, documentation]
+tags: [ai, agents, documentation]
 ---
 
 Almost exactly a month ago, I wrote an article about poking around in my server logs attempting to measure agent web traffic: [How to Measure Agent Web Traffic](https://dacharycarey.com/2026/03/05/how-to-measure-agent-web-traffic/). I was trying to give our documentation platform team information to help them identify agents in our web traffic. My conclusion at the time was this:

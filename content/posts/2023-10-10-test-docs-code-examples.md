@@ -6,7 +6,7 @@ description: In which I explore why you really need to test docs code examples.
 date: 2023-10-10 12:00:00 -0500
 url: /2023/10/10/test-docs-code-examples/
 image: /images/test-docs-code-examples-hero.png
-tags: [Documentation, Coding, Writing]
+tags: [documentation, coding, writing]
 ---
 
 When I interviewed to join the Developer Education team at MongoDB, one thing really stood out to me: they maintain their documentation code examples in unit test suites. In fact, they wrote a tool, [Bluehawk](https://github.com/mongodb-university/Bluehawk), to mark up and extract code snippets for use in documentation. They explained to me that this helped them ensure accuracy - the code was free of typos and would compile.

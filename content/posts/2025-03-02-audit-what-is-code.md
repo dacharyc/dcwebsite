@@ -6,8 +6,7 @@ description: In which we decide what to count, and how.
 date: 2025-03-02 13:00:00 -0000
 url: /2025/03/02/audit-what-is-code-example/
 image: /images/what-is-code-example-hero.png
-tags: [Documentation, Coding]
-
+tags: [documentation, coding]
 ---
 
 When the Education AI team provided an initial count of code examples across our documentation corpus, broken down by programming language, the numbers were much higher than some members of the org expected. We apparently had tens of thousands of code examples, and nearly 9,000 of those were JavaScript. That couldn't possibly be right, could it? And more importantly, because the number was so high, how could we break it down to be more meaningful?

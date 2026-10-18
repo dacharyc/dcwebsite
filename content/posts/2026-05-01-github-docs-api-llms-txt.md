@@ -6,7 +6,7 @@ description: In which GitHub replaces the standard llms.txt URL list with a purp
 date: 2026-05-01 07:00:00 -0500
 url: /2026/05/01/github-docs-api-llms-txt/
 image: /images/github-docs-api-llms-txt-hero.jpg
-tags: [ai, documentation]
+tags: [ai, agents, documentation]
 ---
 
 I'm working on a new research report that starts by scoring a wide cross-section of documentation sites with [afdocs](https://afdocs.dev/). Consider it an industry-wide audit driven by specific research questions. This has given me an excuse to dig into different platforms, web hosts, documentation sizes, and documentation strategies. I've really been surprised and intrigued by the different approaches I've seen in the wild, and I have a rich editorial calendar of content to share with you about these findings (when I get the time).

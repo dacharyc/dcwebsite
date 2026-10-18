@@ -6,8 +6,7 @@ description: In which I complete a beginner programming class - in Python!
 date: 2020-05-19 15:01:35 +0300
 url: /2020/05/19/learning-to-code-redux/
 image: /images/learning-to-code-redux-hero.jpg
-tags: [Coding]
-
+tags: [coding]
 ---
 A little over a year ago, I wrote here about how I was learning Swift because there are a couple of apps I want to write. I've gone through a few courses online, and had started working through an Everyone Can Code book: _AP Computer Science Principles with Swift_. I was making good progress, had done the data modeling for my "main" app, but then got a little overwhelmed with the idea of actually starting it. Like, how does a n00b sit down and begin writing an app for the first time?  
   

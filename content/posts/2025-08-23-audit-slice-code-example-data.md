@@ -6,7 +6,7 @@ description: In which we explore different ways to break down audit data.
 date: 2025-08-23 08:00:00 -0000
 url: /2025/08/23/audit-slice-code-example-data/
 image: /images/audit-slice-code-example-data-hero.png
-tags: [Documentation, Coding]
+tags: [documentation, coding]
 ---
 
 With our code example audit data ingested into the database, we were no longer constrained to static analysis at the time of parsing the data. We had the freedom to analyze the data in a variety of different ways as we explored different theories and questions. I started with a simple count of code examples broken down by programming languages. As I explored the data, this evolved into 19 different queries (at the time of this writing) to break down the data in different ways.

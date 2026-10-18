@@ -6,7 +6,7 @@ description: In which I dig into how Claude Code teaches the model about its own
 date: 2026-07-21 07:00:00 -0500
 url: /2026/07/21/agent-know-what-it-can-do/
 image: /images/agent-know-what-it-can-do-hero.jpg
-tags: [ai]
+tags: [ai, agents]
 draft: false
 ---
 

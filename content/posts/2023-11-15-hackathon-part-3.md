@@ -6,7 +6,7 @@ description: In which I make a whole lotta Charts.
 date: 2023-11-15 7:00:00 -0400
 url: /2023/11/15/hackathon-part-3/
 image: /images/aggregate-dashboard-hero.png
-tags: [Documentation, Coding, Hackathon]
+tags: [documentation, coding, hackathon]
 ---
 
 In this final installment in my hackathon series, let's take a look at the MongoDB Charts I made from all the lovely data I've liberated from Google Sheets. 

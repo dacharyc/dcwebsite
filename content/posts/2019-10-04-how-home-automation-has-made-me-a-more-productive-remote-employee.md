@@ -6,8 +6,7 @@ description: In which I dive into how home automation helps us move through our 
 date: 2019-10-04 15:01:35 +0300
 url: /2019/10/04/how-home-automation-has-made-me-a-more-productive-remote-employee/
 image: /images/home-automation-hero.jpg
-tags: [Business, Personal]
-
+tags: [business, personal]
 ---
 I've been working remotely since 2007. Along the way, I've learned a few things about how my workspace impacts my productivity. Home automation has enabled subtle improvements to my life and productivity as a remote employee - and subtle improvements can have big impacts.
 

@@ -6,8 +6,7 @@ description: In which I talk about the pros and cons of being a freelance techni
 date: 2019-06-12 15:01:35 +0300
 url: /2019/06/12/real-talk-freelance-contract-writing/
 image: /images/shutterstock_1348169369-1200x795.jpg
-tags: [Business, Writing]
-
+tags: [business, writing]
 ---
 Someone in the [Write the Docs Slack](https://www.writethedocs.org/slack/) was asking about things to consider as she pondered transitioning to a freelance/contract technical writing career, and I have Thoughts to share:
 

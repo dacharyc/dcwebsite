@@ -6,8 +6,7 @@ description: I which I am amazed to wake up and see my app leading sales in its 
 date: 2022-03-14 15:01:35 +0300
 url: /2022/03/13/i-wrote-a-best-selling-ios-app/
 image: /images/best-selling-app-hero.jpg
-tags: [Coding]
-
+tags: [coding]
 ---
 Hey! Remember that time I wrote an iOS app to keep track of my Elden Ring and D&D play through details, and released it to the App Store?
 

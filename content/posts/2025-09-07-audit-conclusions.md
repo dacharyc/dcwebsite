@@ -6,7 +6,7 @@ description: In which we report what we learned through the code example audit.
 date: 2025-09-07 08:00:00 -0000
 url: /2025/09/07/audit-conclusions/
 image: /images/audit-conclusions-hero.png
-tags: [Documentation, Coding]
+tags: [documentation, coding]
 ---
 
 After a months-long code example audit process that included:

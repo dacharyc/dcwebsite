@@ -6,8 +6,7 @@ date: 2017-06-18 15:01:35 +0300
 description: In which I explore the value of protecting your digital assets.
 url: /2017/06/17/protecting-your-digital-empire/
 image: /images/digital-empire-hero.jpg
-tags: [Business]
-
+tags: [business]
 ---
 After some of the conversations I've seen lately about backup strategies, I have been reminded that I'm not on my A-game when it comes to backing up my digital assets. It's not just manuscripts; it's the book covers, ad images, videos, podcasts and everything else related to the publishing empire. I've had bits and pieces backed up here and there, but not a comprehensive strategy.
 

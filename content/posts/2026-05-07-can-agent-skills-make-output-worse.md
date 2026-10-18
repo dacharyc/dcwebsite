@@ -6,7 +6,7 @@ description: In which I discover that a skill made LLM output 66% worse, and dig
 date: 2026-05-07 22:00:00 -0500
 url: /2026/05/07/can-agent-skills-make-output-worse/
 image: /images/can-agent-skills-make-output-worse-hero.jpg
-tags: [ai]
+tags: [ai, agents]
 ---
 
 In the last ~6 months, Agent Skills have gone from a new feature introduced by Claude Code to a widely adopted paradigm across the industry. Companies that want to signal they understand customer AI adoption and consider it as part of the developer experience have been publishing official skills. I have been part of such an effort at my own company, where I have learned a ton from our experience and from analyzing other releases across the industry. I went in expecting a documentation-pipeline problem. I came out understanding that official skills are a full product surface; one that can actively make your customers' agent output worse if you ship them naively.

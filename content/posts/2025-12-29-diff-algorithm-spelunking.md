@@ -6,7 +6,7 @@ description: In which I fall down a semantic diffing rabbit hole and emerge two 
 date: 2025-12-29 08:00:00 -0000
 url: /2025/12/29/diff-algorithm-spelunking/
 image: /images/diff-hero.png
-tags: [Coding]
+tags: [coding]
 draft: false
 ---
 

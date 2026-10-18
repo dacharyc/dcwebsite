@@ -6,7 +6,7 @@ description: In which I explain why a vibes-based approach to AI and docs ain't 
 date: 2026-03-12 07:30:00 -0500
 url: /2026/03/12/vibes-out-data-in/
 image: /images/vibes-out-data-in-hero.jpg
-tags: [ai, documentation]
+tags: [ai, agents, documentation]
 draft: false
 ---
 

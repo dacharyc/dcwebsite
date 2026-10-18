@@ -6,7 +6,7 @@ description: In which I investigate what agent scoring tools actually measure.
 date: 2026-04-18 16:00:00 -0500
 url: /2026/04/18/what-agent-score-can-tell-you/
 image: /images/what-agent-score-tells-you-hero.jpg
-tags: [ai, documentation]
+tags: [ai, agents, documentation]
 ---
 
 If you're a documentation team trying to figure out what "agent-ready" means for your site, you've probably noticed that several different organizations are now offering to score you. Cloudflare just launched [isitagentready.com](https://isitagentready.com). Fern has an [Agent Score](https://buildwithfern.com/agent-score) directory powered by my [Agent-Friendly Documentation Spec](https://agentdocsspec.com) and its [CLI tool](https://afdocs.dev/), which runs 22 checks against any docs site. There will probably be more by the time you read this.

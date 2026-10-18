@@ -6,7 +6,7 @@ description: In which I try to give people tools to understand how agents read w
 date: 2026-04-06 11:00:00 -0500
 url: /2026/04/06/designing-agent-reading-test/
 image: /images/designing-agent-reading-test-hero.jpg
-tags: [ai, documentation]
+tags: [ai, agents, documentation]
 ---
 
 With my work on the [Agent-Friendly Documentation Spec](https://agentdocsspec.com) and the companion [AFDocs tool](https://afdocs.dev/), I've been talking with a lot of people about what all this means. I've been writing about the different failure modes in a way that might make sense to a web developer, or a documentarian with a strong technical understanding of how websites work, but there are a lot of pieces involved. It's not *just* about the website behavior; it's also about agent platform limitations. The intersection of those things is where the failures originate. And because all this requires a strong technical understanding of both parts, I realize it might be harder for people who are not super involved in this space to understand the impact.

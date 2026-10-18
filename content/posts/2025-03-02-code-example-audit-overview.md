@@ -6,8 +6,7 @@ description: In which we try to make sense of our code examples, and track them.
 date: 2025-03-02 00:11:00 -0000
 url: /2025/03/02/code-example-audit-overview/
 image: /images/audit-overview-hero.png
-tags: [Documentation]
-
+tags: [documentation]
 ---
 
 My company uses a docs-as-code workflow. We have historically split our documentation by product, for reasons related to our platform's implementation of table of contents and documentation/product versioning. This means we have documentation in a *lot* of different repositories (60+ by my last count), and the people who write and manage that documentation are split across four separate documentation teams. Each team has a different process for writing code examples. So for any given repository/product, the code examples may be created using a different process, and may contain widely variable content.

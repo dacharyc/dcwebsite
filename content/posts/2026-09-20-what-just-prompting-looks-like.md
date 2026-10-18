@@ -6,7 +6,7 @@ description: In which I have Claude audit my own prompts to find out what "just 
 date: 2026-09-20 11:00:00 -0500
 url: /2026/09/20/what-just-prompting-looks-like/
 image: /images/what-just-prompting-looks-like-hero.jpg
-tags: [ai]
+tags: [ai, agents]
 draft: false
 ---
 

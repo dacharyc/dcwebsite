@@ -6,7 +6,7 @@ description: In which we dive deeper into what we actually want to know.
 date: 2025-03-09 00:11:00 -0000
 url: /2025/03/09/audit-what-to-track/
 image: /images/audit-overview-hero.png
-tags: [Documentation]
+tags: [documentation]
 draft: true
 ---
 

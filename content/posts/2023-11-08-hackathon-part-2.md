@@ -6,7 +6,7 @@ description: In which I decide how I want to structure my documentation metadata
 date: 2023-11-08 7:00:00 -0400
 url: /2023/11/08/hackathon-part-2/
 image: /images/hackathon-data-model-hero.png
-tags: [Documentation, Coding, Hackathon]
+tags: [documentation, coding, hackathon]
 ---
 
 ## Defining a data model

@@ -1,0 +1,38 @@
+<!-- begin section-tags -->
+{{/* Project override of the theme partial: show the four most-used tags (by post count)
+     instead of the first four alphabetically, and use the newest tagged post's hero as the card image. */}}
+<section class="section section-tags">
+  <div class="container">
+    <div class="row">
+      <div class="col col-12">
+        <div class="section__head">
+          <h3 class="section__title">Tags</h3>
+          <a href="/tags/" class="section__link">See all</a>
+        </div>
+
+        <div class="row">
+          {{ range first 4 .Site.Taxonomies.tags.ByCount }}
+            {{ with .Page }}
+            <div class="col col-3 col-d-6 col-m-12">
+              <a href="{{ .RelPermalink }}" class="tag-image" title="{{ .Title }}">
+                <span class="tag-name">{{ .Title }}</span>
+                {{/* Newest tagged post's hero, skipping images already used by an earlier card so AI and Agents don't share one. */}}
+                {{ $used := $.Scratch.Get "tagStripImages" | default slice }}
+                {{ $pick := "" }}
+                {{ range where .Pages "Params.image" "!=" nil }}
+                  {{ if and (not $pick) (not (in $used .Params.image)) }}{{ $pick = .Params.image }}{{ end }}
+                {{ end }}
+                {{ with $pick }}
+                {{ $.Scratch.Add "tagStripImages" (slice .) }}
+                <img class="lazy" data-src="{{ . | absURL }}" alt="">
+                {{ end }}
+              </a>
+            </div>
+            {{ end }}
+          {{ end }}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- end section-tags -->

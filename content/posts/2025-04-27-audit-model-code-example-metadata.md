@@ -6,7 +6,7 @@ description: In which we decide what information to store, and how.
 date: 2025-04-27 08:00:00 -0000
 url: /2025/04/27/audit-model-code-example-metadata/
 image: /images/model-code-example-metadata-hero.png
-tags: [Documentation, Coding]
+tags: [documentation, coding]
 ---
 
 As we worked our way through this initial code example audit process, requirements emerged sporadically. At the core of this project, our department wanted to understand our code example content distribution and communicate about it to leadership. That became "count the code examples" by category and programming language. Even as we iterated on the tooling to perform the initial count, new requirements emerged. My team agreed that we couldn't just take a static "count" approach - we needed to store information about our code examples in a database, so we could slice the data in whatever new way leadership wanted to break it down.

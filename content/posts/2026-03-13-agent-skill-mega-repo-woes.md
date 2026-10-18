@@ -6,7 +6,7 @@ description: In which I validate a 23.7k-star skill mega repo and discover probl
 date: 2026-03-13 07:00:00 -0500
 url: /2026/03/13/agent-skill-mega-repo-woes/
 image: /images/skill-mega-repo-hero.png
-tags: [ai, Coding]
+tags: [ai, agents, coding]
 draft: false
 ---
 

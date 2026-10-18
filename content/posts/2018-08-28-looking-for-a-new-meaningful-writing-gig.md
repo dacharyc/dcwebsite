@@ -6,8 +6,7 @@ description: In which I part ways with a long-term client and want to do somethi
 date: 2018-08-28 15:01:35 +0300
 url: /2018/08/28/looking-for-a-new-meaningful-writing-gig/
 image: /images/looking-for-meaning-hero.jpg
-tags: [Business, Personal]
-
+tags: [business, personal]
 ---
 At the beginning of August, I said farewell to the company where I've been contracting for the past two years. I worked with a great team, but I'd gotten burned out and it was time to take a break and then look at what I want to do next.
 

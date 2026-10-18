@@ -6,8 +6,7 @@ description: In which I accidentally body-surfed a Class V rapid and things look
 date: 2019-08-20 15:01:35 +0300
 url: /2019/08/20/my-vacation-rafting-misadventure/
 image: /images/vacation-rafting-misadventure-hero.jpg
-tags: [Personal, Travel]
-
+tags: [personal, travel]
 ---
 Or that time I accidentally body-surfed a Class V rapid on the Penobscot River in Maine.
 

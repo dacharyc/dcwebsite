@@ -6,7 +6,7 @@ description: In which Astro removes its llms.txt entirely, and I explore the res
 date: 2026-05-04 07:00:00 -0500
 url: /2026/05/04/astro-removed-llms-txt/
 image: /images/astro-removed-llms-txt-hero.jpg
-tags: [ai, documentation]
+tags: [ai, agents, documentation]
 ---
 
 As I have been re-scoring documentation sites with my updated `afdocs` tool, I have had the opportunity to see a snapshot of various docs sites a few weeks apart as the industry is starting to pay a lot more attention to how to make documentation agent-friendly. I got a surprise when I re-scored the docs for [Astro](https://docs.astro.build/en/getting-started/), a web framework that is well-regarded. In the prior scoring run, Astro got a C (78) for agent-friendliness; their new score is an F (59); capped by a missing llms.txt. I wanted to dig into why someone would make a change to make their docs *less* agent-friendly, when you have a contrast like last week's GitHub going out of its way to build their llms.txt into a comprehensive [agent-discovery layer](https://dacharycarey.com/2026/05/01/github-docs-api-llms-txt/).

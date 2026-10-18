@@ -6,8 +6,7 @@ description: In which I give up my beloved caffeine. Oh dear.
 date: 2017-06-25 15:01:35 +0300
 url: /2017/06/25/my-strange-caffeine-detox-journey/
 image: /images/caffiene-detox-hero.jpg
-tags: [Lifestyle,Personal]
-
+tags: [lifestyle, personal]
 ---
 If you know me at all, you know I'm a devoted coffee snob. I have an AeroPress at home and a second one at the office where I've been contracting for almost a year. I have not one, but *two* expensive burr grinders so I can always brew from fresh beans (one at home, one at the office). I temp the water before I brew. (Different beans extract ideally at different temps - I generally prefer anywhere from 85C to 95C depending on the bean, but 92C seems to be about my sweet spot.) And I buy rather expensive single-source beans from a local roaster.
 

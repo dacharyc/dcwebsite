@@ -6,8 +6,7 @@ date: 2017-04-02 15:01:35 +0300
 description: In which I take issue with the Hollywood treatment of this classic fairy tale.
 url: /2017/04/02/beauty-and-the-beast-why-we-dont-mess-with-a-classic/
 image: /images/beauty-and-the-beast-hero.jpg
-tags: [Review]
-
+tags: [review]
 ---
 I went to see the _Beauty and the Beast_ live action movie over the weekend.
 

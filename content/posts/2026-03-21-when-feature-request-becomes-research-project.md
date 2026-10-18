@@ -6,7 +6,7 @@ description: In which someone asks for something in 'skill-validator' and I spin
 date: 2026-03-21 19:00:00 -0500
 url: /2026/03/21/when-feature-request-becomes-research-project/
 image: /images/when-feature-request-becomes-research-project-hero.jpg
-tags: [ai, coding]
+tags: [ai, agents, coding]
 draft: false
 ---
 

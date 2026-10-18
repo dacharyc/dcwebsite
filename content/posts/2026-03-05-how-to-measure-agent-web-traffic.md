@@ -6,7 +6,7 @@ description: In which I lurk in server logs and try to make sense of what I see.
 date: 2026-03-05 21:00:00 -0500
 url: /2026/03/05/how-to-measure-agent-web-traffic/
 image: /images/how-to-measure-agent-web-traffic-hero.jpg
-tags: [ai, documentation]
+tags: [ai, agents, documentation]
 draft: false
 ---
 

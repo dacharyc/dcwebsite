@@ -6,7 +6,7 @@ description: In which I build a freshness check for llms.txt and discover that m
 date: 2026-03-15 23:00:00 -0500
 url: /2026/03/15/is-your-llms-txt-already-stale/
 image: /images/llms-txt-freshness-hero.jpg
-tags: [ai, documentation]
+tags: [ai, agents, documentation]
 draft: false
 ---
 

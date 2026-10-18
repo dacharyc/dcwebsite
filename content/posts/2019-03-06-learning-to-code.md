@@ -6,8 +6,7 @@ description: In which I finally decide to start my coding journey.
 date: 2019-03-06 15:01:35 +0300
 url: /2019/03/06/learning-to-code/
 image: /images/learning-to-code-hero.jpg
-tags: [Coding, Personal]
-
+tags: [coding, personal]
 ---
 There are a couple of apps I've been wanting to write, so the time has come to learn to code! Unsurprisingly, this makes hubby happy, as now I can more readily empathize with the geeky coding plights of a senior web dev.
 

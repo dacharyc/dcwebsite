@@ -6,7 +6,7 @@ description: In which I free my data from Google Sheets.
 date: 2023-11-01 12:00:00 -0400
 url: /2023/11/01/hackathon-part-1/
 image: /images/docs-analytics-google-sheet.png
-tags: [Documentation, Coding, Hackathon]
+tags: [documentation, coding, hackathon]
 ---
 
 One of my favorite things about working at MongoDB is that we do a hackathon once or twice a year. It's a one-week extravaganza where we can work on PoCs, improve tooling, build skills, or try interesting projects. Some of my teammates have even built things during hackathon that have made it into the product! It's great for making improvements and getting us to think creatively.

@@ -6,8 +6,7 @@ description: In which I recognize how important it is to have good equipment, an
 date: 2019-08-08 15:01:35 +0300
 url: /2019/08/08/investing-in-good-equipment/
 image: /images/investing-in-good-equipment-hero.jpg
-tags: [Business, Coding, Lifestyle, Personal, Writing]
-
+tags: [business, coding, lifestyle, personal, writing]
 ---
 
 ![Image of a desk with two laptops and a monitor labeled "Before" above an image of the same desk with an iMac and a monitor labeled "After"](/images/new-equipment_before_after-1083x1200.jpg)

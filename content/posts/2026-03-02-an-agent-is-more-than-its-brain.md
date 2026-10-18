@@ -6,7 +6,7 @@ description: In which I talk about what's inside a coding agent.
 date: 2026-03-02 20:00:00 -0500
 url: /2026/03/02/an-agent-is-more-than-its-brain/
 image: /images/agent-more-than-brain-hero.jpg
-tags: [ai]
+tags: [ai, agents]
 draft: false
 ---
 

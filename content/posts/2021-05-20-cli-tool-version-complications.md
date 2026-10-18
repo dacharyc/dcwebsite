@@ -6,8 +6,7 @@ description: In which I attempt to debug a CLI thing and find out I made an assu
 date: 2021-05-20 15:01:35 +0300
 url: /2021/05/20/cli-tool-version-complications/
 image: /images/cli-version-hero.jpg
-tags: [Coding]
-
+tags: [coding]
 ---
 I've been playing around with different versions of the `realm-cli` for some documentation projects. That means installing and uninstalling various versions via NPM. I kept getting tripped up on this complication so I'm documenting it here in case other folks find it helpful.
 

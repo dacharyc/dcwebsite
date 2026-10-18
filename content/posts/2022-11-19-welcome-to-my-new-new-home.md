@@ -6,7 +6,7 @@ description: In which I migrate from WordPress to Hugo.
 date: 2022-11-19 10:01:35 -0500
 url: /2022/11/19/welcome-to-my-new-new-home/
 image: /images/new-new-home-hero.jpg
-tags: [Personal]
+tags: [personal]
 ---
 
 Why are we here? (Well, why is any of us here, really?)

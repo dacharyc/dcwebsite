@@ -6,7 +6,7 @@ description: In which we dive deeper into what we actually want to know.
 date: 2025-03-10 00:19:00 -0000
 url: /2025/03/10/audit-what-to-track/
 image: /images/audit-what-to-track-hero.png
-tags: [Documentation, Coding]
+tags: [documentation, coding]
 ---
 
 Now that we had [defined what we were going to count as a code example](http://dacharycarey.com/2025/03/02/audit-what-is-code-example/), we just needed to count them - right? As I worked on refining the brand-new-tooling we were building out to track this information, I realized we needed a lot more information about what we wanted to track, and how we might want to use the information, to make sure the tooling captured the right details in the right way. As I brainstormed, I wrote a four-page document trying to capture the details; there was a lot to consider. The points break down along these axes:

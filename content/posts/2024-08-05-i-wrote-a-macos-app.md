@@ -6,8 +6,7 @@ description: In which I write a macOS app to track important pull requests.
 date: 2024-08-05 00:01:35 -0000
 url: /2024/08/05/i-wrote-a-macos-app/
 image: /images/prfocus-hero-1.png
-tags: [Coding]
-
+tags: [coding]
 ---
 
 Apparently writing [Shattered Ring](https://shatteredring.com) a few years ago whetted my appetite for useful tools that do what I want in the way I want. A mere month after releasing Shattered Ring, I started working on [PR Focus](https://prfocus.app): a macOS app that tracks pull requests across GitHub repositories. After more than two years of nights-and-weekends development, and *several* incarnations along the way, I have now released PR Focus on the Mac App Store!

@@ -6,7 +6,7 @@ description: In which we have an LLM help us assign categories to code examples.
 date: 2025-03-23 13:00:00 -0000
 url: /2025/03/23/audit-ai-assisted-classification/
 image: /images/ai-assisted-categorization-poc-hero.png
-tags: [Documentation, Coding]
+tags: [documentation, coding]
 ---
 
 With over 35,000 code examples, there's no way our docs organization could afford for people to spend time manually assigning a category to each code example. Humans apply criteria selectively, too, which means we would categorize code examples inconsistently. When we started talking about an audit, I had recently written code examples using Go with a local LLM, [Ollama](https://ollama.com), to perform some embedding generation and summarization tasks. I wondered if we could use Ollama to categorize our code examples, so I spent a few hours writing a proof-of-concept to test the idea. I iterated on the prompt until I got 90% accuracy with my test data, and called that "good enough" to validate the concept. It worked! We could use an AI to assign categories to the code examples.
