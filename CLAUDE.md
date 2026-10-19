@@ -112,7 +112,7 @@ npx --yes sharp-cli --input static/images/microblog/FILE.jpeg --output /tmp/FILE
 
 `./import_linkedin_notes` builds microblog posts from a LinkedIn data export unzipped into `.linkedin/export/` (gitignored). `manifest` writes `.linkedin/notes-manifest.csv` with automatic include/exclude decisions, keyword-derived topics, people flags, and generated titles; `build` writes `content/microblog/*.md` for rows marked `include: yes`. Manual edits to `include`, `title`, `slug`, and `topics` in the manifest survive a regenerate. The script resolves `lnkd.in` short links (cached in `.linkedin/lnkd-cache.json`), attaches links from "link in the comments" posts by matching your own comments within three hours, and swaps people's full names for linked GitHub handles using `.linkedin/people.json` (`"Full Name": "login"`), in titles and slugs as a plain `@login` and in the body as a link; a value of `first-name-only` trims the name to its first word instead. Posts that still name someone unmapped are written as `draft: true` with a `needs_review` field. `build` only deletes files it recorded in the manifest's `file` column and skips any export post whose share ID already appears in a hand-written file's `linkedin:` field, so hand-written posts are never overwritten.
 
-Vale is relaxed for `content/microblog/` (see `.vale.ini`) because backfilled posts are historical LinkedIn writing.
+Vale applies in full to `content/microblog/`; AdverbDensity is a warning there only because that is its default level, since Vale cannot scope a severity to one directory (see `.vale.ini`). Backfilled historical posts would fail several rules, so expect errors if you edit one. Vale is off entirely for `content/drafts/`; a draft gets linted once it moves into `content/posts/`. New DC rules need adding to that section too, since Vale has no style-level wildcard.
 
 ## Conventions
 
@@ -232,7 +232,7 @@ node /Users/dachary/workspace/agent-ecosystem/afdocs/bin/afdocs.mjs check http:/
 
 Known expected behavior locally (not real issues):
 
-- **`content-negotiation` always fails locally.** Hugo's dev server doesn't honor `Accept: text/markdown`; it serves by extension only. This is also true of production (rsync to a static host), so the failure is currently a known limitation of the deploy mechanism, not a bug to fix unless you swap hosting to something with content-negotiation support (Cloudflare Workers, nginx with rules, etc.).
+- **`content-negotiation` always fails locally.** Hugo's dev server doesn't honor `Accept: text/markdown`; it serves by extension only. This is also true of production (rsync to a static host), so the failure is a known limitation of the deploy mechanism. It only becomes fixable if you swap hosting to something with content-negotiation support (Cloudflare Workers, nginx with rules, etc.).
 - **Some checks may behave differently than production.** Cache headers and redirect behavior in particular. See `/Users/dachary/workspace/agent-ecosystem/afdocs/docs/run-locally.md` for the full list of local-vs-production differences.
 
 When checking after infra changes, the key checks to watch are:
