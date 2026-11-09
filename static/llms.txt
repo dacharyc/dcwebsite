@@ -93,6 +93,7 @@
 
 Short posts, syndicated to LinkedIn.
 
+- [Woot! After more time than I would have expected spent refining it](https://dacharycarey.com/microblog/2026/11/08/woot-after-more-time-than-i-would-have-expected-spent-refining-it/index.md)
 - [Another weekend, another big round of updating the various libs and tools](https://dacharycarey.com/microblog/2026/11/01/another-weekend-another-big-round-of-updating-the-various-libs-and-tools/index.md)
 - [This week has ranged far and wide, so it's hard to pick just one thing](https://dacharycarey.com/microblog/2026/10/30/this-week-has-ranged-far-and-wide-so-its-hard-to-pick-just-one-thing/index.md)
 - [I'm back on my Agent Skill stuff, at least for today.](https://dacharycarey.com/microblog/2026/10/29/im-back-on-my-agent-skill-stuff-at-least-for-today/index.md)
