@@ -93,6 +93,7 @@
 
 Short posts, syndicated to LinkedIn.
 
+- [This week, what I'm thinking about in agent experience land is learning design](https://dacharycarey.com/microblog/2026/11/13/this-week-what-im-thinking-about-in-agent-experience-land-is-learning-design/index.md)
 - [Forgot to post last Friday about what I was thinking about last week, but it was eval design](https://dacharycarey.com/microblog/2026/11/09/forgot-to-post-last-friday-about-what-i-was-thinking-about-but-it-was-eval-design/index.md)
 - [Woot! After more time than I would have expected spent refining it](https://dacharycarey.com/microblog/2026/11/08/woot-after-more-time-than-i-would-have-expected-spent-refining-it/index.md)
 - [Another weekend, another big round of updating the various libs and tools](https://dacharycarey.com/microblog/2026/11/01/another-weekend-another-big-round-of-updating-the-various-libs-and-tools/index.md)
