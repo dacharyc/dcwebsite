@@ -1,6 +1,6 @@
 ---
 title: Drafts
-_build:
+build:
   list: never
   render: never
 ---
