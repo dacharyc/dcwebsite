@@ -3,7 +3,7 @@ title: "AI-assisted development thoughts related to weekend personal project"
 author: Dachary Carey
 date: 2026-11-16 08:59:06 -0500
 url: /microblog/2026/11/16/ai-assisted-development-thoughts-related-to-weekend-personal-project/
-topics: [coding]
+topics: [ai, coding]
 linkedin: https://www.linkedin.com/feed/update/urn:li:share:7528094299377348608
 draft: false
 ---

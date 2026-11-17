@@ -93,6 +93,7 @@
 
 Short posts, syndicated to LinkedIn.
 
+- [Randomly thinking about that time I wrote a tailored iOS/iPadOS app](https://dacharycarey.com/microblog/2026/11/16/randomly-thinking-about-that-time/index.md)
 - [AI-assisted development thoughts related to weekend personal project](https://dacharycarey.com/microblog/2026/11/16/ai-assisted-development-thoughts-related-to-weekend-personal-project/index.md)
 - [Oh dang... had a new app idea and now a new domain is registered](https://dacharycarey.com/microblog/2026/11/15/oh-dang-had-a-new-app-idea-and-now-a-new-domain-is-registered/index.md)
 - [This week, what I'm thinking about in agent experience land is learning design](https://dacharycarey.com/microblog/2026/11/13/this-week-what-im-thinking-about-in-agent-experience-land-is-learning-design/index.md)
