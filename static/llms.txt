@@ -93,6 +93,7 @@
 
 Short posts, syndicated to LinkedIn.
 
+- [I made it to my weekly reset without running out of my AI Subscription budget](https://dacharycarey.com/microblog/2026/11/27/i-made-it-to-my-weekly-reset-without-running-out-of-my-ai-subscription-budget/index.md)
 - [Here's what I'm thinking about this week in agent experience land](https://dacharycarey.com/microblog/2026/11/25/heres-what-im-thinking-about-this-week-in-agent-experience/index.md)
 - [I have taken tomorrow off, so today is my Friday](https://dacharycarey.com/microblog/2026/11/19/i-have-taken-tomorrow-off-so-today-is-my-friday/index.md)
 - [Randomly thinking about that time I wrote a tailored iOS/iPadOS app](https://dacharycarey.com/microblog/2026/11/16/randomly-thinking-about-that-time/index.md)

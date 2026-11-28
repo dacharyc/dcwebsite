@@ -168,6 +168,13 @@ A GM toolkit for tabletop gaming - generates shops, taverns, NPCs, and other ele
 
 Native iOS applications built with SwiftUI.
 
+### Completionaire
+
+Completionaire is a completion tracker for video games. It keeps a game's trophy or achievement list and its own 100% checklist in one place: collectibles, medals, vehicles, and what you can still miss. Link PlayStation, Xbox, or Steam and the trophies and achievements you've earned check themselves off.
+
+- **Stack**: SwiftUI, SwiftData, CloudKit
+- **State**: TestFlight Alpha ・ [Website](https://completionaire.app)
+
 ### Shattered Ring
 
 A companion app for the video game *Elden Ring* - helps players track NPCs, Quests, Locations, and Bosses since the game did not provide an in-game system for this.
